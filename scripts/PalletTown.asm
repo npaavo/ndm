@@ -155,7 +155,6 @@ PalletTown_TextPointers:
 	dw PalletTownText4
 	dw PalletTownText5
 	dw PalletTownText6
-	dw PalletTownText7
 
 PalletTownText1:
 	TX_ASM
@@ -209,6 +208,3 @@ PalletTownText6: ; sign by Red’s house
 	TX_FAR _PalletTownText6
 	db "@"
 
-PalletTownText7: ; sign by Blue’s house
-	TX_FAR _PalletTownText7
-	db "@"

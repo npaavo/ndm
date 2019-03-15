@@ -37,7 +37,7 @@ WildDataPointers:
 	dw Route24Mons ; ROUTE_24
 	dw Route25Mons ; ROUTE_25
 	dw NoMons      ; REDS_HOUSE_1F
-	dw NoMons
+	dw PalletCaveMons ; REDS_HOUSE_2F - MOD - Pallet Cave
 	dw NoMons
 	dw NoMons
 	dw NoMons
@@ -261,6 +261,7 @@ WildDataPointers:
         ; level, species (ten times)
 
 INCLUDE "data/wildPokemon/nomons.asm"
+INCLUDE "data/wildPokemon/pallet_cave.asm"
 INCLUDE "data/wildPokemon/route1.asm"
 INCLUDE "data/wildPokemon/route2.asm"
 INCLUDE "data/wildPokemon/route22.asm"

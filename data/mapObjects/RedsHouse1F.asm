@@ -1,18 +1,17 @@
 RedsHouse1F_Object:
 	db $a ; border block
 
-	db 3 ; warps
-	warp 2, 7, 0, -1 ; exit1
-	warp 3, 7, 0, -1 ; exit2
-	warp 7, 1, 0, REDS_HOUSE_2F ; staircase
+	db 2 ; warps
+	warp 4, 7, 0, PALLET_TOWN ; exit1
+	warp 5, 7, 0, PALLET_TOWN ; exit2
 
 	db 1 ; signs
-	sign 3, 1, 2 ; TV
+	sign 5, 1, 2 ; TV
 
-	db 1 ; objects
-	object SPRITE_MOM, 5, 4, STAY, LEFT, 1 ; Mom
+	db 2 ; objects
+	object SPRITE_MOM, 4, 4, STAY, RIGHT, 1 ; Mom
+	object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 3, SURFBOARD ; get map
 
 	; warp-to
-	warp_to 2, 7, REDS_HOUSE_1F_WIDTH
-	warp_to 3, 7, REDS_HOUSE_1F_WIDTH
-	warp_to 7, 1, REDS_HOUSE_1F_WIDTH
+	warp_to 4, 7, REDS_HOUSE_1F_WIDTH
+	warp_to 5, 7, REDS_HOUSE_1F_WIDTH

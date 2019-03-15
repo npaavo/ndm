@@ -187,37 +187,21 @@ DisplayIntroNameTextBox:
 .namestring
 	db "NAME@"
 
-IF DEF(_RED)
+
 DefaultNamesPlayer:
 	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
+	next "MARCEL"
+	next "NICK"
+	next "...you"
 	db   "@"
 
 DefaultNamesRival:
 	db   "NEW NAME"
-	next "BLUE"
+	next "RONALD"
 	next "GARY"
-	next "JOHN"
-	db   "@"
-ENDC
-
-IF DEF(_BLUE)
-DefaultNamesPlayer:
-	db   "NEW NAME"
-	next "BLUE"
-	next "GARY"
-	next "JOHN"
+	next "DENNIS"
 	db   "@"
 
-DefaultNamesRival:
-	db   "NEW NAME"
-	next "RED"
-	next "ASH"
-	next "JACK"
-	db   "@"
-ENDC
 
 GetDefaultName:
 ; a = name index
@@ -243,30 +227,17 @@ GetDefaultName:
 	ld bc, $14
 	jp CopyData
 
-IF DEF(_RED)
+
 DefaultNamesPlayerList:
 	db "NEW NAME@"
-	db "RED@"
-	db "ASH@"
-	db "JACK@"
+	db "MARCEL@"
+	db "NICK@"
+	db "...you@"
 DefaultNamesRivalList:
 	db "NEW NAME@"
-	db "BLUE@"
+	db "RONALD@"
 	db "GARY@"
-	db "JOHN@"
-ENDC
-IF DEF(_BLUE)
-DefaultNamesPlayerList:
-	db "NEW NAME@"
-	db "BLUE@"
-	db "GARY@"
-	db "JOHN@"
-DefaultNamesRivalList:
-	db "NEW NAME@"
-	db "RED@"
-	db "ASH@"
-	db "JACK@"
-ENDC
+	db "DENNIS@"
 
 TextTerminator_6b20:
 	db "@"

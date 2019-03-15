@@ -1,35 +1,44 @@
 _MomWakeUpText::
-	text "MOM: Right."
-	line "All boys leave"
-	cont "home some day."
-	cont "It said so on TV."
+	text "Chloe: Please be"
+	line "careful out on"
+	cont "the job! I'm sure"
+	cont "you'll do great."
 
-	para "PROF.OAK, next"
-	line "door, is looking"
-	cont "for you."
+	para "If you ever need"
+	line "to rest, come"
+	cont "back here. I'll"
+	cont "keep unpacking"
+	cont "our things."
 	done
 
 _MomHealText1::
-	text "MOM: <PLAYER>!"
+	text "Chloe: <PLAYER>!"
 	line "You should take a"
 	cont "quick rest."
 	prompt
 
 _MomHealText2::
-	text "MOM: Oh good!"
-	line "You and your"
-	cont "#MON are"
-	cont "looking great!"
-	cont "Take care now!"
+	text "MOM: I believe"
+	line "in you! Never"
+	cont "give up!"
 	done
 
 _StandByMeText::
-	text "There's a movie"
-	line "on TV. Four boys"
-	cont "are walking on"
-	cont "railroad tracks."
+	text "KANTO NEWS"
+	
+	para "Experts warn that"
+	line "the rapid growth"
+	cont "of cities could"
+	cont "lead to a drop"
+	cont "in natural"
+	cont "diversity in as"
+	cont "little as 50"
+	cont "years."
+	
+	para "..."
 
-	para "I better go too."
+	para "I've got a lot"
+	line "of work to do."
 	done
 
 _TVWrongSideText::

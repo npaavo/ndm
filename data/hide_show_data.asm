@@ -42,7 +42,7 @@ MapHSPointers:
 	dw MapHSXX
 	dw MapHS23
 	dw MapHS24
-	dw MapHSXX
+	dw MapHS25
 	dw MapHSXX
 	dw MapHS27
 	dw MapHS28
@@ -324,9 +324,10 @@ MapHS23:
 	db ROUTE_24,$08,Show
 MapHS24:
 	db ROUTE_25,$0A,Show
+MapHS25: ; mod - town map on table 
+	db REDS_HOUSE_1F,$02,Show
 MapHS27:
 	db BLUES_HOUSE,$01,Show
-	db BLUES_HOUSE,$02,Hide
 	db BLUES_HOUSE,$03,Show
 MapHS28:
 	db OAKS_LAB,$01,Show

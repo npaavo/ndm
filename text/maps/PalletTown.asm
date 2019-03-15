@@ -1,38 +1,42 @@
 _OakAppearsText::
-	text "OAK: Hey! Wait!"
-	line "Don't go out!@@"
+	text "OAK: Hey! <PLAYER>!"
+	line "Sorry I'm late!"
+	done
 
 _OakWalksUpText::
-	text "OAK: It's unsafe!"
-	line "Wild #MON live"
-	cont "in tall grass!"
+	text "I guess it's good"
+	line "you're up and out"
+	cont "earlier than me!"
+	cont "Hahah!"
 
-	para "You need your own"
-	line "#MON for your"
-	cont "protection."
-	cont "I know!"
-
-	para "Here, come with"
-	line "me!"
+	para "Come on back to"
+	line "my lab! I was"
+	cont "just getting"
+	cont "ready!"
 	done
 
 _PalletTownText2::
-	text "I'm raising"
-	line "#MON too!"
+	text "PALLET CAMP is"
+	line "ok, I guess."
 
-	para "When they get"
-	line "strong, they can"
-	cont "protect me!"
+	para "I can't imagine"
+	line "living here,"
+	cont "though. No shops!"
+	
+	para "Oh, you're the one"
+	line "that moved into"
+	cont "that apartment?"
+	
+	para "It's... quaint."
 	done
 
 _PalletTownText3::
 	text "Technology is"
 	line "incredible!"
 
-	para "You can now store"
-	line "and recall items"
-	cont "and #MON as"
-	cont "data via PC!"
+	para "You can even get"
+	line "a signal all the"
+	cont "way out here!"
 	done
 
 _PalletTownText4::
@@ -41,15 +45,17 @@ _PalletTownText4::
 	done
 
 _PalletTownText5::
-	text "PALLET TOWN"
-	line "Shades of your"
-	cont "journey await!"
+	text "CAMP PALLET"
+	
+	para "Please don't"
+	line "litter!"
 	done
 
 _PalletTownText6::
-	text "<PLAYER>'s house "
-	done
-
-_PalletTownText7::
-	text "<RIVAL>'s house "
+	text "It's a permit to"
+	line "construct a"
+	cont "temporary home."
+	
+	para "You live here"
+	line "now."
 	done

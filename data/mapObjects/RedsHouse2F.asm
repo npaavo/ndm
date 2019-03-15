@@ -1,12 +1,12 @@
 RedsHouse2F_Object:
-	db $a ; border block
+	db $02 ; border block
 
 	db 1 ; warps
-	warp 7, 1, 2, REDS_HOUSE_1F
+	warp 7, 3, 0, ROUTE_1
 
 	db 0 ; signs
 
 	db 0 ; objects
 
 	; warp-to
-	warp_to 7, 1, REDS_HOUSE_2F_WIDTH
+	warp_to 7, 3, REDS_HOUSE_2F_WIDTH

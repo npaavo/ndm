@@ -34,9 +34,9 @@ SetDefaultNames:
 OakSpeech:
 	ld a, $FF
 	call PlaySound ; stop music
-	ld a, BANK(Music_Routes2)
+	ld a, BANK(Music_Gym)
 	ld c, a
-	ld a, MUSIC_ROUTES2
+	ld a, MUSIC_GYM
 	call PlayMusic
 	call ClearScreen
 	call LoadTextBoxTilePatterns
@@ -64,7 +64,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld a, NIDORINO
+	ld a, PIDGEOT
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
@@ -157,7 +157,7 @@ OakSpeechText1:
 	db "@"
 OakSpeechText2:
 	TX_FAR _OakSpeechText2A
-	TX_CRY_NIDORINA
+	TX_CRY_PIDGEOT
 	TX_FAR _OakSpeechText2B
 	db "@"
 IntroducePlayerText:

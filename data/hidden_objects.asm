@@ -1,5 +1,5 @@
 HiddenObjectMaps:
-	db REDS_HOUSE_2F
+	db REDS_HOUSE_1F
 	db BLUES_HOUSE
 	db OAKS_LAB
 	db VIRIDIAN_POKECENTER
@@ -88,7 +88,7 @@ HiddenObjectMaps:
 
 HiddenObjectPointers:
 ; each of these pointers is for the corresponding map in HiddenObjectMaps
-	dw RedsHouse2FHiddenObjects
+	dw RedsHouse1FHiddenObjects
 	dw BluesHouseHiddenObjects
 	dw OaksLabHiddenObjects
 	dw ViridianPokecenterHiddenObjects
@@ -191,11 +191,9 @@ ColosseumHiddenObjects:
 	db BANK(CableClubLeftGameboy)
 	dw CableClubLeftGameboy
 	db $FF
-RedsHouse2FHiddenObjects:
+RedsHouse1FHiddenObjects:
 	db $01,$00,$04
 	dbw BANK(OpenRedsPC), OpenRedsPC
-	db $05,$03,$d0
-	dbw BANK(PrintRedSNESText), PrintRedSNESText
 	db $FF
 BluesHouseHiddenObjects:
 	db $01,$00,$04
