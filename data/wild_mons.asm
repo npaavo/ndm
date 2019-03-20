@@ -38,12 +38,12 @@ WildDataPointers:
 	dw Route25Mons ; ROUTE_25
 	dw NoMons      ; REDS_HOUSE_1F
 	dw PalletCaveMons ; REDS_HOUSE_2F - MOD - Pallet Cave
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
+	dw NoMons ; blues house ****
+	dw NoMons ; oak lab
+	dw NoMons ; pokecenter
+	dw NoMons ; mart
+	dw NoMons ; viridian gate house 
+	dw Route1CaveMons; "nickname house" - MOD - Rt 1 Cave
 	dw NoMons
 	dw NoMons
 	dw NoMons
@@ -262,6 +262,7 @@ WildDataPointers:
 
 INCLUDE "data/wildPokemon/nomons.asm"
 INCLUDE "data/wildPokemon/pallet_cave.asm"
+INCLUDE "data/wildPokemon/route1_cave.asm"
 INCLUDE "data/wildPokemon/route1.asm"
 INCLUDE "data/wildPokemon/route2.asm"
 INCLUDE "data/wildPokemon/route22.asm"

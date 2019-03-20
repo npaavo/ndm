@@ -22,7 +22,6 @@ INCLUDE "engine/black_out.asm"
 
 MewPicFront:: INCBIN "pic/bmon/mew.pic"
 MewPicBack::  INCBIN "pic/monback/mewb.pic"
-INCLUDE "data/baseStats/mew.asm"
 
 INCLUDE "engine/battle/safari_zone.asm"
 
@@ -352,17 +351,22 @@ UndergroundPathRoute8_Blocks: INCBIN "maps/UndergroundPathRoute8.blk"
 
 OaksLab_Blocks: INCBIN "maps/OaksLab.blk"
 
-MrPsychicsHouse_Blocks:
-NameRatersHouse_Blocks:
-MrFujisHouse_Blocks:
-Route16FlyHouse_Blocks:
-Route2TradeHouse_Blocks:
-SaffronPidgeyHouse_Blocks:
-VermilionPidgeyHouse_Blocks:
-LavenderCuboneHouse_Blocks:
-CeruleanTradeHouse_Blocks:
-PewterNidoranHouse_Blocks:
-PewterSpeechHouse_Blocks:
+; HEY! WHENEVER YOU EDIT ONE OF THESE TINY HOUSES, YOU GOTTA FIX THIS!
+; To save space, they repeated this map and assumed they used the same
+; layout! clever, but dangerous to romhackers looking for maps to scrap! 
+
+MrPsychicsHouse_Blocks: INCBIN "maps/MrPsychicsHouse.blk"
+NameRatersHouse_Blocks: INCBIN "maps/NameRatersHouse.blk"
+MrFujisHouse_Blocks: INCBIN "maps/MrFujisHouse.blk"
+Route16FlyHouse_Blocks: INCBIN "maps/Route16FlyHouse.blk"
+SaffronPidgeyHouse_Blocks: INCBIN "maps/SaffronPidgeyHouse.blk"
+VermilionPidgeyHouse_Blocks: INCBIN "maps/VermilionPidgeyHouse.blk"
+LavenderCuboneHouse_Blocks: INCBIN "maps/LavenderCuboneHouse.blk"
+CeruleanTradeHouse_Blocks: INCBIN "maps/CeruleanBadgeHouse.blk"
+PewterNidoranHouse_Blocks: INCBIN "maps/PewterNidoranHouse.blk"
+
+PewterSpeechHouse_Blocks: INCBIN "maps/PewterSpeechHouse.blk"
+Route2TradeHouse_Blocks: INCBIN "maps/Route2TradeHouse.blk"
 ViridianNicknameHouse_Blocks: INCBIN "maps/ViridianNicknameHouse.blk"
 
 CeladonMansionRoofHouse_Blocks:
@@ -920,6 +924,8 @@ SECTION "bankF", ROMX
 
 INCLUDE "engine/battle/core.asm"
 
+VisigoPicFront::     INCBIN "pic/bmon/Visigo.pic"
+VisigoPicBack::      INCBIN "pic/monback/Visigob.pic"
 
 SECTION "bank10", ROMX
 
@@ -1264,6 +1270,7 @@ JrTrainerMPic::    INCBIN "pic/trainer/jr.trainerm.pic"
 JrTrainerFPic::    INCBIN "pic/trainer/jr.trainerf.pic"
 PokemaniacPic::    INCBIN "pic/trainer/pokemaniac.pic"
 SuperNerdPic::     INCBIN "pic/trainer/supernerd.pic"
+LoggerPic::
 HikerPic::         INCBIN "pic/trainer/hiker.pic"
 BikerPic::         INCBIN "pic/trainer/biker.pic"
 BurglarPic::       INCBIN "pic/trainer/burglar.pic"
@@ -1879,12 +1886,7 @@ SECTION "bank1A", ROMX
 INCLUDE "engine/battle/decrement_pp.asm"
 
 Version_GFX:
-IF DEF(_RED)
-	INCBIN "gfx/red/redgreenversion.1bpp" ; 10 tiles
-ENDC
-IF DEF(_BLUE)
 	INCBIN "gfx/blue/blueversion.1bpp" ; 8 tiles
-ENDC
 Version_GFXEnd:
 
 Dojo_GFX:

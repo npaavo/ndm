@@ -1,40 +1,86 @@
 _Route22RivalBeforeBattleText1::
-	text "<RIVAL>: Hey!"
-	line "<PLAYER>!"
+	text "<RIVAL>: Well"
+	line "look who we got"
+	cont "here! <PLAYER>!"
 
-	para "You're going to"
-	line "#MON LEAGUE?"
+	para "What are you"
+	line "doing out here?"
+	
+	para "Catching #MON?"
+	line "What a waste!"
 
-	para "Forget it! You"
-	line "probably don't"
-	cont "have any BADGEs!"
+	para "See that building"
+	line "to the west? That"
+	cont "is the #MON"
+	cont "LEAGUE HQ!"
+	
+	para "That's my goal."
+	line "You can keep"
+	cont "scrounging around"
+	cont "in the dirt for"
+	cont "worms."
 
-	para "The guard won't"
-	line "let you through!"
-
-	para "By the way, did"
-	line "your #MON"
-	cont "get any stronger?"
+	para "I only catch the"
+	line "strong ones. And"
+	cont "you know what?"
+	
+	para "If OAK has a lick"
+	line "of sense, he'd"
+	cont "agree with me on"
+	cont "this:"
+	
+	para "Survival of the"
+	line "fittest! That's"
+	cont "what nature is"
+	cont "all about!"
+	
+	para "So."
+	
+	para "Let's see if YOU"
+	line "can survive!"
+	
 	done
 
 _Route22RivalAfterBattleText1::
-	text "I heard #MON"
-	line "LEAGUE has many"
-	cont "tough trainers!"
+	text "Look, <PLAYER>. I'm"
+	line "gonna be honest."
+	
+	para "I don't collect"
+	line "#MON. I'm into"
+	cont "BADGES and WINS."
 
-	para "I have to figure"
-	line "out how to get"
-	cont "past them!"
+	para "I will challenge"
+	line "the KANTO GYM"
+	cont "LEADERS and show"
+	cont "them what a REAL"
+	cont "CHAMPION looks"
+	cont "like!"
+	
+	para "And I'm not gonna"
+	line "let some second-"
+	cont "rate scrub like"
+	cont "you keep lucking"
+	cont "out in battles!"
+	
+	para "I'm gonna beat"
+	line "you, <PLAYER>. I"
+	cont "just need to hit"
+	cont "my stride."
 
-	para "You should quit"
-	line "dawdling and get"
-	cont "a move on!"
+	para "There's got to be"
+	line "some #MON in"
+	cont "KANTO that don't" 
+	cont "totally suck."
+	
+	para "See ya, nerd."
 	done
 
 _Route22RivalDefeatedText1::
-	text "Awww!"
-	line "You just lucked"
-	cont "out!"
+	text "But..."
+	line "I caught that "
+	cont "one just to..."
+	
+	para "... nevermind."
 	prompt
 
 _Route22Text_511bc::

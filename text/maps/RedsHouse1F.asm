@@ -42,5 +42,6 @@ _StandByMeText::
 	done
 
 _TVWrongSideText::
-	text "Oops, wrong side."
+	text "Yep, it's still"
+	line "plugged in."
 	done

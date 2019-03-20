@@ -140,6 +140,7 @@ ViridianCity_TextPointers:
 	dw ViridianCityText13
 	dw ViridianCityText14
 	dw ViridianCityText15
+	dw ViridianCityText16
 
 ViridianCityText1:
 	TX_FAR _ViridianCityText1
@@ -230,43 +231,11 @@ ViridianCityText_19191:
 	db "@"
 
 ViridianCityText6:
-	TX_ASM
-	CheckEvent EVENT_GOT_TM42
-	jr nz, .asm_4e5a0
-	ld hl, ViridianCityText_191ca
-	call PrintText
-	lb bc, TM_42, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld hl, ReceivedTM42Text
-	call PrintText
-	SetEvent EVENT_GOT_TM42
-	jr .asm_3c73c
-.BagFull
-	ld hl, TM42NoRoomText
-	call PrintText
-	jr .asm_3c73c
-.asm_4e5a0
-	ld hl, TM42Explanation
-	call PrintText
-.asm_3c73c
-	jp TextScriptEnd
+	TX_FAR ViridianCityText_191ca
+	db "@"
 
 ViridianCityText_191ca:
 	TX_FAR _ViridianCityText_191ca
-	db "@"
-
-ReceivedTM42Text:
-	TX_FAR _ReceivedTM42Text
-	TX_SFX_ITEM_2
-	db "@"
-
-TM42Explanation:
-	TX_FAR _TM42Explanation
-	db "@"
-
-TM42NoRoomText:
-	TX_FAR _TM42NoRoomText
 	db "@"
 
 ViridianCityText7:
@@ -324,4 +293,8 @@ ViridianCityText13:
 
 ViridianCityText14:
 	TX_FAR _ViridianCityText14
+	db "@"
+
+ViridianCityText16:
+	TX_FAR _ViridianCityText16
 	db "@"

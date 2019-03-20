@@ -390,9 +390,12 @@ _GymStatueText2::
 
 _ViridianCityPokecenterGuyText::
 	text "#MON CENTERs"
-	line "heal your tired,"
-	cont "hurt or fainted"
-	cont "#MON!"
+	line "in KANTO don't"
+	cont "mess around!"
+	
+	para "I'm in and out in"
+	line "seconds. No chit-"
+	cont "chat. It's great!"
 	done
 
 _PewterCityPokecenterGuyText::
@@ -1645,31 +1648,24 @@ _RareCandyText::
 	text "!@@"
 
 _TurnedOnPC1Text::
-	text "<PLAYER> turned on"
-	line "the PC."
+	text "<PLAYER> logged in"
+	line "to the PC."
 	prompt
 
 _AccessedBillsPCText::
-	text "Accessed BILL's"
-	line "PC."
+	text "Logged in to your"
+	line "#MON STORAGE."
 
-	para "Accessed #MON"
-	line "Storage System."
 	prompt
 
 _AccessedSomeonesPCText::
-	text "Accessed someone's"
-	line "PC."
-
-	para "Accessed #MON"
-	line "Storage System."
+	text "Logged in to your"
+	line "#MON STORAGE."
 	prompt
 
 _AccessedMyPCText::
-	text "Accessed my PC."
-
-	para "Accessed Item"
-	line "Storage System."
+	text "Logged in to your"
+	line "ITEM STORAGE."
 	prompt
 
 _TurnedOnPC2Text::
@@ -1745,9 +1741,6 @@ _TossHowManyText::
 _AccessedHoFPCText::
 	text "Accessed #MON"
 	line "LEAGUE's site."
-
-	para "Accessed the HALL"
-	line "OF FAME List."
 	prompt
 
 _SwitchOnText::
@@ -1863,20 +1856,23 @@ _OhFineThenText::
 	text "Oh, fine then.@@"
 
 _GetDexRatedText::
-	text "Want to get your"
-	line "#DEX rated?"
+	text "Hey <PLAYER>!"
+	line "How is the"
+	cont "project going?"
+	
+	para "Care to show me"
+	line "your #DEX?"
 	done
 
 _ClosedOaksPCText::
-	text "Closed link to"
-	line "PROF.OAK's PC.@@"
+	text "Ended call."
+	done
 
 _AccessedOaksPCText::
-	text "Accessed PROF."
-	line "OAK's PC."
+	text "Calling PROF."
+	line "OAK..."
 
-	para "Accessed #DEX"
-	line "Rating System."
+	para "..."
 	prompt
 
 _WhereWouldYouLikeText::
@@ -2591,31 +2587,11 @@ _HMCantDeleteText::
 _PokemonCenterWelcomeText::
 	text "Welcome to our"
 	line "#MON CENTER!"
-
-	para "We heal your"
-	line "#MON back to"
-	cont "perfect health!"
-	prompt
-
-_ShallWeHealYourPokemonText::
-	text "Shall we heal your"
-	line "#MON?"
-	done
-
-_NeedYourPokemonText::
-	text "OK. We'll need"
-	line "your #MON."
-	done
-
-_PokemonFightingFitText::
-	text "Thank you!"
-	line "Your #MON are"
-	cont "fighting fit!"
 	prompt
 
 _PokemonCenterFarewellText::
-	text "We hope to see"
-	line "you again!"
+	text "Thank you for"
+	line "waiting!"
 	done
 
 _CableClubNPCAreaReservedFor2FriendsLinkedByCableText::
@@ -2807,19 +2783,19 @@ _ItemUseBallText07::
 	TX_RAM wBoxMonNicks
 	text " was"
 	line "transferred to"
-	cont "BILL's PC!"
+	cont "<pkmn> STORAGE!"
 	prompt
 
 _ItemUseBallText08::
 	TX_RAM wBoxMonNicks
 	text " was"
 	line "transferred to"
-	cont "someone's PC!"
+	cont "<pkmn> STORAGE!"
 	prompt
 
 _ItemUseBallText06::
-	text "New #DEX data"
-	line "will be added for"
+	text "Ok! The #DEX"
+	line "has new data for"
 	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!@@"

@@ -61,3 +61,4 @@ const_value = 0
 	const PAL_BADGE     ; $22
 	const PAL_CAVE      ; $23
 	const PAL_GAMEFREAK ; $24
+	const PAL_TRUEHERO  ; $25

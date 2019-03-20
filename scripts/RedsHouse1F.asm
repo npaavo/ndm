@@ -3,8 +3,8 @@ RedsHouse1F_Script:
 
 RedsHouse1F_TextPointers:
 	dw RedsHouse1FText1
-	dw RedsHouse1FText2
 	dw PickUpItemText
+	dw RedsHouse1FText2
 
 RedsHouse1FText1: ; Mom
 	TX_ASM

@@ -6,11 +6,11 @@ RedsHouse1F_Object:
 	warp 5, 7, 0, PALLET_TOWN ; exit2
 
 	db 1 ; signs
-	sign 5, 1, 2 ; TV
+	sign 5, 1, 3 ; TV
 
 	db 2 ; objects
 	object SPRITE_MOM, 4, 4, STAY, RIGHT, 1 ; Mom
-	object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 3, SURFBOARD ; get map
+	object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 2, TOWN_MAP ; get map
 
 	; warp-to
 	warp_to 4, 7, REDS_HOUSE_1F_WIDTH

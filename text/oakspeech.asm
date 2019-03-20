@@ -1,4 +1,5 @@
 _OakSpeechText1::
+IF DEF(_RED)
 	text "Hello there!"
 	line "I'm glad you got"
 	cont "my invitation!"
@@ -16,8 +17,14 @@ _OakSpeechText1::
 	cont "moving here every"
 	cont "day!"
 	prompt
+ENDC
+IF DEF(_BLUE)
+	text "a"
+	prompt
+ENDC
 
 _OakSpeechText2A::
+IF DEF(_RED)
 	text "But this has come"
 	line "at a great cost."
 	
@@ -27,8 +34,14 @@ _OakSpeechText2A::
 	cont "being forced out"
 	cont "of their habitat!"
 	prompt 
+ENDC
+IF DEF(_BLUE)
+	text "b"
+	prompt
+ENDC
 
 _OakSpeechText2B::
+IF DEF(_RED)
 	text $51,"Those who study"
 	line "#MON know this"
 	cont "is not good!"
@@ -47,8 +60,14 @@ _OakSpeechText2B::
 	cont "back!"
 	
 	prompt
+ENDC
+IF DEF(_BLUE)
+	text $51,"c"
+	prompt
+ENDC
 
 _IntroducePlayerText::
+IF DEF(_RED)
 	text "That is why I"
 	line "reached out to"
 	cont "expert #MON"
@@ -72,8 +91,14 @@ _IntroducePlayerText::
 	cont "Is it really you?"
 	cont "State your name."
 	prompt
+ENDC
+IF DEF(_BLUE)
+	text "d"
+	prompt
+ENDC
 
 _IntroduceRivalText::
+IF DEF(_RED)
 	text "I hope you don't"
 	line "mind, but I've"
 	cont "contacted other"
@@ -83,8 +108,14 @@ _IntroduceRivalText::
 	para "I'm sure you know"
 	line "this one."
 	prompt
+ENDC
+IF DEF(_BLUE)
+	text "e"
+	prompt 
+ENDC
 
 _OakSpeechText3::
+IF DEF(_RED)
 	text "<PLAYER>!"
 
 	para "Together, we can"
@@ -96,3 +127,8 @@ _OakSpeechText3::
 	cont "Meet me north"
 	cont "of CAMP PALLET!"
 	done
+ENDC 
+IF DEF(_BLUE)
+	text "f"
+	done 
+ENDC

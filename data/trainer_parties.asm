@@ -46,6 +46,7 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
+	dw LoggerData
 
 ; if first byte != FF, then
 	; first byte is level (of all pokemon on this team)
@@ -459,9 +460,17 @@ BlackbeltData:
 ; Victory Road 2F
 	db 43,MACHOKE,MACHOP,MACHOKE,0
 Green1Data:
+IF DEF(_RED)
 	db 5,SQUIRTLE,0
 	db 5,BULBASAUR,0
 	db 5,CHARMANDER,0
+ENDC
+IF DEF(_BLUE)
+	db 2,SQUIRTLE,0
+	db 2,BULBASAUR,0
+	db 2,CHARMANDER,0
+ENDC
+
 ; Route 22
 	db $FF,9,PIDGEY,8,SQUIRTLE,0
 	db $FF,9,PIDGEY,8,BULBASAUR,0
@@ -694,3 +703,8 @@ AgathaData:
 	db $FF,56,GENGAR,56,GOLBAT,55,HAUNTER,58,ARBOK,60,GENGAR,0
 LanceData:
 	db $FF,58,GYARADOS,56,DRAGONAIR,56,DRAGONAIR,60,AERODACTYL,62,DRAGONITE,0
+LoggerData:
+	db 8,MACHOP,KOFFING,0
+	db 8,KOFFING,MACHOP,PARAS,0
+	db 11,MACHOP,PARAS,0
+	db 9,MACHOP,CHARMANDER,0

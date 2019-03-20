@@ -53,3 +53,4 @@ const_value = 1
 	trainer_const CHANNELER     ; $2D
 	trainer_const AGATHA        ; $2E
 	trainer_const LANCE         ; $2F
+	trainer_const LOGGER         ; $30 MOD - Logger 

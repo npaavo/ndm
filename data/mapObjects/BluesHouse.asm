@@ -1,17 +1,24 @@
 BluesHouse_Object:
-	db $a ; border block
+	db $03 ; border block
 
-	db 2 ; warps
-	warp 2, 7, 1, -1
-	warp 3, 7, 1, -1
+	db 7 ; warps
+	warp 18, 11, 5, VIRIDIAN_CITY
+	warp 19, 11, 5, VIRIDIAN_CITY
+	warp 9, 11, 0, ROUTE_2_TRADE_HOUSE
+	warp 0, 8, 1, ROUTE_2_TRADE_HOUSE
+	warp 1, 3, 2, ROUTE_2_TRADE_HOUSE
+	warp 13, 5, 3, ROUTE_2_TRADE_HOUSE
+	warp 21, 5, 4, ROUTE_2_TRADE_HOUSE
 
 	db 0 ; signs
 
-	db 3 ; objects
-	object SPRITE_DAISY, 2, 3, STAY, RIGHT, 1 ; Daisy, sitting by map
-	object SPRITE_DAISY, 6, 4, WALK, 1, 2, 0 ; Daisy, walking around
-	object SPRITE_BOOK_MAP_DEX, 3, 3, STAY, NONE, 3, 0 ; map on table
+	db 0 ; objects
 
 	; warp-to
-	warp_to 2, 7, BLUES_HOUSE_WIDTH
-	warp_to 3, 7, BLUES_HOUSE_WIDTH
+	warp_to 18, 11, BLUES_HOUSE_WIDTH
+	warp_to 19, 11, BLUES_HOUSE_WIDTH
+	warp_to 9, 11, BLUES_HOUSE_WIDTH
+	warp_to 0, 8, BLUES_HOUSE_WIDTH
+	warp_to 1, 3, BLUES_HOUSE_WIDTH
+	warp_to 13, 5, BLUES_HOUSE_WIDTH
+	warp_to 21, 5, BLUES_HOUSE_WIDTH

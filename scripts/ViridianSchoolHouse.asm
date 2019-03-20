@@ -2,13 +2,8 @@ ViridianSchoolHouse_Script:
 	jp EnableAutoTextBoxDrawing
 
 ViridianSchoolHouse_TextPointers:
-	dw SchoolText1
-	dw SchoolText2
+	dw ViridianGateText1
 
-SchoolText1:
-	TX_FAR _SchoolText1
-	db "@"
-
-SchoolText2:
-	TX_FAR _SchoolText2
+ViridianGateText1:
+	TX_FAR _ViridianGateText1
 	db "@"

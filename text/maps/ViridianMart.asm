@@ -4,27 +4,68 @@ _ViridianMartText1::
 	done
 
 _ViridianMartText4::
-	text "Hey! You came from"
-	line "PALLET TOWN?"
+	text "Whoa, is that"
+	line "<PLAYER>?!"
+	
+	para "Hey, over here!"
 	done
 
 ViridianMartParcelQuestText::
-	text "You know PROF."
-	line "OAK, right?"
-
-	para "His order came in."
-	line "Will you take it"
-	cont "to him?"
+	text "I saw you on TV,"
+	line "during the JOHTO"
+	cont "CHAMPIONSHIPS!"
+	
+	para "What's a top"
+	line "TRAINER like you"
+	cont "doing out here?"
+	
+	para "..."
+	line "Helping OAK, huh?"
+	cont "That's cool I"
+	cont "guess."
+	
+	para "I want to be a"
+	line "TRAINER, but my"
+	cont "dad makes me run"
+	cont "the shop. Lame!"
+	
+	para "Anyway, if you're"
+	line "heading back to"
+	cont "the CAMP, could"
+	cont "you take this to"
+	cont "OAK?"
+	
+	para "Looks like he"
+	line "applied to the"
+	cont "KANTO LEAGUE to"
+	cont "approve new"
+	cont "TRAINER IDs. His"
+	cont "stamp arrived."
 
 	para "<PLAYER> got"
 	line "OAK's PARCEL!@@"
 
 _ViridianMartText2::
 	text "This shop sells"
-	line "many ANTIDOTEs."
+	line "all kinds of"
+	cont "cool items!"
+	
+	para "But I can't use "
+	line "any of them, I'm"
+	cont "not a TRAINER."
+	
+	para "I just like to"
+	line "look at them."
 	done
 
 _ViridianMartText3::
-	text "No! POTIONs are"
-	line "all sold out."
+	text "I've been waiting"
+	line "for my TRAINER ID"
+	cont "for weeks now!"
+	para "KANTO post is so"
+	line "slow with all the"
+	cont "wild #MON!"
+	
+	para "We need roads!"
+	
 	done

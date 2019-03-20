@@ -1,20 +1,34 @@
 _ViridianCityText1::
-	text "Those # BALLs"
-	line "at your waist!"
-	cont "You have #MON!"
-
-	para "It's great that"
-	line "you can carry and"
-	cont "use #MON any"
-	cont "time, anywhere!"
+	text "There's a marsh"
+	line "to the west that"
+	cont "has a bunch of"
+	cont "WATER #MON."
+	
+	para "The #MON"
+	line "LEAGUE is trying"
+	cont "to develop the"
+	cont "area, since the"
+	cont "INDIGO PLATEU"
+	cont "is just ahead."
 	done
 
 _ViridianCityText_19122::
-	text "This #MON GYM"
-	line "is always closed."
+	text "That's our #MON"
+	line "GYM! It got built"
+	cont "recently!"
 
-	para "I wonder who the"
-	line "LEADER is?"
+	para "I've heard the"
+	line "LEADER was a "
+	cont "CHAMPION before"
+	cont "they moved here!"
+
+	para "Oh, you just"
+	line "moved to KANTO"
+	cont "too? Welcome!"
+	
+	para "Maybe you can"
+	line "be a GYM LEADER"
+	cont "someday, too!"
 	done
 
 _ViridianCityText_19127::
@@ -23,23 +37,20 @@ _ViridianCityText_19127::
 	done
 
 _ViridianCityText_1914d::
-	text "You want to know"
-	line "about the 2 kinds"
-	cont "of caterpillar"
-	cont "#MON?"
+	text "Have you been in"
+	line "that cave over"
+	cont "there?"
 	done
 
 _ViridianCityText_19152::
-	text "Oh, OK then!"
+	text "It's so tempting!"
+	line "But I can't find"
+	cont "the entrance!"
 	done
 
 _ViridianCityText_19157::
-	text "CATERPIE has no"
-	line "poison, but"
-	cont "WEEDLE does."
-
-	para "Watch out for its"
-	line "POISON STING!"
+	text "Aww, I'm jealous!"
+	line "Tell me how!"
 	done
 
 _ViridianCityText_19175::
@@ -55,6 +66,8 @@ _ViridianCityText_1917a::
 	cont "have to take the"
 	cont "winding trail in"
 	cont "VIRIDIAN FOREST."
+	
+	para "We need roads!"
 	done
 
 _ViridianCityText_19191::
@@ -66,35 +79,21 @@ _ViridianCityText_19191::
 	done
 
 _ViridianCityText_191ca::
-	text "Yawn!"
-	line "I must have dozed"
-	cont "off in the sun."
+	text "My cousin said"
+	line "that there are"
+	cont "rare #MON"
+	cont "in caves, But"
+	cont "I only found"
+	cont "FIRE types."
+	
+	para "Maybe he was"
+	line "talking about a"
+	cont "different cave."
+	
+	para "There's so many"
+	line "of them around"
+	cont "VIRIDIAN CITY."
 
-	para "I had this dream"
-	line "about a DROWZEE"
-	cont "eating my dream."
-	cont "What's this?"
-	cont "Where did this TM"
-	cont "come from?"
-
-	para "This is spooky!"
-	line "Here, you can"
-	cont "have this TM."
-	prompt
-
-_ReceivedTM42Text::
-	text "<PLAYER> received"
-	line "TM42!@@"
-
-_TM42Explanation::
-	text "TM42 contains"
-	line "DREAM EATER..."
-	cont "...Snore..."
-	done
-
-_TM42NoRoomText::
-	text "You have too much"
-	line "stuff already."
 	done
 
 _ViridianCityText_1920a::
@@ -110,20 +109,23 @@ _ViridianCityText_1920a::
 	done
 
 _ViridianCityText_1920f::
-	text "I see you're using"
-	line "a #DEX."
+	text "You're interested"
+	line "in catching new"
+	cont "#MON, right?"
 
-	para "When you catch a"
-	line "#MON, #DEX"
-	cont "is automatically"
-	cont "updated."
-
-	para "What? Don't you"
-	line "know how to catch"
-	cont "#MON?"
-
-	para "I'll show you"
-	line "how to then."
+	para "Kids these days"
+	line "don't know how"
+	cont "it's done. Back"
+	cont "in my day, you"
+	cont "just threw a"
+	cont "#BALL and"
+	cont "yelled ″BE UP!″"
+	
+	para "I caught so many"
+	line "#MON that way."	
+	
+	para "Don't believe me?"
+	line "I'll show you!"
 	done
 
 _ViridianCityText_19214::
@@ -132,9 +134,12 @@ _ViridianCityText_19214::
 	done
 
 _ViridianCityText_19219::
-	text "First, you need"
-	line "to weaken the"
-	cont "target #MON."
+	text "But, if you're a"
+	line "coward, you can"
+	cont "weaken the wild"
+	cont "#MON before"
+	cont "throwing a BALL."
+	
 	done
 
 _ViridianCityText8::
@@ -144,29 +149,28 @@ _ViridianCityText8::
 	done
 
 _ViridianCityText9::
-	text "TRAINER TIPS"
+	text "VIRIDIAN FOREST"
+	line "1km NORTH"
+	
+	para "Keep BUGs away"
+	line "with REPEL!"
+	cont "-VIRIDIAN MART"
 
-	para "Catch #MON"
-	line "and expand your"
-	cont "collection!"
-
-	para "The more you have,"
-	line "the easier it is"
-	cont "to fight!"
+	para "..."
+	line "It's another ad."
 	done
 
 _ViridianCityText10::
-	text "TRAINER TIPS"
+	text "CAMP PALLET"
+	line "1km SOUTH"
+	
+	para "Don't forget to"
+	line "stock up on"
+	cont "camping supplies!"
+	cont "-VIRIDIAN MART"
 
-	para "The battle moves"
-	line "of #MON are"
-	cont "limited by their"
-	cont "POWER POINTs, PP."
-
-	para "To replenish PP,"
-	line "rest your tired"
-	cont "#MON at a"
-	cont "#MON CENTER!"
+	para "..."
+	line "It's an ad."
 	done
 
 _ViridianCityText13::
@@ -177,4 +181,10 @@ _ViridianCityText13::
 _ViridianCityText14::
 	text "The GYM's doors"
 	line "are locked..."
+	done
+
+_ViridianCityText16::
+	text "VIRIDIAN BEACH"
+	para "ROUTE 16"
+	line "to CELADON CITY"
 	done

@@ -1,19 +1,19 @@
 ItemPrices:
-	money 0     ; MASTER_BALL
+	money 10000 ; MASTER_BALL
 	money 1200  ; ULTRA_BALL
 	money 600   ; GREAT_BALL
 	money 200   ; POKE_BALL
 	money 0     ; TOWN_MAP
 	money 0     ; BICYCLE
-	money 0     ; SURFBOARD
+	money 1		; SURFBOARD - MOD?
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
-	money 0     ; MOON_STONE
+	money 4000  ; MOON_STONE
 	money 100   ; ANTIDOTE
-	money 250   ; BURN_HEAL
-	money 250   ; ICE_HEAL
-	money 200   ; AWAKENING
-	money 200   ; PARLYZ_HEAL
+	money 100   ; BURN_HEAL
+	money 100   ; ICE_HEAL
+	money 100   ; AWAKENING
+	money 100   ; PARLYZ_HEAL
 	money 3000  ; FULL_RESTORE
 	money 2500  ; MAX_POTION
 	money 1500  ; HYPER_POTION
@@ -33,22 +33,22 @@ ItemPrices:
 	money 2100  ; FIRE_STONE
 	money 2100  ; THUNDER_STONE
 	money 2100  ; WATER_STONE
-	money 9800  ; HP_UP
-	money 9800  ; PROTEIN
-	money 9800  ; IRON
-	money 9800  ; CARBOS
-	money 9800  ; CALCIUM
-	money 4800  ; RARE_CANDY
+	money 5000  ; HP_UP
+	money 5000  ; PROTEIN
+	money 5000  ; IRON
+	money 5000  ; CARBOS
+	money 5000  ; CALCIUM
+	money 1     ; RARE_CANDY
 	money 0     ; DOME_FOSSIL
 	money 0     ; HELIX_FOSSIL
 	money 0     ; SECRET_KEY
-	money 0     ; XXX
+	money 1     ; LANTERN - MOD
 	money 0     ; BIKE_VOUCHER
 	money 950   ; X_ACCURACY
 	money 2100  ; LEAF_STONE
 	money 0     ; CARD_KEY
 	money 10000 ; NUGGET
-	money 9800  ; XXX PP_UP
+	money 1     ; SCYTHE - MOD
 	money 1000  ; POKE_DOLL
 	money 600   ; FULL_HEAL
 	money 1500  ; REVIVE
@@ -64,9 +64,9 @@ ItemPrices:
 	money 0     ; S_S_TICKET
 	money 0     ; GOLD_TEETH
 	money 500   ; X_ATTACK
-	money 550   ; X_DEFEND
+	money 350   ; X_DEFEND
 	money 350   ; X_SPEED
-	money 350   ; X_SPECIAL
+	money 500   ; X_SPECIAL
 	money 0     ; COIN_CASE
 	money 0     ; OAKS_PARCEL
 	money 0     ; ITEMFINDER
@@ -77,11 +77,11 @@ ItemPrices:
 	money 0     ; OLD_ROD
 	money 0     ; GOOD_ROD
 	money 0     ; SUPER_ROD
-	money 0     ; PP_UP
-	money 0     ; ETHER
-	money 0     ; MAX_ETHER
-	money 0     ; ELIXER
-	money 0     ; MAX_ELIXER
+	money 5000  ; PP_UP (REAL)
+	money 300   ; ETHER
+	money 1000  ; MAX_ETHER
+	money 1000  ; ELIXER
+	money 5000  ; MAX_ELIXER
 	money 0     ; FLOOR_B2F
 	money 0     ; FLOOR_B1F
 	money 0     ; FLOOR_1F

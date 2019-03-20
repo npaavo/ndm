@@ -1,5 +1,5 @@
 Music_PokemonTower_Ch0::
-	tempo 152
+	tempo 152 ; 152
 	volume 7, 7
 	duty 3
 	toggleperfectpitch

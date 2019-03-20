@@ -1,51 +1,58 @@
 _OaksLabGaryText1::
-	text "<RIVAL>: Yo"
-	line "<PLAYER>! Gramps"
-	cont "isn't around!"
+	text "<RIVAL>: So, you"
+	line "finally made it."
+	para "OAK isn't here"
+	line "yet. Why don't you"
+	cont "make yourself"
+	cont "useful and find"
+	cont "him?"
 	done
 
 _OaksLabText40::
-	text "<RIVAL>: Heh, I"
-	line "don't need to be"
-	cont "greedy like you!"
+	text "<RIVAL>: I can"
+	line "win with any of"
+	cont "these."
 
-	para "Go ahead and"
-	line "choose, <PLAYER>!"
+	para "I'll let 2nd place"
+	line "go first. Heh."
 	done
 
 _OaksLabText41::
-	text "<RIVAL>: My"
-	line "#MON looks a"
-	cont "lot stronger."
+	text "<RIVAL>: Already"
+	line "doubting your"
+	cont "choice? Tough!"
+	
+	para "I'm not into"
+	line "trading."
 	done
 
 _OaksLabText39::
-	text "Those are #"
-	line "BALLs. They"
-	cont "contain #MON!"
+	text "OAK seems to "
+	line "have left some"
+	cont "#MON here."
 	done
 
 _OaksLabCharmanderText::
-	text "So! You want the"
-	line "fire #MON,"
-	cont "CHARMANDER?"
+	text "It seems full of"
+	line "promise, somehow."
+	cont "Pick CHARMANDER?"
 	done
 
 _OaksLabSquirtleText::
-	text "So! You want the"
-	line "water #MON,"
-	cont "SQUIRTLE?"
+	text "It reminds you"
+	line "of home, somehow."
+	cont "Pick SQUIRTLE?"
 	done
 
 _OaksLabBulbasaurText::
-	text "So! You want the"
-	line "plant #MON,"
-	cont "BULBASAUR?"
+	text "Seeing it makes"
+	line "you feel brave."
+	cont "Pick BULBASAUR?"
 	done
 
 _OaksLabMonEnergeticText::
-	text "This #MON is"
-	line "really energetic!"
+	text "Good choice! A"
+	line "fine #MON!"
 	prompt
 
 _OaksLabReceivedMonText::
@@ -55,8 +62,8 @@ _OaksLabReceivedMonText::
 	text "!@@"
 
 _OaksLabLastMonText::
-	text "That's PROF.OAK's"
-	line "last #MON!"
+	text "You can catch"
+	line "your own."
 	done
 
 _OaksLabText_1d2f0::
@@ -82,15 +89,16 @@ _OaksLabText_1d2fa::
 _OaksLabDeliverParcelText1::
 	text "OAK: Oh, <PLAYER>!"
 
-	para "How is my old"
-	line "#MON?"
+	para "How is training"
+	line "going?"
 
-	para "Well, it seems to"
-	line "like you a lot."
+	para "The #MON I"
+	line "gave you is"
+	cont "looking strong."
 
-	para "You must be"
-	line "talented as a"
-	cont "#MON trainer!"
+	para "Your reputation"
+	line "as a top TRAINER"
+	cont "shines through!"
 
 	para "What? You have"
 	line "something for me?"
@@ -100,16 +108,33 @@ _OaksLabDeliverParcelText1::
 
 _OaksLabDeliverParcelText2::
 	text ""
-	para "Ah! This is the"
-	line "custom # BALL"
-	cont "I ordered!"
-	cont "Thank you!"
+	para "... Oh no! I was"
+	line "supposed to"
+	cont "stamp your ID"
+	cont "before you left!"
+	
+	para "I just applied to"
+	line "approve LICENSEs"
+	cont "last month."
+	
+	para "It's illegal to"
+	line "train #MON"
+	cont "without a stamp"
+	cont "of this seal!"
+	
+	para "... Wait! We"
+	line "need to find"
+	cont "<RIVAL> before he"
+	cont "gets in trouble!"
+	
 	done
 
 _OaksLabAroundWorldText::
-	text "#MON around the"
-	line "world wait for"
-	cont "you, <PLAYER>!"
+	text "I'm beginning to"
+	line "doubt <RIVAL>..."
+	
+	para "...but I can count"
+	line "on you, right?"
 	done
 
 _OaksLabGivePokeballsText1::
@@ -182,51 +207,117 @@ _OaksLabText_1d340::
 	done
 
 _OaksLabRivalWaitingText::
-	text "<RIVAL>: Gramps!"
-	line "I'm fed up with"
-	cont "waiting!"
+
+IF DEF(_RED)
+	text "<RIVAL>: About"
+	line "time you show up!"
+	
+	para "I was about to"
+	line "pack up and head"
+	cont "back to JOHTO!"
+	
+	para "People there"
+	line "respect my time!"
 	done
+ENDC
+IF DEF(_BLUE)
+	text "a" 
+	done
+ENDC
 
 _OaksLabChooseMonText::
-	text "OAK: <RIVAL>?"
-	line "Let me think..."
+IF DEF(_RED)
+	text "OAK: Sorry about"
+	line "that! But, we're"
+	cont "all here now."
 
-	para "Oh, that's right,"
-	line "I told you to"
-	cont "come! Just wait!"
+	para "<PLAYER>! <RIVAL>!"
+	line "Thank you again"
+	cont "for answering my"
+	cont "call. Allow me"
+	cont "to fully brief"
+	cont "you on our plan."
+	
+	para "This region is"
+	line "full of wonderful"
+	cont "kinds of #MON."
+	
+	para "Forests, caves,"
+	line "rivers and seas"
+	cont "all contain a"
+	cont "wide variety of"
+	cont "species!"
+	
+	para "But the cities"
+	line "are pushing the"
+	cont "wildlife out,"
+	cont "and the #MON"
+	cont "are becoming"
+	cont "hostile!"
+	
+	para "I need you two"
+	line "to capture one of"
+	cont "every kind. We"
+	cont "must understand"
+	cont "these magnificent"
+	cont "creatures, and"
+	cont "find ways to"
+	cont "coexist!"
 
-	para "Here, <PLAYER>!"
-
-	para "There are 3"
-	line "#MON here!"
-
-	para "Haha!"
-
-	para "They are inside"
-	line "the # BALLs."
-
-	para "When I was young,"
-	line "I was a serious"
-	cont "#MON trainer!"
-
-	para "In my old age, I"
-	line "have only 3 left,"
-	cont "but you can have"
-	cont "one! Choose!"
+	para "To help you do"
+	line "that, I'll give"
+	cont "you a #MON"
+	cont "to start out!"
+	
+	para "You'll need one"
+	line "to protect you"
+	cont "from wild ones!"
 	done
-
+ENDC
+IF DEF(_BLUE)
+	text "b" 
+	done
+ENDC
 _OaksLabRivalInterjectionText::
-	text "<RIVAL>: Hey!"
-	line "Gramps! What"
-	cont "about me?"
+IF DEF(_RED)
+	text "<RIVAL>: Tch."
+	line "I don't see why"
+	cont "we couldn't have"
+	cont "brought our own"
+	cont "#MON... You"
+	cont "know, the ones"
+	cont "that won the"
+	cont "CHAMPIONSHIP?"
+	
+	para "...or, in the case"
+	line "of <PLAYER>, at"
+	cont "least came in 2nd."
 	done
+ENDC
+IF DEF(_BLUE)
+	text "c" 
+	done
+ENDC
 
 _OaksLabBePatientText::
-	text "OAK: Be patient!"
-	line "<RIVAL>, you can"
-	cont "have one too!"
+IF DEF(_RED)
+	text "OAK: The last"
+	line "thing we need is"
+	cont "invasive species."
+	
+	para "Now! Go on and"
+	line "choose!"
+	
+	para "Don't worry, they"
+	line "aren't rare. You"
+	cont "can catch these"
+	cont "around VIRIDIAN!"
 	done
-
+ENDC
+IF DEF(_BLUE)
+	text "d" 
+	done
+ENDC
 _OaksLabLeavingText::
 	text "OAK: Hey! Don't go"
 	line "away yet!"
@@ -244,56 +335,110 @@ _OaksLabRivalReceivedMonText::
 	text "!@@"
 
 _OaksLabRivalChallengeText::
-	text "<RIVAL>: Wait"
-	line "<PLAYER>!"
-	cont "Let's check out"
-	cont "our #MON!"
-
+IF DEF(_RED)
+	text "<RIVAL>: Wait."
+	line "<PLAYER>."
+	
+	para "It's been a hot"
+	line "minute since I"
+	cont "mopped the floor"
+	cont "with you."
+	
 	para "Come on, I'll take"
-	line "you on!"
+	line "you on, and win!"
+	
+	para "Even with this"
+	line "weak #MON!"
 	done
+ENDC
+IF DEF(_BLUE)
+	text "e" 
+	done
+ENDC
 
 _OaksLabText_1d3be::
-	text "WHAT?"
-	line "Unbelievable!"
-	cont "I picked the"
-	cont "wrong #MON!"
+	text "Tch."
+	line "You're lucky you"
+	cont "picked a strong"
+	cont "one."
 	prompt
 
 _OaksLabText_1d3c3::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text "<RIVAL>: Deja"
+	line "vu! Hahahah!"
 	prompt
 
 _OaksLabRivalToughenUpText::
-	text "<RIVAL>: Okay!"
-	line "I'll make my"
-	cont "#MON fight to"
-	cont "toughen it up!"
+IF DEF(_RED)
+	text "<RIVAL>: Look,"
+	line "OAK. I'll help you"
+	cont "with the project."
 
-	para "<PLAYER>! Gramps!"
-	line "Smell you later!"
+	para "But my first"
+	line "priority is to"
+	cont "conquer the KANTO"
+	cont "#MON LEAGUE."
+	
+	para "Thanks for the"
+	line "TRAINER LICENSE."
+	cont "Later."
+	
 	done
-
+ENDC
+IF DEF(_BLUE)
+	text "f" 
+	done
+ENDC
 _OaksLabText21::
-	text "<RIVAL>: Gramps!"
+	text "<RIVAL>: OOOAK!"
 	done
 
 _OaksLabText22::
-	text "<RIVAL>: What did"
-	line "you call me for?"
-	done
+IF DEF(_RED)
+	text "What kind of hack"
+	line "job is this?!"
+	
+	para "I almost got"
+	line "arrested in"
+	cont "VIRIDIAN for an"
+	cont "unapproved ID!"
 
+    para "Good thing they"
+	line "recognized me!"
+	done
+ENDC
+IF DEF(_BLUE)
+	text "a" 
+	done
+ENDC
 _OaksLabText23::
-	text "OAK: Oh right! I"
-	line "have a request"
-	cont "of you two."
+IF DEF(_RED)
+	text "OAK: I'm so"
+	line "sorry! I'm new"
+	cont "to this!"
+	
+	para "I'm a researcher,"
+	line "not a bureaucrat!"
+	
+	para "But, <PLAYER> has"
+	line "delivered my"
+	cont "stamp. We can fix"
+	cont "this now."
+	
+	para "This is also a"
+	line "good opportunity"
+	cont "to give you this!"
 	done
-
+ENDC
+IF DEF(_BLUE)
+	text "b" 
+	done
+ENDC
 _OaksLabText24::
+IF DEF(_RED)
 	text "On the desk there"
 	line "is my invention,"
-	cont "#DEX!"
+	cont "the #DEX!"
 
 	para "It automatically"
 	line "records data on"
@@ -302,57 +447,76 @@ _OaksLabText24::
 
 	para "It's a hi-tech"
 	line "encyclopedia!"
+	
 	done
+ENDC
+IF DEF(_BLUE)
+	text "c" 
+	done
+ENDC
 
 _OaksLabText25::
-	text "OAK: <PLAYER> and"
-	line "<RIVAL>! Take"
-	cont "these with you!"
-
-	para "<PLAYER> got"
+IF DEF(_RED)
+	text "I was a little"
+	line "unsure if I"
+	cont "should give you"
+	cont "it, since it is"
+	cont "only a prototype"
+	cont "right now, but"
+	cont "what the heck!"
+ENDC
+IF DEF(_BLUE)
+	text "d" 
+	done
+ENDC
+	para "<PLAYER> got the"
 	line "#DEX from OAK!@@"
 
 _OaksLabText26::
-	text "To make a complete"
+
+IF DEF(_RED)
+	text "Making a complete"
 	line "guide on all the"
 	cont "#MON in the"
 	cont "world..."
 
-	para "That was my dream!"
-
-	para "But, I'm too old!"
-	line "I can't do it!"
-
-	para "So, I want you two"
-	line "to fulfill my"
-	cont "dream for me!"
-
-	para "Get moving, you"
-	line "two!"
+	para "Future TRAINERs"
+	line "will be relying"
+	cont "on our finds!"
 
 	para "This is a great"
 	line "undertaking in"
 	cont "#MON history!"
 	done
-
-_OaksLabText27::
-	text "<RIVAL>: Alright"
-	line "Gramps! Leave it"
-	cont "all to me!"
-
-	para "<PLAYER>, I hate to"
-	line "say it, but I"
-	cont "don't need you!"
-
-	para "I know! I'll"
-	line "borrow a TOWN MAP"
-	cont "from my sis!"
-
-	para "I'll tell her not"
-	line "to lend you one,"
-	cont "<PLAYER>! Hahaha!"
+ENDC
+IF DEF(_BLUE)
+	text "e" 
 	done
+ENDC
+_OaksLabText27::
+IF DEF(_RED)
+	text "<RIVAL>: Sure."
+	line "I'm sure there's"
+	cont "SOME strong ones"
+	cont "out here."
 
+	para "I'll catch what"
+	line "I need to beat"
+	cont "the KANTO GYM"
+	cont "LEADERS."
+	
+	para "<PLAYER>, catch"
+	line "the weak ones"
+	cont "for me."
+	
+	para "See ya, nerds!"
+	
+	done
+ENDC
+IF DEF(_BLUE)
+	text "f" 
+	done
+ENDC
 _OaksLabText_1d405::
 	text "I study #MON as"
 	line "PROF.OAK's AIDE."

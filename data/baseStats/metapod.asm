@@ -12,9 +12,9 @@ INCBIN "pic/bmon/metapod.pic",0,1 ; 55, sprite dimensions
 dw MetapodPicFront
 dw MetapodPicBack
 ; attacks known at lvl 0
+db TACKLE
+db STRING_SHOT
 db HARDEN
-db 0
-db 0
 db 0
 db 0 ; growth rate
 ; learnset

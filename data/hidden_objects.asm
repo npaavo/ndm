@@ -224,7 +224,7 @@ ViridianPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -262,7 +262,7 @@ PewterPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -270,7 +270,7 @@ CeruleanPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -286,12 +286,12 @@ LavenderPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
 VermilionPokecenterHiddenObjects:
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $04,$00,$04
@@ -345,7 +345,7 @@ CeladonPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -462,7 +462,7 @@ CeladonHotelHiddenObjects:
 	dw PrintBenchGuyText
 	db $FF
 FuchsiaPokecenterHiddenObjects:
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $04,$00,$04
@@ -501,7 +501,7 @@ CinnabarPokecenterHiddenObjects:
 	db $04,$00,$04
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -513,7 +513,7 @@ MtMoonPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -521,7 +521,7 @@ RockTunnelPokecenterHiddenObjects:
 	db $04,$00,$08
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF
@@ -589,7 +589,7 @@ SaffronPokecenterHiddenObjects:
 	db $04,$00,$04
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$0d,$04
+	db $03,$07,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF

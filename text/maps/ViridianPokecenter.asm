@@ -1,16 +1,23 @@
 _ViridianPokeCenterText2::
-	text "You can use that"
-	line "PC in the corner."
+	text "Lots of TRAINERS"
+	line "visit VIRIDIAN"
+	cont "on their way to"
+	cont "INDIGO PLATEAU."
+	
+	para "Some are also"
+	line "just starting"
+	cont "their journey."
 
-	para "The receptionist"
-	line "told me. So kind!"
+	para "You see all kinds"
+	line "around here!"
 	done
 
 _ViridianPokeCenterText3::
-	text "There's a #MON"
-	line "CENTER in every"
-	cont "town ahead."
+	text "The GYM LEADER"
+	line "totally thrashed"
+	cont "my #MON!"
 
-	para "They don't charge"
-	line "any money either!"
+	para "I need to train"
+	line "much harder to"
+	cont "be on her level."
 	done

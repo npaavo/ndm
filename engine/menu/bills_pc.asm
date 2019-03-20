@@ -85,10 +85,10 @@ DisplayPCMainMenu::
 	ld [H_AUTOBGTRANSFERENABLED], a
 	ret
 
-SomeonesPCText:   db "SOMEONE's PC@"
-BillsPCText:      db "BILL's PC@"
+SomeonesPCText:   db "<pkmn> STORAGE@"
+BillsPCText:      db "<pkmn> STORAGE@"
 PlayersPCText:    db "'s PC@"
-OaksPCText:       db "PROF.OAK's PC@"
+OaksPCText:       db "Call OAK@"
 PKMNLeaguePCText: db $4a, "LEAGUE@"
 LogOffPCText:     db "LOG OFF@"
 

@@ -6,7 +6,7 @@ db 43 ; base speed
 db 50 ; base special
 db WATER ; species type 1
 db WATER ; species type 2
-db 45 ; catch rate
+db 120 ; catch rate
 db 66 ; base exp yield
 INCBIN "pic/bmon/squirtle.pic",0,1 ; 55, sprite dimensions
 dw SquirtlePicFront

@@ -4,7 +4,7 @@ Route16_h:
 	dw Route16_Blocks ; blocks
 	dw Route16_TextPointers ; texts
 	dw Route16_Script ; scripts
-	db SOUTH | EAST ; connections
-	SOUTH_MAP_CONNECTION ROUTE_16, ROUTE_17, 0, 0, Route17_Blocks
+	db WEST | EAST ; connections
+	WEST_MAP_CONNECTION ROUTE_16, VIRIDIAN_CITY, -4, 0, ViridianCity_Blocks
 	EAST_MAP_CONNECTION ROUTE_16, CELADON_CITY, -3, 1, CeladonCity_Blocks, 1
 	dw Route16_Object ; objects

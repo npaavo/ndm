@@ -737,6 +737,10 @@ UncompressMonSprite::
 	ld a, BANK(FossilKabutopsPic)
 	jr z, .GotBank
 	ld a, b
+	cp VISIGO
+	ld a, BANK(VisigoPicFront)
+	jr z, .GotBank
+	ld a, b
 	cp TANGELA + 1
 	ld a, BANK(TangelaPicFront)
 	jr c, .GotBank

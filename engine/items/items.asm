@@ -22,7 +22,7 @@ ItemUsePtrTable:
 	dw ItemUseBall       ; POKE_BALL
 	dw ItemUseTownMap    ; TOWN_MAP
 	dw ItemUseBicycle    ; BICYCLE
-	dw ItemUseSurfboard  ; out-of-battle Surf effect
+	dw ItemUseSurfboard  ; SURFBOARD- out-of-battle Surf effect
 	dw ItemUseBall       ; SAFARI_BALL
 	dw ItemUsePokedex    ; POKEDEX
 	dw ItemUseEvoStone   ; MOON_STONE
@@ -59,13 +59,13 @@ ItemUsePtrTable:
 	dw UnusableItem      ; DOME_FOSSIL
 	dw UnusableItem      ; HELIX_FOSSIL
 	dw UnusableItem      ; SECRET_KEY
-	dw UnusableItem
+	dw ItemUseLantern    ; LANTERN - MOD, does FLASH
 	dw UnusableItem      ; BIKE_VOUCHER
 	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseEvoStone   ; LEAF_STONE
 	dw ItemUseCardKey    ; CARD_KEY
 	dw UnusableItem      ; NUGGET
-	dw UnusableItem      ; ??? PP_UP
+	dw ItemUseScythe     ; SCYTHE - MOD, does CUT
 	dw ItemUsePokedoll   ; POKE_DOLL
 	dw ItemUseMedicine   ; FULL_HEAL
 	dw ItemUseMedicine   ; REVIVE
@@ -345,7 +345,6 @@ ItemUseBall:
 	ld b, 150
 	cp ULTRA_BALL
 	jr z, .skip4
-
 .skip4
 ; Let Y = (CatchRate * 100) / BallFactor2. Calculate Y.
 	ld a, b
@@ -751,6 +750,54 @@ SurfingGotOnText:
 SurfingNoPlaceToGetOffText:
 	TX_FAR _SurfingNoPlaceToGetOffText
 	db "@"
+
+; MOD - simulates flash
+ItemUseLantern:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	ld a, [wMapPalOffset]
+	cp 0
+	jr nz, .LightTheRoom
+	ld hl, CanSeeFineText
+	jr .done
+.LightTheRoom	
+	xor a
+	ld [wMapPalOffset], a
+	ld a, [wGrassRate]  ;double encounter rate
+	sla a
+	ld [wGrassRate], a
+	ld a, [wWaterRate]  ;double encounter rate
+	sla a
+	ld [wWaterRate], a
+	ld hl, UseLanternText
+.done
+	call PrintText
+	ret
+
+UseLanternText:
+	TX_FAR _UseLanternText
+	db "@"
+	
+CanSeeFineText:
+	TX_FAR _CanSeeFineText
+	db "@"
+	
+_UseLanternText::
+	text "You light the"
+	line "LANTERN."
+	prompt 
+	
+_CanSeeFineText::
+	text "You can see around"
+	line "here just fine!"
+	prompt	
+	
+; MOD - simulates cut
+ItemUseScythe:
+	predef UsedCut
+	jp CloseTextDisplay
+	ret 
 
 ItemUsePokedex:
 	predef_jump ShowPokedexMenu

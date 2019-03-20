@@ -45,13 +45,13 @@ SAFARI_ROCK           EQU $16 ; overload
 	const DOME_FOSSIL   ; $29
 	const HELIX_FOSSIL  ; $2A
 	const SECRET_KEY    ; $2B
-	const UNUSED_ITEM   ; $2C "?????"
+	const LANTERN	    ; $2C MOD - LANTERN
 	const BIKE_VOUCHER  ; $2D
 	const X_ACCURACY    ; $2E
 	const LEAF_STONE    ; $2F
 	const CARD_KEY      ; $30
 	const NUGGET        ; $31
-	const PP_UP_2       ; $32
+	const SCYTHE        ; $32
 	const POKE_DOLL     ; $33
 	const FULL_HEAL     ; $34
 	const REVIVE        ; $35
@@ -80,7 +80,7 @@ SAFARI_ROCK           EQU $16 ; overload
 	const OLD_ROD       ; $4C
 	const GOOD_ROD      ; $4D
 	const SUPER_ROD     ; $4E
-	const PP_UP         ; $4F
+	const PP_UP         ; $4F - the real one
 	const ETHER         ; $50
 	const MAX_ETHER     ; $51
 	const ELIXER        ; $52

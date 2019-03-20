@@ -298,6 +298,16 @@ _TangelaDexEntry::
 	next "shake as it walks"
 	dex
 
+_VisigoDexEntry::
+	text "Singularly driven"
+	next "to consume, and is"
+	next "said to be an omen"
+
+	page "of greed. Whenever"
+	next "it eats, it only"
+	next "gets hungrier."
+	dex
+
 _GrowlitheDexEntry::
 	text "Very protective"
 	next "of its territory."

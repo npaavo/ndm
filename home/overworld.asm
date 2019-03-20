@@ -493,15 +493,13 @@ WarpFound2::
 	ld a, [wCurMapWidth]
 	ld [wUnusedD366], a ; not read
 	ld a, [hWarpDestinationMap]
-	ld [wCurMap], a
-	cp ROCK_TUNNEL_1F
-	jr nz, .notRockTunnel
-	ld a, $06
-	ld [wMapPalOffset], a
-	call GBFadeOutToBlack
-.notRockTunnel
+	ld [wCurMap], a	
+	
+	; ===== Custom dark map loop
+	call CheckAndSetDarkMaps
 	call PlayMapChangeSound
 	jr .done
+	; ===== Custom dark map loop
 
 ; for maps that can have the 0xFF destination map, which means to return to the outside map
 ; not all these maps are necessarily indoors, though
@@ -521,6 +519,7 @@ WarpFound2::
 	call LeaveMapAnim
 	jr .skipMapChangeSound
 .notWarpPad
+	call CheckAndSetDarkMaps
 	call PlayMapChangeSound
 .skipMapChangeSound
 	ld hl, wd736
@@ -531,13 +530,45 @@ WarpFound2::
 	ld a, [wLastMap]
 	ld [wCurMap], a
 	call PlayMapChangeSound
-	xor a
+	xor a ; outside is always bright
 	ld [wMapPalOffset], a
 .done
 	ld hl, wd736
 	set 0, [hl] ; have the player's sprite step out from the door (if there is one)
 	call IgnoreInputForHalfSecond
 	jp EnterMap
+
+; let's have multiple dark maps k
+; these should be entry-point only. Otherwise, the player
+; needs to re-flash when entering, and that's kind of lame
+
+CheckAndSetDarkMaps::
+	ld a, [wCurMap]
+	ld c, a
+	ld hl, DarkMaps     ; table of maps to dark on enter
+.DarkLoop                 
+	ld a, [hli]
+	cp c            	   ; does it match the map about to be used? (A - C == 0)
+	jr z, .DarkThisMap     ; if so, do the darkness
+	inc a                  ; move on to the next map. 
+	jr nz, .DarkLoop       ; (FF terminates loop because if c = FF and is inc, it becomes 0)
+	;} fall through 
+	xor a					
+	ld [wMapPalOffset], a  ; otherwise, make it not-dark.
+	jr .done
+.DarkThisMap
+	ld a, $06
+	ld [wMapPalOffset], a
+.done
+	ret 
+	
+DarkMaps:
+	db ROCK_TUNNEL_1F
+	db BLUES_HOUSE
+	db ROUTE_2_TRADE_HOUSE
+	db REDS_HOUSE_2F
+	db $FF
+
 
 ContinueCheckWarpsNoCollisionLoop::
 	inc b ; increment warp number

@@ -323,6 +323,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,0    ; CHANNELER
 	db 1,0    ; AGATHA
 	db 1,3,0  ; LANCE
+	db 0      ; LOGGER - MOD
 
 INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
 
@@ -419,6 +420,7 @@ TrainerAIPointers:
 	dbw 3,GenericAI
 	dbw 2,AgathaAI ; agatha
 	dbw 1,LanceAI ; lance
+	dbw 1,GenericAI ; Logger
 
 JugglerAI:
 	cp $40

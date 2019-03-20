@@ -4,6 +4,7 @@ _OakAppearsText::
 	done
 
 _OakWalksUpText::
+IF DEF(_RED)
 	text "I guess it's good"
 	line "you're up and out"
 	cont "earlier than me!"
@@ -14,7 +15,11 @@ _OakWalksUpText::
 	cont "just getting"
 	cont "ready!"
 	done
-
+ENDC
+IF DEF(_BLUE)
+	text "a" 
+	done
+ENDC
 _PalletTownText2::
 	text "PALLET CAMP is"
 	line "ok, I guess."

@@ -33,7 +33,7 @@ ENDM
 	mapconst ROUTE_14,                      27, 10 ; $19
 	mapconst ROUTE_15,                       9, 30 ; $1A
 	mapconst ROUTE_16,                       9, 20 ; $1B
-	mapconst ROUTE_17,                      72, 10 ; $1C
+	mapconst ROUTE_17,                      10, 10 ; $1C
 	mapconst ROUTE_18,                       9, 25 ; $1D
 	mapconst ROUTE_19,                      27, 10 ; $1E
 	mapconst ROUTE_20,                       9, 50 ; $1F
@@ -43,17 +43,17 @@ ENDM
 	mapconst ROUTE_24,                      18, 10 ; $23
 	mapconst ROUTE_25,                       9, 30 ; $24
 	mapconst REDS_HOUSE_1F,                  4,  4 ; $25
-	mapconst REDS_HOUSE_2F,                  7,  7 ; $26
-	mapconst BLUES_HOUSE,                    4,  4 ; $27
+	mapconst REDS_HOUSE_2F,                  7,  7 ; $26 - MOD lapras cave
+	mapconst BLUES_HOUSE,                    6,  11 ; $27  - MOD upstairs of viridian cave 2 ($30)
 	mapconst OAKS_LAB,                       6,  5 ; $28
-	mapconst VIRIDIAN_POKECENTER,            4,  7 ; $29
+	mapconst VIRIDIAN_POKECENTER,            4,  4 ; $29
 	mapconst VIRIDIAN_MART,                  4,  4 ; $2A
-	mapconst VIRIDIAN_SCHOOL_HOUSE,          4,  4 ; $2B
-	mapconst VIRIDIAN_NICKNAME_HOUSE,        4,  4 ; $2C
+	mapconst VIRIDIAN_SCHOOL_HOUSE,          3,  4 ; $2B - MOD viridian east gate
+	mapconst VIRIDIAN_NICKNAME_HOUSE,        6,  8 ; $2C - MOD viridian fire cave
 	mapconst VIRIDIAN_GYM,                   9, 10 ; $2D
 	mapconst DIGLETTS_CAVE_ROUTE_2,          4,  4 ; $2E
 	mapconst VIRIDIAN_FOREST_NORTH_GATE,     4,  5 ; $2F
-	mapconst ROUTE_2_TRADE_HOUSE,            4,  4 ; $30
+	mapconst ROUTE_2_TRADE_HOUSE,            6,  11 ; $30 - MOD basement of viridian cave 2 ($27)
 	mapconst ROUTE_2_GATE,                   4,  5 ; $31
 	mapconst VIRIDIAN_FOREST_SOUTH_GATE,     4,  5 ; $32
 	mapconst VIRIDIAN_FOREST,               24, 17 ; $33
@@ -63,17 +63,17 @@ ENDM
 	mapconst PEWTER_NIDORAN_HOUSE,           4,  4 ; $37
 	mapconst PEWTER_MART,                    4,  4 ; $38
 	mapconst PEWTER_SPEECH_HOUSE,            4,  4 ; $39
-	mapconst PEWTER_POKECENTER,              4,  7 ; $3A
+	mapconst PEWTER_POKECENTER,              4,  4 ; $3A
 	mapconst MT_MOON_1F,                    18, 20 ; $3B
 	mapconst MT_MOON_B1F,                   14, 14 ; $3C
 	mapconst MT_MOON_B2F,                   18, 20 ; $3D
 	mapconst CERULEAN_TRASHED_HOUSE,         4,  4 ; $3E
 	mapconst CERULEAN_TRADE_HOUSE,           4,  4 ; $3F
-	mapconst CERULEAN_POKECENTER,            4,  7 ; $40
+	mapconst CERULEAN_POKECENTER,            4,  4 ; $40
 	mapconst CERULEAN_GYM,                   7,  5 ; $41
 	mapconst BIKE_SHOP,                      4,  4 ; $42
 	mapconst CERULEAN_MART,                  4,  4 ; $43
-	mapconst MT_MOON_POKECENTER,             4,  7 ; $44
+	mapconst MT_MOON_POKECENTER,             4,  4 ; $44
 	mapconst CERULEAN_TRASHED_HOUSE_COPY,    4,  4 ; $45
 	mapconst ROUTE_5_GATE,                   3,  4 ; $46
 	mapconst UNDERGROUND_PATH_ROUTE_5,       4,  4 ; $47
@@ -86,7 +86,7 @@ ENDM
 	mapconst UNDERGROUND_PATH_ROUTE_7_COPY,  4,  4 ; $4E
 	mapconst ROUTE_8_GATE,                   4,  3 ; $4F
 	mapconst UNDERGROUND_PATH_ROUTE_8,       4,  4 ; $50
-	mapconst ROCK_TUNNEL_POKECENTER,         4,  7 ; $51
+	mapconst ROCK_TUNNEL_POKECENTER,         4,  4 ; $51
 	mapconst ROCK_TUNNEL_1F,                18, 20 ; $52
 	mapconst POWER_PLANT,                   18, 20 ; $53
 	mapconst ROUTE_11_GATE_1F,               5,  4 ; $54
@@ -94,7 +94,7 @@ ENDM
 	mapconst ROUTE_11_GATE_2F,               4,  4 ; $56
 	mapconst ROUTE_12_GATE_1F,               4,  5 ; $57
 	mapconst BILLS_HOUSE,                    4,  4 ; $58
-	mapconst VERMILION_POKECENTER,           4,  7 ; $59
+	mapconst VERMILION_POKECENTER,           4,  4 ; $59
 	mapconst POKEMON_FAN_CLUB,               4,  4 ; $5A
 	mapconst VERMILION_MART,                 4,  4 ; $5B
 	mapconst VERMILION_GYM,                  9,  5 ; $5C
@@ -138,7 +138,7 @@ ENDM
 	mapconst CELADON_MANSION_3F,             6,  4 ; $82
 	mapconst CELADON_MANSION_ROOF,           6,  4 ; $83
 	mapconst CELADON_MANSION_ROOF_HOUSE,     4,  4 ; $84
-	mapconst CELADON_POKECENTER,             4,  7 ; $85
+	mapconst CELADON_POKECENTER,             4,  4 ; $85
 	mapconst CELADON_GYM,                    9,  5 ; $86
 	mapconst GAME_CORNER,                    9, 10 ; $87
 	mapconst CELADON_MART_5F,                4, 10 ; $88
@@ -146,7 +146,7 @@ ENDM
 	mapconst CELADON_DINER,                  4,  5 ; $8A
 	mapconst CELADON_CHIEF_HOUSE,            4,  4 ; $8B
 	mapconst CELADON_HOTEL,                  4,  7 ; $8C
-	mapconst LAVENDER_POKECENTER,            4,  7 ; $8D
+	mapconst LAVENDER_POKECENTER,            4,  4 ; $8D
 	mapconst POKEMON_TOWER_1F,               9, 10 ; $8E
 	mapconst POKEMON_TOWER_2F,               9, 10 ; $8F
 	mapconst POKEMON_TOWER_3F,               9, 10 ; $90
@@ -159,7 +159,7 @@ ENDM
 	mapconst LAVENDER_CUBONE_HOUSE,          4,  4 ; $97
 	mapconst FUCHSIA_MART,                   4,  4 ; $98
 	mapconst FUCHSIA_BILLS_GRANDPAS_HOUSE,   4,  4 ; $99
-	mapconst FUCHSIA_POKECENTER,             4,  7 ; $9A
+	mapconst FUCHSIA_POKECENTER,             4,  4 ; $9A
 	mapconst WARDENS_HOUSE,                  4,  5 ; $9B
 	mapconst SAFARI_ZONE_GATE,               3,  4 ; $9C
 	mapconst FUCHSIA_GYM,                    9,  5 ; $9D
@@ -176,7 +176,7 @@ ENDM
 	mapconst CINNABAR_LAB_TRADE_ROOM,        4,  4 ; $A8
 	mapconst CINNABAR_LAB_METRONOME_ROOM,    4,  4 ; $A9
 	mapconst CINNABAR_LAB_FOSSIL_ROOM,       4,  4 ; $AA
-	mapconst CINNABAR_POKECENTER,            4,  7 ; $AB
+	mapconst CINNABAR_POKECENTER,            4,  4 ; $AB
 	mapconst CINNABAR_MART,                  4,  4 ; $AC
 	mapconst CINNABAR_MART_COPY,             4,  4 ; $AD
 	mapconst INDIGO_PLATEAU_LOBBY,           6,  8 ; $AE
@@ -187,7 +187,7 @@ ENDM
 	mapconst SAFFRON_PIDGEY_HOUSE,           4,  4 ; $B3
 	mapconst SAFFRON_MART,                   4,  4 ; $B4
 	mapconst SILPH_CO_1F,                    9, 15 ; $B5
-	mapconst SAFFRON_POKECENTER,             4,  7 ; $B6
+	mapconst SAFFRON_POKECENTER,             4,  4 ; $B6
 	mapconst MR_PSYCHICS_HOUSE,              4,  4 ; $B7
 	mapconst ROUTE_15_GATE_1F,               5,  4 ; $B8
 	mapconst ROUTE_15_GATE_2F,               4,  4 ; $B9

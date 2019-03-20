@@ -32,7 +32,7 @@ EvosMovesPointerTable:
 	dw BlastoiseEvosMoves
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
-	dw MissingNo1FEvosMoves
+	dw VISIGOEvosMoves
 	dw MissingNo20EvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
@@ -538,10 +538,16 @@ TangelaEvosMoves:
 	db 49, GROWTH
 	db 0
 
-MissingNo1FEvosMoves:
+VISIGOEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 30, HYPNOSIS
+	db 31, DREAM_EATER
+	db 35, MEGA_DRAIN
+	db 40, BLIZZARD
+	db 45, NIGHT_SHADE
+	db 50, CONFUSE_RAY
 	db 0
 
 MissingNo20EvosMoves:
@@ -555,11 +561,11 @@ GrowlitheEvosMoves:
 	db EV_ITEM, FIRE_STONE, 1, ARCANINE
 	db 0
 ; Learnset
-	db 18, EMBER
-	db 23, LEER
-	db 30, TAKE_DOWN
-	db 39, AGILITY
-	db 50, FLAMETHROWER
+	db 8, EMBER
+	db 13, LEER
+	db 18, TAKE_DOWN
+	db 23, AGILITY
+	db 28, FLAMETHROWER
 	db 0
 
 OnixEvosMoves:
@@ -612,7 +618,7 @@ SlowpokeEvosMoves:
 
 KadabraEvosMoves:
 ; Evolutions
-	db EV_TRADE, 1, ALAKAZAM
+	db EV_LEVEL, 36, ALAKAZAM
 	db 0
 ; Learnset
 	db 16, CONFUSION
@@ -625,7 +631,7 @@ KadabraEvosMoves:
 
 GravelerEvosMoves:
 ; Evolutions
-	db EV_TRADE, 1, GOLEM
+	db EV_LEVEL, 36, GOLEM
 	db 0
 ; Learnset
 	db 11, DEFENSE_CURL
@@ -650,7 +656,7 @@ ChanseyEvosMoves:
 
 MachokeEvosMoves:
 ; Evolutions
-	db EV_TRADE, 1, MACHAMP
+	db EV_LEVEL, 36, MACHAMP
 	db 0
 ; Learnset
 	db 20, LOW_KICK
@@ -1053,11 +1059,11 @@ VulpixEvosMoves:
 	db EV_ITEM, FIRE_STONE, 1, NINETALES
 	db 0
 ; Learnset
-	db 16, QUICK_ATTACK
-	db 21, ROAR
-	db 28, CONFUSE_RAY
-	db 35, FLAMETHROWER
-	db 42, FIRE_SPIN
+	db 10, QUICK_ATTACK
+	db 15, ROAR
+	db 20, CONFUSE_RAY
+	db 25, FLAMETHROWER
+	db 30, FIRE_SPIN
 	db 0
 
 NinetalesEvosMoves:
@@ -1247,10 +1253,10 @@ EeveeEvosMoves:
 	db EV_ITEM, WATER_STONE, 1, VAPOREON
 	db 0
 ; Learnset
-	db 27, QUICK_ATTACK
-	db 31, TAIL_WHIP
-	db 37, BITE
-	db 45, TAKE_DOWN
+	db 10, QUICK_ATTACK
+	db 15, SAND_ATTACK
+	db 20, BITE
+	db 25, TAKE_DOWN
 	db 0
 
 FlareonEvosMoves:
@@ -1300,11 +1306,11 @@ MachopEvosMoves:
 	db EV_LEVEL, 28, MACHOKE
 	db 0
 ; Learnset
-	db 20, LOW_KICK
-	db 25, LEER
-	db 32, FOCUS_ENERGY
-	db 39, SEISMIC_TOSS
-	db 46, SUBMISSION
+	db 10, LOW_KICK
+	db 15, LEER
+	db 20, FOCUS_ENERGY
+	db 25, SEISMIC_TOSS
+	db 30, SUBMISSION
 	db 0
 
 ZubatEvosMoves:
@@ -1684,7 +1690,7 @@ MissingNo92EvosMoves:
 
 HaunterEvosMoves:
 ; Evolutions
-	db EV_TRADE, 1, GENGAR
+	db EV_LEVEL, 36, GENGAR
 	db 0
 ; Learnset
 	db 29, HYPNOSIS
@@ -1746,8 +1752,8 @@ BulbasaurEvosMoves:
 	db EV_LEVEL, 16, IVYSAUR
 	db 0
 ; Learnset
-	db 7, LEECH_SEED
-	db 13, VINE_WHIP
+	db 7, VINE_WHIP
+	db 13, LEECH_SEED
 	db 20, POISONPOWDER
 	db 27, RAZOR_LEAF
 	db 34, GROWTH
@@ -1978,7 +1984,7 @@ CharmanderEvosMoves:
 	db EV_LEVEL, 16, CHARMELEON
 	db 0
 ; Learnset
-	db 9, EMBER
+	db 7, EMBER
 	db 15, LEER
 	db 22, RAGE
 	db 30, SLASH
@@ -1991,7 +1997,7 @@ SquirtleEvosMoves:
 	db EV_LEVEL, 16, WARTORTLE
 	db 0
 ; Learnset
-	db 8, BUBBLE
+	db 7, BUBBLE
 	db 15, WATER_GUN
 	db 22, BITE
 	db 28, WITHDRAW

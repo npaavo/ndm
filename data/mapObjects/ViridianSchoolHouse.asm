@@ -1,16 +1,17 @@
 ViridianSchoolHouse_Object:
 	db $a ; border block
 
-	db 2 ; warps
-	warp 2, 7, 2, -1
-	warp 3, 7, 2, -1
+	db 4 ; warps
+	warp 0, 2, 2, VIRIDIAN_CITY
+	warp 0, 3, 2, VIRIDIAN_CITY
+	warp 7, 2, 2, ROUTE_16
+	warp 7, 3, 2, ROUTE_16
 
 	db 0 ; signs
 
-	db 2 ; objects
-	object SPRITE_BRUNETTE_GIRL, 3, 5, STAY, UP, 1 ; person
-	object SPRITE_LASS, 4, 1, STAY, DOWN, 2 ; person
+	db 1 ; objects
+	object SPRITE_ROCKER, 2, 2, WALK, 0, 1 ; person
 
 	; warp-to
-	warp_to 2, 7, VIRIDIAN_SCHOOL_HOUSE_WIDTH
-	warp_to 3, 7, VIRIDIAN_SCHOOL_HOUSE_WIDTH
+	warp_to 0, 3, VIRIDIAN_SCHOOL_HOUSE_WIDTH
+	warp_to 7, 3, VIRIDIAN_SCHOOL_HOUSE_WIDTH
