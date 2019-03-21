@@ -1,5 +1,5 @@
 ItemPrices:
-	money 10000 ; MASTER_BALL
+	money 1 ; MASTER_BALL
 	money 1200  ; ULTRA_BALL
 	money 600   ; GREAT_BALL
 	money 200   ; POKE_BALL

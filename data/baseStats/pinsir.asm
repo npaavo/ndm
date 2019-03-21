@@ -5,7 +5,7 @@ db 100 ; base defense
 db 85 ; base speed
 db 55 ; base special
 db BUG ; species type 1
-db BUG ; species type 2
+db FIGHTING ; species type 2
 db 45 ; catch rate
 db 200 ; base exp yield
 INCBIN "pic/bmon/pinsir.pic",0,1 ; 77, sprite dimensions

@@ -32,7 +32,7 @@ EvosMovesPointerTable:
 	dw BlastoiseEvosMoves
 	dw PinsirEvosMoves
 	dw TangelaEvosMoves
-	dw VISIGOEvosMoves
+	dw VisigoEvosMoves
 	dw MissingNo20EvosMoves
 	dw GrowlitheEvosMoves
 	dw OnixEvosMoves
@@ -538,16 +538,19 @@ TangelaEvosMoves:
 	db 49, GROWTH
 	db 0
 
-VISIGOEvosMoves:
+VisigoEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
 	db 30, HYPNOSIS
 	db 31, DREAM_EATER
-	db 35, MEGA_DRAIN
-	db 40, BLIZZARD
-	db 45, NIGHT_SHADE
-	db 50, CONFUSE_RAY
+	db 35, PHANTASM
+	db 40, MEGA_DRAIN
+	db 45, ICE_BEAM
+	db 50, VAMPIRE_BITE
+	db 55, CONFUSE_RAY
+	db 60, BLIZZARD
+	db 65, NIGHT_TERROR
 	db 0
 
 MissingNo20EvosMoves:
@@ -1873,6 +1876,8 @@ RattataEvosMoves:
 	db EV_LEVEL, 20, RATICATE
 	db 0
 ; Learnset
+
+	db 4, NIGHT_TERROR ;MOD TEST MOVE
 	db 7, QUICK_ATTACK
 	db 14, HYPER_FANG
 	db 23, FOCUS_ENERGY

@@ -5,7 +5,7 @@ db 48 ; base defense
 db 55 ; base speed
 db 50 ; base special
 db WATER ; species type 1
-db WATER ; species type 2
+db PSYCHIC ; species type 2
 db 190 ; catch rate
 db 80 ; base exp yield
 INCBIN "pic/bmon/psyduck.pic",0,1 ; 55, sprite dimensions

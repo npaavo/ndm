@@ -32,7 +32,7 @@ MoveEnd:
 	move FLY,          FLY_EFFECT,                  70, FLYING,    95, 15
 	move BIND,         TRAPPING_EFFECT,             15, NORMAL,    75, 20
 	move SLAM,         NO_ADDITIONAL_EFFECT,        80, NORMAL,    75, 20
-	move VINE_WHIP,    NO_ADDITIONAL_EFFECT,        35, GRASS,    100, 10
+	move VINE_WHIP,    NO_ADDITIONAL_EFFECT,        35, GRASS,    100, 20
 	move STOMP,        FLINCH_SIDE_EFFECT2,         65, NORMAL,   100, 20
 	move DOUBLE_KICK,  ATTACK_TWICE_EFFECT,         30, FIGHTING, 100, 30
 	move MEGA_KICK,    NO_ADDITIONAL_EFFECT,       120, NORMAL,    75,  5
@@ -175,4 +175,18 @@ MoveEnd:
 	move SUPER_FANG,   SUPER_FANG_EFFECT,            1, NORMAL,    90, 10
 	move SLASH,        NO_ADDITIONAL_EFFECT,        70, NORMAL,   100, 20
 	move SUBSTITUTE,   SUBSTITUTE_EFFECT,            0, NORMAL,   100, 10
-	move STRUGGLE,     RECOIL_EFFECT,               50, BIRD,     100, 10
+	;MODS
+	;move, 			   anim,  						pow, type,   acc, pp
+	move PHANTASM,	   TWO_TO_FIVE_ATTACKS_EFFECT,  25, GHOST,	  100, 20
+	move DRAGONFIRE,   BURN_SIDE_EFFECT1,  			70, DRAGON,	  100, 15
+	move DIRE_STING,   BURN_SIDE_EFFECT2,  			60, BUG,	  100, 20
+	move VAMPIRE_BITE, DRAIN_HP_EFFECT,  		   110, BUG,	  100, 5
+	move CHILLY_GUST,  SPEED_DOWN_SIDE_EFFECT,      40, ICE,	  100, 30
+	move FIREBALL,     BURN_SIDE_EFFECT1,           70, FIRE,	  100, 20
+	move CORRODE,      DEFENSE_DOWN_SIDE_EFFECT,    90, POISON,	  100, 10
+	move QUICKSAND,    SPEED_DOWN_SIDE_EFFECT,      40, GROUND,	  100, 20
+	move SKIP_STONE,   TWO_TO_FIVE_ATTACKS_EFFECT,  20, ROCK,	  100, 15
+	move NIGHT_TERROR, CHARGE_EFFECT,		 	   100, GHOST,	  100, 10
+	move NIGHT_TERROR_START_ANIM, NO_ADDITIONAL_EFFECT,	   100, GHOST,	  100, 10 ; this is required for jank I'm very sorry
+	;END MODS	
+	move STRUGGLE,     RECOIL_EFFECT,               50, BIRD,     100, 10 ; STRUGGLE MUST GO LAST

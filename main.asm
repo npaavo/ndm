@@ -1945,6 +1945,8 @@ INCLUDE "engine/in_game_trades.asm"
 INCLUDE "engine/palettes.asm"
 INCLUDE "engine/save.asm"
 
+INCLUDE "engine/items/tm_prices.asm" ; used to be in 1E
+
 
 SECTION "bank1D", ROMX
 
@@ -2096,5 +2098,3 @@ INCLUDE "data/animations.asm"
 INCLUDE "engine/evolution.asm"
 
 INCLUDE "engine/overworld/elevator.asm"
-
-INCLUDE "engine/items/tm_prices.asm"

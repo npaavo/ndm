@@ -163,5 +163,19 @@ MoveNames::
 	db "SUPER FANG@"
 	db "SLASH@"
 	db "SUBSTITUTE@"
-	db "STRUGGLE@"
+	;MODS
+	db "PHANTASM@"
+	db "DRAGONFIRE@"
+	db "DIRE STING@"
+	db "VAMPIRE BITE@"
+	db "CHILLY GUST@"
+	db "FIREBALL@"
+	db "CORRODE@"
+	db "QUICKSAND@"
+	db "SKIP STONE@"
+	db "NIGHT TERROR@"
+	db "NTA@" ; clone for animation jank
+	
+	;END MODS
+	db "STRUGGLE@" ; struggle must go last
 

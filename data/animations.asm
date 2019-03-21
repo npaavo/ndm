@@ -163,7 +163,20 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
-	dw StruggleAnim
+	;MODS
+	dw PhantasmAnim
+	dw DragonfireAnim
+	dw DireStingAnim
+	dw VampireBiteAnim
+	dw ChillyGustAnim
+	dw FireballAnim
+	dw CorrodeAnim
+	dw QuicksandAnim
+	dw SkipStoneAnim
+	dw NightTerrorAnim
+	dw NightTerrorStartAnim
+	;END MODS
+	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
 	dw EnemyFlashAnim
 	dw PlayerFlashAnim
@@ -480,6 +493,7 @@ EmberAnim:
 	db $46,$33,$11
 	db $FF
 
+DragonfireAnim:
 FlamethrowerAnim:
 	db $46,$34,$1F
 	db $46,$34,$0C
@@ -990,6 +1004,7 @@ PoisonGasAnim:
 	db $46,$8A,$19
 	db $FF
 
+SkipStoneAnim:
 BarrageAnim:
 	db $43,$8B,$41
 	db $05,$FF,$55
@@ -1123,6 +1138,72 @@ SubstituteAnim:
 	db $08,$FF,$47
 	db SE_SUBSTITUTE_MON, $FF
 	db $FF
+
+; MODS
+PhantasmAnim:
+	db SE_DARK_SCREEN_PALETTE, $FF
+	db SE_SHAKE_BACK_AND_FORTH, $67
+	db SE_RESET_SCREEN_PALETTE, $FF
+	db SE_SHOW_MON_PIC, $FF
+	db $FF
+
+DireStingAnim:
+	db SE_DARK_SCREEN_FLASH, $FF
+	db $03,$29,$02
+	db SE_DARK_SCREEN_FLASH, $FF
+	db $05,$A2,$01
+	db $FF
+	
+VampireBiteAnim:
+	db $03,$29,$02
+	db SE_DARK_SCREEN_FLASH, $FF
+	db $06,$9D,$21
+	db SE_DARK_SCREEN_FLASH, $FF
+	db $06,$8A,$22
+	db $FF
+
+ChillyGustAnim:
+	db SE_LIGHT_SCREEN_PALETTE, $0F	
+	db SE_WATER_DROPLETS_EVERYWHERE, $FF
+	db SE_RESET_SCREEN_PALETTE, $FF
+	db $FF
+	
+FireballAnim:
+	db SE_SPIRAL_BALLS_INWARD, $7D
+	db $46,$34,$1F
+	db $46,$34,$0C
+	db $FF
+
+CorrodeAnim:
+	db SE_DARK_SCREEN_PALETTE, $A3	
+	db SE_WATER_DROPLETS_EVERYWHERE, $FF
+	db SE_RESET_SCREEN_PALETTE, $FF
+	db $46,$7B,$14
+	db $FF
+
+QuicksandAnim:
+	db $46,$1B,$28
+	db SE_WAVY_SCREEN, $FF
+	db $FF
+	
+	
+
+NightTerrorAnim:
+	db SE_DARK_SCREEN_FLASH, $29
+	db SE_WAVY_SCREEN, $54
+	db SE_DARK_SCREEN_FLASH, $29
+	db SE_RESET_SCREEN_PALETTE, $FF
+	db SE_SHOW_MON_PIC, $FF
+	db $FF
+	
+NightTerrorStartAnim:
+	db SE_DARK_SCREEN_FLASH, $A0
+	db SE_DARK_SCREEN_PALETTE, $67
+	db SE_SLIDE_MON_OFF, $FF
+	db SE_DARK_SCREEN_FLASH, $FF
+	db $FF
+	
+;END MODS
 
 BallTossAnim:
 	db $03,$FF,$06

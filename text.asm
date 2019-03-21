@@ -2171,6 +2171,11 @@ _DugAHoleText::
 	line "dug a hole!"
 	prompt
 
+_NightTerrorText::
+	text ""
+	line "vanished?!"
+	prompt
+
 _BecameConfusedText::
 	text "<TARGET>"
 	line "became confused!"

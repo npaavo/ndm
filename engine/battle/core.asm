@@ -8236,10 +8236,15 @@ ChargeEffect:
 .notFly
 	ld a, [de]
 	cp DIG
-	jr nz, .notDigOrFly
+	jr nz, .notDig
 	set INVULNERABLE, [hl] ; mon is now invulnerable to typical attacks (fly/dig)
 	ld b, ANIM_C0
-.notDigOrFly
+.notDig
+	cp NIGHT_TERROR
+	jr nz, .notDigOrFly
+	set INVULNERABLE, [hl] ; mon is now invulnerable to typical attacks (fly/dig)
+	ld b, NIGHT_TERROR_START_ANIM ; play night-terror start anim	
+.notDigOrFly	
 	xor a
 	ld [wAnimationType], a
 	ld a, b
@@ -8270,6 +8275,9 @@ ChargeMoveEffectText:
 	jr z, .gotText
 	cp DIG
 	ld hl, DugAHoleText
+	jr z, .gotText
+	cp NIGHT_TERROR
+	ld hl, NightTerrorText
 .gotText
 	ret
 
@@ -8295,6 +8303,10 @@ FlewUpHighText:
 
 DugAHoleText:
 	TX_FAR _DugAHoleText
+	db "@"
+	
+NightTerrorText:
+	TX_FAR _NightTerrorText
 	db "@"
 
 TrappingEffect:

@@ -163,11 +163,24 @@ const_value = 1
 	const TRI_ATTACK   ; a1
 	const SUPER_FANG   ; a2
 	const SLASH        ; a3
-	const SUBSTITUTE   ; a4
+	const SUBSTITUTE   ; a4	
+	;MODS
+	const PHANTASM	   ; a5
+	const DRAGONFIRE   ; a6
+	const DIRE_STING   ; a7
+	const VAMPIRE_BITE ; a8
+	const CHILLY_GUST  ; a9
+	const FIREBALL	   ; aa
+	const CORRODE	   ; ab
+	const QUICKSAND	   ; ac	
+	const SKIP_STONE   ; ad	
+	const NIGHT_TERROR ; ad	
+	const NIGHT_TERROR_START_ANIM ; clone for jank	
+	;END MODS
 
 NUM_ATTACKS EQU const_value + -1
 
-	const STRUGGLE
+	const STRUGGLE ; struggle must go last
 
 	; Moves do double duty as animation identifiers.
 

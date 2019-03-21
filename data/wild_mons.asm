@@ -38,7 +38,7 @@ WildDataPointers:
 	dw Route25Mons ; ROUTE_25
 	dw NoMons      ; REDS_HOUSE_1F
 	dw PalletCaveMons ; REDS_HOUSE_2F - MOD - Pallet Cave
-	dw NoMons ; blues house ****
+	dw BoneCaveMons ; BLUES_HOUSE - MOD - Visigo Cave F1
 	dw NoMons ; oak lab
 	dw NoMons ; pokecenter
 	dw NoMons ; mart
@@ -47,7 +47,7 @@ WildDataPointers:
 	dw NoMons
 	dw NoMons
 	dw NoMons
-	dw NoMons
+	dw BoneCaveMons ; Route2_Trade_house - MOD - Visigo Cave B1
 	dw NoMons
 	dw NoMons
 	dw ForestMons ; ViridianForest
@@ -321,3 +321,4 @@ INCLUDE "data/wildPokemon/victoryroad2.asm"
 INCLUDE "data/wildPokemon/victoryroad3.asm"
 INCLUDE "data/wildPokemon/victoryroad1.asm"
 INCLUDE "data/wildPokemon/diglettscave.asm"
+INCLUDE "data/wildPokemon/bonecave.asm"

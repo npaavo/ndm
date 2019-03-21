@@ -764,10 +764,10 @@ ItemUseLantern:
 .LightTheRoom	
 	xor a
 	ld [wMapPalOffset], a
-	ld a, [wGrassRate]  ;double encounter rate
+	ld a, [wGrassRate]  ;double encounter rate I think?
 	sla a
 	ld [wGrassRate], a
-	ld a, [wWaterRate]  ;double encounter rate
+	ld a, [wWaterRate]  ;double encounter rate I think?
 	sla a
 	ld [wWaterRate], a
 	ld hl, UseLanternText

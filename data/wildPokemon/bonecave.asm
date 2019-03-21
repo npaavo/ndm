@@ -1,0 +1,13 @@
+BoneCaveMons:
+	db $0a
+	db 25,GASTLY
+	db 25,ZUBAT
+	db 25,CUBONE
+	db 25,DIGLETT
+	db 25,PARAS
+	db 30,GOLBAT
+	db 30,HAUNTER
+	db 30,DUGTRIO
+	db 40,GENGAR
+	db 25,VISIGO
+	db $00

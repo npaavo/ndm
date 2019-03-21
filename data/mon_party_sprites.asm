@@ -73,6 +73,6 @@ MonPartyData:
 	dn SPRITE_MON, SPRITE_BIRD_M            ;Snorlax/Articuno
 	dn SPRITE_BIRD_M, SPRITE_BIRD_M         ;Zapdos/Moltres
 	dn SPRITE_SNAKE, SPRITE_SNAKE           ;Dratini/Dragonair
-	dn SPRITE_SNAKE, SPRITE_MON             ;Dragonite/Mew
-	dn SPRITE_BUG, SPRITE_MON               ;Visigo/Mewtwo
+	dn SPRITE_MON, SPRITE_MON               ;Dragonite/Mew
+	dn SPRITE_MON, SPRITE_MON               ;Visigo/Mewtwo
 	db 0, 0
