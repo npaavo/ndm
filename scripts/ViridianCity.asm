@@ -15,28 +15,6 @@ ViridianCityScript0:
 	jp ViridianCityScript_1903d
 
 ViridianCityScript_1900b:
-	CheckEvent EVENT_VIRIDIAN_GYM_OPEN
-	ret nz
-	ld a, [wObtainedBadges]
-	cp %01111111
-	jr nz, .asm_1901e
-	SetEvent EVENT_VIRIDIAN_GYM_OPEN
-	ret
-.asm_1901e
-	ld a, [wYCoord]
-	cp $8
-	ret nz
-	ld a, [wXCoord]
-	cp $20
-	ret nz
-	ld a, $e
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	xor a
-	ld [hJoyHeld], a
-	call ViridianCityScript_190cf
-	ld a, $3
-	ld [wViridianCityCurScript], a
 	ret
 
 ViridianCityScript_1903d:

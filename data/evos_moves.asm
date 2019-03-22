@@ -1877,7 +1877,6 @@ RattataEvosMoves:
 	db 0
 ; Learnset
 
-	db 4, NIGHT_TERROR ;MOD TEST MOVE
 	db 7, QUICK_ATTACK
 	db 14, HYPER_FANG
 	db 23, FOCUS_ENERGY

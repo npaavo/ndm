@@ -50,7 +50,7 @@ ENDM
 	mapconst VIRIDIAN_MART,                  4,  4 ; $2A
 	mapconst VIRIDIAN_SCHOOL_HOUSE,          3,  4 ; $2B - MOD viridian east gate
 	mapconst VIRIDIAN_NICKNAME_HOUSE,        6,  8 ; $2C - MOD viridian fire cave
-	mapconst VIRIDIAN_GYM,                   9, 10 ; $2D
+	mapconst VIRIDIAN_GYM,                   9,  7 ; $2D
 	mapconst DIGLETTS_CAVE_ROUTE_2,          4,  4 ; $2E
 	mapconst VIRIDIAN_FOREST_NORTH_GATE,     4,  5 ; $2F
 	mapconst ROUTE_2_TRADE_HOUSE,            6,  11 ; $30 - MOD basement of viridian cave 2 ($27)

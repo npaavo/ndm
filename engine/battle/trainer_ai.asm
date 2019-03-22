@@ -324,6 +324,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,0    ; AGATHA
 	db 1,3,0  ; LANCE
 	db 0      ; LOGGER - MOD
+	db 1,3,0  ; WYLDA - MOD
 
 INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
 
@@ -421,6 +422,7 @@ TrainerAIPointers:
 	dbw 2,AgathaAI ; agatha
 	dbw 1,LanceAI ; lance
 	dbw 1,GenericAI ; Logger
+	dbw 1,LoreleiAI ; Wylda
 
 JugglerAI:
 	cp $40

@@ -795,10 +795,69 @@ _CanSeeFineText::
 	
 ; MOD - simulates cut
 ItemUseScythe:
-	predef UsedCut
-	jp CloseTextDisplay
-	ret 
+	xor a
+	ld [wActionResultOrTookBattleTurn], a ; initialise to failure value
+	ld a, [wCurMapTileset]
+	and a ; OVERWORLD
+	jr z, .overworld
+	cp GYM
+	jr nz, .nothingToCut
+	ld a, [wTileInFrontOfPlayer]
+	cp $50 ; gym cut tree
+	jr nz, .nothingToCut
+	jr .canCut
+.overworld
+	dec a
+	ld a, [wTileInFrontOfPlayer]
+	cp $3d ; cut tree
+	jr z, .canCut
+	cp $52 ; grass
+	jr z, .canCut
+.nothingToCut
+	ld hl, .NothingToCutText
+	jp PrintText
 
+.NothingToCutText
+	TX_FAR _NothingToCutText
+	db "@"
+
+.canCut
+	ld [wCutTile], a
+	ld a, 1
+	ld [wActionResultOrTookBattleTurn], a ; used cut
+	set 6, [hl]
+	xor a
+	ld [hWY], a
+	ld hl, UsedScytheText
+	call PrintText
+	call UpdateSprites
+	ld hl, wd730
+	res 6, [hl]
+	ld a, $ff
+	ld [wUpdateSpritesEnabled], a
+	call InitCutAnimOAM
+	ld de, CutTreeBlockSwaps
+	call ReplaceTreeTileBlock
+	call RedrawMapView
+	callba AnimCut
+	ld a, $1
+	ld [wUpdateSpritesEnabled], a
+	call UpdateSprites
+	ld a, SFX_CUT
+	call PlaySound
+	ld a, $90
+	ld [hWY], a
+	ret
+
+UsedScytheText:
+	TX_FAR _UsedScytheText
+	db "@" 
+	
+_UsedScytheText::
+	text "<PLAYER> gave the" 
+	line "SCYTHE a swing!"
+	prompt
+	
 ItemUsePokedex:
 	predef_jump ShowPokedexMenu
 

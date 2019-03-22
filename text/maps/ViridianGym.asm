@@ -1,30 +1,76 @@
 _ViridianGymText_74ace::
-	text "Fwahahaha! This is"
-	line "my hideout!"
+	text "Welcome to the"
+	line "VIRIDIAN GYM."
 
-	para "I planned to"
-	line "resurrect TEAM"
-	cont "ROCKET here!"
+	para "I am called WYLDA."
+	line "And you? ..."
+	
+	para "<PLAYER>. I knew"
+	line "I recognized you."
+	
+	para "You participated" 
+	line "in the JOHTO"
+	cont "CHAMPIONSHIPS a"
+	cont "year ago, right?"
+		
+	para "You see, I was a"
+	line "champion, too."
+	cont "Long before I"
+	cont "traveled here."
+	
+	para "I was young when"
+	line "fame called my"
+	cont "name, and I paid"
+	cont "a price for it."
+	
+	para "I had a lot of"
+	line "growing up to do"
+	cont "after I left the"
+	cont "spotlight."
+	
+	para "On my journey, I"
+	line "grew close to the"
+	cont "GRASS type."
+	
+	para "They symbolize the"
+	line "growth that is"
+	cont "innate to all"
+	cont "living things."
+	
+	para "No matter the"
+	line "circumstance, "
+	cont "life finds a way"
+	cont "to flourish!"
+	
+	para "I've grown and"
+	line "overcome so many"
+	cont "obstacles on my"
+	cont "way here."
+	
+	para "And now, I am"
+	line "your obstacle."
+	
+	para "Will you rise"
+	line "to the challenge?!"
+	cont "Give it your all!"	
 
-	para "But, you have"
-	line "caught me again!"
-	cont "So be it! This"
-	cont "time, I'm not"
-	cont "holding back!"
-
-	para "Once more, you"
-	line "shall face"
-	cont "GIOVANNI, the"
-	cont "greatest trainer!"
 	done
 
 _ViridianGymText_74ad3::
-	text "Ha!"
-	line "That was a truly"
-	cont "intense fight!"
-	cont "You have won!"
-	cont "As proof, here is"
-	cont "the EARTHBADGE!@@"
+	text "Good"
+	line "work, <PLAYER>!"
+	
+	para "A well-fought"
+	line "battle by you and"
+	cont "your #MON."
+	
+	para "I see great"
+	line "potential in you."
+	cont "Nurture it."
+	
+	para "As proof of your"
+	line "victory, take"
+	cont "this LIFE BADGE!@@"
 
 _ViridianGymText_74ad9::
 	text "Having lost, I"
@@ -234,4 +280,14 @@ _ViridianGymText_74bd9::
 	text "Blow me away!"
 	line "GIOVANNI was the"
 	cont "GYM LEADER here?"
+	done
+
+_ViridianGymText15::
+	text "The battle is" 
+	line "starting soon," 
+	cont "right?"
+	
+	para "I always root for" 
+	line "WYLDA. She never"
+	cont "loses!" 
 	done

@@ -47,3 +47,4 @@ TrainerNames:
 	db "AGATHA@"
 	db "LANCE@"
 	db "LOGGER@"
+	db "WYLDA@"

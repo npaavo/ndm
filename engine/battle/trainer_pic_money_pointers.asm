@@ -144,3 +144,6 @@ TrainerPicAndMoneyPointers:
 	
 	dw LoggerPic
 	money 3000
+	
+	dw WyldaPic
+	money 9900

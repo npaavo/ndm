@@ -704,19 +704,7 @@ _JustAMomentText::
 	done
 
 TMNotebookText::
-	text "It's a pamphlet"
-	line "on TMs."
-
-	para "..."
-
-	para "There are 50 TMs"
-	line "in all."
-
-	para "There are also 5"
-	line "HMs that can be"
-	cont "used repeatedly."
-
-	para "SILPH CO.@@"
+	text "..."
 
 _TurnPageText::
 	text "Turn the page?"
@@ -727,64 +715,19 @@ _ViridianSchoolNotebookText5::
 	line "look at my notes!@@"
 
 _ViridianSchoolNotebookText1::
-	text "Looked at the"
-	line "notebook!"
-
-	para "First page..."
-
-	para "# BALLs are"
-	line "used to catch"
-	cont "#MON."
-
-	para "Up to 6 #MON"
-	line "can be carried."
-
-	para "People who raise"
-	line "and make #MON"
-	cont "fight are called"
-	cont "#MON trainers."
+	text "..." 
 	prompt
 
 _ViridianSchoolNotebookText2::
-	text "Second page..."
-
-	para "A healthy #MON"
-	line "may be hard to"
-	cont "catch, so weaken"
-	cont "it first!"
-
-	para "Poison, burns and"
-	line "other damage are"
-	cont "effective!"
+	text "..." 
 	prompt
 
 _ViridianSchoolNotebookText3::
-	text "Third page..."
-
-	para "#MON trainers"
-	line "seek others to"
-	cont "engage in #MON"
-	cont "fights."
-
-	para "Battles are"
-	line "constantly fought"
-	cont "at #MON GYMs."
+	text "..." 
 	prompt
 
 _ViridianSchoolNotebookText4::
-	text "Fourth page..."
-
-	para "The goal for"
-	line "#MON trainers"
-	cont "is to beat the "
-	cont "top 8 #MON"
-	cont "GYM LEADERs."
-
-	para "Do so to earn the"
-	line "right to face..."
-
-	para "The ELITE FOUR of"
-	line "#MON LEAGUE!"
+	text "..." 
 	prompt
 
 _EnemiesOnEverySideText::
@@ -835,112 +778,52 @@ _KabutopsFossilText::
 	done
 
 _LinkCableHelpText1::
-	text "TRAINER TIPS"
-
-	para "Using a Game Link"
-	line "Cable"
+	text "..." 
+	prompt
 	prompt
 
 _LinkCableHelpText2::
-	text "Which heading do"
-	line "you want to read?"
+	text "..."
 	done
 
 _LinkCableInfoText1::
-	text "When you have"
-	line "linked your GAME"
-	cont "BOY with another"
-	cont "GAME BOY, talk to"
-	cont "the attendant on"
-	cont "the right in any"
-	cont "#MON CENTER."
+	text "..." 
 	prompt
 
 _LinkCableInfoText2::
-	text "COLOSSEUM lets"
-	line "you play against"
-	cont "a friend."
+	text "..." 
 	prompt
 
 _LinkCableInfoText3::
-	text "TRADE CENTER is"
-	line "used for trading"
-	cont "#MON."
+	text "..." 
 	prompt
 
 _ViridianSchoolBlackboardText1::
-	text "The blackboard"
-	line "describes #MON"
-	cont "STATUS changes"
-	cont "during battles."
+	text "..." 
 	prompt
 
 _ViridianSchoolBlackboardText2::
-	text "Which heading do"
-	line "you want to read?"
+	text "..."
 	done
 
 _ViridianBlackboardSleepText::
-	text "A #MON can't"
-	line "attack if it's"
-	cont "asleep!"
-
-	para "#MON will stay"
-	line "asleep even after"
-	cont "battles."
-
-	para "Use AWAKENING to"
-	line "wake them up!"
+	text "..." 
 	prompt
 
 _ViridianBlackboardPoisonText::
-	text "When poisoned, a"
-	line "#MON's health"
-	cont "steadily drops."
-
-	para "Poison lingers"
-	line "after battles."
-
-	para "Use an ANTIDOTE"
-	line "to cure poison!"
+	text "..." 
 	prompt
 
 _ViridianBlackboardPrlzText::
-	text "Paralysis could"
-	line "make #MON"
-	cont "moves misfire!"
-
-	para "Paralysis remains"
-	line "after battles."
-
-	para "Use PARLYZ HEAL"
-	line "for treatment!"
+	text "..." 
 	prompt
 
 _ViridianBlackboardBurnText::
-	text "A burn reduces"
-	line "power and speed."
-	cont "It also causes"
-	cont "ongoing damage."
-
-	para "Burns remain"
-	line "after battles."
-
-	para "Use BURN HEAL to"
-	line "cure a burn!"
+	text "..." 
 	prompt
 
 _ViridianBlackboardFrozenText::
-	text "If frozen, a"
-	line "#MON becomes"
-	cont "totally immobile!"
-
-	para "It stays frozen"
-	line "even after the"
-	cont "battle ends."
-
-	para "Use ICE HEAL to"
-	line "thaw out #MON!"
+	text "..." 
 	prompt
 
 _VermilionGymTrashText::
@@ -1119,11 +1002,12 @@ _Sony1WinText::
 	prompt
 
 _PlayerBlackedOutText2::
-	text "<PLAYER> is out of"
-	line "useable #MON!"
+	text "All of <PLAYER>'s"
+	line "#MON have"
+	cont "been defeated!"
 
-	para "<PLAYER> blacked"
-	line "out!"
+	para "<PLAYER> escaped"
+	line "the battle!"
 	prompt
 
 _LinkBattleLostText::
@@ -1159,13 +1043,13 @@ _NoWillText::
 	prompt
 
 _CantEscapeText::
-	text "Can't escape!"
+	text "The #MON"
+	line "continued chase!"
+	cont "Can't escape!"
 	prompt
 
 _NoRunningText::
-	text "No! There's no"
-	line "running from a"
-	cont "trainer battle!"
+	text "I can't give up!"
 	prompt
 
 _GotAwayText::
@@ -1474,7 +1358,7 @@ _EnemyAppearedText::
 _TrainerWantsToFightText::
 	TX_RAM wTrainerName
 	text " wants"
-	line "to fight!"
+	line "to battle!"
 	prompt
 
 _UnveiledGhostText::
@@ -1893,11 +1777,10 @@ _LinkCanceledText::
 INCLUDE "text/oakspeech.asm"
 
 _DoYouWantToNicknameText::
-	text "Do you want to"
-	line "give a nickname"
-	cont "to @"
+	text "Should @"
 	TX_RAM wcd6d
-	text "?"
+	text " " 
+	line "have a nickname?"
 	done
 
 _YourNameIsText::
@@ -2799,7 +2682,7 @@ _ItemUseBallText08::
 	prompt
 
 _ItemUseBallText06::
-	text "Ok! The #DEX"
+	text "Nice! The #DEX"
 	line "has new data for"
 	cont "@"
 	TX_RAM wEnemyMonNick

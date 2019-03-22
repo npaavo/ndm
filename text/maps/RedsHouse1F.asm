@@ -1,5 +1,5 @@
 _MomWakeUpText::
-	text "Chloe: Please be"
+	text "CHLOE: Please be"
 	line "careful out on"
 	cont "the job! I'm sure"
 	cont "you'll do great."
@@ -12,13 +12,13 @@ _MomWakeUpText::
 	done
 
 _MomHealText1::
-	text "Chloe: <PLAYER>!"
+	text "CHLOE: <PLAYER>!"
 	line "You should take a"
 	cont "quick rest."
 	prompt
 
 _MomHealText2::
-	text "MOM: I believe"
+	text "CHLOE: I believe"
 	line "in you! Never"
 	cont "give up!"
 	done

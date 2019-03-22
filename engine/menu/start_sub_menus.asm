@@ -484,6 +484,7 @@ UsableItems_CloseMenu:
 	db OLD_ROD
 	db GOOD_ROD
 	db SUPER_ROD
+	db SCYTHE
 	db $ff
 
 StartMenu_TrainerInfo:

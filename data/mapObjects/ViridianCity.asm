@@ -15,7 +15,7 @@ ViridianCity_Object:
 	sign 21, 29, 10 ; ViridianCityText10
 	sign 30, 19, 11 ; MartSignText
 	sign 24, 25, 12 ; PokeCenterSignText
-	sign 27, 7, 13 ; ViridianCityText13
+	sign 29, 9, 13 ; ViridianCityText13
 	sign 35, 17, 16 ; ViridianCityText16
 
 	db 7 ; objects

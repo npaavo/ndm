@@ -47,6 +47,7 @@ TrainerDataPointers:
 	dw AgathaData
 	dw LanceData
 	dw LoggerData
+	dw WyldaData
 
 ; if first byte != FF, then
 	; first byte is level (of all pokemon on this team)
@@ -708,3 +709,5 @@ LoggerData:
 	db 8,KOFFING,MACHOP,PARAS,0
 	db 11,MACHOP,PARAS,0
 	db 9,MACHOP,CHARMANDER,0
+WyldaData:
+	db $FF,12,BULBASAUR,14,ODDISH,0

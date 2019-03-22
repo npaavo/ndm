@@ -68,6 +68,7 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw wTrainerName
 	dw wTrainerName
+	dw wTrainerName
 
 YoungsterName:
 	db "YOUNGSTER@"
