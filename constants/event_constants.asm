@@ -81,7 +81,7 @@ const_value = 0
 	const EVENT_04E                                  ; 04E, (D750, bit 6)
 	const EVENT_04F                                  ; 04F, (D750, bit 7)
 	const EVENT_GOT_TM27                             ; 050, (D751, bit 0)
-	const EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI           ; 051, (D751, bit 1)
+	const EVENT_BEAT_VIRIDIAN_GYM_WYLDA           ; 051, (D751, bit 1)
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0          ; 052, (D751, bit 2)
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_1          ; 053, (D751, bit 3)
 	const EVENT_BEAT_VIRIDIAN_GYM_TRAINER_2          ; 054, (D751, bit 4)

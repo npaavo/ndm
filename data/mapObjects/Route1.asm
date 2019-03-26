@@ -2,7 +2,7 @@ Route1_Object:
 	db $f ; border block
 
 	db 1 ; warps
-	warp 2, 33, 0, BLUES_HOUSE ; hidden cave
+	warp 2, 33, 0, REDS_HOUSE_2F ; hidden cave
 
 	db 1 ; signs
 	sign 9, 27, 3 ; Route1Text3

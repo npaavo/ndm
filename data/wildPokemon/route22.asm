@@ -1,10 +1,10 @@
 Route22Mons:
 	db $19
-	db 3,SPEAROW
-	db 4,MACHOP
+	db 3,PSYDUCK
+	db 4,POLIWAG
 	db 4,MEOWTH
 	db 5,SQUIRTLE
-	db 4,POLIWAG
+	db 4,MACHOP
 	db 4,ABRA
 	db 4,NIDORAN_F
 	db 4,NIDORAN_M

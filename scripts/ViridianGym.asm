@@ -13,9 +13,9 @@ ViridianGym_Script:
 Gym8CityName:
 	db "VIRIDIAN CITY@"
 Gym8LeaderName:
-	db "GIOVANNI@"
+	db "WYLDA@"
 
-ViridianGymScript_748d6:
+ViridianGymScript_ResetScripts:
 	xor a
 	ld [wJoyIgnore], a
 	ld [wViridianGymCurScript], a
@@ -53,16 +53,18 @@ ViridianGymScript0:
 ;db y,x
 ;dw pointer to movement
 ViridianGymArrowTilePlayerMovement:
+	db $0,$0
+	dw ViridianGymArrowMovement1
 	db $FF
 
 ;format: direction, count
 ViridianGymArrowMovement1:
-	db D_UP,$09,$FF
+	db D_UP,$01,$FF
 
 ViridianGymScript4:
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
-	jr nz, .asm_74980
+	jr nz, .done
 	xor a
 	ld [wJoyIgnore], a
 	ld hl, wd736
@@ -70,46 +72,46 @@ ViridianGymScript4:
 	ld a, $0
 	ld [wCurMapScript], a
 	ret
-.asm_74980
+.done
 	jpba LoadSpinnerArrowTiles
 
 ViridianGymScript3:
 	ld a, [wIsInBattle]
 	cp $ff
-	jp z, ViridianGymScript_748d6
+	jp z, ViridianGymScript_ResetScripts
 	ld a, $f0
 	ld [wJoyIgnore], a
-ViridianGymScript3_74995:
+	
+ViridianGymScript3_GiveRewards:
+
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
 	ld a, $c
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
-	lb bc, TM_27, 1
-	call GiveItem
-	jr nc, .BagFull
+	SetEvent EVENT_BEAT_VIRIDIAN_GYM_WYLDA
+	SetEvent EVENT_GOT_TM27
+	ld hl, wObtainedBadges
+	set 0, [hl]
+	ld hl, wBeatGymFlags
+	set 0, [hl]
+	jr .done
+.rematchwintext
 	ld a, $d
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM27
-	jr .asm_749be
-.BagFull
-	ld a, $e
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-.asm_749be
-	ld hl, wObtainedBadges
-	set 7, [hl]
-	ld hl, wBeatGymFlags
-	set 7, [hl]
+.done
+
 
 	; deactivate gym trainers
-	SetEventRange EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
+	;SetEventRange EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
 
-	ld a, HS_ROUTE_22_RIVAL_2
-	ld [wMissableObjectIndex], a
-	predef ShowObject
-	SetEvents EVENT_2ND_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
-	jp ViridianGymScript_748d6
+	;ld a, HS_ROUTE_22_RIVAL_2
+	;ld [wMissableObjectIndex], a
+	;predef ShowObject
+	;SetEvents EVENT_2ND_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	jp ViridianGymScript_ResetScripts
 
 ViridianGym_TextPointers:
 	dw ViridianGymText1
@@ -126,7 +128,6 @@ ViridianGym_TextPointers:
 	dw ViridianGymText12
 	dw ViridianGymText13
 	dw ViridianGymText14
-	dw ViridianGymText15
 
 ViridianGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0
@@ -204,58 +205,89 @@ ViridianGymTrainerHeader7:
 
 ViridianGymText1:
 	TX_ASM
-	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
-	jr z, .asm_6de66
+	call CountNumBadgesOwned
+	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_WYLDA
+	jr z, .startbattle
 	CheckEventReuseA EVENT_GOT_TM27
-	jr nz, .asm_9fc95
-	call z, ViridianGymScript3_74995
+	jr nz, .rematch
+	call z, ViridianGymScript3_GiveRewards
 	call DisableWaitingAfterTextDisplay
-	jr .asm_6dff7
-.asm_9fc95
+	jr .done
+.rematch
 	ld a, $1
-	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
-	ld hl, ViridianGymText_74ad9
+	ld [wGymBattleIsRematch], a	
+	ld hl, ViridianGymRematchText
 	call PrintText
-	call GBFadeOutToBlack
-	ld a, HS_VIRIDIAN_GYM_GIOVANNI
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	call UpdateSprites
-	call Delay3
-	call GBFadeInFromBlack
-	jr .asm_6dff7
-.asm_6de66
-	ld hl, ViridianGymText_74ace
+	jr .initbattle
+.startbattle
+	ld hl, ViridianGymIntroText
 	call PrintText
+.initbattle
+	;allegedly this does nothing but at this point this jenga tower 
+	;has collapsed enough times where I'm sure it does something
 	ld hl, wd72d
 	set 6, [hl]
 	set 7, [hl]
-	ld hl, ViridianGymText_74ad3
-	ld de, ViridianGymText_74ad3
+	ld a, [wEffectiveNumBadgesOwned]
+	ld b, a
+	xor a
+	cp b
+	jr z, .nobadges
+	inc a 
+	cp b
+	jr z, .onebadge
+	jr nz, .plural
+.nobadges
+	ld hl, ViridianGymHowManyBadgesText0
+	call PrintText	
+	jr .initfight
+.onebadge
+	ld hl, ViridianGymHowManyBadgesText1
+	call PrintText	
+	jr .initfight
+.plural
+	ld hl, ViridianGymHowManyBadgesText
+	call PrintText
+.initfight
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
+	ld hl, ViridianGymWinText
+	ld de, ViridianGymWinText
+	jr .continit
+.rematchwintext 
+	ld hl, ViridianGymRematchWinText
+	ld de, ViridianGymRematchWinText	
+.continit
 	call SaveEndBattleTextPointers
 	ld a, [H_SPRITEINDEX]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	ld a, $8
+	call SetGymPartyByBadgeCount
+	ld a, $1
 	ld [wGymLeaderNo], a
 	ld a, $3
 	ld [wViridianGymCurScript], a
-.asm_6dff7
+.done
 	jp TextScriptEnd
 
-ViridianGymText_74ace:
-	TX_FAR _ViridianGymText_74ace
+ViridianGymIntroText:
+	TX_FAR _ViridianGymIntroText
 	db "@"
 
-ViridianGymText_74ad3:
-	TX_FAR _ViridianGymText_74ad3
+ViridianGymWinText:
+	TX_FAR _ViridianGymWinText
+	TX_SFX_LEVEL_UP ; probably supposed to play SFX_GET_ITEM_1 but the wrong music bank is loaded
+	db "@"
+	
+ViridianGymRematchWinText:
+	TX_FAR _ViridianGymRematchWinText
 	TX_SFX_LEVEL_UP ; probably supposed to play SFX_GET_ITEM_1 but the wrong music bank is loaded
 	db "@"
 
-ViridianGymText_74ad9:
-	TX_FAR _ViridianGymText_74ad9
-	TX_WAIT
+ViridianGymRematchText:
+	TX_FAR _ViridianGymRematchText
 	db "@"
 
 ViridianGymText12:
@@ -263,8 +295,8 @@ ViridianGymText12:
 	db "@"
 
 ViridianGymText13:
-	TX_FAR _ReceivedTM27Text
-	TX_SFX_ITEM_1
+	TX_FAR _ViridianGymPostRematchText
+	db "@"
 
 TM27ExplanationText:
 	TX_FAR _TM27ExplanationText
@@ -420,7 +452,7 @@ ViridianGymAfterBattleText8:
 
 ViridianGymText10:
 	TX_ASM
-	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
+	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_WYLDA
 	jr nz, .asm_1abd1
 	ld hl, ViridianGymText_74bd4
 	call PrintText
@@ -439,6 +471,15 @@ ViridianGymText_74bd9:
 	TX_FAR _ViridianGymText_74bd9
 	db "@"
 	
-ViridianGymText15:
-	TX_FAR _ViridianGymText15
+ViridianGymHowManyBadgesText0:
+	TX_FAR _ViridianGymHowManyBadgesText0
 	db "@"
+	
+ViridianGymHowManyBadgesText1:
+	TX_FAR _ViridianGymHowManyBadgesText1
+	db "@"
+	
+ViridianGymHowManyBadgesText:
+	TX_FAR _ViridianGymHowManyBadgesText
+	db "@"
+

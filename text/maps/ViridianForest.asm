@@ -107,9 +107,9 @@ _ViridianForestBattleText4::
 	done
 
 _ViridianForestEndBattleText4::
-	text "The"
-	line "FOREMAN will not"
-	cont "be happy with me!"
+	text "Nope!"
+	line "You're just"
+	cont "mighty!"
 	prompt
 
 _ViridianFrstAfterBattleText4::

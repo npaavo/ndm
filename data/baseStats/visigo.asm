@@ -6,7 +6,7 @@ db 105 ; base speed
 db 115 ; base special
 db GHOST ; species type 1
 db ICE ; species type 2
-db 255 ; catch rate
+db 15 ; catch rate
 db 202 ; base exp yield
 INCBIN "pic/bmon/Visigo.pic",0,1 ; 77, sprite dimensions
 dw VisigoPicFront

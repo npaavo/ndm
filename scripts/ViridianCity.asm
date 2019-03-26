@@ -130,7 +130,7 @@ ViridianCityText2:
 	cp %01111111
 	ld hl, ViridianCityText_19127
 	jr z, .asm_ae9fe
-	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
+	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_WYLDA
 	jr nz, .asm_ae9fe
 	ld hl, ViridianCityText_19122
 .asm_ae9fe

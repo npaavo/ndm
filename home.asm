@@ -2532,6 +2532,22 @@ EngageMapTrainer::
 	ld [wEngagedTrainerSet], a
 	jp PlayTrainerMusic
 
+CountNumBadgesOwned::
+	ld hl, wObtainedBadges
+	ld b, $1
+	call CountSetBits
+	ld a, [wNumSetBits]
+	ld [wEffectiveNumBadgesOwned], a
+	xor a
+	ld [wGymBattleIsRematch], a	;gonna reset this flag here for my own sanity, sorry future me
+	ret
+
+SetGymPartyByBadgeCount::
+	ld a, [wEffectiveNumBadgesOwned]
+	inc a
+	ld [wTrainerNo], a 
+	ret
+
 PrintEndBattleText::
 	push hl
 	ld hl, wd72d
@@ -3058,7 +3074,6 @@ MoveSprite_::
 	ld [wSimulatedJoypadStatesEnd], a
 	dec a
 	ld [wJoyIgnore], a
-	ld [wWastedByteCD3A], a
 	ret
 
 ; divides [hDividend2] by [hDivisor2] and stores the quotient in [hQuotient2]

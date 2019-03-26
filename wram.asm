@@ -829,12 +829,12 @@ wSimulatedJoypadStatesIndex:: ; cd38
 ; 0 if the joypad state is not being simulated
 	ds 1
 
-wWastedByteCD39:: ; cd39
-; written to but nothing ever reads it
+wEffectiveNumBadgesOwned:: ; cd39
+; Set when engaging gym leaders to calculate which team to use
 	ds 1
 
-wWastedByteCD3A:: ; cd3a
-; written to but nothing ever reads it
+wGymBattleIsRematch:: ; cd3a
+; Set when engaging gym leaders to make text pointer assignment cleaner
 	ds 1
 
 wOverrideSimulatedJoypadStatesMask:: ; cd3b

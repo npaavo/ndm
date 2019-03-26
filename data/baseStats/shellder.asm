@@ -5,7 +5,7 @@ db 100 ; base defense
 db 40 ; base speed
 db 45 ; base special
 db WATER ; species type 1
-db WATER ; species type 2
+db ICE ; species type 2
 db 190 ; catch rate
 db 97 ; base exp yield
 INCBIN "pic/bmon/shellder.pic",0,1 ; 55, sprite dimensions

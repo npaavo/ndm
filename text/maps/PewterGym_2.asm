@@ -1,4 +1,4 @@
-_PewterGymText_5c4a3::
+_PewterGymAfterVictoryText::
 	text "There are all"
 	line "kinds of trainers"
 	cont "in the world!"
@@ -50,7 +50,7 @@ _TM34NoRoomText::
 	line "room for this!"
 	done
 
-_PewterGymText_5c4bc::
+_PewterGymWinText::
 	text "I took"
 	line "you for granted."
 
@@ -100,7 +100,7 @@ _PewterGymAfterBattleText1::
 	cont "as BROCK!"
 	done
 
-_PewterGymText_5c515::
+_PewterGymTutorialText1::
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
@@ -114,12 +114,12 @@ _PewterGymText_5c515::
 	line "to the top!"
 	done
 
-_PewterGymText_5c51a::
+_PewterGymTutorialText2::
 	text "All right! Let's"
 	line "get happening!"
 	prompt
 
-_PewterGymText_5c51f::
+_PewterGymTutorialText3::
 	text "The 1st #MON"
 	line "out in a match is"
 	cont "at the top of the"
@@ -131,13 +131,13 @@ _PewterGymText_5c51f::
 	cont "made easier!"
 	done
 
-_PewterGymText_5c524::
+_PewterGymTutorialText4::
 	text "It's a free"
 	line "service! Let's"
 	cont "get happening!"
 	prompt
 
-_PewterGymText_5c529::
+_PewterGymTutorialTextWon::
 	text "Just as I thought!"
 	line "You're #MON"
 	cont "champ material!"

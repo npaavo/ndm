@@ -85,7 +85,7 @@ GainExperience:
 	ld [wGainBoostedExp], a
 	ld a, [wIsInBattle]
 	dec a ; is it a trainer battle?
-	call nz, BoostExp ; if so, boost exp
+	call BoostExp ; if so, boost exp
 	inc hl
 	inc hl
 	inc hl

@@ -1,4 +1,161 @@
-_ViridianGymText_74ace::
+
+_ViridianGymDebugText::
+	text "IT ME"
+	prompt
+	
+_ViridianGymRematchText::
+	text "Welcome back,"
+	line "<PLAYER>!"
+	
+	para "Since our last"
+	line "battle, I've had" 
+	cont "time to reflect"
+	cont "on my strategies."
+	
+	para "You've also grown"
+	line "stronger, too!"
+	
+	
+	prompt
+
+_ViridianGymText12::
+	text "You've done well"
+	line "to make it this"
+	cont "far, but still"
+	cont "many challenges"
+	cont "are ahead."
+	
+	para "The LIFE BADGE"
+	line "is proof that you"
+	cont "can overcome and"
+	cont "adapt to them."
+	
+	para "It was a great"
+	line "battle! We should"
+	cont "rematch someday."
+	
+	para "I can't give you"
+	line "another badge,"
+	cont "but we can still"
+	cont "learn a lot from"
+	cont "each other."
+	
+	para "Farewell!"
+	done
+
+_TM27ExplanationText::
+	text "unused"
+	done
+
+_TM27NoRoomText::
+	text "unused"
+	done
+
+_ViridianGymBattleText1::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText1::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText1::
+	text "uu"
+	done
+
+_ViridianGymBattleText2::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText2::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText2::
+	text "uu"
+	done
+
+_ViridianGymBattleText3::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText3::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText3::
+	text "uu"
+	done
+
+_ViridianGymBattleText4::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText4::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText4::
+	text "uu"
+	done
+
+_ViridianGymBattleText5::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText5::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText5::
+	text "uu"
+	done
+
+_ViridianGymBattleText6::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText6::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText6::
+	text "uu"
+	done
+
+_ViridianGymBattleText7::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText7::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText7::
+	text "uu"
+	done
+
+_ViridianGymBattleText8::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText8::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText8::
+	text "uu"
+	done
+
+_ViridianGymText_74bd4::
+	text "uu"
+	done
+
+_ViridianGymText_74bd9::
+	text "uu"
+	done
+
+_ViridianGymIntroText::
 	text "Welcome to the"
 	line "VIRIDIAN GYM."
 
@@ -50,15 +207,62 @@ _ViridianGymText_74ace::
 	para "And now, I am"
 	line "your obstacle."
 	
-	para "Will you rise"
-	line "to the challenge?!"
-	cont "Give it your all!"	
+	para "Will you rise to"
+	line "the challenge?!"
+	cont "Give it your all!"
 
+	prompt
+
+_ViridianGymHowManyBadgesText::
+	text "I see you have @"
+	TX_NUM wEffectiveNumBadgesOwned, 1, 1
+	text " "
+	line "BADGEs, so I will"
+	cont "use... ..." 
+	
+	para "...these #MON."
+	line "OK!"
+	
+	para "Show me what"
+	line "you're made of!"
+	
 	done
 
-_ViridianGymText_74ad3::
-	text "Good"
-	line "work, <PLAYER>!"
+_ViridianGymHowManyBadgesText0::
+	text "This is your first"
+	line "KANTO GYM battle,"
+	cont "correct?" 
+	
+	para "Since you haven't"
+	line "earned any badges"
+	cont "yet, I'll use..."
+	
+	para "...these #MON."
+	line "They're more than"
+	cont "enough for you!"
+	
+	para "Show me what"
+	line "you're made of!"
+
+	done
+	
+_ViridianGymHowManyBadgesText1::
+	text "You only have @"
+	TX_NUM wEffectiveNumBadgesOwned, 1, 1
+	text " "
+	line "badge, so I will"
+	cont "use... ..." 
+	
+	para "...these #MON."
+	line "OK!"
+	
+	para "Show me what"
+	line "you're made of!"
+	
+	done
+
+_ViridianGymWinText::
+	text "Wow!"
 	
 	para "A well-fought"
 	line "battle by you and"
@@ -72,222 +276,47 @@ _ViridianGymText_74ad3::
 	line "victory, take"
 	cont "this LIFE BADGE!@@"
 
-_ViridianGymText_74ad9::
-	text "Having lost, I"
-	line "cannot face my"
-	cont "underlings!"
-	cont "TEAM ROCKET is"
-	cont "finished forever!"
-
-	para "I will dedicate my"
-	line "life to the study"
-	cont "of #MON!"
-
-	para "Let us meet again"
-	line "some day!"
-	cont "Farewell!@@"
-
-_ViridianGymText12::
-	text "The EARTHBADGE"
-	line "makes #MON of"
-	cont "any level obey!"
-
-	para "It is evidence of"
-	line "your mastery as a"
-	cont "#MON trainer!"
-
-	para "With it, you can"
-	line "enter the #MON"
-	cont "LEAGUE!"
-
-	para "It is my gift for"
-	line "your #MON"
-	cont "LEAGUE challenge!"
-	done
-
-_ReceivedTM27Text::
-	text "<PLAYER> received"
-	line "TM27!@@"
-
-_TM27ExplanationText::
-	text ""
-
-	para "TM27 is FISSURE!"
-	line "It will take out"
-	cont "#MON with just"
-	cont "one hit!"
-
-	para "I made it when I"
-	line "ran the GYM here,"
-	cont "too long ago..."
-	done
-
-_TM27NoRoomText::
-	text "You do not have"
-	line "space for this!"
-	done
-
-_ViridianGymBattleText1::
-	text "Heh! You must be"
-	line "running out of"
-	cont "steam by now!"
-	done
-
-_ViridianGymEndBattleText1::
-	text "I"
-	line "ran out of gas!"
-	prompt
-
-_ViridianGymAfterBattleText1::
-	text "You need power to"
-	line "keep up with our"
-	cont "GYM LEADER!"
-	done
-
-_ViridianGymBattleText2::
-	text "Rrrroar! I'm"
-	line "working myself"
-	cont "into a rage!"
-	done
-
-_ViridianGymEndBattleText2::
-	text "Wargh!"
-	prompt
-
-_ViridianGymAfterBattleText2::
-	text "I'm still not"
-	line "worthy!"
-	done
-
-_ViridianGymBattleText3::
-	text "#MON and I, we"
-	line "make wonderful"
-	cont "music together!"
-	done
-
-_ViridianGymEndBattleText3::
-	text "You are in"
-	line "perfect harmony!"
-	prompt
-
-_ViridianGymAfterBattleText3::
-	text "Do you know the"
-	line "identity of our"
-	cont "GYM LEADER?"
-	done
-
-_ViridianGymBattleText4::
-	text "Karate is the"
-	line "ultimate form of"
-	cont "martial arts!"
-	done
-
-_ViridianGymEndBattleText4::
-	text "Atcho!"
-	prompt
-
-_ViridianGymAfterBattleText4::
-	text "If my #MON"
-	line "were as good at"
-	cont "Karate as I..."
-	done
-
-_ViridianGymBattleText5::
-	text "The truly talented"
-	line "win with style!"
-	done
-
-_ViridianGymEndBattleText5::
-	text "I"
-	line "lost my grip!"
-	prompt
-
-_ViridianGymAfterBattleText5::
-	text "The LEADER will"
-	line "scold me!"
-	done
-
-_ViridianGymBattleText6::
-	text "I'm the KARATE"
-	line "KING! Your fate"
-	cont "rests with me!"
-	done
-
-_ViridianGymEndBattleText6::
-	text "Ayah!"
-	prompt
-
-_ViridianGymAfterBattleText6::
-	text "#MON LEAGUE?"
-	line "You? Don't get"
-	cont "cocky!"
-	done
-
-_ViridianGymBattleText7::
-	text "Your #MON will"
-	line "cower at the"
-	cont "crack of my whip!"
-	done
-
-_ViridianGymEndBattleText7::
-	text "Yowch!"
-	line "Whiplash!"
-	prompt
-
-_ViridianGymAfterBattleText7::
-	text "Wait! I was just"
-	line "careless!"
-	done
-
-_ViridianGymBattleText8::
-	text "VIRIDIAN GYM was"
-	line "closed for a long"
-	cont "time, but now our"
-	cont "LEADER is back!"
-	done
-
-_ViridianGymEndBattleText8::
-	text "I"
-	line "was beaten?"
-	prompt
-
-_ViridianGymAfterBattleText8::
-	text "You can go onto"
-	line "#MON LEAGUE"
-	cont "only by defeating"
-	cont "our GYM LEADER!"
-	done
-
-_ViridianGymText_74bd4::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "Even I don't know"
-	line "VIRIDIAN LEADER's"
-	cont "identity!"
-
-	para "This will be the"
-	line "toughest of all"
-	cont "the GYM LEADERs!"
-
-	para "I heard that the"
-	line "trainers here"
-	cont "like ground-type"
-	cont "#MON!"
-	done
-
-_ViridianGymText_74bd9::
-	text "Blow me away!"
-	line "GIOVANNI was the"
-	cont "GYM LEADER here?"
-	done
-
-_ViridianGymText15::
-	text "The battle is" 
-	line "starting soon," 
-	cont "right?"
+_ViridianGymRematchWinText::
+	text "That's it!"
 	
-	para "I always root for" 
-	line "WYLDA. She never"
-	cont "loses!" 
+	para "You've defeated"
+	line "me again!"
+	
+	para "I see I've got a"
+	line "lot of catching-"
+	cont "up to do!@@"
+
+_ViridianGymBadgeText::
+	text "<PLAYER>, you will"
+	line "face a great number"
+	cont "of TRAINERs in" 
+	cont "the future."
+		
+	para "I will carry with"
+	line "me the lessons I've"
+	cont "learned from our"
+	cont "battle. Will you do"
+	cont "the same?"
+	
+	para "Learn and grow"
+	line "from every fight,"
+	cont "and nothing can"
+	cont "stop you."
+	
+	done
+
+_ViridianGymPostRematchText::
+	text "A refreshing fight"
+	line "like always,"
+	cont "<PLAYER>!"
+	
+	para "You've gotten even"
+	line "stronger than last"
+	cont "we battled."
+	
+	para "I believe you are"
+	line "tough enough to"
+	cont "face your next"
+	cont "challenge."
+	
 	done

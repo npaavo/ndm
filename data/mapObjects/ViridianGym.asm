@@ -8,7 +8,7 @@ ViridianGym_Object:
 	db 0 ; signs
 
 	db 1 ; objects
-	object SPRITE_BRUNETTE_GIRL, 6, 3, STAY, DOWN, 1, OPP_WYLDA, 1
+	object SPRITE_BRUNETTE_GIRL, 6, 3, STAY, UP, 1, OPP_WYLDA, 1
 
 	; warp-to
 	warp_to 7, 17, VIRIDIAN_GYM_WIDTH
