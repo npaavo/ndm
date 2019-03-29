@@ -10,13 +10,13 @@ Route2_Object:
 	warp 6, 25, 2, VIRIDIAN_FOREST ; lake
 
 	db 2 ; signs
-	sign 9, 65, 3 ; Route2Text3 , trail sign
-	sign 11, 11, 4 ; Route2Text4, cave sign
+	sign 9, 65, 4 ; Route2Text3 , trail sign
+	sign 11, 11, 5 ; Route2Text4, cave sign
 
 	db 3 ; objects
 	object SPRITE_BALL, 11, 56, STAY, NONE, 1, MOON_STONE
 	object SPRITE_BALL, 14, 45, STAY, NONE, 2, MOON_STONE
-	object SPRITE_BLACK_HAIR_BOY_2, 5, 27, STAY, DOWN, 5
+	object SPRITE_BLACK_HAIR_BOY_2, 5, 27, STAY, DOWN, 3
 
 	; warp-to
 	warp_to 12, 9, ROUTE_2_WIDTH ; DIGLETTS_CAVE_ROUTE_2

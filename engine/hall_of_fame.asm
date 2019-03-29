@@ -213,25 +213,49 @@ HoFDisplayPlayerStats:
 	ld b, 6
 	ld c, 10
 	call TextBoxBorder
-	coord hl, 5, 0
+	coord hl, 0, 0
 	ld b, 2
-	ld c, 9
+	ld c, 18
 	call TextBoxBorder
-	coord hl, 7, 2
-	ld de, wPlayerName
-	call PlaceString
-	coord hl, 1, 6
+	coord hl, 2, 1
 	ld de, HoFPlayTimeText
 	call PlaceString
-	coord hl, 5, 7
+	coord hl, 4, 2
 	ld de, wPlayTimeHours
-	lb bc, 1, 3
+	lb bc, 1, 2
 	call PrintNumber
 	ld [hl], $6d
 	inc hl
 	ld de, wPlayTimeMinutes
 	lb bc, LEADING_ZEROES | 1, 2
 	call PrintNumber
+	ld [hl], $6d
+	inc hl
+	ld de, wPlayTimeSeconds
+	lb bc, LEADING_ZEROES | 1, 2
+	call PrintNumber
+	ld [hl], $74
+	inc hl
+	ld de, wPlayTimeFrames
+	lb bc, LEADING_ZEROES | 1, 2
+	call PrintNumber
+	
+	coord hl, 1, 6
+	ld de, wPlayerName
+	call PlaceString
+	
+	coord hl, 3, 7
+	
+	ld [hl], $68
+	inc hl
+	ld [hl], $63
+	inc hl
+	ld [hl], $74
+	inc hl
+	ld de, wPlayerID
+	lb bc, LEADING_ZEROES | 2, 5
+	call PrintNumber ; ID Number
+	
 	coord hl, 1, 9
 	ld de, HoFMoneyText
 	call PlaceString
@@ -251,7 +275,7 @@ HoFPrintTextAndDelay:
 	jp DelayFrames
 
 HoFPlayTimeText:
-	db "PLAY TIME@"
+	db "TOTAL PLAY TIME:@"
 
 HoFMoneyText:
 	db "MONEY@"

@@ -30,6 +30,23 @@ _ViridianGymText12::
 	cont "can overcome and"
 	cont "adapt to them."
 	
+	para "I'll also give"
+	line "you this. It's a"
+	cont "gift from me."
+	
+	para "<PLAYER> got 3"
+	line "ULTRA BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+	para "If you see a"
+	line "#MON that"
+	cont "really speaks to"
+	cont "you, it will make"
+	cont "it easier to"
+	cont "catch."
+	
 	para "It was a great"
 	line "battle! We should"
 	cont "rematch someday."
@@ -311,12 +328,65 @@ _ViridianGymPostRematchText::
 	cont "<PLAYER>!"
 	
 	para "You've gotten even"
-	line "stronger than last"
-	cont "we battled."
+	line "stronger than"
+	cont "last we battled."
 	
 	para "I believe you are"
 	line "tough enough to"
 	cont "face your next"
 	cont "challenge."
+	
+	para "I can't grant you"
+	line "another BADGE,"
+	cont "but I can give"
+	cont "you these!"
+	
+	para "<PLAYER> got 3"
+	line "GREAT BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""	
+	para "You can't find"
+	line "those in stores!"
+	cont "Only GYM LEADERs"
+	cont "are given them."
+	
+	para "I'm sure they"
+	line "will help you on"
+	cont "your journey."
+	
+	
+	done
+
+_ViridianGymText15::
+	text "As a gym leader,"
+	line "I'm also allowed"
+	cont "to give you this."
+	
+	para "It's a GREAT BALL!"
+	line "They are very"
+	cont "rare, and prized"
+	cont "among TRAINERs."
+	
+	para "If you're having"
+	line "trouble capturing"
+	cont "a #MON, a"
+	cont "GREAT BALL is"
+	cont "much more"
+	cont "effective than a"
+	cont "#BALL."
+	
+	done
+
+_ViridianGymCantRematchYetText::
+	text "Your determination" 
+	line "is admirable, but" 
+	cont "we just fought," 
+	cont "<PLAYER>." 
+	
+	para "Take some time to" 
+	line "reflect on our" 
+	cont "last battle." 
 	
 	done

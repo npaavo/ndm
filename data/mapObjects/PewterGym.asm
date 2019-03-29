@@ -2,8 +2,8 @@ PewterGym_Object:
 	db $3 ; border block
 
 	db 2 ; warps
-	warp 4, 13, 2, -1
-	warp 5, 13, 2, -1
+	warp 4, 13, 0, PEWTER_CITY
+	warp 5, 13, 0, PEWTER_CITY
 
 	db 0 ; signs
 

@@ -23,10 +23,15 @@ TrackPlayTime:
 	ld a, [wPlayTimeMinutes]
 	inc a
 	ld [wPlayTimeMinutes], a
+	cp 20
+	call z, NDMSetRepeatingEvents ; on 20, set repeating events
+	cp 40
+	call z, NDMSetRepeatingEvents ; on 40, set repeating events
 	cp 60
 	ret nz
 	xor a
 	ld [wPlayTimeMinutes], a
+	call NDMSetRepeatingEvents ; on 0, too!
 	ld a, [wPlayTimeHours]
 	inc a
 	ld [wPlayTimeHours], a
@@ -58,4 +63,12 @@ CountDownIgnoreInputBitReset:
 	xor a
 	ld [hJoyPressed], a
 	ld [hJoyHeld], a
+	ret
+
+; MOD: these event flags are SET every 30 minutes of play time!
+; Put stuff here that you want to happen regularly, like being
+; able to rematch key trainers (i.e. gym leaders)
+
+NDMSetRepeatingEvents:
+	ResetEventRange EVENT_CANT_REMATCH_GYM_0, EVENT_CANT_REMATCH_GYM_7
 	ret

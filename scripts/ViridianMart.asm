@@ -52,9 +52,9 @@ ViridianMartScript1:
 	ld a, $5
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	lb bc, OAKS_PARCEL, 1
-	call GiveItem
-	SetEvent EVENT_GOT_OAKS_PARCEL
+	SetEvent EVENT_TRIED_TO_BUY_BALLS
+	ld a, SFX_DENIED
+	call PlaySound
 	ld a, $2
 	ld [wViridianMartCurScript], a
 	; fallthrough
@@ -82,7 +82,6 @@ ViridianMartText4:
 
 ViridianMartText5:
 	TX_FAR ViridianMartParcelQuestText
-	TX_SFX_KEY_ITEM
 	db "@"
 
 ViridianMartText2:

@@ -8,4 +8,7 @@ _ViridianGateText1::
 	para "My SURFBOARD makes"
 	line "it easy to cross"
 	cont "over to CELADON!"
+	
+	para "Chase your"
+	line "passion, dude!"
 	done

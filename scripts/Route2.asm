@@ -4,9 +4,9 @@ Route2_Script:
 Route2_TextPointers:
 	dw PickUpItemText
 	dw PickUpItemText
+	dw Route2Text5
 	dw Route2Text3
 	dw Route2Text4
-	dw Route2Text5
 
 Route2Text3:
 	TX_FAR _Route2Text3

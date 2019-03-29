@@ -125,24 +125,7 @@ ViridianCityText1:
 	db "@"
 
 ViridianCityText2:
-	TX_ASM
-	ld a, [wObtainedBadges]
-	cp %01111111
-	ld hl, ViridianCityText_19127
-	jr z, .asm_ae9fe
-	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_WYLDA
-	jr nz, .asm_ae9fe
-	ld hl, ViridianCityText_19122
-.asm_ae9fe
-	call PrintText
-	jp TextScriptEnd
-
-ViridianCityText_19122:
-	TX_FAR _ViridianCityText_19122
-	db "@"
-
-ViridianCityText_19127:
-	TX_FAR _ViridianCityText_19127
+	TX_FAR _ViridianCityText2
 	db "@"
 
 ViridianCityText3:

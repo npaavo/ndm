@@ -78,14 +78,14 @@ _SlowbroDexEntry::
 	next "over scraps"
 	dex
 
-_IvysaurDexEntry::
-	text "When the bulb on"
-	next "its back grows"
-	next "large, it appears"
+_IvysaurDexEntry:: ;mod
+	text "It uses its vines"
+	next "as extra arms,"
+	next "extending its"
 
-	page "to lose the"
-	next "ability to stand"
-	next "on its hind legs"
+	page "reach and allowing"
+	next "it to flip itself"
+	next "when knocked over"
 	dex
 
 _ExeggutorDexEntry::
@@ -338,14 +338,14 @@ _FearowDexEntry::
 	next "for rest"
 	dex
 
-_PidgeyDexEntry::
-	text "A common sight in"
-	next "forests and woods."
-	next "It flaps its"
+_PidgeyDexEntry:: ;mod
+	text "A common sight all"
+	next "over the world."
+	next "Easily spooked,"
 
-	page "wings at ground"
-	next "level to kick up"
-	next "blinding sand"
+	page "they will kick"
+	next "up blinding sand"
+	next "when provoked"
 	dex
 
 _SlowpokeDexEntry::
@@ -698,14 +698,14 @@ _NinetalesDexEntry::
 	next "1000-year curse"
 	dex
 
-_PikachuDexEntry::
-	text "When several of"
-	next "these #MON"
-	next "gather, their"
+_PikachuDexEntry:: ;mod
+	text "Frequently chews"
+	next "electrical wires"
+	next "around homes."
 
-	page "electricity could"
-	next "build and cause"
-	next "lightning storms"
+	page "Though small, its"
+	next "electrical power"
+	next "can be dangerous"
 	dex
 
 _RaichuDexEntry::
@@ -1258,24 +1258,24 @@ _StarmieDexEntry::
 	next "core as a gem"
 	dex
 
-_BulbasaurDexEntry::
-	text "A strange seed was"
-	next "planted on its"
-	next "back at birth."
+_BulbasaurDexEntry:: ;mod
+	text "The plant on its"
+	next "back blooms as it"
+	next "develops. It"
 
-	page "The plant sprouts"
-	next "and grows with"
-	next "this #MON"
+	page "gathers sunlight,"
+	next "which causes it to"
+	next "grow stronger"
 	dex
 
-_VenusaurDexEntry::
-	text "The plant blooms"
-	next "when it is"
-	next "absorbing solar"
+_VenusaurDexEntry:: ;mod
+	text "Its huge flower"
+	next "converts the sun's"
+	next "rays to energy."
 
-	page "energy. It stays"
-	next "on the move to"
-	next "seek sunlight"
+	page "Rarely needs to "
+	next "eat food, despite"
+	next "its large size"
 	dex
 
 _TentacruelDexEntry::
@@ -1328,24 +1328,24 @@ _RapidashDexEntry::
 	next "racing it"
 	dex
 
-_RattataDexEntry::
-	text "Bites anything"
-	next "when it attacks."
-	next "Small and very"
+_RattataDexEntry:: ;mod
+	text "Its developing"
+	next "teeth are used for"
+	next "everything."
 
-	page "quick, it is a"
-	next "common sight in"
-	next "many places"
+	page "Through use, their"
+	next "teeth grow larger"
+	next "and harder"
 	dex
 
-_RaticateDexEntry::
-	text "It uses its whis-"
-	next "kers to maintain"
-	next "its balance."
+_RaticateDexEntry:: ;mod
+	text "Its massive front"
+	next "teeth are sharp"
+	next "and super hard."
 
-	page "It apparently"
-	next "slows down if"
-	next "they are cut off"
+	page "They have been"
+	next "seen even biting"
+	next "through rocks"
 	dex
 
 _NidorinoDexEntry::
@@ -1408,54 +1408,54 @@ _MagnemiteDexEntry::
 	next "similar moves"
 	dex
 
-_CharmanderDexEntry::
-	text "Obviously prefers"
-	next "hot places. When"
-	next "it rains, steam"
+_CharmanderDexEntry:: ;mod
+	text "Its signature tail"
+	next "flame burns most"
+	next "bright when it is"
 
-	page "is said to spout"
-	next "from the tip of"
-	next "its tail"
+	page "healthy. The young"
+	next "rely on their"
+	next "claws in battle"
 	dex
 
-_SquirtleDexEntry::
-	text "After birth, its"
-	next "back swells and"
-	next "hardens into a"
+_SquirtleDexEntry:: ;mod
+	text "When provoked, it"
+	next "draws into its"
+	next "shell and shoots"
 
-	page "shell. Powerfully"
-	next "sprays foam from"
-	next "its mouth"
+	page "pressurized water,"
+	next "causing it to spin"
+	next "incredibly fast"
 	dex
 
-_CharmeleonDexEntry::
-	text "When it swings"
-	next "its burning tail,"
-	next "it elevates the"
+_CharmeleonDexEntry:: ;mod
+	text "Unlike CHARMANDER,"
+	next "its evolved form"
+	next "is very fickle."
 
-	page "temperature to"
-	next "unbearably high"
-	next "levels"
+	page "Dealing with its "
+	next "ego is a test for"
+	next "many new TRAINERs"
 	dex
 
-_WartortleDexEntry::
-	text "Often hides in"
-	next "water to stalk"
-	next "unwary prey. For"
+_WartortleDexEntry:: ;mod
+	text "Its ears are not"
+	next "only effective at"
+	next "finding prey, but"
 
-	page "swimming fast, it"
-	next "moves its ears to"
-	next "maintain balance"
+	page "allow it to swim"
+	next "very fast as it"
+	next "ambushes them"
 	dex
 
-_CharizardDexEntry::
-	text "Spits fire that"
-	next "is hot enough to"
-	next "melt boulders."
+_CharizardDexEntry:: ;mod
+	text "Quickly learns how"
+	next "to use its wings"
+	next "after evolving,"
 
-	page "Known to cause"
-	next "forest fires"
-	next "unintentionally"
+	page "becoming extremely"
+	next "territorial and"
+	next "hot-tempered."
 	dex
 
 _OddishDexEntry::

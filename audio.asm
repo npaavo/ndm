@@ -578,7 +578,7 @@ PlayPokedexRatingSfx::
 	jp PlayDefaultMusic
 
 PokedexRatingSfxPointers:
-	db SFX_DENIED,         BANK(SFX_Denied_3)
+	db SFX_GET_ITEM_1,     BANK(SFX_Get_Item1_1)
 	db SFX_POKEDEX_RATING, BANK(SFX_Pokedex_Rating_1)
 	db SFX_GET_ITEM_1,     BANK(SFX_Get_Item1_1)
 	db SFX_CAUGHT_MON,     BANK(SFX_Caught_Mon)

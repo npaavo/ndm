@@ -1,6 +1,12 @@
 _ViridianMartText1::
-	text "Okay! Say hi to"
-	line "PROF.OAK for me!"
+	text "I think OAK"
+	line "applied to issue"
+	cont "TRAINER LICENSEs."
+	
+	para "If you're heading"
+	line "back to PALLET"
+	cont "CAMP, you should"
+	cont "hit him up."
 	done
 
 _ViridianMartText4::
@@ -20,30 +26,35 @@ ViridianMartParcelQuestText::
 	cont "doing out here?"
 	
 	para "..."
-	line "Helping OAK, huh?"
-	cont "That's cool I"
-	cont "guess."
+	line "Helping OAK?"
+	cont "Seems a little"
+	cont "beneath you, but"
+	cont "sure!"
 	
-	para "I want to be a"
-	line "TRAINER, but my"
-	cont "dad makes me run"
-	cont "the shop. Lame!"
+	para "So, need to buy"
+	line "some #BALLs?"
 	
-	para "Anyway, if you're"
-	line "heading back to"
-	cont "the CAMP, could"
-	cont "you take this to"
-	cont "OAK?"
+	para "I'll just need to"
+	line "see your TRAINER"
+	cont "LICENSE... ..."
 	
-	para "Looks like he"
-	line "applied to the"
-	cont "KANTO LEAGUE to"
-	cont "approve new"
-	cont "TRAINER IDs. His"
-	cont "stamp arrived."
-
-	para "<PLAYER> got"
-	line "OAK's PARCEL!@@"
+	para "..."
+	
+	para "You don't have"
+	line "it on you?!"
+	
+	para "I can't legally "
+	line "sell you any"
+	cont "#BALLs if"
+	cont "your ID isn't"
+	cont "approved for use"
+	cont "in KANTO!"
+	
+	para "You may be a"
+	line "champ in JOHTO,"
+	cont "but things work"
+	cont "different here!"
+	done
 
 _ViridianMartText2::
 	text "This shop sells"

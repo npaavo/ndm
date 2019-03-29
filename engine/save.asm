@@ -153,21 +153,21 @@ SaveSAV:
 	and a
 	ret nz
 .save
-	call SaveSAVtoSRAM
+	call SaveSAVtoSRAM ; save the game, completely.
 	coord hl, 1, 13
 	lb bc, 4, 18
-	call ClearScreenArea
+	call ClearScreenArea ;clear the text field 
 	coord hl, 1, 14
-	ld de, NowSavingString
-	call PlaceString
-	ld c, 120
-	call DelayFrames
-	ld hl, GameSavedText
-	call PrintText
+	;ld de, NowSavingString 
+	;call PlaceString ; draw the "now saving..." text
+	;ld c, 120 ; wait 2 seconds for literally no reason
+	;call DelayFrames
+	ld hl, GameSavedText 
+	call PrintText ; display "saved the game!"
 	ld a, SFX_SAVE
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
-	ld c, 30
+	ld c, 30 ; wait another half second after save jingle finishes
 	jp DelayFrames
 
 NowSavingString:

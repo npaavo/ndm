@@ -239,10 +239,12 @@ ViridianSchoolHiddenObjects:
 	dw PrintBlackboardLinkCableText
 	db $FF
 ViridianGymHiddenObjects:
-	db $0f,$0f,$04
-	dbw BANK(GymStatues),GymStatues
-	db $0f,$12,$04
-	dbw BANK(GymStatues),GymStatues
+	db $0d,$04,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $0d,$05,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
 	db $FF
 Museum1FHiddenObjects:
 	db $03,$02,$04

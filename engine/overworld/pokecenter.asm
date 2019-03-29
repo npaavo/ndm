@@ -2,6 +2,7 @@ DisplayPokemonCenterDialogue_:
 	call SaveScreenTilesToBuffer1 ; save screen
 	ld hl, PokemonCenterWelcomeText
 	call PrintText
+	call SetLastBlackoutMap
 	ld a, $18
 	ld [wSpriteStateData1 + $12], a ; make the nurse turn to face the machine
 	call Delay3

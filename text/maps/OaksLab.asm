@@ -82,8 +82,18 @@ _OaksLabText_1d2f5::
 _OaksLabText_1d2fa::
 	text "OAK: <PLAYER>,"
 	line "raise your young"
-	cont "#MON by making"
-	cont "it fight!"
+	cont "#MON with"
+	cont "care!"
+	
+	para "It will help"
+	line "you capture any"
+	cont "wild #MON"
+	cont "you find!"
+	
+	para "If you need"
+	line "#BALLs, you'll"
+	cont "need to go north"
+	cont "to VIRIDIAN CITY!"
 	done
 
 _OaksLabDeliverParcelText1::
@@ -100,17 +110,17 @@ _OaksLabDeliverParcelText1::
 	line "as a top TRAINER"
 	cont "shines through!"
 
-	para "What? You have"
-	line "something for me?"
-
-	para "<PLAYER> delivered"
-	line "OAK's PARCEL.@@"
+	para "What? You ran"
+	line "into trouble"
+	cont "trying to buy"
+	cont "#BALLs?"
+	prompt 
 
 _OaksLabDeliverParcelText2::
 	text ""
 	para "... Oh no! I was"
 	line "supposed to"
-	cont "stamp your ID"
+	cont "give you your ID"
 	cont "before you left!"
 	
 	para "I just applied to"
@@ -119,8 +129,7 @@ _OaksLabDeliverParcelText2::
 	
 	para "It's illegal to"
 	line "train #MON"
-	cont "without a stamp"
-	cont "of this seal!"
+	cont "without it!"
 	
 	para "... Wait! We"
 	line "need to find"
@@ -187,9 +196,10 @@ _OaksLabText_1d31d::
 	prompt
 
 _OaksLabText_1d32c::
-	text "It's encyclopedia-"
-	line "like, but the"
-	cont "pages are blank!"
+	text "It's really high-"
+	line "tech looking."
+	para "Better not"
+	line "touch it..."
 	done
 
 _OaksLabText8::
@@ -197,13 +207,13 @@ _OaksLabText8::
 	done
 
 _OaksLabText_1d340::
-	text "PROF.OAK is the"
-	line "authority on"
-	cont "#MON!"
+	text "PROF.OAK is a"
+	line "real genius!"
 
-	para "Many #MON"
-	line "trainers hold him"
-	cont "in high regard!"
+	para "He may be young,"
+	line "but is already"
+	cont "making waves!"
+	
 	done
 
 _OaksLabRivalWaitingText::
@@ -238,31 +248,40 @@ IF DEF(_RED)
 	cont "to fully brief"
 	cont "you on our plan."
 	
-	para "This region is"
-	line "full of wonderful"
-	cont "kinds of #MON."
+	para "The relentless"
+	line "expansion of the"
+	cont "cities and roads"
+	cont "of KANTO are"
+	cont "pushing out the"
+	cont "native #MON!"
 	
-	para "Forests, caves,"
-	line "rivers and seas"
-	cont "all contain a"
-	cont "wide variety of"
-	cont "species!"
+	para "The once peaceful"
+	line "wild #MON"
+	cont "have been seen"
+	cont "attacking humans!"
 	
-	para "But the cities"
-	line "are pushing the"
-	cont "wildlife out,"
-	cont "and the #MON"
-	cont "are becoming"
-	cont "hostile!"
+	para "Some species are"
+	line "even becoming"
+	cont "endangered by"
+	cont "habitat loss."
 	
 	para "I need you two"
 	line "to capture one of"
-	cont "every kind. We"
-	cont "must understand"
-	cont "these magnificent"
-	cont "creatures, and"
-	cont "find ways to"
-	cont "coexist!"
+	cont "every kind."
+	
+	para "We must learn"
+	line "what we can"
+	cont "about the KANTO"
+	cont "species before"
+	cont "it's too late!"
+	
+	para "With any luck,"
+	line "we may be able"
+	cont "to preserve the"
+	cont "populations of"
+	cont "every kind,"
+	cont "even if only "
+	cont "in captivity."
 
 	para "To help you do"
 	line "that, I'll give"
@@ -280,14 +299,15 @@ IF DEF(_BLUE)
 ENDC
 _OaksLabRivalInterjectionText::
 IF DEF(_RED)
-	text "<RIVAL>: Tch."
+	text "<RIVAL>: Pff."
 	line "I don't see why"
 	cont "we couldn't have"
 	cont "brought our own"
-	cont "#MON... You"
-	cont "know, the ones"
-	cont "that won the"
-	cont "CHAMPIONSHIP?"
+	cont "#MON... "
+	
+	para "You know, the"
+	cont "ones that won"
+	cont "a CHAMPIONSHIP?"
 	
 	para "...or, in the case"
 	line "of <PLAYER>, at"
@@ -380,8 +400,8 @@ IF DEF(_RED)
 	cont "#MON LEAGUE."
 	
 	para "Thanks for the"
-	line "TRAINER LICENSE."
-	cont "Later."
+	line "#MON. See ya,"
+	cont "nerds!"
 	
 	done
 ENDC
@@ -400,8 +420,7 @@ IF DEF(_RED)
 	
 	para "I almost got"
 	line "arrested in"
-	cont "VIRIDIAN for an"
-	cont "unapproved ID!"
+	cont "VIRIDIAN!"
 
     para "Good thing they"
 	line "recognized me!"
@@ -420,12 +439,10 @@ IF DEF(_RED)
 	para "I'm a researcher,"
 	line "not a bureaucrat!"
 	
-	para "But, <PLAYER> has"
-	line "delivered my"
-	cont "stamp. We can fix"
-	cont "this now."
+	para "Well, you're both"
+	line "here... again."
 	
-	para "This is also a"
+    para "So, now is a"
 	line "good opportunity"
 	cont "to give you this!"
 	done
@@ -440,13 +457,20 @@ IF DEF(_RED)
 	line "is my invention,"
 	cont "the #DEX!"
 
-	para "It automatically"
-	line "records data on"
-	cont "#MON you've"
-	cont "seen or caught!"
-
-	para "It's a hi-tech"
-	line "encyclopedia!"
+	para "Whenever you catch"
+	line "a #MON, be"
+	cont "sure to record"
+	cont "any information"
+	cont "about it!"
+	
+	para "When it's finished,"
+	line "the #DEX will"
+	cont "be a priceless"
+	cont "tool for all new" 
+	cont "#MON TRAINERs!"
+	
+	para "At least, that's"
+	line "my dream."
 	
 	done
 ENDC
@@ -457,13 +481,13 @@ ENDC
 
 _OaksLabText25::
 IF DEF(_RED)
-	text "I was a little"
-	line "unsure if I"
-	cont "should give you"
-	cont "it, since it is"
-	cont "only a prototype"
-	cont "right now, but"
-	cont "what the heck!"
+	text "Even better, it's" 
+	line "got a digital"
+	cont "copy of your ID."
+	
+	para "So don't go"
+	line "throwing it away,"
+	cont "hahah!"
 ENDC
 IF DEF(_BLUE)
 	text "d" 
@@ -475,18 +499,21 @@ ENDC
 _OaksLabText26::
 
 IF DEF(_RED)
-	text "Making a complete"
-	line "guide on all the"
-	cont "#MON in the"
-	cont "world..."
-
-	para "Future TRAINERs"
-	line "will be relying"
-	cont "on our finds!"
-
-	para "This is a great"
-	line "undertaking in"
-	cont "#MON history!"
+	text "<PLAYER>..."
+	line "<RIVAL>..."
+	
+	para "It's frightening"
+	line "to think that in"
+	cont "a few decades,"
+	cont "trainers may"
+	cont "never encounter"
+	cont "#MON we take"
+	cont "for granted..."
+	
+	para "Please, capture"
+	line "as many species"
+	cont "as you can!"
+	
 	done
 ENDC
 IF DEF(_BLUE)
@@ -523,8 +550,8 @@ _OaksLabText_1d405::
 	done
 
 _OaksLabText_441cc::
-	text "#DEX comp-"
-	line "letion is:"
+	text "Your #DEX"
+	line "has recorded..."
 
 	para "@"
 	TX_NUM hDexRatingNumMonsSeen, 1, 3
@@ -533,67 +560,63 @@ _OaksLabText_441cc::
 	TX_NUM hDexRatingNumMonsOwned, 1, 3
 	text " #MON owned"
 
-	para "PROF.OAK's"
-	line "Rating:"
+	para "OAK: I see..."
 	prompt
 
 _OaksLabText_44201::
-	text "You still have"
-	line "lots to do."
-	cont "Look for #MON"
-	cont "in grassy areas!"
+	text "We're just getting"
+	line "started! I can't"
+	cont "wait to see what"
+	cont "you catch!"
+	
 	done
 
 _OaksLabText_44206::
 	text "You're on the"
 	line "right track! "
-	cont "Get a FLASH HM"
-	cont "from my AIDE!"
+	cont "Keep at it!"
 	done
 
 _OaksLabText_4420b::
-	text "You still need"
-	line "more #MON!"
-	cont "Try to catch"
-	cont "other species!"
+	text "Keep an eye out"
+	line "for rare #MON"
+	cont "when exploring!"
 	done
 
 _OaksLabText_44210::
-	text "Good, you're"
-	line "trying hard!"
-	cont "Get an ITEMFINDER"
-	cont "from my AIDE!"
+	text "Your effort shows!"
+	line "But we're not"
+	cont "done yet!"
 	done
 
 _OaksLabText_44215::
 	text "Looking good!"
-	line "Go find my AIDE"
-	cont "when you get 50!"
+	line "Your dedication is"
+	cont "admirable!"
 	done
 
 _OaksLabText_4421a::
-	text "You finally got at"
-	line "least 50 species!"
-	cont "Be sure to get"
-	cont "EXP.ALL from my"
-	cont "AIDE!"
+	text "I can't believe"
+	line "it! Over 50"
+	cont "already?!"
 	done
 
 _OaksLabText_4421f::
-	text "Ho! This is geting"
-	line "even better!"
+	text "The #DEX is"
+	line "really coming"
+	cont "together!"
 	done
 
 _OaksLabText_44224::
 	text "Very good!"
-	line "Go fish for some"
-	cont "marine #MON!"
+	line "I've learned a"
+	cont "lot from you!"
 	done
 
 _OaksLabText_44229::
 	text "Wonderful!"
-	line "Do you like to"
-	cont "collect things?"
+	line "You're quite the"
+	cont "collector!"
 	done
 
 _OaksLabText_4422e::
@@ -610,15 +633,16 @@ _OaksLabText_44233::
 	done
 
 _OaksLabText_44238::
-	text "You even have the"
-	line "evolved forms of"
-	cont "#MON! Super!"
+	text "I've never seen"
+	line "some of these!"
+	cont "Where did you"
+	cont "find them?"
 	done
 
 _OaksLabText_4423d::
-	text "Excellent! Trade"
-	line "with friends to"
-	cont "get some more!"
+	text "Your catalog of"
+	line "#MON is still"
+	cont "growing?! Wow!"
 	done
 
 _OaksLabText_44242::
@@ -628,14 +652,17 @@ _OaksLabText_44242::
 	done
 
 _OaksLabText_44247::
-	text "I have nothing"
-	line "left to say!"
-	cont "You're the"
-	cont "authority now!"
+	text "Are there even"
+	line "any left to find?"
+	cont "Good luck!"
 	done
 
 _OaksLabText_4424c::
-	text "Your #DEX is"
-	line "entirely complete!"
-	cont "Congratulations!"
+	text "It's... beautiful!"
+	line "You've made a"
+	cont "dream come true!"
+	
+	para "<PLAYER>, I am"
+	line "forever in your"
+	cont "debt!"
 	done

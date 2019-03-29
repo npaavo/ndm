@@ -6,5 +6,5 @@ Route3_h:
 	dw Route3_Script ; scripts
 	db NORTH | WEST ; connections
 	NORTH_MAP_CONNECTION ROUTE_3, ROUTE_4, 25, 0, Route4_Blocks
-	WEST_MAP_CONNECTION ROUTE_3, PEWTER_CITY, -3, 1, PewterCity_Blocks
+	WEST_MAP_CONNECTION ROUTE_3, PEWTER_CITY, 1, 1, PewterCity_Blocks
 	dw Route3_Object ; objects

@@ -1001,8 +1001,7 @@ OaksLabText5:
 	call PrintText
 	jr .asm_1d2ed
 .asm_1d2a9
-	ld b, OAKS_PARCEL
-	call IsItemInBag
+	CheckEvent EVENT_TRIED_TO_BUY_BALLS
 	jr nz, .asm_1d2b8
 	ld hl, OaksLabText_1d2fa
 	call PrintText
@@ -1046,7 +1045,6 @@ OaksLabText_1d2fa:
 
 OaksLabDeliverParcelText:
 	TX_FAR _OaksLabDeliverParcelText1
-	TX_SFX_KEY_ITEM
 	TX_FAR _OaksLabDeliverParcelText2
 	db "@"
 

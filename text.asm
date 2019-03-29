@@ -94,15 +94,14 @@ _NoMoreRoomForItemText::
 
 _OaksAideHiText::
 	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
-	cont "AIDE!"
+	line "I help PROF. OAK"
+	cont "with field tasks!"
 
-	para "If you caught @"
+	para "If you've got @"
 	TX_NUM hOaksAideRequirement, 1, 3
 	text ""
 	line "kinds of #MON,"
-	cont "I'm supposed to"
-	cont "give you an"
+	cont "I'll give you a"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
 	text "!"
@@ -123,7 +122,7 @@ _OaksAideUhOhText::
 	text ""
 	cont "kinds of #MON!"
 
-	para "You need @"
+	para "You'll need @"
 	TX_NUM hOaksAideRequirement, 1, 3
 	text " kinds"
 	line "if you want the"
@@ -139,18 +138,14 @@ _OaksAideComeBackText::
 	TX_NUM hOaksAideRequirement, 1, 3
 	text ""
 	line "kinds, come back"
-	cont "for @"
+	cont "for a @"
 	TX_RAM wOaksAideRewardItemName
 	text "."
 	done
 
 _OaksAideHereYouGoText::
-	text "Great! You have"
-	line "caught @"
-	TX_NUM hOaksAideNumMonsOwned, 1, 3
-	text " kinds "
-	cont "of #MON!"
-	cont "Congratulations!"
+	text "Nice work,"
+	line "<PLAYER>!"
 
 	para "Here you go!"
 	prompt

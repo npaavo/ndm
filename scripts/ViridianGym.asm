@@ -96,14 +96,16 @@ ViridianGymScript3_GiveRewards:
 	set 0, [hl]
 	ld hl, wBeatGymFlags
 	set 0, [hl]
+	lb bc, ULTRA_BALL, 3
+	call GiveItem
 	jr .done
 .rematchwintext
-	ld a, $d
+	lb bc, GREAT_BALL, 3
+	call GiveItem
+	ld a, $f
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .done
-
-
 	; deactivate gym trainers
 	;SetEventRange EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
 
@@ -128,6 +130,7 @@ ViridianGym_TextPointers:
 	dw ViridianGymText12
 	dw ViridianGymText13
 	dw ViridianGymText14
+	dw ViridianGymText15
 
 ViridianGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0
@@ -212,17 +215,24 @@ ViridianGymText1:
 	jr nz, .rematch
 	call z, ViridianGymScript3_GiveRewards
 	call DisableWaitingAfterTextDisplay
-	jr .done
+	jp .done
 .rematch
+	CheckEvent EVENT_CANT_REMATCH_GYM_0
+	jr nz, .cantrematch
 	ld a, $1
 	ld [wGymBattleIsRematch], a	
 	ld hl, ViridianGymRematchText
 	call PrintText
 	jr .initbattle
+.cantrematch
+	ld hl, ViridianGymCantRematchYetText
+	call PrintText
+	jr .done
 .startbattle
 	ld hl, ViridianGymIntroText
 	call PrintText
 .initbattle
+	SetEvent EVENT_CANT_REMATCH_GYM_0
 	;allegedly this does nothing but at this point this jenga tower 
 	;has collapsed enough times where I'm sure it does something
 	ld hl, wd72d
@@ -483,3 +493,10 @@ ViridianGymHowManyBadgesText:
 	TX_FAR _ViridianGymHowManyBadgesText
 	db "@"
 
+ViridianGymText15:
+	TX_FAR _ViridianGymText15
+	db "@"
+	
+ViridianGymCantRematchYetText:
+	TX_FAR _ViridianGymCantRematchYetText 
+	db "@"

@@ -12,7 +12,7 @@ _ViridianCityText1::
 	cont "is just ahead."
 	done
 
-_ViridianCityText_19122::
+_ViridianCityText2::
 	text "That's our #MON"
 	line "GYM! It got built"
 	cont "recently!"
@@ -29,11 +29,6 @@ _ViridianCityText_19122::
 	para "Maybe you can"
 	line "be a GYM LEADER"
 	cont "someday, too!"
-	done
-
-_ViridianCityText_19127::
-	text "VIRIDIAN GYM's"
-	line "LEADER returned!"
 	done
 
 _ViridianCityText_1914d::

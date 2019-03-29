@@ -665,6 +665,10 @@ ItemUseBicycle:
 
 ; used for Surf out-of-battle effect
 ItemUseSurfboard:
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	
 	ld a, [wWalkBikeSurfState]
 	ld [wWalkBikeSurfStateCopy], a
 	cp 2 ; is the player already surfing?
@@ -792,8 +796,12 @@ _CanSeeFineText::
 	line "here just fine!"
 	prompt	
 	
-; MOD - simulates cut
 ItemUseScythe:
+; MOD - simulates cut
+	ld a, [wIsInBattle]
+	and a
+	jp nz, ItemUseNotTime
+	
 	xor a
 	ld [wActionResultOrTookBattleTurn], a ; initialise to failure value
 	ld a, [wCurMapTileset]

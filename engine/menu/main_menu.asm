@@ -357,7 +357,7 @@ DisplayContinueGameInfo:
 	call PrintNumBadges
 	coord hl, 16, 13
 	call PrintNumOwnedMons
-	coord hl, 13, 15
+	coord hl, 10, 15
 	call PrintPlayTime
 	ld a, 1
 	ld [H_AUTOBGTRANSFERENABLED], a
@@ -383,7 +383,7 @@ PrintSaveScreenText:
 	call PrintNumBadges
 	coord hl, 16, 6
 	call PrintNumOwnedMons
-	coord hl, 13, 8
+	coord hl, 10, 8
 	call PrintPlayTime
 	ld a, $1
 	ld [H_AUTOBGTRANSFERENABLED], a
@@ -418,8 +418,13 @@ PrintPlayTime:
 	inc hl
 	ld de, wPlayTimeMinutes
 	lb bc, LEADING_ZEROES | 1, 2
+	call PrintNumber
+	ld [hl], $6d
+	inc hl
+	ld de, wPlayTimeSeconds
+	lb bc, LEADING_ZEROES | 1, 2
 	jp PrintNumber
-
+	
 SaveScreenInfoText:
 	db   "PLAYER"
 	next "BADGES    "
@@ -675,9 +680,9 @@ SetCursorPositionsFromOptions:
 ; 00: X coordinate of menu cursor
 ; 01: delay after printing a letter (in frames)
 TextSpeedOptionData:
-	db 14,5 ; Slow
-	db  7,3 ; Medium
-	db  1,1 ; Fast
+	db 14,3 ; Slow
+	db  7,1 ; Medium
+	db  1,0 ; Fast
 	db 7 ; default X coordinate (Medium)
 	db $ff ; terminator
 

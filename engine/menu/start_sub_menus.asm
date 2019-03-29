@@ -599,6 +599,11 @@ DrawTrainerInfo:
 	inc hl
 	ld de, wPlayTimeMinutes ; minutes
 	lb bc, LEADING_ZEROES | 1, 2
+	call PrintNumber
+	ld [hl], $d6 ; colon tile ID
+	inc hl
+	ld de, wPlayTimeSeconds ; minutes
+	lb bc, LEADING_ZEROES | 1, 2
 	jp PrintNumber
 
 TrainerInfo_FarCopyData:
