@@ -24,6 +24,15 @@ WarpTileIDPointers:
 	dw FacilityWarpTileIDs
 	dw PlateauWarpTileIDs
 
+
+; these represent the index of the sub-sprite 
+; that is the bottom-left corner of the tile 
+; you intend to walk on to warp.
+
+; i.e. if a ladder is    -->   $08  $09
+; made up of the sprites -->   $0A  $0B
+; then you would use $0A
+
 OverworldWarpTileIDs:
 	db $1B,$58,$FF
 
@@ -57,7 +66,7 @@ InteriorWarpTileIDs:
 	db $15,$55,$04,$FF
 
 CavernWarpTileIDs:
-	db $18,$1A,$22,$FF
+	db $18,$1A,$21,$22,$FF
 
 LobbyWarpTileIDs:
 	db $1A,$1C,$38,$FF

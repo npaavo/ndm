@@ -56,7 +56,7 @@ WildDataPointers:
 	dw NoMons
 	dw NoMons
 	dw NoMons
-	dw NoMons
+	dw PewterFieldMons ; MOD
 	dw NoMons
 	dw MoonMons1
 	dw MoonMonsB1
@@ -267,6 +267,7 @@ INCLUDE "data/wildPokemon/route1.asm"
 INCLUDE "data/wildPokemon/route2.asm"
 INCLUDE "data/wildPokemon/route22.asm"
 INCLUDE "data/wildPokemon/viridianforest.asm"
+INCLUDE "data/wildPokemon/pewterfield.asm"
 INCLUDE "data/wildPokemon/route3.asm"
 INCLUDE "data/wildPokemon/mtmoon1.asm"
 INCLUDE "data/wildPokemon/mtmoonb1.asm"

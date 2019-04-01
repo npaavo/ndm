@@ -2941,7 +2941,7 @@ wDestinationMap:: ; d71a
 ; destination map (for certain types of special warps, not ordinary walking)
 	ds 1
 
-wUnusedD71B:: ; d71b
+wSideRouteCurScript:: ; MOD - I HOPE THIS BREAKS NOTHING
 	ds 1
 
 wTileInFrontOfBoulderAndBoulderCollisionResult:: ; d71c

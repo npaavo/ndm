@@ -2,8 +2,8 @@ PewterMart_Object:
 	db $0 ; border block
 
 	db 2 ; warps
-	warp 3, 7, 4, -1
-	warp 4, 7, 4, -1
+	warp 3, 7, 2, -1
+	warp 4, 7, 2, -1
 
 	db 0 ; signs
 

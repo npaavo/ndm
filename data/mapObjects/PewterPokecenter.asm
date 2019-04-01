@@ -2,8 +2,8 @@ PewterPokecenter_Object:
 	db $0 ; border block
 
 	db 2 ; warps
-	warp 3, 7, 4, PEWTER_CITY
-	warp 4, 7, 4, PEWTER_CITY
+	warp 3, 7, 4, -1
+	warp 4, 7, 4, -1
 
 	db 0 ; signs
 

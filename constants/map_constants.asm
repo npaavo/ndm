@@ -62,7 +62,7 @@ ENDM
 	mapconst PEWTER_GYM,                     7,  5 ; $36
 	mapconst PEWTER_NIDORAN_HOUSE,           4,  4 ; $37
 	mapconst PEWTER_MART,                    4,  4 ; $38
-	mapconst PEWTER_SPEECH_HOUSE,            4,  4 ; $39
+	mapconst PEWTER_SPEECH_HOUSE,            8,  6 ; $39
 	mapconst PEWTER_POKECENTER,              4,  4 ; $3A
 	mapconst MT_MOON_1F,                    18, 20 ; $3B
 	mapconst MT_MOON_B1F,                   14, 14 ; $3C
