@@ -20,9 +20,9 @@ Gym1CityName:
 	db "PEWTER CITY@"
 
 Gym1LeaderName:
-	db "BROCK@"
+	db "LARS@"
 
-PewterGymScript_5c3bf:
+PewterGymResetScripts:
 	xor a
 	ld [wJoyIgnore], a
 	ld [wPewterGymCurScript], a
@@ -38,46 +38,40 @@ PewterGym_ScriptPointers:
 PewterGymScript3:
 	ld a, [wIsInBattle]
 	cp $ff
-	jp z, PewterGymScript_5c3bf
+	jp z, PewterGymResetScripts
 	ld a, $f0
 	ld [wJoyIgnore], a
 
 PewterGymScriptGiveRewards:
-	ld a, $4
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
+	ld a, $c
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_BEAT_BROCK
-	lb bc, TM_34, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, $5
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM34
-	jr .gotit
-.BagFull
-	ld a, $6
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-.gotit
+	SetEvent EVENT_BEAT_PEWTER_GYM_LARS
 	ld hl, wObtainedBadges
 	set 0, [hl]
 	ld hl, wBeatGymFlags
 	set 0, [hl]
-
-	ld a, HS_GYM_GUY
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	ld a, HS_ROUTE_22_RIVAL_1
-	ld [wMissableObjectIndex], a
-	predef HideObject
-
-	ResetEvents EVENT_1ST_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
-
+	lb bc, ULTRA_BALL, 3
+	call GiveItem
+	jr .done
+.rematchwintext
+	lb bc, GREAT_BALL, 3
+	call GiveItem
+	ld a, $f
+	ld [hSpriteIndexOrTextID], a
+	call DisplayTextID
+.done
 	; deactivate gym trainers
-	SetEvent EVENT_BEAT_PEWTER_GYM_TRAINER_0
+	;SetEventRange EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
 
-	jp PewterGymScript_5c3bf
+	;ld a, HS_ROUTE_22_RIVAL_2
+	;ld [wMissableObjectIndex], a
+	;predef ShowObject
+	;SetEvents EVENT_2ND_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	jp PewterGymResetScripts
 
 PewterGym_TextPointers:
 	dw PewterGymText1
@@ -89,7 +83,7 @@ PewterGym_TextPointers:
 
 PewterGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_PEWTER_GYM_TRAINER_0
-	db ($5 << 4) ; trainer's view range
+	db ($0 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_PEWTER_GYM_TRAINER_0
 	dw PewterGymBattleText1 ; TextBeforeBattle
 	dw PewterGymAfterBattleText1 ; TextAfterBattle
@@ -100,37 +94,70 @@ PewterGymTrainerHeader0:
 
 PewterGymText1:
 	TX_ASM
-	CheckEvent EVENT_BEAT_BROCK
-	jr z, .fight
-	CheckEventReuseA EVENT_GOT_TM34
-	jr nz, .alreadywon
+	call CountNumBadgesOwned
+	CheckEvent EVENT_BEAT_PEWTER_GYM_LARS
+	jr z, .startbattle
+	CheckEventReuseA EVENT_BEAT_PEWTER_GYM_LARS
+	jr nz, .rematch
 	call z, PewterGymScriptGiveRewards
 	call DisableWaitingAfterTextDisplay
-	jr .done
-.alreadywon
-	ld hl, PewterGymAfterVictoryText
+	jp .done
+.rematch
+	CheckEvent EVENT_CANT_REMATCH_GYM_1
+	jr nz, .cantrematch
+	ld a, $1
+	ld [wGymBattleIsRematch], a	
+	ld hl, PewterGymRematchText
+	call PrintText
+	jr .initbattle
+.cantrematch
+	ld hl, PewterGymCantRematchYetText
 	call PrintText
 	jr .done
-.fight
+.startbattle
 	ld hl, PewterGymFirstFightIntroText
 	call PrintText
+.initbattle
+	SetEvent EVENT_CANT_REMATCH_GYM_1
+	;allegedly this does nothing but at this point this jenga tower 
+	;has collapsed enough times where I'm sure it does something
 	ld hl, wd72d
 	set 6, [hl]
 	set 7, [hl]
+	ld a, [wEffectiveNumBadgesOwned]
+	ld b, a
+	xor a
+	cp b
+	jr z, .nobadges
+	jr nz, .plural
+.nobadges
+	ld hl, PewterGymHowManyBadgesText0
+	call PrintText	
+	jr .initfight
+.plural
+	ld hl, PewterGymHowManyBadgesText
+	call PrintText
+.initfight
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
 	ld hl, PewterGymWinText
 	ld de, PewterGymWinText
+	jr .continit
+.rematchwintext 
+	ld hl, PewterGymRematchWinText
+	ld de, PewterGymRematchWinText	
+.continit
 	call SaveEndBattleTextPointers
 	ld a, [H_SPRITEINDEX]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	ld a, $1
+	call SetGymPartyByBadgeCount
+	ld a, $2
 	ld [wGymLeaderNo], a
-	xor a
-	ld [hJoyHeld], a
 	ld a, $3
 	ld [wPewterGymCurScript], a
-	ld [wCurMapScript], a
 .done
 	jp TextScriptEnd
 
@@ -141,6 +168,22 @@ PewterGymFirstFightIntroText:
 PewterGymAfterVictoryText:
 	TX_FAR _PewterGymAfterVictoryText
 	db "@"
+
+PewterGymRematchText:
+	TX_FAR _PewterGymRematchText
+	db "@"
+	
+PewterGymCantRematchYetText:
+	TX_FAR _PewterGymCantRematchYetText
+	db "@" 
+
+PewterGymHowManyBadgesText0:
+	TX_FAR _PewterGymHowManyBadgesText0
+	db "@" 
+	
+PewterGymHowManyBadgesText:
+	TX_FAR _PewterGymHowManyBadgesText
+	db "@" 
 
 PewterGymText4:
 	TX_FAR _TM34PreReceiveText
@@ -162,6 +205,11 @@ PewterGymWinText:
 	TX_FAR _PewterGymText_5c4c1
 	db "@"
 
+PewterGymRematchWinText:
+	TX_FAR _PewterGymRematchWinText
+	db "@" 
+
+	
 PewterGymText2:
 	TX_ASM
 	ld hl, PewterGymTrainerHeader0
@@ -182,47 +230,21 @@ PewterGymAfterBattleText1:
 
 PewterGymText3:
 	TX_ASM
-	ld a, [wBeatGymFlags]
-	bit 0, a
-	jr nz, .asm_5c50c
-	ld hl, PewterGymTutorialText1
+	CheckEvent EVENT_FOUND_LARS_IN_CAVE
+	jr nz, .LeaderIsHere
+	ld hl, PewterGymWelcomeEmpty
+	jr .done
+.LeaderIsHere
+	ld hl, PewterGymWelcomeHere
+.done
 	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .asm_5c4fe
-	ld hl, PewterGymTutorialText2
-	call PrintText
-	jr .asm_5c504
-.asm_5c4fe
-	ld hl, PewterGymTutorialText4
-	call PrintText
-.asm_5c504
-	ld hl, PewterGymTutorialText3
-	call PrintText
-	jr .asm_5c512
-.asm_5c50c
-	ld hl, PewterGymTutorialTextWon
-	call PrintText
-.asm_5c512
 	jp TextScriptEnd
 
-PewterGymTutorialText1:
-	TX_FAR _PewterGymTutorialText1
+PewterGymWelcomeHere:
+	TX_FAR _PewterGymWelcomeHere
+	db "@"
+	
+PewterGymWelcomeEmpty:
+	TX_FAR _PewterGymWelcomeEmpty
 	db "@"
 
-PewterGymTutorialText2:
-	TX_FAR _PewterGymTutorialText2
-	db "@"
-
-PewterGymTutorialText3:
-	TX_FAR _PewterGymTutorialText3
-	db "@"
-
-PewterGymTutorialText4:
-	TX_FAR _PewterGymTutorialText4
-	db "@"
-
-PewterGymTutorialTextWon:
-	TX_FAR _PewterGymTutorialTextWon
-	db "@"

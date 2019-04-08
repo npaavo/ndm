@@ -59,7 +59,7 @@ ENDM
 	mapconst VIRIDIAN_FOREST,               24, 17 ; $33
 	mapconst MUSEUM_1F,                      4, 10 ; $34
 	mapconst MUSEUM_2F,                      4,  7 ; $35
-	mapconst PEWTER_GYM,                     7,  5 ; $36
+	mapconst PEWTER_GYM,                     9,  7 ; $36
 	mapconst PEWTER_NIDORAN_HOUSE,           4,  4 ; $37
 	mapconst PEWTER_MART,                    4,  4 ; $38
 	mapconst PEWTER_SPEECH_HOUSE,            8,  6 ; $39

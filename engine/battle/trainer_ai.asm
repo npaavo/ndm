@@ -324,7 +324,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,0    ; AGATHA
 	db 1,3,0  ; LANCE
 	db 0      ; LOGGER - MOD
-	db 1,3,0  ; WYLDA - MOD
+	db 1,0    ; WYLDA - MOD
 
 INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
 

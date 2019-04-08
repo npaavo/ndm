@@ -56,7 +56,7 @@ WildDataPointers:
 	dw NoMons
 	dw NoMons
 	dw NoMons
-	dw PewterFieldMons ; MOD
+	dw NoMons ; MOD - cave to gym (top floor)
 	dw NoMons
 	dw MoonMons1
 	dw MoonMonsB1

@@ -11,11 +11,11 @@ SSAnne2Script_613ab:
 	ret
 
 SSAnne2F_ScriptPointers:
-	dw SSAnne2Script0
-	dw SSAnne2Script1
-	dw SSAnne2Script2
-	dw SSAnne2Script3
-	dw SSAnne2Script4
+	dw SSAnne2Script0 ; trigger rival walk to player
+	dw SSAnne2Script1 ; make player face rival, start battle
+	dw SSAnne2Script2 ; post-battle, rival talk + walk away
+	dw SSAnne2Script3 ; make rival disappear, return music to normal
+	dw SSAnne2Script4 ; ret 
 
 SSAnne2Script4:
 	ret
@@ -70,6 +70,7 @@ CoordsData_61411:
 	db $08,$25
 	db $FF
 
+; make player face rival 
 SSAnne2Script_61416:
 	ld a, [wXCoord]
 	cp $25

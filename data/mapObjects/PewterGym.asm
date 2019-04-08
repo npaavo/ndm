@@ -2,16 +2,15 @@ PewterGym_Object:
 	db $3 ; border block
 
 	db 2 ; warps
-	warp 4, 13, 0, PEWTER_CITY
-	warp 5, 13, 0, PEWTER_CITY
+	warp 6, 17, 0, PEWTER_CITY
+	warp 7, 17, 0, PEWTER_CITY
 
 	db 0 ; signs
 
-	db 3 ; objects
-	object SPRITE_BLACK_HAIR_BOY_2, 4, 1, STAY, DOWN, 1, OPP_BROCK, 1
-	object SPRITE_BLACK_HAIR_BOY_1, 3, 6, STAY, RIGHT, 2, OPP_JR_TRAINER_M, 1
-	object SPRITE_GYM_HELPER, 7, 10, STAY, DOWN, 3 ; person
+	db 2 ; objects
+	object SPRITE_FISHER, 6, 3, STAY, DOWN, 1, OPP_BROCK, 1
+	object SPRITE_CABLE_CLUB_WOMAN, 8, 15, STAY, LEFT, 3 ; person
 
 	; warp-to
-	warp_to 4, 13, PEWTER_GYM_WIDTH
-	warp_to 5, 13, PEWTER_GYM_WIDTH
+	warp_to 6, 17, PEWTER_GYM_WIDTH
+	warp_to 7, 17, PEWTER_GYM_WIDTH

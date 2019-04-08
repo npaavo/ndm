@@ -1,5 +1,10 @@
 PewterCity_Script:
 	call EnableAutoTextBoxDrawing
+	
+	;this prevents the gym from crashing, I am so sorry
+	xor a
+	ld [wPewterGymCurScript], a
+	
 	ld hl, PewterCity_ScriptPointers
 	ld a, [wPewterCityCurScript]
 	jp CallFunctionInTable
@@ -14,29 +19,13 @@ PewterCity_ScriptPointers:
 	dw PewterCityScript6
 
 PewterCityScript0:
-	xor a
-	ld [wMuseum1FCurScript], a
-	ResetEvent EVENT_BOUGHT_MUSEUM_TICKET
-	call PewterCityScript_1925e
 	ret
 
 PewterCityScript_1925e:
-	CheckEvent EVENT_BEAT_BROCK
-	ret nz
-	ld hl, CoordsData_19277
-	call ArePlayerCoordsInArray
-	ret nc
-	ld a, $f0
-	ld [wJoyIgnore], a
-	ld a, $5
-	ld [hSpriteIndexOrTextID], a
-	jp DisplayTextID
+	ret
 
 CoordsData_19277:
-	db $11,$23
-	db $11,$24
-	db $12,$25
-	db $13,$25
+	db $1,$1
 	db $ff
 
 PewterCityScript1:
@@ -77,9 +66,6 @@ PewterCityScript1:
 	ret
 
 MovementData_PewterMuseumGuyExit:
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
-	db NPC_MOVEMENT_DOWN
 	db NPC_MOVEMENT_DOWN
 	db $FF
 

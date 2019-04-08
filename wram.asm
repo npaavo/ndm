@@ -2671,6 +2671,19 @@ wMissableObjectList:: ; d5ce
 
 wGameProgressFlags:: ; d5f0
 ; $c8 bytes
+
+
+; ANY MAP WITH: 
+; •Trainers
+; •Scripted walking
+; needs its own wCurScript slot 
+; this allows trainer battles to gracefully happen
+; as well as automatic movement  (i.e. following npcs)
+
+; I don't understand why these can't get recycled other 
+; than for allowing the trainer-fly glitch to work 
+; in the way it does??? 
+
 wOaksLabCurScript:: ; d5f0
 	ds 1
 wPalletTownCurScript:: ; d5f1
@@ -2729,7 +2742,7 @@ wRoute22GateCurScript:: ; d60e
 	ds 1
 wCeruleanCityCurScript:: ; d60f
 	ds 1
-	ds 7
+	ds 7 ;????
 wSSAnneBowCurScript:: ; d617
 	ds 1
 wViridianForestCurScript:: ; d618
@@ -2879,7 +2892,7 @@ wSeafoamIslandsB4FCurScript:: ; d668
 wRoute18Gate1FCurScript:: ; d669
 	ds 1
 
-	ds 78
+	ds 78 ;??????????
 wGameProgressFlagsEnd::
 
 	ds 56

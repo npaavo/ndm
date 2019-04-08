@@ -62,7 +62,7 @@ MapHSPointers:
 	dw MapHSXX
 	dw MapHSXX
 	dw MapHSXX
-	dw MapHSXX
+	dw MapHS39
 	dw MapHSXX
 	dw MapHS3B
 	dw MapHSXX
@@ -515,8 +515,9 @@ MapHSEB:
 	db SILPH_CO_11F,$03,Show
 	db SILPH_CO_11F,$04,Show
 	db SILPH_CO_11F,$05,Show
+MapHS39:
 MapHSF4:
-	db UNUSED_MAP_F4,$02,Show
+	db PEWTER_SPEECH_HOUSE,$01,Hide ; MOD- rival in cave to pewter gym
 MapHSD6:
 	db POKEMON_MANSION_2F,$02,Show
 MapHSD7:

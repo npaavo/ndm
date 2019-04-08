@@ -1,177 +1,4 @@
 
-_ViridianGymDebugText::
-	text "IT ME"
-	prompt
-	
-_ViridianGymRematchText::
-	text "Welcome back,"
-	line "<PLAYER>!"
-	
-	para "Since our last"
-	line "battle, I've had" 
-	cont "time to reflect"
-	cont "on my strategies."
-	
-	para "You've also grown"
-	line "stronger, too!"
-	
-	
-	prompt
-
-_ViridianGymText12::
-	text "You've done well"
-	line "to make it this"
-	cont "far, but still"
-	cont "many challenges"
-	cont "are ahead."
-	
-	para "The LIFE BADGE"
-	line "is proof that you"
-	cont "can overcome and"
-	cont "adapt to them."
-	
-	para "I'll also give"
-	line "you this. It's a"
-	cont "gift from me."
-	
-	para "<PLAYER> got 3"
-	line "ULTRA BALLs!@"
-	
-	TX_SFX_KEY_ITEM
-	
-	text ""
-	para "If you see a"
-	line "#MON that"
-	cont "really speaks to"
-	cont "you, it will make"
-	cont "it easier to"
-	cont "catch."
-	
-	para "It was a great"
-	line "battle! We should"
-	cont "rematch someday."
-	
-	para "I can't give you"
-	line "another badge,"
-	cont "but we can still"
-	cont "learn a lot from"
-	cont "each other."
-	
-	para "Farewell!"
-	done
-
-_TM27ExplanationText::
-	text "unused"
-	done
-
-_TM27NoRoomText::
-	text "unused"
-	done
-
-_ViridianGymBattleText1::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText1::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText1::
-	text "uu"
-	done
-
-_ViridianGymBattleText2::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText2::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText2::
-	text "uu"
-	done
-
-_ViridianGymBattleText3::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText3::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText3::
-	text "uu"
-	done
-
-_ViridianGymBattleText4::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText4::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText4::
-	text "uu"
-	done
-
-_ViridianGymBattleText5::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText5::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText5::
-	text "uu"
-	done
-
-_ViridianGymBattleText6::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText6::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText6::
-	text "uu"
-	done
-
-_ViridianGymBattleText7::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText7::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText7::
-	text "uu"
-	done
-
-_ViridianGymBattleText8::
-	text "uu"
-	done
-
-_ViridianGymEndBattleText8::
-	text "uu"
-	prompt
-
-_ViridianGymAfterBattleText8::
-	text "uu"
-	done
-
-_ViridianGymText_74bd4::
-	text "uu"
-	done
-
-_ViridianGymText_74bd9::
-	text "uu"
-	done
-
 _ViridianGymIntroText::
 	text "Welcome to the"
 	line "VIRIDIAN GYM."
@@ -303,25 +130,49 @@ _ViridianGymRematchWinText::
 	line "lot of catching-"
 	cont "up to do!@@"
 
-_ViridianGymBadgeText::
-	text "<PLAYER>, you will"
-	line "face a great number"
-	cont "of TRAINERs in" 
-	cont "the future."
-		
-	para "I will carry with"
-	line "me the lessons I've"
-	cont "learned from our"
-	cont "battle. Will you do"
-	cont "the same?"
-	
-	para "Learn and grow"
-	line "from every fight,"
-	cont "and nothing can"
-	cont "stop you."
-	
-	done
 
+_ViridianGymText12::
+	text "You've done well"
+	line "to make it this"
+	cont "far, but still"
+	cont "many challenges"
+	cont "are ahead."
+	
+	para "The LIFE BADGE"
+	line "is proof that you"
+	cont "can overcome and"
+	cont "adapt to them."
+	
+	para "I'll also give"
+	line "you this. It's a"
+	cont "gift from me."
+	
+	para "<PLAYER> got 3"
+	line "ULTRA BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+	para "If you see a"
+	line "#MON that"
+	cont "really speaks to"
+	cont "you, it will make"
+	cont "it easier to"
+	cont "catch."
+	
+	para "It was a great"
+	line "battle! We should"
+	cont "rematch someday."
+	
+	para "I can't give you"
+	line "another badge,"
+	cont "but we can still"
+	cont "learn a lot from"
+	cont "each other."
+	
+	para "Farewell!"
+	done
+	
 _ViridianGymPostRematchText::
 	text "A refreshing fight"
 	line "like always,"
@@ -356,7 +207,6 @@ _ViridianGymPostRematchText::
 	line "will help you on"
 	cont "your journey."
 	
-	
 	done
 
 _ViridianGymText15::
@@ -390,3 +240,131 @@ _ViridianGymCantRematchYetText::
 	cont "last battle." 
 	
 	done
+
+_ViridianGymRematchText::
+	text "Welcome back,"
+	line "<PLAYER>!"
+	
+	para "Since our last"
+	line "battle, I've had" 
+	cont "time to reflect"
+	cont "on my strategies."
+	
+	para "You've also grown"
+	line "stronger, too!"
+	
+	prompt
+
+
+_TM27ExplanationText::
+	text "uu"
+	done
+
+_TM27NoRoomText::
+	text "uu"
+	done
+
+_ViridianGymBattleText1::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText1::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText1::
+	text "uu"
+	done
+
+_ViridianGymBattleText2::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText2::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText2::
+	text "uu"
+	done
+
+_ViridianGymBattleText3::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText3::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText3::
+	text "uu"
+	done
+
+_ViridianGymBattleText4::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText4::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText4::
+	text "uu"
+	done
+
+_ViridianGymBattleText5::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText5::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText5::
+	text "uu"
+	done
+
+_ViridianGymBattleText6::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText6::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText6::
+	text "uu"
+	done
+
+_ViridianGymBattleText7::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText7::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText7::
+	text "uu"
+	done
+
+_ViridianGymBattleText8::
+	text "uu"
+	done
+
+_ViridianGymEndBattleText8::
+	text "uu"
+	prompt
+
+_ViridianGymAfterBattleText8::
+	text "uu"
+	done
+
+_ViridianGymText_74bd4::
+	text "uu"
+	done
+
+_ViridianGymText_74bd9::
+	text "uu"
+	done
+

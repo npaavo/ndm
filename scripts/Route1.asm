@@ -10,18 +10,18 @@ Route1Text1:
 	TX_ASM
 	CheckAndSetEvent EVENT_GOT_POTION_SAMPLE
 	jr nz, .asm_1cada
-	ld hl, Route1ViridianMartSampleText
+	ld hl, Route1ViridianMartSampleText ; here you go text
 	call PrintText
 	lb bc, RARE_CANDY, 1
 	call GiveItem
 	jr nc, .BagFull
-	ld hl, Route1Text_1cae8
+	ld hl, Route1Text_1cae8 ; GOT ITEM text
 	jr .asm_1cadd
 .BagFull
-	ld hl, Route1Text_1caf3
+	ld hl, Route1Text_1caf3 ; too much stuff text
 	jr .asm_1cadd
 .asm_1cada
-	ld hl, Route1Text_1caee
+	ld hl, Route1Text_1caee ; after got sample text
 .asm_1cadd
 	call PrintText
 	jp TextScriptEnd

@@ -657,9 +657,6 @@ PoliwagPicFront::     INCBIN "pic/bmon/poliwag.pic"
 PoliwagPicBack::      INCBIN "pic/monback/poliwagb.pic"
 JynxPicFront::        INCBIN "pic/bmon/jynx.pic"
 JynxPicBack::         INCBIN "pic/monback/jynxb.pic"
-MoltresPicFront::     INCBIN "pic/bmon/moltres.pic"
-MoltresPicBack::      INCBIN "pic/monback/moltresb.pic"
-
 
 SECTION "Battle (BANK A)", ROMX
 
@@ -668,6 +665,8 @@ INCLUDE "engine/battle/moveEffects/leech_seed_effect.asm"
 
 SECTION "Pics 3", ROMX ; BANK $0B
 
+MoltresPicFront::     INCBIN "pic/bmon/moltres.pic"
+MoltresPicBack::      INCBIN "pic/monback/moltresb.pic"
 ArticunoPicFront::    INCBIN "pic/bmon/articuno.pic"
 ArticunoPicBack::     INCBIN "pic/monback/articunob.pic"
 ZapdosPicFront::      INCBIN "pic/bmon/zapdos.pic"
@@ -692,6 +691,7 @@ DragonairPicFront::   INCBIN "pic/bmon/dragonair.pic"
 DragonairPicBack::    INCBIN "pic/monback/dragonairb.pic"
 KabutoPicFront::      INCBIN "pic/bmon/kabuto.pic"
 KabutoPicBack::       INCBIN "pic/monback/kabutob.pic"
+FossilKabutopsPic::
 KabutopsPicFront::    INCBIN "pic/bmon/kabutops.pic"
 KabutopsPicBack::     INCBIN "pic/monback/kabutopsb.pic"
 HorseaPicFront::      INCBIN "pic/bmon/horsea.pic"
@@ -734,11 +734,6 @@ WeedlePicFront::      INCBIN "pic/bmon/weedle.pic"
 WeedlePicBack::       INCBIN "pic/monback/weedleb.pic"
 KakunaPicFront::      INCBIN "pic/bmon/kakuna.pic"
 KakunaPicBack::       INCBIN "pic/monback/kakunab.pic"
-BeedrillPicFront::    INCBIN "pic/bmon/beedrill.pic"
-BeedrillPicBack::     INCBIN "pic/monback/beedrillb.pic"
-
-FossilKabutopsPic::   INCBIN "pic/bmon/fossilkabutops.pic"
-
 
 SECTION "Battle (BANK B)", ROMX
 
@@ -758,6 +753,8 @@ INCLUDE "engine/game_corner_slots2.asm"
 
 SECTION "Pics 4", ROMX ; BANK $0C
 
+BeedrillPicFront::    INCBIN "pic/bmon/beedrill.pic"
+BeedrillPicBack::     INCBIN "pic/monback/beedrillb.pic"
 DodrioPicFront::       INCBIN "pic/bmon/dodrio.pic"
 DodrioPicBack::        INCBIN "pic/monback/dodriob.pic"
 PrimeapePicFront::     INCBIN "pic/bmon/primeape.pic"
@@ -814,12 +811,6 @@ PidgeottoPicFront::    INCBIN "pic/bmon/pidgeotto.pic"
 PidgeottoPicBack::     INCBIN "pic/monback/pidgeottob.pic"
 PidgeotPicFront::      INCBIN "pic/bmon/pidgeot.pic"
 PidgeotPicBack::       INCBIN "pic/monback/pidgeotb.pic"
-StarmiePicFront::      INCBIN "pic/bmon/starmie.pic"
-StarmiePicBack::       INCBIN "pic/monback/starmieb.pic"
-
-RedPicBack::           INCBIN "pic/trainer/redb.pic"
-OldManPic::            INCBIN "pic/trainer/oldman.pic"
-
 
 SECTION "Battle (BANK C)", ROMX
 
@@ -829,6 +820,8 @@ INCLUDE "engine/battle/moveEffects/one_hit_ko_effect.asm"
 
 SECTION "Pics 5", ROMX ; BANK $0D
 
+StarmiePicFront::      INCBIN "pic/bmon/starmie.pic"
+StarmiePicBack::       INCBIN "pic/monback/starmieb.pic"
 BulbasaurPicFront::    INCBIN "pic/bmon/bulbasaur.pic"
 BulbasaurPicBack::     INCBIN "pic/monback/bulbasaurb.pic"
 VenusaurPicFront::     INCBIN "pic/bmon/venusaur.pic"
@@ -855,6 +848,7 @@ GeodudePicFront::      INCBIN "pic/bmon/geodude.pic"
 GeodudePicBack::       INCBIN "pic/monback/geodudeb.pic"
 PorygonPicFront::      INCBIN "pic/bmon/porygon.pic"
 PorygonPicBack::       INCBIN "pic/monback/porygonb.pic"
+FossilAerodactylPic::
 AerodactylPicFront::   INCBIN "pic/bmon/aerodactyl.pic"
 AerodactylPicBack::    INCBIN "pic/monback/aerodactylb.pic"
 MagnemitePicFront::    INCBIN "pic/bmon/magnemite.pic"
@@ -869,7 +863,6 @@ WartortlePicFront::    INCBIN "pic/bmon/wartortle.pic"
 WartortlePicBack::     INCBIN "pic/monback/wartortleb.pic"
 CharizardPicFront::    INCBIN "pic/bmon/charizard.pic"
 CharizardPicBack::     INCBIN "pic/monback/charizardb.pic"
-FossilAerodactylPic::  INCBIN "pic/bmon/fossilaerodactyl.pic"
 GhostPic::             INCBIN "pic/other/ghost.pic"
 OddishPicFront::       INCBIN "pic/bmon/oddish.pic"
 OddishPicBack::        INCBIN "pic/monback/oddishb.pic"
@@ -883,17 +876,17 @@ WeepinbellPicFront::   INCBIN "pic/bmon/weepinbell.pic"
 WeepinbellPicBack::    INCBIN "pic/monback/weepinbellb.pic"
 VictreebelPicFront::   INCBIN "pic/bmon/victreebel.pic"
 VictreebelPicBack::    INCBIN "pic/monback/victreebelb.pic"
-
+RedPicBack::           INCBIN "pic/trainer/redb.pic"
+OldManPic::            INCBIN "pic/trainer/oldman.pic"
 
 SECTION "Battle (BANK D)", ROMX
 
 INCLUDE "engine/titlescreen2.asm"
 INCLUDE "engine/battle/link_battle_versus_text.asm"
-INCLUDE "engine/slot_machine.asm"
+INCLUDE "engine/slot_machine_slim.asm"
 INCLUDE "engine/overworld/pewter_guys.asm"
 INCLUDE "engine/multiply_divide.asm"
 INCLUDE "engine/game_corner_slots.asm"
-
 
 SECTION "bankE", ROMX
 
@@ -1297,7 +1290,7 @@ RocketPic::        INCBIN "pic/trainer/rocket.pic"
 CooltrainerMPic::  INCBIN "pic/trainer/cooltrainerm.pic"
 CooltrainerFPic::  INCBIN "pic/trainer/cooltrainerf.pic"
 BrunoPic::         INCBIN "pic/trainer/bruno.pic"
-BrockPic::         INCBIN "pic/trainer/brock.pic"
+BrockPic::         INCBIN "pic/trainer/lars.pic"
 MistyPic::         INCBIN "pic/trainer/misty.pic"
 LtSurgePic::       INCBIN "pic/trainer/lt.surge.pic"
 ErikaPic::         INCBIN "pic/trainer/erika.pic"

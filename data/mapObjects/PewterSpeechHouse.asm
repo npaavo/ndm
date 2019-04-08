@@ -10,7 +10,8 @@ PewterSpeechHouse_Object:
 
 	db 0 ; signs
 
-	db 0 ; objects
+	db 1 ; objects
+	object SPRITE_BLUE, 2, 13, STAY, UP, 1, OPP_SONY1, 1
 
 	; warp-to
 	warp_to 8, 5, PEWTER_SPEECH_HOUSE_WIDTH ; N

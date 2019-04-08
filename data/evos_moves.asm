@@ -1309,8 +1309,9 @@ MachopEvosMoves:
 	db EV_LEVEL, 28, MACHOKE
 	db 0
 ; Learnset
-	db 10, LOW_KICK
-	db 15, LEER
+	db 8, LOW_KICK
+	db 12, KARATE_CHOP
+	db 16, LEER
 	db 20, FOCUS_ENERGY
 	db 25, SEISMIC_TOSS
 	db 30, SUBMISSION

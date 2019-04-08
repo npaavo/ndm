@@ -132,8 +132,63 @@ ViridianForestAfterBattleText3:
 	db "@"
 
 ; bouncer
+;give SCYTHE (axe) if defeated all trainers 
+
 ViridianForestText8:
-	TX_FAR _ViridianForestText8
+	TX_ASM
+	
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_GOT_AXE
+	jr nz, .GoAwayText	
+	;if there's a way to batch-check events then this
+	;can be optimized later
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_0
+	jr z, .normaltext	
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_1
+	jr z, .normaltext	
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_2
+	jr z, .normaltext	
+	CheckEvent EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3
+	jr z, .normaltext
+	ld hl, ViridianForestText8b ; here you go text 
+	call PrintText
+	lb bc, SCYTHE, 1
+	call GiveItem
+	jr nc, .BagFull
+	SetEvent EVENT_BEAT_VIRIDIAN_FOREST_GOT_AXE
+	ld hl, ViridianForestText8b_get ; GOT ITEM text
+	jr .done
+.BagFull
+	ld hl, ViridianForestText8b_noroom ; too much stuff text
+	jr .done
+.normaltext
+	ld hl, ViridianForestText8a ; axe quest explanation
+	jr .done
+.GoAwayText
+	ld hl, ViridianForestText8c ; axe quest explanation
+.done
+	call PrintText
+	jp TextScriptEnd
+
+ViridianForestText8a:
+	TX_FAR _ViridianForestText8a
+	db "@"
+	
+ViridianForestText8b:
+	TX_FAR _ViridianForestText8b
+	db "@"
+	
+ViridianForestText8b_get: 
+	TX_FAR _ViridianForestText8b_get
+	TX_SFX_KEY_ITEM
+	db "@"
+
+	
+ViridianForestText8b_noroom: 
+	TX_FAR _ViridianForestText8b_noroom
+	db "@"
+	
+ViridianForestText8c:
+	TX_FAR _ViridianForestText8c
 	db "@"
 
 ; trainer 4

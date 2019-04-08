@@ -58,19 +58,66 @@ _ViridianFrstAfterBattleText3::
 
 	done
 	
-_ViridianForestText8::
+_ViridianForestText8a::
 	text "Looking for work?"
 	line "Tough luck!"
 	
-	para "The FOREMAN is"
-	line "really busy! Don't"
-	cont "bother him!"
-	
 	para "We got all the"
 	line "hands we need!"
+	
+	para "If you want to be"
+	line "a LOGGER, you "
+	cont "have to be a"
+	cont "tough TRAINER!"
+	
+	para "Prove that, and"
+	line "I might show you"
+	cont "the ropes!"
 
 	done
 
+_ViridianForestText8b::
+	text "Now look what "
+	line "you've done! My"
+	cont "workers can't"
+	cont "work!"
+	
+	para "Well, I guess you"
+	line "got some gruff,"
+	cont "kid."
+	
+	para "Take this AXE and"
+	line "get out of my"
+	cont "sight!"
+	
+	para "What is it for?"
+	line "What'dya think?!"	
+	
+	para "You can chop down"
+	line "small trees!"	
+
+	prompt
+
+_ViridianForestText8b_get::
+	text "<PLAYER> got"
+	line "@"
+	TX_RAM wcf4b
+	text "!@@"
+	
+_ViridianForestText8b_noroom::
+	text "...but you gotta"
+	line "make room in your"
+	cont "bag first!"
+	done
+
+_ViridianForestText8c::
+	text "The FOREMAN is"
+	line "really busy! Don't"
+	cont "bother him!"
+
+	done	
+
+	
 _ViridianForestText10::
 	text "VIRIDIAN FOREST"
 

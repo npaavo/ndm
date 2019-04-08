@@ -306,7 +306,7 @@ IF DEF(_RED)
 	cont "#MON... "
 	
 	para "You know, the"
-	cont "ones that won"
+	line "ones that won"
 	cont "a CHAMPIONSHIP?"
 	
 	para "...or, in the case"

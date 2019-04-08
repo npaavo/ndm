@@ -733,10 +733,6 @@ UncompressMonSprite::
 	ld a, BANK(MewPicFront)
 	jr z, .GotBank
 	ld a, b
-	cp FOSSIL_KABUTOPS
-	ld a, BANK(FossilKabutopsPic)
-	jr z, .GotBank
-	ld a, b
 	cp VISIGO
 	ld a, BANK(VisigoPicFront)
 	jr z, .GotBank
@@ -745,16 +741,16 @@ UncompressMonSprite::
 	ld a, BANK(TangelaPicFront)
 	jr c, .GotBank
 	ld a, b
-	cp MOLTRES + 1
-	ld a, BANK(MoltresPicFront)
+	cp JYNX + 1
+	ld a, BANK(JynxPicFront)
 	jr c, .GotBank
 	ld a, b
-	cp BEEDRILL + 2
-	ld a, BANK(BeedrillPicFront)
+	cp KAKUNA + 2
+	ld a, BANK(KakunaPicFront)
 	jr c, .GotBank
 	ld a, b
-	cp STARMIE + 1
-	ld a, BANK(StarmiePicFront)
+	cp PIDGEOT + 1
+	ld a, BANK(PidgeotPicFront)
 	jr c, .GotBank
 	ld a, BANK(VictreebelPicFront)
 .GotBank

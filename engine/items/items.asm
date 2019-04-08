@@ -862,7 +862,7 @@ UsedScytheText:
 	
 _UsedScytheText::
 	text "<PLAYER> gave the" 
-	line "SCYTHE a swing!"
+	line "AXE a swing!"
 	prompt
 	
 ItemUsePokedex:
