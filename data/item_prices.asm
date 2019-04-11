@@ -1,11 +1,11 @@
 ItemPrices:
-	money 1 ; MASTER_BALL
+	money 10000 ; MASTER_BALL
 	money 1200  ; ULTRA_BALL
 	money 600   ; GREAT_BALL
 	money 200   ; POKE_BALL
 	money 0     ; TOWN_MAP
-	money 0     ; BICYCLE
-	money 5000		; SURFBOARD - MOD?
+	money 10000 ; BICYCLE
+	money 10000	; SURFBOARD - MOD?
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
 	money 4000  ; MOON_STONE
@@ -15,9 +15,9 @@ ItemPrices:
 	money 100   ; AWAKENING
 	money 100   ; PARLYZ_HEAL
 	money 3000  ; FULL_RESTORE
-	money 2500  ; MAX_POTION
+	money 2000  ; MAX_POTION
 	money 1500  ; HYPER_POTION
-	money 700   ; SUPER_POTION
+	money 600   ; SUPER_POTION
 	money 300   ; POTION
 	money 0     ; BOULDERBADGE
 	money 0     ; CASCADEBADGE
@@ -38,17 +38,17 @@ ItemPrices:
 	money 5000  ; IRON
 	money 5000  ; CARBOS
 	money 5000  ; CALCIUM
-	money 5000     ; RARE_CANDY
+	money 2000  ; RARE_CANDY
 	money 0     ; DOME_FOSSIL
 	money 0     ; HELIX_FOSSIL
 	money 0     ; SECRET_KEY
-	money 5000  ; LANTERN - MOD
+	money 0     ; LANTERN - MOD
 	money 0     ; BIKE_VOUCHER
 	money 950   ; X_ACCURACY
 	money 2100  ; LEAF_STONE
 	money 0     ; CARD_KEY
 	money 10000 ; NUGGET
-	money 5000  ; SCYTHE - MOD
+	money 0     ; SCYTHE - MOD
 	money 1000  ; POKE_DOLL
 	money 600   ; FULL_HEAL
 	money 1500  ; REVIVE
@@ -58,15 +58,15 @@ ItemPrices:
 	money 700   ; MAX_REPEL
 	money 650   ; DIRE_HIT
 	money 10    ; COIN
-	money 200   ; FRESH_WATER
-	money 300   ; SODA_POP
-	money 350   ; LEMONADE
+	money 400   ; FRESH_WATER
+	money 500   ; SODA_POP
+	money 600   ; LEMONADE
 	money 0     ; S_S_TICKET
 	money 0     ; GOLD_TEETH
-	money 500   ; X_ATTACK
+	money 350   ; X_ATTACK
 	money 350   ; X_DEFEND
 	money 350   ; X_SPEED
-	money 500   ; X_SPECIAL
+	money 350   ; X_SPECIAL
 	money 0     ; COIN_CASE
 	money 0     ; OAKS_PARCEL
 	money 0     ; ITEMFINDER
@@ -77,7 +77,7 @@ ItemPrices:
 	money 0     ; OLD_ROD
 	money 0     ; GOOD_ROD
 	money 0     ; SUPER_ROD
-	money 5000  ; PP_UP (REAL)
+	money 3000  ; PP_UP (REAL)
 	money 300   ; ETHER
 	money 1000  ; MAX_ETHER
 	money 1000  ; ELIXER

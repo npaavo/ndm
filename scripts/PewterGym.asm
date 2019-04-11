@@ -46,21 +46,21 @@ PewterGymScriptGiveRewards:
 	ld a, [wGymBattleIsRematch]
 	cp $1
 	jr z, .rematchwintext
-	ld a, $c
+	ld a, $4
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_PEWTER_GYM_LARS
 	ld hl, wObtainedBadges
-	set 0, [hl]
+	set 1, [hl]
 	ld hl, wBeatGymFlags
-	set 0, [hl]
+	set 1, [hl]
 	lb bc, ULTRA_BALL, 3
 	call GiveItem
 	jr .done
 .rematchwintext
 	lb bc, GREAT_BALL, 3
 	call GiveItem
-	ld a, $f
+	ld a, $5
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 .done
@@ -74,12 +74,12 @@ PewterGymScriptGiveRewards:
 	jp PewterGymResetScripts
 
 PewterGym_TextPointers:
-	dw PewterGymText1
-	dw PewterGymText2
-	dw PewterGymText3
-	dw PewterGymText4
-	dw PewterGymText5
-	dw PewterGymText6
+	dw PewterGymText1 ; leader 
+	dw PewterGymText2 ;unused, trainer 
+	dw PewterGymText3 ; welcome assistant 
+	dw PewterGymText4 ; give rewards (first win)
+	dw PewterGymText5 ; give rewards (rematch)
+	dw PewterGymText6 ; no room for TM text 
 
 PewterGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_PEWTER_GYM_TRAINER_0
@@ -186,13 +186,11 @@ PewterGymHowManyBadgesText:
 	db "@" 
 
 PewterGymText4:
-	TX_FAR _TM34PreReceiveText
+	TX_FAR _PewterGymAfterVictoryText
 	db "@"
 
 PewterGymText5:
-	TX_FAR _ReceivedTM34Text
-	TX_SFX_ITEM_1
-	TX_FAR _TM34ExplanationText
+	TX_FAR _PewterGymAfterRematchText
 	db "@"
 
 PewterGymText6:

@@ -33,7 +33,7 @@ _PewterGymFirstFightIntroText::
 	line "BADGE in it for"
 	cont "you if you win!"
 	
-	done
+	prompt
 
 _PewterGymHowManyBadgesText::
 	text "Speakin' a, how"
@@ -111,11 +111,10 @@ _PewterGymCantRematchYetText::
 	text "Oh, hey again!"
 	line "<PLAYER>, you"
 	cont "want to fight"
-	cont "again?"
+	cont "again already?"
 	
-	para "You're gonna have"
-	line "to slow your"
-	cont "roll!" 
+	para "Slow your roll," 
+	line "friend!"
 	
 	para "Come back after"
 	line "you've come up"
@@ -193,44 +192,63 @@ _PewterGymAfterVictoryText::
 	cont "rematch!"
 	
 	para "Can't give ya'"
-	line "another badge, but"
-	cont "I'll give you a"
-	cont "run for your"
+	line "another badge,"
+	cont "but I'll give you"
+	cont "a run for your"
 	cont "money! See ya!"
 	
 	done
 
+_PewterGymAfterRematchText::
+	text "Every battle is"
+	line "a new adventure!"
+	
+	para "It's a dang shame"
+	line "adventures with"
+	cont "you always send"
+	cont "me to the"
+	cont "#MON CENTER!"
+	cont "Huahahaha!"
+	
+	para "Anyway, here's a"
+	line "little prize for"
+	cont "your victory."
+	
+	para "<PLAYER> got 3"
+	line "GREAT BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+		
+	para "Those are GREAT"
+	line "BALLs, courtesy"
+	cont "of the PEWTER GYM!"
+	
+	para "The KANTO LEAGUE"
+	line "sends us GYM"
+	cont "LEADERs way too"
+	cont "many of the darn"
+	cont "things."
+	
+	para "I know you'll get"
+	line "more use out of"
+	cont "'em than I will!"
+	
+	done
+	
 _TM34PreReceiveText::
 	text "Wait! Take this"
 	line "with you!"
 	done
 
 _ReceivedTM34Text::
-	text "<PLAYER> received"
-	line "TM34!@@"
+	text "uu got tm"
 
 _TM34ExplanationText::
 	text ""
 
-	para "A TM contains a"
-	line "technique that"
-	cont "can be taught to"
-	cont "#MON!"
-
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
-
-	para "TM34 contains"
-	line "BIDE!"
-
-	para "Your #MON will"
-	line "absorb damage in"
-	cont "battle then pay"
-	cont "it back double!"
+	para "uu TM34 exp"
 	done
 
 _TM34NoRoomText::
@@ -241,40 +259,20 @@ _TM34NoRoomText::
 _PewterGymText_5c4c1::
 	text ""
 
-	para "That's an official"
-	line "#MON LEAGUE"
-	cont "BADGE!"
-
-	para "Its bearer's"
-	line "#MON become"
-	cont "more powerful!"
-
-	para "The technique"
-	line "FLASH can now be"
-	cont "used any time!"
+	para "Take it! You"
+	line "sure earned it!"
 	prompt
 
 _PewterGymBattleText1::
-	text "Stop right there,"
-	line "kid!"
-
-	para "You're still light"
-	line "years from facing"
-	cont "BROCK!"
+	text "uu battle1"
 	done
 
 _PewterGymEndBattleText1::
-	text "Darn!"
-
-	para "Light years isn't"
-	line "time! It measures"
-	cont "distance!"
+	text "uu endbattle1"
 	prompt
 
 _PewterGymAfterBattleText1::
-	text "You're pretty hot,"
-	line "but not as hot"
-	cont "as BROCK!"
+	text "uu afterbattle1"
 	done
 
 _PewterGymWelcomeHere::
@@ -302,9 +300,9 @@ _PewterGymWelcomeEmpty::
 	
 	para "I don't know when"
 	line "he will be back."
-	cont "It might be fast-"
-	cont "er to find him"
-	cont "yourself..."
+	cont "It might be "
+	cont "faster to find "
+	cont "him yourself..."
 	
 	para "Sorry!"
 	

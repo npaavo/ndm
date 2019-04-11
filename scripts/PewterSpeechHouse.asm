@@ -106,6 +106,17 @@ PSHRivalFightScript:
 	ld a, [wd730]
 	bit 0, a
 	ret nz
+	ld a, [wXCoord] ; rotate rival and player to face each other
+	cp $3
+	jr nz, .cont	
+	ld a, SPRITE_FACING_LEFT
+	ld [wPlayerDirection], a
+	ld a, SPRITE_FACING_RIGHT
+	ld [hSpriteFacingDirection], a
+	ld a, $1
+	ld [H_SPRITEINDEX], a
+	call SetSpriteFacingDirectionAndDelay
+.cont	
 	call PSHPlayerFaceRival
 	xor a
 	ld [wJoyIgnore], a
@@ -115,7 +126,6 @@ PSHRivalFightScript:
 	call Delay3
 	ld a, OPP_SONY1
 	ld [wCurOpponent], a
-
 	; select which team to use during the encounter
 	ld a, [wRivalStarter]
 	cp STARTER2

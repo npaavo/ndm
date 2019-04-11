@@ -618,6 +618,36 @@ TrainerInfo_NameMoneyTimeText:
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
 	db $76,"BADGES",$76,"@"
+	
+	
+TrainerInfo_RankText0:
+	db $76,"NO LICENSE",$76,"@"
+	
+TrainerInfo_RankText1:
+	db $76,"CLASS D TRAINER",$76,"@"
+	
+TrainerInfo_RankText2:
+	db $76,"CLASS C TRAINER",$76,"@"
+	
+TrainerInfo_RankText3:
+	db $76,"CLASS B TRAINER",$76,"@"
+	
+TrainerInfo_RankText4:
+	db $76,"CLASS A TRAINER",$76,"@"
+	
+TrainerInfo_RankText5:
+	db $76,"CLASS S TRAINER",$76,"@"
+	
+TrainerInfo_RankText6:
+	db $76,"CLASS X TRAINER",$76,"@"
+	
+
+TrainerInfo_DrawTrainerRank:
+	;CheckEvent
+	;ld a, [wEffectiveNumBadgesOwned]
+	;cp 	
+	ret 
+	
 
 ; draws a text box on the trainer info screen
 ; height is always 6
