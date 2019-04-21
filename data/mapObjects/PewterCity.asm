@@ -8,17 +8,20 @@ PewterCity_Object:
 	warp 13, 17, 0, PEWTER_POKECENTER
 	warp 8, 9, 1, PEWTER_SPEECH_HOUSE ; s cave
 
-	db 7 ; signs
-	sign 17, 21, 6 ; PewterCityText6
-	sign 37, 11, 7 ; PewterCityText7
+	db 6 ; signs
+	sign 17, 21, 6 ; PewterCityText6 pewter city
+	sign 37, 11, 7 ; PewterCityText7 mt moon dirs
 	sign 24, 9, 8 ; MartSignText
 	sign 14, 17, 9 ; PokeCenterSignText
-	sign 17, 3, 10 ; PewterCityText10
-	sign 11, 5, 11 ; PewterCityText11
-	sign 23, 17, 12 ; PewterCityText12
+	sign 11, 5, 10 ; PewterCityText11 gym sign
+	sign 23, 17, 11 ; PewterCityText12 construction sign
 
-	db 1 ; objects
-	object SPRITE_BLUE, 8, 15, STAY, NONE, 1 ; person
+	db 5 ; objects
+	object SPRITE_BUG_CATCHER, 7, 11, STAY, NONE, 1 ; person
+	object SPRITE_LASS, 28, 17, WALK, 0, 2 ; person
+	object SPRITE_BLACK_HAIR_BOY_1, 28, 9, WALK, 0, 3 ; person
+	object SPRITE_BLACK_HAIR_BOY_1, 30, 19, WALK, 0, 4 ; person
+	object SPRITE_BLACK_HAIR_BOY_2, 9, 22, WALK, 0, 5 ; person
 
 	; warp-to
 	warp_to 16, 9, PEWTER_CITY_WIDTH ; PEWTER_GYM

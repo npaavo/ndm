@@ -253,10 +253,12 @@ Museum1FHiddenObjects:
 	dbw BANK(KabutopsFossil), KabutopsFossil
 	db $FF
 PewterGymHiddenObjects:
-	db $0a,$03,$04
-	dbw BANK(GymStatues),GymStatues
-	db $0a,$06,$04
-	dbw BANK(GymStatues),GymStatues
+	db $0d,$04,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $0d,$05,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
 	db $FF
 PewterMartHiddenObjects:
 	db $FF

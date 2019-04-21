@@ -77,7 +77,7 @@ SpriteSets:
 	db SPRITE_ROCKET
 	db SPRITE_BLACK_HAIR_BOY_2
 	db SPRITE_HIKER
-	db SPRITE_SLOWBRO
+	db SPRITE_TRAINER
 	db SPRITE_BLUE
 	db SPRITE_GUARD
 	db SPRITE_LASS
@@ -199,11 +199,16 @@ SpriteSheetPointerTable:
 	dw BlueSprite
 	db $c0 ; byte count
 	db BANK(BlueSprite)
-
+	
 	; SPRITE_OAK
 	dw OakSprite
 	db $c0 ; byte count
 	db BANK(OakSprite)
+	
+	; SPRITE_TRAINER
+	dw TrainerSprite
+	db $c0 ; byte count
+	db BANK(TrainerSprite)
 
 	; SPRITE_BUG_CATCHER
 	dw BugCatcherSprite
@@ -549,3 +554,4 @@ SpriteSheetPointerTable:
 	dw LyingOldManSprite
 	db $40 ; byte count
 	db BANK(LyingOldManSprite)
+	

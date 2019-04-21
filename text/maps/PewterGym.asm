@@ -289,7 +289,7 @@ _PewterGymWelcomeEmpty::
 	text "Welcome to the"
 	line "PEWTER CITY GYM."
 	
-	para "...Unfotunately,"
+	para "...Unfortunately,"
 	line "LEADER LARS is,"
 	cont "umm... away."
 	

@@ -91,12 +91,15 @@ FlyWarpDataPtr:
 ;   [Event Displacement][Y-block][X-block][Y-sub_block][X-sub_block]
 ; Macro Format:
 ;   FLYWARP_DATA [Map Width][Y-pos][X-pos]
+
+;these are also blackout maps 
+
 PalletTownFlyWarp:
 	FLYWARP_DATA PALLET_TOWN_WIDTH,      6,  5
 ViridianCityFlyWarp:
 	FLYWARP_DATA VIRIDIAN_CITY_WIDTH,   26, 23
 PewterCityFlyWarp:
-	FLYWARP_DATA PEWTER_CITY_WIDTH,     26, 13
+	FLYWARP_DATA PEWTER_CITY_WIDTH,     18, 13
 CeruleanCityFlyWarp:
 	FLYWARP_DATA CERULEAN_CITY_WIDTH,   18, 19
 LavenderTownFlyWarp:

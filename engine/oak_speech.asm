@@ -64,14 +64,18 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld a, PIDGEOT
+	ld a, FARFETCHD
 	ld [wd0b5], a
 	ld [wcf91], a
 	call GetMonHeader
 	coord hl, 6, 4
 	call LoadFlippedFrontSpriteByMonIndex
 	call MovePicLeft
-	ld hl, OakSpeechText2
+	ld hl, OakSpeechText2A
+	call PrintText
+	ld a, FARFETCHD
+	call PlayCry
+	ld hl, OakSpeechText2B
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
@@ -152,14 +156,19 @@ OakSpeech:
 	call DelayFrames
 	call GBFadeOutToWhite
 	jp ClearScreen
+	
 OakSpeechText1:
 	TX_FAR _OakSpeechText1
 	db "@"
-OakSpeechText2:
+
+OakSpeechText2A:
 	TX_FAR _OakSpeechText2A
-	TX_CRY_PIDGEOT
+	db "@"
+	
+OakSpeechText2B:
 	TX_FAR _OakSpeechText2B
 	db "@"
+
 IntroducePlayerText:
 	TX_FAR _IntroducePlayerText
 	db "@"

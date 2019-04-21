@@ -1,5 +1,5 @@
 Museum2F_h:
-	db MUSEUM ; tileset
+	db CAVERN ; tileset
 	db MUSEUM_2F_HEIGHT, MUSEUM_2F_WIDTH ; dimensions (y, x)
 	dw Museum2F_Blocks ; blocks
 	dw Museum2F_TextPointers ; texts

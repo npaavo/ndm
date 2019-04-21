@@ -567,6 +567,8 @@ DarkMaps:
 	db BLUES_HOUSE
 	db ROUTE_2_TRADE_HOUSE
 	db REDS_HOUSE_2F
+	db MUSEUM_1F
+	db MUSEUM_2F
 	db $FF
 
 

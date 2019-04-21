@@ -250,8 +250,8 @@ BrunoSprite:          INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite:        INCBIN "gfx/sprites/lorelei.2bpp"
 SeelSprite:           INCBIN "gfx/sprites/seel.2bpp"
 
-
 SECTION "Battle (BANK 5)", ROMX
+
 
 INCLUDE "engine/load_pokedex_tiles.asm"
 INCLUDE "engine/overworld/map_sprites.asm"
@@ -262,6 +262,8 @@ INCLUDE "engine/menu/pc.asm"
 
 
 SECTION "bank6", ROMX
+
+TrainerSprite:		  INCBIN "gfx/sprites/trainer.2bpp"
 
 INCLUDE "data/mapHeaders/CeladonCity.asm"
 INCLUDE "data/mapObjects/CeladonCity.asm"
@@ -338,6 +340,8 @@ INCLUDE "engine/overworld/ledges.asm"
 
 
 SECTION "bank7", ROMX
+
+; @@@ FREESPACE: about 990 bytes 4-14-2019
 
 INCLUDE "data/mapHeaders/CinnabarIsland.asm"
 INCLUDE "data/mapObjects/CinnabarIsland.asm"
@@ -920,6 +924,8 @@ INCLUDE "engine/battle/core.asm"
 VisigoPicFront::     INCBIN "pic/bmon/Visigo.pic"
 VisigoPicBack::      INCBIN "pic/monback/Visigob.pic"
 
+; @@@ FREESPACE: about 560 bytes 4-14-2019
+
 SECTION "bank10", ROMX
 
 INCLUDE "engine/menu/pokedex.asm"
@@ -1274,7 +1280,7 @@ CueBallPic::       INCBIN "pic/trainer/cueball.pic"
 GamblerPic::       INCBIN "pic/trainer/gambler.pic"
 BeautyPic::        INCBIN "pic/trainer/beauty.pic"
 PsychicPic::       INCBIN "pic/trainer/psychic.pic"
-RockerPic::        INCBIN "pic/trainer/rocker.pic"
+PunkPic::          INCBIN "pic/trainer/street_punk.pic"
 JugglerPic::       INCBIN "pic/trainer/juggler.pic"
 TamerPic::         INCBIN "pic/trainer/tamer.pic"
 BirdKeeperPic::    INCBIN "pic/trainer/birdkeeper.pic"
@@ -1318,6 +1324,8 @@ INCLUDE "engine/give_pokemon.asm"
 
 INCLUDE "engine/predefs.asm"
 
+
+; @@@ FREESPACE: about 1280 bytes 4-14-2019
 
 SECTION "bank14", ROMX
 
@@ -1906,6 +1914,7 @@ Facility_GFX:      INCBIN "gfx/tilesets/facility.2bpp"
 Facility_Block:    INCBIN "gfx/blocksets/facility.bst"
 	ds 1
 
+; @@@ FREESPACE: about 2656 bytes 4-14-2019
 
 SECTION "bank1B", ROMX
 

@@ -51,8 +51,8 @@ WildDataPointers:
 	dw NoMons
 	dw NoMons
 	dw ForestMons ; ViridianForest
-	dw NoMons
-	dw NoMons
+	dw PewterFieldMons
+	dw PewterFieldMons
 	dw NoMons
 	dw NoMons
 	dw NoMons
@@ -128,9 +128,9 @@ WildDataPointers:
 	dw NoMons
 	dw NoMons
 	dw NoMons
-	dw NoMons
-	dw NoMons
-	dw NoMons
+	dw SewerPlantMons ; MOD - Celadon Sewer Treatment
+	dw SewerPlantMons ; MOD
+	dw SewerPlantMons ; MOD
 	dw NoMons
 	dw NoMons
 	dw NoMons
@@ -323,3 +323,4 @@ INCLUDE "data/wildPokemon/victoryroad3.asm"
 INCLUDE "data/wildPokemon/victoryroad1.asm"
 INCLUDE "data/wildPokemon/diglettscave.asm"
 INCLUDE "data/wildPokemon/bonecave.asm"
+INCLUDE "data/wildPokemon/sewer_plant.asm"

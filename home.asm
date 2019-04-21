@@ -745,7 +745,7 @@ UncompressMonSprite::
 	ld a, BANK(JynxPicFront)
 	jr c, .GotBank
 	ld a, b
-	cp KAKUNA + 2
+	cp KAKUNA + 1
 	ld a, BANK(KakunaPicFront)
 	jr c, .GotBank
 	ld a, b

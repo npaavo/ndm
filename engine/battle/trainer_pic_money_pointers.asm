@@ -58,7 +58,7 @@ TrainerPicAndMoneyPointers:
 	dw PsychicPic
 	money 1000
 
-	dw RockerPic
+	dw PunkPic
 	money 2500
 
 	dw JugglerPic

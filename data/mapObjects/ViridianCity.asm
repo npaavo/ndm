@@ -1,13 +1,14 @@
 ViridianCity_Object:
 	db $f ; border block
 
-	db 6 ; warps
+	db 7 ; warps
 	warp 23, 25, 0, VIRIDIAN_POKECENTER
 	warp 29, 19, 0, VIRIDIAN_MART
 	warp 35, 16, 0, VIRIDIAN_SCHOOL_HOUSE
 	warp 30, 29, 0, VIRIDIAN_NICKNAME_HOUSE
 	warp 32, 7, 0, VIRIDIAN_GYM
 	warp 4, 31, 0, BLUES_HOUSE
+	warp 16, 27, 1, ROUTE_11_GATE_1F  ;  DEBUG WRONG WARP
 
 	db 7 ; signs
 	sign 17, 17, 8 ; ViridianCityText8

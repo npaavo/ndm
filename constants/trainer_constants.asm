@@ -25,7 +25,7 @@ const_value = 1
 	trainer_const GAMBLER       ; $11
 	trainer_const BEAUTY        ; $12
 	trainer_const PSYCHIC_TR    ; $13
-	trainer_const ROCKER        ; $14
+	trainer_const PUNK          ; $14
 	trainer_const JUGGLER       ; $15
 	trainer_const TAMER         ; $16
 	trainer_const BIRD_KEEPER   ; $17

@@ -57,8 +57,8 @@ const_value = 0
 	const HS_POKEDEX_2                     ; 30
 	const HS_OAKS_LAB_OAK_2                ; 31
 	const HS_VIRIDIAN_GYM_GIOVANNI         ; 32
-	const HS_VIRIDIAN_GYM_ITEM             ; 33 X
-	const HS_OLD_AMBER                     ; 34
+	const HS_PEWTER_GYM_LARS_IN_GYM        ; 33  ; mod
+	const HS_PEWTER_GYM_LARS_IN_CAVE       ; 34  ; mod 
 	const HS_CERULEAN_CAVE_1F_ITEM_1       ; 35 X
 	const HS_CERULEAN_CAVE_1F_ITEM_2       ; 36 X
 	const HS_CERULEAN_CAVE_1F_ITEM_3       ; 37 X

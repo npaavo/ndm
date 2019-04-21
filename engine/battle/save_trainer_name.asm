@@ -39,7 +39,7 @@ TrainerNamePointers:
 	dw wTrainerName
 	dw BeautyName
 	dw wTrainerName
-	dw RockerName
+	dw PunkName
 	dw JugglerName
 	dw wTrainerName
 	dw wTrainerName
@@ -94,8 +94,8 @@ SwimmerName:
 	db "SWIMMER@"
 BeautyName:
 	db "BEAUTY@"
-RockerName:
-	db "ROCKER@"
+PunkName:
+	db "TOUGH GUY@"
 JugglerName:
 	db "JUGGLER@"
 BlackbeltName:

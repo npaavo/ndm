@@ -1,0 +1,23 @@
+SewerPlantMons:
+	db $0A
+	db 12,RATTATA
+	db 12,KOFFING
+	db 12,GRIMER
+	db 12,MAGNEMITE
+	db 12,VOLTORB
+	db 14,DITTO
+	db 14,PORYGON
+	db 20,MAGNETON
+	db 30,WEEZING
+	db 35,MUK
+	db $20
+	db 25,GRIMER
+	db 26,GRIMER
+	db 27,GRIMER
+	db 28,GRIMER
+	db 29,GRIMER
+	db 32,MUK
+	db 33,MUK
+	db 34,MUK
+	db 35,MUK
+	db 40,MUK

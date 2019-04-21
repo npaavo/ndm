@@ -578,20 +578,35 @@ DrawTrainerInfo:
 	call TrainerInfo_DrawVerticalLine
 	coord hl, 19, 10
 	call TrainerInfo_DrawVerticalLine
-	coord hl, 6, 9
+	coord hl, 5, 9
 	ld de, TrainerInfo_BadgesText
 	call PlaceString
 	coord hl, 2, 2
-	ld de, TrainerInfo_NameMoneyTimeText
+	;ld de, TrainerInfo_NameMoneyTimeText
+	;call PlaceString
+
+	
+	coord hl, 2, 5
+	ld de, TrainerInfo_TrainerText0
 	call PlaceString
-	coord hl, 7, 2
+	
+	coord hl, 6, 5
+	ld de, wPlayerID
+	lb bc, LEADING_ZEROES | 2, 5
+	call PrintNumber ; ID Number
+	
+	coord hl, 2, 6
+	ld de, TrainerInfo_RankText2
+	call PlaceString
+	
+	coord hl, 2, 1
 	ld de, wPlayerName
 	call PlaceString
-	coord hl, 8, 4
+	coord hl, 2, 2
 	ld de, wPlayerMoney
 	ld c, $e3
 	call PrintBCDNumber
-	coord hl, 9, 6
+	coord hl, 2, 3
 	ld de, wPlayTimeHours ; hours
 	lb bc, LEFT_ALIGN | 1, 3
 	call PrintNumber
@@ -611,35 +626,37 @@ TrainerInfo_FarCopyData:
 	jp FarCopyData2
 
 TrainerInfo_NameMoneyTimeText:
-	db   "NAME/"
-	next "MONEY/"
-	next "TIME/@"
+	db   ""
+	next ""
+	next "@"
 
 ; $76 is a circle tile
 TrainerInfo_BadgesText:
-	db $76,"BADGES",$76,"@"
+	db $76," BADGES ",$76,"@"
 	
+TrainerInfo_TrainerText0:
+	db "TID:@"
 	
 TrainerInfo_RankText0:
-	db $76,"NO LICENSE",$76,"@"
+	db "UNAPPROVED@"
 	
 TrainerInfo_RankText1:
-	db $76,"CLASS D TRAINER",$76,"@"
+	db $76," CLASS D@"
 	
 TrainerInfo_RankText2:
-	db $76,"CLASS C TRAINER",$76,"@"
+	db $76," CLASS C@"
 	
 TrainerInfo_RankText3:
-	db $76,"CLASS B TRAINER",$76,"@"
+	db $76," CLASS B@"
 	
 TrainerInfo_RankText4:
-	db $76,"CLASS A TRAINER",$76,"@"
+	db $76," CLASS A@"
 	
 TrainerInfo_RankText5:
-	db $76,"CLASS S TRAINER",$76,"@"
+	db $76," CLASS S@"
 	
 TrainerInfo_RankText6:
-	db $76,"CLASS X TRAINER",$76,"@"
+	db $76," CLASS X@"
 	
 
 TrainerInfo_DrawTrainerRank:

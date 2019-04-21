@@ -1,5 +1,5 @@
 CeladonMansion2F_h:
-	db MANSION ; tileset
+	db FACILITY ; tileset
 	db CELADON_MANSION_2F_HEIGHT, CELADON_MANSION_2F_WIDTH ; dimensions (y, x)
 	dw CeladonMansion2F_Blocks ; blocks
 	dw CeladonMansion2F_TextPointers ; texts

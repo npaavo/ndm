@@ -1,117 +1,99 @@
 _PewterCityText1::
-	text "It's rumored that"
-	line "CLEFAIRYs came"
-	cont "from the moon!"
-
-	para "They appeared "
-	line "after MOON STONE"
-	cont "fell on MT.MOON."
+	text "The PEWTER GYM"
+	line "LEADER has a"
+	cont "reputation of"
+	cont "being a total"
+	cont "flake!"
+	
+	para "If I was a"
+	line "#MON TRAINER,"
+	cont "I'd take over his"
+	cont "GYM in a heart-"
+	cont "beat!"
+	
 	done
 
 _PewterCityText2::
-	text "There aren't many"
-	line "serious #MON"
-	cont "trainers here!"
-
-	para "They're all like"
-	line "BUG CATCHERs,"
-	cont "but PEWTER GYM's"
-	cont "BROCK is totally"
-	cont "into it!"
+	text "I'm thinking of"
+	line "getting a house"
+	cont "here in PEWTER."
+	
+	para "They're all so"
+	line "nice and new!"
 	done
 
-_PewterCityText_193f1::
-	text "Did you check out"
-	line "the MUSEUM?"
+_PewterCityText3::
+	text "I can't stand the"
+	line "noise from the"
+	cont "construction site"
+	cont "over there."
+	
+	para "And worse yet,"
+	line "when they're done,"
+	cont "a bunch of noisy"
+	cont "neighbors will"
+	cont "be moving in!"
+	
+	para "This town isn't"
+	line "the quiet place"
+	cont "in the mountains"
+	cont "it used to be..."
 	done
 
-_PewterCityText_193f6::
-	text "Weren't those"
-	line "fossils from MT."
-	cont "MOON amazing?"
+_PewterCityText4::
+	text "These houses are"
+	line "so new, and so"
+	cont "cheap, too!"
+	
+	para "Could this be"
+	line "my new home?"
+	cont "... I'll have"
+	cont "to talk it over"
+	cont "with my wife..."
 	done
 
-_PewterCityText_193fb::
-	text "Really?"
-	line "You absolutely"
-	cont "have to go!"
-	done
-
-_PewterCityText13::
-	text "It's right here!"
-	line "You have to pay"
-	cont "to get in, but"
-	cont "it's worth it!"
-	cont "See you around!"
-	done
-
-_PewterCityText_19427::
-	text "Psssst!"
-	line "Do you know what"
-	cont "I'm doing?"
-	done
-
-_PewterCityText_1942c::
-	text "That's right!"
-	line "It's hard work!"
-	done
-
-_PewterCityText_19431::
-	text "I'm spraying REPEL"
-	line "to keep #MON"
-	cont "out of my garden!"
-	done
-
-_PewterCityText_1945d::
-	text "You're a trainer"
-	line "right? BROCK's"
-	cont "looking for new"
-	cont "challengers!"
-	cont "Follow me!"
-	done
-
-_PewterCityText14::
-	text "If you have the"
-	line "right stuff, go"
-	cont "take on BROCK!"
+_PewterCityText5::
+	text "Have you heard"
+	line "about that new"
+	cont "study on MT."
+	cont "MOON #MON?" 
+	
+	para "It seems like"
+	line "they don't EVOLVE"
+	cont "when taken away"
+	cont "from their home!"
+	
+	para "I don't blame them,"
+	line "but it sure is"
+	cont "interesting!"
+	
+	para "Maybe there's"
+	line "something special"
+	cont "in their diet..."
+	
 	done
 
 _PewterCityText6::
-	text "TRAINER TIPS"
-
-	para "Any #MON that"
-	line "takes part in"
-	cont "battle, however"
-	cont "short, earns EXP!"
-	done
-
-_PewterCityText7::
-	text "NOTICE!"
-
-	para "Thieves have been"
-	line "stealing #MON"
-	cont "fossils at MT."
-	cont "MOON! Please call"
-	cont "PEWTER POLICE"
-	cont "with any info!"
-	done
-
-_PewterCityText10::
-	text "PEWTER MUSEUM"
-	line "OF SCIENCE"
-	done
-
-_PewterCityText11::
-	text "PEWTER CITY"
-	line "#MON GYM"
-	cont "LEADER: BROCK"
-
-	para "The Rock Solid"
-	line "#MON Trainer!"
-	done
-
-_PewterCityText12::
 	text "PEWTER CITY"
 	line "A Stone Gray"
 	cont "City"
 	done
+
+_PewterCityText7::
+	text "ROUTE 3"
+	line "To MT. MOON"
+	done
+
+_PewterCityText10::
+	text "PEWTER CITY"
+	line "#MON GYM"
+	
+	para "(beyond the"
+	line "cave) --LARS"
+	done
+
+_PewterCityText11::
+	text "CELADON" 
+	line "CONSTRUCTION"
+	done
+

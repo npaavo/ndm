@@ -57,9 +57,9 @@ MapHSPointers:
 	dw MapHSXX
 	dw MapHSXX
 	dw MapHS33
-	dw MapHS34
 	dw MapHSXX
-	dw MapHSXX
+	dw MapHS35
+	dw MapHS36
 	dw MapHSXX
 	dw MapHSXX
 	dw MapHS39
@@ -340,9 +340,10 @@ MapHS28:
 	db OAKS_LAB,$08,Hide
 MapHS2D:
 	db VIRIDIAN_GYM,$01,Show
-	db VIRIDIAN_GYM,$0B,Show
-MapHS34:
-	db MUSEUM_1F,$05,Show
+MapHS36:
+	db PEWTER_GYM,$01,Hide
+MapHS35:
+	db MUSEUM_2F,$01,Show
 MapHSE4:
 	db CERULEAN_CAVE_1F,$01,Show
 	db CERULEAN_CAVE_1F,$02,Show

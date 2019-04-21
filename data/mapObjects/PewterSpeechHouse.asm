@@ -6,7 +6,8 @@ PewterSpeechHouse_Object:
 	warp 9, 5, 1, PEWTER_CITY
 	warp 2, 15, 3, PEWTER_CITY
 	warp 3, 15, 3, PEWTER_CITY
-	warp 5, 11, 0, MUSEUM_1F
+	warp 8, 10, 0, MUSEUM_1F
+;	warp 8, 10, 1, MUSEUM_2F
 
 	db 0 ; signs
 
@@ -16,5 +17,5 @@ PewterSpeechHouse_Object:
 	; warp-to
 	warp_to 8, 5, PEWTER_SPEECH_HOUSE_WIDTH ; N
 	warp_to 3, 15, PEWTER_SPEECH_HOUSE_WIDTH ; S
-	warp_to 5, 11, PEWTER_SPEECH_HOUSE_WIDTH ; Lower
+	warp_to 8, 10, PEWTER_SPEECH_HOUSE_WIDTH ; Lower
 	

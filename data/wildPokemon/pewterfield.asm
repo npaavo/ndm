@@ -1,13 +1,13 @@
 PewterFieldMons:
-	db $1
-	db 8,MANKEY
+	db $14
+	db 8,ZUBAT
 	db 8,GEODUDE
 	db 8,SANDSHREW
-	db 9,NIDORAN_M
-	db 9,NIDORAN_F
+	db 9,JIGGLYPUFF
+	db 9,CLEFAIRY
 	db 9,CUBONE
-	db 10,NIDORINO
-	db 14,NIDORINA
+	db 10,ONIX
+	db 10,DIGLETT
 	db 14,SANDSLASH
 	db 19,MAROWAK
 	db $00

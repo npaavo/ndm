@@ -26,7 +26,7 @@ Route3_TextPointers:
 
 Route3TrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_ROUTE_3_TRAINER_0
-	db ($2 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_ROUTE_3_TRAINER_0
 	dw Route3BattleText1 ; TextBeforeBattle
 	dw Route3AfterBattleText1 ; TextAfterBattle

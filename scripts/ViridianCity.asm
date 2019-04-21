@@ -209,14 +209,14 @@ ViridianCityText7:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .asm_42f68
+	ld hl, ViridianCityText_19214
+	call PrintText
+	jr .asm_2413a
+.asm_42f68
 	ld hl, ViridianCityText_1920f
 	call PrintText
 	ld a, $1
 	ld [wViridianCityCurScript], a
-	jr .asm_2413a
-.asm_42f68
-	ld hl, ViridianCityText_19214
-	call PrintText
 .asm_2413a
 	jp TextScriptEnd
 

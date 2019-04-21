@@ -130,15 +130,15 @@ PSHRivalFightScript:
 	ld a, [wRivalStarter]
 	cp STARTER2
 	jr nz, .NotSquirtle
-	ld a, $1;7
+	ld a, $7
 	jr .done
 .NotSquirtle
 	cp STARTER3
 	jr nz, .Charmander
-	ld a, $2;8
+	ld a, $8
 	jr .done
 .Charmander
-	ld a, $3;9
+	ld a, $9
 .done
 	ld [wTrainerNo], a ; set trainer encounter based on starter
 

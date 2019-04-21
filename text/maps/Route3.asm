@@ -9,98 +9,103 @@ _Route3Text1::
 	done
 
 _Route3BattleText1::
-	text "Hey! I met you in"
-	line "VIRIDIAN FOREST!"
+	text "Hey! You've got"
+	line "#MON on you!"
+	
+	para "Let's battle 'em!"
 	done
 
 _Route3EndBattleText1::
-	text "You"
-	line "beat me again!"
+	text "Dang!"
+	line "You're tough!"
 	prompt
 
 _Route3AfterBattleText1::
-	text "There are other"
-	line "kinds of #MON"
-	cont "than those found"
-	cont "in the forest!"
+	text "All that training"
+	line "and I still can't"
+	cont "win!"
 	done
 
 _Route3BattleText2::
-	text "Hi! I like shorts!"
-	line "They're comfy and"
-	cont "easy to wear!"
+	text "Shorts are great!"
+	line "Nothing easier to"
+	cont "wear! Comfy, too!"
 	done
 
 _Route3EndBattleText2::
-	text "I don't"
-	line "believe it!"
+	text "That"
+	line "battle was short!"
 	prompt
 
 _Route3AfterBattleText2::
-	text "Are you storing"
-	line "your #MON on"
-	cont "PC? Each BOX can"
-	cont "hold 20 #MON!"
+	text "If only battles"
+	line "were as easy to"
+	cont "win as shorts"
+	cont "are to wear!"
 	done
 
 _Route3BattleText3::
-	text "You looked at me,"
-	line "didn't you?"
+	text "Eeek! Something"
+	line "in the grass!"
 	done
 
 _Route3EndBattleText3::
 	text "You're"
-	line "mean!"
+	line "sneaky!"
 	prompt
 
 _Route3AfterBattleText3::
-	text "Quit staring if"
-	line "you don't want to"
-	cont "fight!"
+	text "I came out here"
+	line "to catch some"
+	cont "new #MON."
 	done
 
 _Route3BattleText4::
-	text "Are you a trainer?"
-	line "Let's fight!"
+	text "Have you got any"
+	line "badges? I've got"
+	cont "two! I'm on a"
+	cont "hot streak!"
 	done
 
 _Route3EndBattleText4::
-	text "If I"
-	line "had new #MON I"
-	cont "would've won!"
+	text "How?!"
+	line "We won those"
+	cont "other battles!"
 	prompt
 
 _Route3AfterBattleText4::
-	text "If a #MON BOX"
-	line "on the PC gets"
-	cont "full, just switch"
-	cont "to another BOX!"
+	text "I got my BADGES"
+	line "in SAFFRON and"
+	cont "CERULEAN."
 	done
 
 _Route3BattleText5::
-	text "That look you"
-	line "gave me, it's so"
-	cont "intriguing!"
+	text "You look so"
+	line "confident! What"
+	cont "is your strategy?"
 	done
 
 _Route3EndBattleText5::
-	text "Be nice!"
+	text "Wow!"
+	line "You just win!"
 	prompt
 
 _Route3AfterBattleText5::
-	text "Avoid fights by"
-	line "not letting"
-	cont "people see you!"
+	text "My favorite"
+	line "strategy is to"
+	cont "attack the enemy"
+	cont "#MON until"
+	cont "they faint."
 	done
 
 _Route3BattleText6::
-	text "Hey! You're not"
-	line "wearing shorts!"
+	text "Aren't you hot"
+	line "in those pants?"
 	done
 
 _Route3EndBattleText6::
-	text "Lost!"
-	line "Lost! Lost!"
+	text "Noooo!"
+	line "Noooooooooo!"
 	prompt
 
 _Route3AfterBattleText6::
@@ -110,33 +115,36 @@ _Route3AfterBattleText6::
 	done
 
 _Route3BattleText7::
-	text "You can fight my"
-	line "new #MON!"
+	text "Step one: pick"
+	line "your #MON!"
 	done
 
 _Route3EndBattleText7::
-	text "Done"
-	line "like dinner!"
+	text "Step"
+	line "two... LOSE?!"
 	prompt
 
 _Route3AfterBattleText7::
-	text "Trained #MON"
-	line "are stronger than"
-	cont "the wild ones!"
+	text "I'm still figuring"
+	line "out what step"
+	cont "three is!"
 	done
 
 _Route3BattleText8::
-	text "Eek! Did you"
-	line "touch me?"
+	text "This hike really"
+	line "wears you out!"
 	done
 
 _Route3EndBattleText8::
-	text "That's it?"
+	text "Aren't you"
+	line "tired yet?!"
 	prompt
 
 _Route3AfterBattleText8::
-	text "ROUTE 4 is at the"
-	line "foot of MT.MOON."
+	text "I need to work"
+	line "out more. Maybe"
+	cont "I'll exercise with"
+	cont "my #MON..."
 	done
 
 _Route3Text10::

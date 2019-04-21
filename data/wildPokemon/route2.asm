@@ -1,7 +1,7 @@
 Route2Mons:
 	db $19
-	db 3,BELLSPROUT
-	db 3,ODDISH
+	db 5,BELLSPROUT
+	db 5,ODDISH
 	db 6,EEVEE
 	db 6,SPEAROW
 	db 6,PIDGEY

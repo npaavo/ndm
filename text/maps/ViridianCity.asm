@@ -51,8 +51,10 @@ _ViridianCityText_19157::
 _ViridianCityText_19175::
 	text "Oh Grandpa! Don't"
 	line "be so mean!"
-	cont "He hasn't had his"
-	cont "coffee yet."
+	
+	para "He always acts"
+	line "this way in the"
+	cont "early morning!"
 	done
 
 _ViridianCityText_1917a::
@@ -66,11 +68,11 @@ _ViridianCityText_1917a::
 	done
 
 _ViridianCityText_19191::
-	text "You can't go"
-	line "through here!"
+	text "Hey you!"
+	line "Kid!"
 
-	para "This is private"
-	line "property!"
+	para "Get off my"
+	line "lawn!"
 	done
 
 _ViridianCityText_191ca::
@@ -92,23 +94,21 @@ _ViridianCityText_191ca::
 	done
 
 _ViridianCityText_1920a::
-	text "Ahh, I've had my"
-	line "coffee now and I"
-	cont "feel great!"
+	text "Hey, you!"
+	line "You're a TRAINER!"
 
-	para "Sure you can go"
-	line "through!"
-
-	para "Are you in a"
-	line "hurry?"
+	para "You're interested"
+	line "in catching new"
+	cont "#MON, right?"
+	
+	para "Got some time"
+	line "to learn a cool"
+	cont "secret?!"
+	
 	done
 
 _ViridianCityText_1920f::
-	text "You're interested"
-	line "in catching new"
-	cont "#MON, right?"
-
-	para "Kids these days"
+	text "Kids these days"
 	line "don't know how"
 	cont "it's done. Back"
 	cont "in my day, you"
