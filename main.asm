@@ -366,7 +366,7 @@ Route16FlyHouse_Blocks: INCBIN "maps/Route16FlyHouse.blk"
 SaffronPidgeyHouse_Blocks: INCBIN "maps/SaffronPidgeyHouse.blk"
 VermilionPidgeyHouse_Blocks: INCBIN "maps/VermilionPidgeyHouse.blk"
 LavenderCuboneHouse_Blocks: INCBIN "maps/LavenderCuboneHouse.blk"
-CeruleanTradeHouse_Blocks: INCBIN "maps/CeruleanBadgeHouse.blk"
+CeruleanTradeHouse_Blocks: INCBIN "maps/CeruleanTradeHouse.blk"
 PewterNidoranHouse_Blocks: INCBIN "maps/PewterNidoranHouse.blk"
 
 PewterSpeechHouse_Blocks: INCBIN "maps/PewterSpeechHouse.blk"

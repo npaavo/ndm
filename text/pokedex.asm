@@ -268,14 +268,14 @@ _StaryuDexEntry::
 	next "loses in battle"
 	dex
 
-_BlastoiseDexEntry::
-	text "A brutal #MON"
-	next "with pressurized"
-	next "water jets on its"
+_BlastoiseDexEntry:: ;mod
+	text "The water jets"
+	next "on its shell"
+	next "are adapted to"
 
-	page "shell. They are"
-	next "used for high"
-	next "speed tackles"
+	page "battle, able to"
+	next "articulate with"
+	next "high precision"
 	dex
 
 _PinsirDexEntry::
@@ -1228,24 +1228,24 @@ _AlakazamDexEntry::
 	next "to be 5,000"
 	dex
 
-_PidgeottoDexEntry::
-	text "Very protective"
-	next "of its sprawling"
-	next "territorial area,"
+_PidgeottoDexEntry:: ;mod
+	text "Fiercely defends"
+	next "its territory"
+	next "with its enhanced"
 
-	page "this #MON will"
-	next "fiercely peck at"
-	next "any intruder"
+	page "flight speed. Once"
+	next "provoked, it will"
+	next "never forget you"
 	dex
 
-_PidgeotDexEntry::
-	text "When hunting, it"
-	next "skims the surface"
-	next "of water at high"
+_PidgeotDexEntry:: ;mod
+	text "Hunts by skimming"
+	next "lakes and rivers"
+	next "at near-sonic"
 
-	page "speed to pick off"
-	next "unwary prey such"
-	next "as MAGIKARP"
+	page "speeds. Its talons"
+	next "have remarkable"
+	next "grip force"
 	dex
 
 _StarmieDexEntry::

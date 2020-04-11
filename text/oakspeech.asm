@@ -33,7 +33,7 @@ IF DEF(_RED)
 	cont "wild #MON are"
 	cont "being forced out"
 	cont "of their habitat!"
-	prompt 
+	prompt
 ENDC
 IF DEF(_BLUE)
 	text "b"
@@ -42,22 +42,20 @@ ENDC
 
 _OakSpeechText2B::
 IF DEF(_RED)
-	text $51,"Those who study"
-	line "#MON know this"
-	cont "is not good!"
+	text "Those who study"
+	line "#MON agree"
+	cont "this is bad!"
 	
-	para "Wild #MON are"
-	line "not only becoming"
-	cont "harder to find,"
-	cont "but also hostile"
-	cont "towards people!"
-
-	para "I study #MON"
-	line "as a profession."
-	cont "They understand"
-	cont "what is happening"
-	cont "and are fighting"
-	cont "back!"
+	para "Wild #MON"
+	line "have become more"
+	cont "and more hostile"
+	cont "every day."
+	
+	para "I have a theory,"
+	line "that they sense"
+	cont "the danger we"
+	cont "pose, and are"
+	cont "fighting back!"
 	
 	prompt
 ENDC

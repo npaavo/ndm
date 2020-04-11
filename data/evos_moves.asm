@@ -988,12 +988,12 @@ DoduoEvosMoves:
 	db EV_LEVEL, 31, DODRIO
 	db 0
 ; Learnset
-	db 20, GROWL
-	db 24, FURY_ATTACK
-	db 30, DRILL_PECK
-	db 36, RAGE
-	db 40, TRI_ATTACK
-	db 44, AGILITY
+	db 10, QUICK_ATTACK
+	db 14, FURY_ATTACK
+	db 18, DRILL_PECK
+	db 26, RAGE
+	db 34, TRI_ATTACK
+	db 42, AGILITY
 	db 0
 
 PoliwagEvosMoves:
@@ -1312,6 +1312,13 @@ WigglytuffEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 9, POUND
+	db 14, DISABLE
+	db 19, DEFENSE_CURL
+	db 24, DOUBLESLAP
+	db 29, REST
+	db 34, BODY_SLAM
+	db 39, DOUBLE_EDGE
 	db 0
 
 EeveeEvosMoves:
@@ -1457,6 +1464,7 @@ WeedleEvosMoves:
 	db EV_LEVEL, 7, KAKUNA
 	db 0
 ; Learnset
+	db 7, BUG_OUT
 	db 0
 
 KakunaEvosMoves:
@@ -1470,12 +1478,16 @@ BeedrillEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, FURY_ATTACK
-	db 16, FOCUS_ENERGY
-	db 20, TWINEEDLE
+	db 10, FURY_ATTACK
+	db 16, TWINEEDLE
+	db 20, SWORDS_DANCE
 	db 25, RAGE
 	db 30, PIN_MISSILE
-	db 35, AGILITY
+	db 35, SPIKE_CANNON
+	db 40, DIRE_STING
+	db 45, TOXIC
+	db 50, DRILL_PECK
+	db 55, HORN_DRILL
 	db 0
 
 MissingNo73EvosMoves:
@@ -1560,6 +1572,7 @@ CaterpieEvosMoves:
 	db EV_LEVEL, 7, METAPOD
 	db 0
 ; Learnset
+	db 7, BUG_OUT
 	db 0
 
 MetapodEvosMoves:
@@ -1573,13 +1586,15 @@ ButterfreeEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 12, CONFUSION
+	db 10, CONFUSION
 	db 15, POISONPOWDER
 	db 16, STUN_SPORE
 	db 17, SLEEP_POWDER
 	db 21, SUPERSONIC
 	db 26, WHIRLWIND
 	db 32, PSYBEAM
+	db 38, PSYWAVE
+	db 45, PSYCHIC_M
 	db 0
 
 MachampEvosMoves:
@@ -1741,6 +1756,12 @@ ClefableEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 13, SING
+	db 18, DOUBLESLAP
+	db 24, MINIMIZE
+	db 31, METRONOME
+	db 39, DEFENSE_CURL
+	db 48, LIGHT_SCREEN
 	db 0
 
 WeezingEvosMoves:

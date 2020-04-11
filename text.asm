@@ -2839,7 +2839,7 @@ _ThrowBallAtTrainerMonText2::
 	prompt
 
 _NoCyclingAllowedHereText::
-	text "No cycling"
+	text "No skating"
 	next "allowed here."
 	prompt
 

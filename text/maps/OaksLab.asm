@@ -144,38 +144,26 @@ _OaksLabAroundWorldText::
 	
 	para "...but I can count"
 	line "on you, right?"
+	cont ""
+
 	done
 
 _OaksLabGivePokeballsText1::
-	text "OAK: You can't get"
-	line "detailed data on"
-	cont "#MON by just"
-	cont "seeing them."
-
-	para "You must catch"
-	line "them! Use these"
+	text ""
+	para "You've got your" 
+	line "work cut out for"
+	cont "you. Use these"
 	cont "to capture wild"
 	cont "#MON."
+	cont ""
 
 	para "<PLAYER> got 5"
-	line "# BALLs!@@"
+	line "#BALLs!@@"
 
 _OaksLabGivePokeballsText2::
 	text ""
-	para "When a wild"
-	line "#MON appears,"
-	cont "it's fair game."
-
-	para "Just throw a #"
-	line "BALL at it and try"
-	line "to catch it!"
-
-	para "This won't always"
-	line "work, though."
-
-	para "A healthy #MON"
-	line "could escape. You"
-	cont "have to be lucky!"
+	para "I believe in you,"
+	line "<PLAYER>!" 
 	done
 
 _OaksLabPleaseVisitText::
@@ -481,13 +469,27 @@ ENDC
 
 _OaksLabText25::
 IF DEF(_RED)
-	text "Even better, it's" 
-	line "got a digital"
-	cont "copy of your ID."
+	text "You'll also need" 
+	line "this! It's my new"
+	cont "invention I call"
+	cont "the #DEX!"
+
+	para "Whenever you catch"
+	line "a #MON, be"
+	cont "sure to record"
+	cont "any information"
+	cont "about it!"
 	
-	para "So don't go"
-	line "throwing it away,"
-	cont "hahah!"
+	para "When it's finished,"
+	line "the #DEX will"
+	cont "be a priceless"
+	cont "tool for all new" 
+	cont "#MON TRAINERs!"
+	
+	para "At least, that's"
+	line "my dream... so"	
+	cont "don't go throwing"
+	cont "it away, hahah!"
 ENDC
 IF DEF(_BLUE)
 	text "d" 
@@ -534,9 +536,7 @@ IF DEF(_RED)
 	
 	para "<PLAYER>, catch"
 	line "the weak ones"
-	cont "for me."
-	
-	para "See ya, nerds!"
+	cont "for me, will ya?"
 	
 	done
 ENDC

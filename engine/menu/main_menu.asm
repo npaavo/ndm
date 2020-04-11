@@ -53,6 +53,9 @@ MainMenu:
 	ld hl, wd730
 	res 6, [hl]
 	call UpdateSprites
+	coord hl, 1, 9
+	ld de, ModWarningText
+	call PlaceString
 	xor a
 	ld [wCurrentMenuItem], a
 	ld [wLastMenuItem], a
@@ -339,6 +342,11 @@ CableClubOptionsText:
 	db   "TRADE CENTER"
 	next "COLOSSEUM"
 	next "CANCEL@"
+	
+ModWarningText:
+	db "v0.3 aka Venusaur"
+	next "Please don't share"
+	next "compiled ROMs!@" 
 
 DisplayContinueGameInfo:
 	xor a

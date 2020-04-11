@@ -6,7 +6,7 @@ ViridianMart_Script:
 	jp CallFunctionInTable
 
 ViridianMartScript_1d47d:
-	CheckEvent EVENT_OAK_GOT_PARCEL
+	CheckEvent EVENT_TRIED_TO_BUY_BALLS
 	jr nz, .asm_1d489
 	ld hl, ViridianMart_TextPointers
 	jr .asm_1d48c
@@ -53,12 +53,15 @@ ViridianMartScript1:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_TRIED_TO_BUY_BALLS
-	ld a, SFX_DENIED
-	call PlaySound
 	ld a, $2
 	ld [wViridianMartCurScript], a
 	; fallthrough
 ViridianMartScript2:
+	ld hl, ViridianMart_TextPointers2
+	ld a, l
+	ld [wMapTextPtr], a
+	ld a, h
+	ld [wMapTextPtr+1], a
 	ret
 
 ViridianMart_TextPointers:

@@ -1,7 +1,8 @@
 Route3_Object:
 	db $2c ; border block
 
-	db 0 ; warps
+	db 1 ; warps
+	warp 64, 7, 0, CERULEAN_TRADE_HOUSE
 
 	db 2 ; signs
 	sign 59, 9, 10 ; Route3Text10
@@ -17,3 +18,10 @@ Route3_Object:
 	object SPRITE_BUG_CATCHER, 34, 6, STAY, RIGHT, 7, OPP_YOUNGSTER, 2
 	object SPRITE_TRAINER, 29, 11, STAY, NONE, 8, OPP_PUNK, 3
 	object SPRITE_LASS, 44, 4, STAY, NONE, 9, OPP_LASS, 3
+	
+	;PUNK 1, 2, 3
+	;LASS 1, 2, 3
+	;YOUNGSTER 1, 2
+
+	warp_to 64, 7, ROUTE_3_WIDTH
+	

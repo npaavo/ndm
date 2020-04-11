@@ -4,7 +4,7 @@ ItemNames:
 	db "GREAT BALL@"
 	db "POKé BALL@"
 	db "TOWN MAP@"
-	db "BICYCLE@"
+	db "SKATEBOARD@"
 	db "SURFBOARD@"
 	db "SAFARI BALL@"
 	db "POKéDEX@"

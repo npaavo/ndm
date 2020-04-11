@@ -1,5 +1,5 @@
 CeruleanTradeHouse_h:
-	db HOUSE ; tileset
+	db CAVERN ; tileset
 	db CERULEAN_TRADE_HOUSE_HEIGHT, CERULEAN_TRADE_HOUSE_WIDTH ; dimensions (y, x)
 	dw CeruleanTradeHouse_Blocks ; blocks
 	dw CeruleanTradeHouse_TextPointers ; texts

@@ -1,22 +1,16 @@
 _MtMoon3Text_49f24::
-	text "You want the"
-	line "DOME FOSSIL?"
+	text "uu"
 	done
 
 _MtMoon3Text_49f64::
-	text "You want the"
-	line "HELIX FOSSIL?"
+	text "uu"
 	done
 
 _MtMoon3Text_49f6f::
-	text "<PLAYER> got the"
-	line "@"
-	TX_RAM wcf4b
-	text "!@@"
+	text "uu"
 
 _MtMoon3Text_49f7f::
-	text "Look, you've got"
-	line "no room for this.@@"
+	text "uu"
 
 _MtMoon3Text_49f85::
 	text "Hey, stop!"
@@ -38,85 +32,96 @@ _MtMoon3Text_49f8f::
 	done
 
 _MtMoon3Text_49f94::
-	text "Far away, on"
-	line "CINNABAR ISLAND,"
-	cont "there's a #MON"
-	cont "LAB."
-
-	para "They do research"
-	line "on regenerating"
-	cont "fossils."
+	text "uu"
 	done
 
 _MtMoon3Text_49f99::
-	text "All right. Then"
-	line "this is mine!@@"
+	text "uu"
 
 _MtMoon3BattleText2::
-	text "TEAM ROCKET will"
-	line "find the fossils,"
-	cont "revive and sell"
-	cont "them for cash!"
+	text "I keep getting"
+	line "lost, even while"
+	cont "following my map!"
 	done
 
 _MtMoon3EndBattleText2::
-	text "Urgh!"
-	line "Now I'm mad!"
+	text "Now I've"
+	line "lost the battle,"
+	cont "too!"
 	prompt
 
 _MtMoon3AfterBattleText2::
-	text "You made me mad!"
-	line "TEAM ROCKET will"
-	cont "blacklist you!"
+	text "I knew I should"
+	line "have packed an"
+	cont "ESCAPE ROPE!"
 	done
 
 _MtMoon3BattleText3::
-	text "We, TEAM ROCKET,"
-	line "are #MON"
-	cont "gangsters!"
+	text "This is where I"
+	line "like to battle!"
 	done
 
 _MtMoon3EndBattleText3::
-	text "I blew"
-	line "it!"
+	text "Oof!"
+	line "Too good!"
 	prompt
 
 _MtMoon3AfterBattleText3::
-	text "Darn it all! My"
-	line "associates won't"
-	cont "stand for this!"
+	text "It's so much"
+	line "cooler to fight"
+	cont "in a cave."
 	done
 
 _MtMoon3BattleText4::
-	text "We're pulling a"
-	line "big job here!"
-	cont "Get lost, kid!"
+	text "#MON are made"
+	line "for battling!"
+	cont "Let's go!"
 	done
 
 _MtMoon3EndBattleText4::
-	text "So, you"
-	line "are good."
+	text "You are"
+	line "made for battle,"
+	cont "too!"
 	prompt
 
 _MtMoon3AfterBattleText4::
-	text "If you find a"
-	line "fossil, give it"
-	cont "to me and scram!"
+	text "Training in MT."
+	line "MOON has made me"
+	cont "tougher!"
 	done
 
 _MtMoon3BattleText5::
-	text "Little kids"
-	line "should leave"
-	cont "grown-ups alone!"
+	text "Hey, who are you?"
+	
+	para "... <PLAYER>?"
+	line "Never heard of"
+	cont "you. Let's battle!"
 	done
 
 _MtMoon3EndBattleText5::
-	text "I'm"
-	line "steamed!"
+	text "Wow!"
+	line "I'm beat!"
 	prompt
 
 _MtMoon3AfterBattleText5::
-	text "#MON lived"
-	line "here long before"
-	cont "people came."
+	text "#MON battles"
+	line "are the best way"
+	cont "to get to know"
+	cont "somebody!"
+	done
+
+_MtMoon3Text6::
+	text "I've been looking"
+	line "all over, and I"
+	cont "still can't find"
+	cont "a MOON STONE!"
+	done 
+	
+_MtMoon3Text7::
+	text "A MOON STONE can"
+	line "evolve #MON"
+	cont "from around MT."
+	cont "MOON. Everyone"
+	cont "is looking for"
+	cont "them now!"
 	done

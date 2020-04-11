@@ -175,6 +175,7 @@ MoveNames::
 	db "SKIP STONE@"
 	db "NIGHT TERROR@"
 	db "NTA@" ; clone for animation jank
+	db "BUG OUT@"
 	
 	;END MODS
 	db "STRUGGLE@" ; struggle must go last

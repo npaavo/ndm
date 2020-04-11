@@ -2037,7 +2037,7 @@ LoadWalkingPlayerSpriteGraphics::
 	jr LoadPlayerSpriteGraphicsCommon
 
 LoadSurfingPlayerSpriteGraphics::
-	ld de, SeelSprite
+	ld de, RedCyclingSprite
 	ld hl, vNPCSprites
 	jr LoadPlayerSpriteGraphicsCommon
 

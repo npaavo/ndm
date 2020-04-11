@@ -1,13 +1,13 @@
 MoonMons1:
-	db $0A
-	db 8,ZUBAT
-	db 7,ZUBAT
-	db 9,ZUBAT
-	db 8,GEODUDE
-	db 6,ZUBAT
+	db $10
 	db 10,ZUBAT
-	db 10,GEODUDE
-	db 8,PARAS
+	db 10,NIDORAN_F
+	db 10,NIDORAN_M
 	db 11,ZUBAT
-	db 8,CLEFAIRY
+	db 10,GEODUDE
+	db 12,ZUBAT
+	db 12,JIGGLYPUFF
+	db 13,CLEFAIRY
+	db 18,ZUBAT
+	db 25,GRAVELER
 	db $00

@@ -1,19 +1,24 @@
 _OakAppearsText::
 	text "OAK: Hey! <PLAYER>!"
-	line "Sorry I'm late!"
+	line "There you are!"
 	done
 
 _OakWalksUpText::
 IF DEF(_RED)
-	text "I guess it's good"
+	text "We must've just" 
+	line "passed by each"
+	cont "other! I came by" 
+	cont "your house to" 
+	cont "pick you up!"
+	
+	para "I guess it's good"
 	line "you're up and out"
 	cont "earlier than me!"
 	cont "Hahah!"
 
 	para "Come on back to"
-	line "my lab! I was"
-	cont "just getting"
-	cont "ready!"
+	line "my lab so we can" 
+	cont "get to work!"
 	done
 ENDC
 IF DEF(_BLUE)

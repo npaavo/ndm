@@ -175,6 +175,7 @@ AttackAnimationPointers:
 	dw SkipStoneAnim
 	dw NightTerrorAnim
 	dw NightTerrorStartAnim
+	dw BugOutAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -569,6 +570,7 @@ SubmissionAnim:
 	db SE_SHOW_MON_PIC, $FF
 	db $FF
 
+BugOutAnim:
 LowKickAnim:
 	db SE_SLIDE_MON_OFF, $42
 	db $46,$FF,$04

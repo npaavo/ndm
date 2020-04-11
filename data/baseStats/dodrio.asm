@@ -13,7 +13,7 @@ dw DodrioPicFront
 dw DodrioPicBack
 ; attacks known at lvl 0
 db PECK
-db GROWL
+db QUICK_ATTACK
 db FURY_ATTACK
 db 0
 db 0 ; growth rate

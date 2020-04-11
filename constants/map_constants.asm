@@ -68,7 +68,7 @@ ENDM
 	mapconst MT_MOON_B1F,                   14, 14 ; $3C
 	mapconst MT_MOON_B2F,                   18, 20 ; $3D
 	mapconst CERULEAN_TRASHED_HOUSE,         4,  4 ; $3E
-	mapconst CERULEAN_TRADE_HOUSE,           4,  4 ; $3F
+	mapconst CERULEAN_TRADE_HOUSE,           6,  12 ; $3F
 	mapconst CERULEAN_POKECENTER,            4,  4 ; $40
 	mapconst CERULEAN_GYM,                   7,  5 ; $41
 	mapconst BIKE_SHOP,                      4,  4 ; $42

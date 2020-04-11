@@ -1,14 +1,18 @@
 Route4_Object:
 	db $2c ; border block
 
-	db 3 ; warps
+	db 7 ; warps
 	warp 11, 5, 0, MT_MOON_POKECENTER
-	warp 18, 5, 0, MT_MOON_1F
-	warp 24, 5, 7, MT_MOON_B1F
+	warp 20, 3, 8, MT_MOON_1F
+	warp 28, 3, 0, MT_MOON_1F
+	warp 34, 13, 7, MT_MOON_1F
+	warp 48, 1, 2, MT_MOON_1F
+	warp 68, 9, 1, CERULEAN_TRADE_HOUSE
+	warp 74, 9, 2, CERULEAN_TRADE_HOUSE
 
 	db 3 ; signs
 	sign 12, 5, 4 ; PokeCenterSignText
-	sign 17, 7, 5 ; Route4Text5
+	sign 15, 11, 5 ; Route4Text5
 	sign 27, 7, 6 ; Route4Text6
 
 	db 3 ; objects
@@ -18,5 +22,9 @@ Route4_Object:
 
 	; warp-to
 	warp_to 11, 5, ROUTE_4_WIDTH ; MT_MOON_POKECENTER
-	warp_to 18, 5, ROUTE_4_WIDTH ; MT_MOON_1F
-	warp_to 24, 5, ROUTE_4_WIDTH ; MT_MOON_B1F
+	warp_to 20, 3, ROUTE_4_WIDTH ; MT_MOON_1F
+	warp_to 28, 3, ROUTE_4_WIDTH ; MT_MOON_1F
+	warp_to 34, 13, ROUTE_4_WIDTH ; MT_MOON_1F
+	warp_to 48, 1, ROUTE_4_WIDTH ; MT_MOON_1F
+	warp_to 68, 9, ROUTE_4_WIDTH ; WCERULEANCAVE L
+	warp_to 74, 9, ROUTE_4_WIDTH ; WCERULEANCAVE R

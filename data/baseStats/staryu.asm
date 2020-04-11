@@ -5,7 +5,7 @@ db 55 ; base defense
 db 85 ; base speed
 db 70 ; base special
 db WATER ; species type 1
-db WATER ; species type 2
+db PSYCHIC ; species type 2
 db 225 ; catch rate
 db 106 ; base exp yield
 INCBIN "pic/bmon/staryu.pic",0,1 ; 66, sprite dimensions

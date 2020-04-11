@@ -2,40 +2,40 @@ TrainerPicAndMoneyPointers:
 ; trainer pic pointers and base money.
 ; money received after battle = base money × level of highest-level enemy mon
 	dw YoungsterPic
-	money 1500
+	money 2000
 
 	dw BugCatcherPic
-	money 1000
+	money 2000
 
 	dw LassPic
-	money 1500
+	money 3500
 
 	dw SailorPic
-	money 3000
+	money 4000
 
 	dw JrTrainerMPic
-	money 2000
+	money 3500
 
 	dw JrTrainerFPic
-	money 2000
+	money 3500
 
 	dw PokemaniacPic
 	money 5000
 
 	dw SuperNerdPic
-	money 2500
+	money 4500
 
 	dw HikerPic
 	money 3500
 
 	dw BikerPic
-	money 2000
+	money 4000
 
 	dw BurglarPic
 	money 9000
 
 	dw EngineerPic
-	money 5000
+	money 6000
 
 	dw JugglerPic
 	money 3500
@@ -44,10 +44,10 @@ TrainerPicAndMoneyPointers:
 	money 3500
 
 	dw SwimmerPic
-	money 500
+	money 2500
 
 	dw CueBallPic
-	money 2500
+	money 4500
 
 	dw GamblerPic
 	money 7000
@@ -56,10 +56,10 @@ TrainerPicAndMoneyPointers:
 	money 7000
 
 	dw PsychicPic
-	money 1000
+	money 3000
 
 	dw PunkPic
-	money 2500
+	money 3500
 
 	dw JugglerPic
 	money 3500
@@ -80,7 +80,7 @@ TrainerPicAndMoneyPointers:
 	money 9900
 
 	dw ChiefPic
-	money 3000
+	money 5000
 
 	dw ScientistPic
 	money 5000

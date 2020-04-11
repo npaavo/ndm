@@ -175,7 +175,8 @@ const_value = 1
 	const QUICKSAND	   ; ac	
 	const SKIP_STONE   ; ad	
 	const NIGHT_TERROR ; ad	
-	const NIGHT_TERROR_START_ANIM ; clone for jank	
+	const NIGHT_TERROR_START_ANIM ; clone for jank	ae
+	const BUG_OUT ; af
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

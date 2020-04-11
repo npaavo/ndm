@@ -38,22 +38,7 @@ ViridianMartParcelQuestText::
 	line "see your TRAINER"
 	cont "LICENSE... ..."
 	
-	para "..."
-	
-	para "You don't have"
-	line "it on you?!"
-	
-	para "I can't legally "
-	line "sell you any"
-	cont "#BALLs if"
-	cont "your ID isn't"
-	cont "approved for use"
-	cont "in KANTO!"
-	
-	para "You may be a"
-	line "champ in JOHTO,"
-	cont "but things work"
-	cont "different here!"
+	para "Cool! Checks out."
 	done
 
 _ViridianMartText2::

@@ -188,5 +188,6 @@ MoveEnd:
 	move SKIP_STONE,   TWO_TO_FIVE_ATTACKS_EFFECT,  20, ROCK,	  100, 15
 	move NIGHT_TERROR, CHARGE_EFFECT,		 	   100, GHOST,	  100, 10
 	move NIGHT_TERROR_START_ANIM, NO_ADDITIONAL_EFFECT,	   100, GHOST,	  100, 10 ; this is required for jank I'm very sorry
+	move BUG_OUT, 	   FLINCH_SIDE_EFFECT1,	   		40, BUG,	  100, 20 
 	;END MODS	
 	move STRUGGLE,     RECOIL_EFFECT,               50, BIRD,     100, 10 ; STRUGGLE MUST GO LAST

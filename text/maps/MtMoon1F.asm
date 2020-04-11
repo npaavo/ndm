@@ -1,34 +1,36 @@
 _MtMoon1BattleText2::
-	text "WHOA! You shocked"
-	line "me! Oh, you're"
-	cont "just a kid!"
+	text "Welcome to MT."
+	line "MOON! Here, we"
+	cont "battle!"
 	done
 
 _MtMoon1EndBattleText2::
-	text "Wow!"
-	line "Shocked again!"
+	text "Hoho!"
+	line "You're good at"
+	cont "this!"	
 	prompt
 
 _MtMoon1AfterBattleText2::
-	text "Kids like you"
-	line "shouldn't be"
-	cont "here!"
+	text "Everyone is"
+	line "looking for MOON"
+	cont "STONEs!"
 	done
 
 _MtMoon1BattleText3::
-	text "Did you come to"
-	line "explore too?"
+	text "This cave is kinda"
+	line "cool I guess."
 	done
 
 _MtMoon1EndBattleText3::
-	text "Losing"
-	line "stinks!"
+	text "This"
+	line "sucks!"
 	prompt
 
 _MtMoon1AfterBattleText3::
-	text "I came down here"
-	line "to show off to"
-	cont "girls."
+	text "I don't see what"
+	line "the big deal is."
+	cont "It's just a lousy"
+	cont "cave."
 	done
 
 _MtMoon1BattleText4::
@@ -38,8 +40,9 @@ _MtMoon1BattleText4::
 	done
 
 _MtMoon1EndBattleText4::
-	text "Oh!"
-	line "I lost it!"
+	text "Well,"
+	line "that's another"
+	cont "shocker!"
 	prompt
 
 _MtMoon1AfterBattleText4::
@@ -48,40 +51,42 @@ _MtMoon1AfterBattleText4::
 	done
 
 _MtMoon1BattleText5::
-	text "What! Don't sneak"
-	line "up on me!"
+	text "Hey! If I win,"
+	line "will you help me"
+	cont "get out of here?"
 	done
 
 _MtMoon1EndBattleText5::
-	text "My"
-	line "#MON won't do!"
+	text "Dang!"
+	line "Now I'll be stuck"
+	cont "in here forever!"
 	prompt
 
 _MtMoon1AfterBattleText5::
-	text "I have to find"
-	line "stronger #MON."
+	text "Eh, I can figure"
+	line "it out. Later."
 	done
 
 _MtMoon1BattleText6::
-	text "What? I'm waiting"
-	line "for my friends to"
-	cont "find me here."
+	text "Have you found a"
+	line "MOON STONE yet?"
 	done
 
 _MtMoon1EndBattleText6::
-	text "I lost?"
+	text "No way!"
 	prompt
 
 _MtMoon1AfterBattleText6::
-	text "I heard there are"
-	line "some very rare"
-	cont "fossils here."
+	text "I want to evolve"
+	line "my CLEFAIRY."
+	cont "Then I could"
+	cont "win battles!"
 	done
 
 _MtMoon1BattleText7::
-	text "Suspicious men"
-	line "are in the cave."
-	cont "What about you?"
+	text "Had enough of"
+	line "battling? Well,"
+	cont "too bad!"
 	done
 
 _MtMoon1EndBattleText7::
@@ -90,30 +95,34 @@ _MtMoon1EndBattleText7::
 	prompt
 
 _MtMoon1AfterBattleText7::
-	text "I saw them! I'm"
-	line "sure they're from"
-	cont "TEAM ROCKET!"
+	text "I beat everyone"
+	line "else today. That's"
+	cont "enough for me!"
 	done
 
 _MtMoon1BattleText8::
-	text "Go through this"
-	line "cave to get to"
-	cont "CERULEAN CITY!"
+	text "I'm sick of all"
+	line "these ZUBAT!"
+	cont "AaaaauuuGGGH!"
 	done
 
 _MtMoon1EndBattleText8::
-	text "I"
-	line "lost."
+	text "They're"
+	line "driving me BATTY!"
 	prompt
 
 _MtMoon1AfterBattleText8::
-	text "ZUBAT is tough!"
-	line "But, it can be"
-	cont "useful if you"
-	cont "catch one."
+	text "They aren't too"
+	line "tough, but they're"
+	cont "just EVERYWHERE,"
+	cont "you know?!"
 	done
 
 _MtMoon1Text14::
-	text "Beware! ZUBAT is"
-	line "a blood sucker!"
+	text "Be careful when"
+	line "exploring!"
+	
+	para "Use ESCAPE ROPE"
+	line "if lost to find"
+	cont "your way back!"
 	done

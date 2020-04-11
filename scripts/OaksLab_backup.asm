@@ -332,46 +332,9 @@ OaksLabScript9:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_GOT_STARTER
-	
-	
-	call EnableAutoTextBoxDrawing
-	
-	ld a, $19
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	call Delay3
-	ld a, HS_POKEDEX_1
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	ld a, HS_POKEDEX_2
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	call OaksLabScript_1cefd
-	ld a, $1a
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	ld a, $1
-	ld [H_SPRITEINDEX], a
-	ld a, SPRITE_FACING_RIGHT
-	ld [hSpriteFacingDirection], a
-	call SetSpriteFacingDirectionAndDelay
-	call Delay3
-	ld a, $1b
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_POKEDEX
-	SetEvent EVENT_OAK_GOT_PARCEL
-	ld a, HS_LYING_OLD_MAN
-	ld [wMissableObjectIndex], a
-	predef HideObject
-	ld a, HS_OLD_MAN
-	ld [wMissableObjectIndex], a
-	predef ShowObject
-
-
 	xor a
 	ld [wJoyIgnore], a
-	
+
 	ld a, $a
 	ld [wOaksLabCurScript], a
 	ret
@@ -519,12 +482,6 @@ OaksLabScript14:
 	call PlayDefaultMusic ; reset to map music
 	ld a, $12
 	ld [wOaksLabCurScript], a
-	SetEvent EVENT_1ST_ROUTE22_RIVAL_BATTLE
-	ResetEventReuseHL EVENT_2ND_ROUTE22_RIVAL_BATTLE
-	SetEventReuseHL EVENT_ROUTE22_RIVAL_WANTS_BATTLE
-	ld a, HS_ROUTE_22_RIVAL_1
-	ld [wMissableObjectIndex], a
-	predef ShowObject
 	jr .done
 ; make the player keep facing the rival as he walks away
 .asm_1ce8c
@@ -687,8 +644,7 @@ OaksLabScript17:
 	ld [wJoyIgnore], a
 
 	ld a, $12
-	ld [wOaksLabCurScript], a	
-	
+	ld [wOaksLabCurScript], a
 	ret
 
 OaksLabScript18:
@@ -1028,6 +984,8 @@ OaksLabText5:
 	ld b, POKE_BALL
 	call IsItemInBag
 	jr nz, .asm_1d2e7
+	CheckEvent EVENT_BEAT_ROUTE22_RIVAL_1ST_BATTLE
+	jr nz, .asm_1d2d0
 	CheckEvent EVENT_GOT_POKEDEX
 	jr nz, .asm_1d2c8
 	CheckEventReuseA EVENT_BATTLED_RIVAL_IN_OAKS_LAB
@@ -1058,6 +1016,8 @@ OaksLabText5:
 .asm_1d2c8
 	ld hl, OaksLabAroundWorldText
 	call PrintText
+	jr .asm_1d2ed
+.asm_1d2d0
 	CheckAndSetEvent EVENT_GOT_POKEBALLS_FROM_OAK
 	jr nz, .asm_1d2e7
 	lb bc, POKE_BALL, 5

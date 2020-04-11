@@ -14,7 +14,7 @@ dw ClefairyPicBack
 ; attacks known at lvl 0
 db POUND
 db GROWL
-db 0
+db METRONOME
 db 0
 db 4 ; growth rate
 ; learnset
