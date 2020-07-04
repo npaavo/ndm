@@ -5,7 +5,7 @@
 const_value = 0
 
 	const NO_ADDITIONAL_EFFECT       ; $00
-	const UNUSED_EFFECT_01           ; $01
+	const SECOND_WIND_EFFECT         ; $01 ; MOD - restores all pp
 	const POISON_SIDE_EFFECT1        ; $02
 	const DRAIN_HP_EFFECT            ; $03
 	const BURN_SIDE_EFFECT1          ; $04
@@ -92,6 +92,6 @@ const_value = 0
 	const SPLASH_EFFECT              ; $55
 	const DISABLE_EFFECT             ; $56
 
-; fixed damage constants
+; fixed damage constants  ; MOD: these are now overriden to work like seismic toss
 SONICBOOM_DAMAGE   EQU 20
 DRAGON_RAGE_DAMAGE EQU 40

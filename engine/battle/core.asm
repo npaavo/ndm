@@ -19,6 +19,7 @@ ResidualEffects1:
 	db MIMIC_EFFECT
 	db LEECH_SEED_EFFECT
 	db SPLASH_EFFECT
+	db SECOND_WIND_EFFECT
 	db -1
 SetDamageEffects:
 ; moves that do damage but not through normal calculations
@@ -1003,7 +1004,7 @@ ReplaceFaintedEnemyMon:
 	ret
 
 TrainerBattleVictory:
-	call EndLowHealthAlarm
+	call EndLowHealthAlarm	
 	ld b, MUSIC_DEFEATED_GYM_LEADER
 	ld a, [wGymLeaderNo]
 	and a
@@ -4681,16 +4682,14 @@ ApplyAttackToEnemyPokemon:
 .specialDamage
 	ld hl, wBattleMonLevel
 	ld a, [hl]
-	ld b, a ; Seismic Toss deals damage equal to the user's level
+	ld b, a ; Seismic Toss deals damage equal to the user's level ; MOD: and so does sonic boom and dragon rage
 	ld a, [wPlayerMoveNum]
 	cp SEISMIC_TOSS
 	jr z, .storeDamage
 	cp NIGHT_SHADE
 	jr z, .storeDamage
-	ld b, SONICBOOM_DAMAGE ; 20
 	cp SONICBOOM
 	jr z, .storeDamage
-	ld b, DRAGON_RAGE_DAMAGE ; 40
 	cp DRAGON_RAGE
 	jr z, .storeDamage
 ; Psywave
@@ -6921,7 +6920,7 @@ _JumpMoveEffect:
 	jp hl ; jump to special effect handler
 
 MoveEffectPointerTable:
-	 dw SleepEffect               ; unused effect
+	 dw SecondWindEffect          ; MOD - SECOND_WIND_EFFECT
 	 dw PoisonEffect              ; POISON_SIDE_EFFECT1
 	 dw DrainHPEffect             ; DRAIN_HP_EFFECT
 	 dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT1
@@ -8392,6 +8391,9 @@ HazeEffect:
 
 HealEffect:
 	jpab HealEffect_
+	
+SecondWindEffect:
+	jpab SecondWindEffect_
 
 TransformEffect:
 	jpab TransformEffect_

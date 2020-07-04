@@ -1,12 +1,17 @@
 _Route2GateText_5d616::
-	text "The HM FLASH"
-	line "lights even the"
-	cont "darkest dungeons."
+	text "The LANTERN will"
+	line "help you see in"
+	cont "dark places!"
+	para "Wild #MON are"
+	line "drawn to it,"
+	cont "though. Be ready!"
 	done
 
 _Route2GateText2::
-	text "Once a #MON"
-	line "learns FLASH, you"
-	cont "can get through"
-	cont "ROCK TUNNEL."
+	text "That guy said"
+	line "he was looking"
+	cont "for <PLAYER>."
+	
+	para "I wonder what"
+	line "they did..."
 	done

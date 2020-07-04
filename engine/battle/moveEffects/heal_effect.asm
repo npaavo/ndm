@@ -118,3 +118,44 @@ FellAsleepBecameHealthyText:
 RegainedHealthText:
 	TX_FAR _RegainedHealthText
 	db "@"
+
+
+SecondWindEffect_:
+	ld a, [H_WHOSETURN]
+	and a
+	;load useful variables
+	ld de, wBattleMonHP
+	ld hl, wBattleMonMaxHP
+	ld a, [wPlayerMoveNum]
+	jr z, .swEffect
+	ld de, wEnemyMonHP
+	ld hl, wEnemyMonMaxHP
+	ld a, [wEnemyMoveNum]
+.swEffect
+	; ??? lol gotta code this 
+.playAnim
+	ld hl, PlayCurrentMoveAnimation
+	call BankswitchEtoF
+	ld a, [H_WHOSETURN]
+	and a
+	coord hl, 10, 9
+	ld a, $1
+	jr z, .updateHPBar
+	coord hl, 2, 2
+	xor a
+.updateHPBar
+	ld [wHPBarType], a
+	predef UpdateHPBar2
+	ld hl, DrawHUDsAndHPBars
+	call BankswitchEtoF
+	ld hl, RegainedHealthText
+	jp PrintText
+.failed
+	ld c, 50
+	call DelayFrames
+	ld hl, PrintButItFailedText_
+	jp BankswitchEtoF
+
+SecondWindText:
+	TX_FAR _SecondWindText
+	db "@"

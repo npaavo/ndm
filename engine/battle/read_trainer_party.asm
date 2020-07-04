@@ -45,10 +45,16 @@ ReadTrainer:
 ;      (as opposed to the whole team being of the same level)
 ; - if [wLoneAttackNo] != 0, one pokemon on the team has a special move
 ; else the first byte is the level of every pokemon on the team
+
 .IterateTrainer
 	ld a, [hli]
 	cp $FF ; is the trainer special?
 	jr z, .SpecialTrainer ; if so, check for special moves
+	
+	; MOD: evaluate what level they should be at.
+	; We're hijacking the first byte for how many mons they can use of their list.
+	
+	
 	ld [wCurEnemyLVL], a
 .LoopTrainerData
 	ld a, [hli]

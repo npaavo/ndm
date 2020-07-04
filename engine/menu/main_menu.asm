@@ -128,9 +128,12 @@ MainMenu:
 	jp SpecialEnterMap
 
 InitOptions:
-	ld a, 1 ; no delay
-	ld [wLetterPrintingDelayFlags], a
-	ld a, 3 ; medium speed
+
+
+	;ld a, 1 ; no delay
+	;ld [wLetterPrintingDelayFlags], a
+	;ld a, 3 ; medium speed
+	ld a, 67
 	ld [wOptions], a
 	ret
 
@@ -344,9 +347,7 @@ CableClubOptionsText:
 	next "CANCEL@"
 	
 ModWarningText:
-	db "v0.3 aka Venusaur"
-	next "Please don't share"
-	next "compiled ROMs!@" 
+	db   "v0.6 / CHARIZARD@"
 
 DisplayContinueGameInfo:
 	xor a
@@ -570,38 +571,38 @@ DisplayOptionMenu:
 	ld a, [wOptionsTextSpeedCursorX] ; text speed cursor X coordinate
 	cp 1
 	jr z, .updateTextSpeedXCoord
-	cp 7
+	cp 8
 	jr nz, .fromSlowToMedium
-	sub 6
+	sub 7
 	jr .updateTextSpeedXCoord
 .fromSlowToMedium
-	sub 7
+	sub 6
 	jr .updateTextSpeedXCoord
 .pressedRightInTextSpeed
 	ld a, [wOptionsTextSpeedCursorX] ; text speed cursor X coordinate
 	cp 14
 	jr z, .updateTextSpeedXCoord
-	cp 7
+	cp 8
 	jr nz, .fromFastToMedium
-	add 7
+	add 6
 	jr .updateTextSpeedXCoord
 .fromFastToMedium
-	add 6
+	add 7
 .updateTextSpeedXCoord
 	ld [wOptionsTextSpeedCursorX], a ; text speed cursor X coordinate
 	jp .eraseOldMenuCursor
 
 TextSpeedOptionText:
 	db   "TEXT SPEED"
-	next " FAST  MEDIUM SLOW@"
+	next " BUGGY  FAST  FINE@"
 
 BattleAnimationOptionText:
 	db   "BATTLE ANIMATION"
-	next " ON       OFF@"
+	next " FLASHY   QUICK@"
 
 BattleStyleOptionText:
 	db   "BATTLE STYLE"
-	next " SHIFT    SET@"
+	next " EASY     NORMAL@"
 
 OptionMenuCancelText:
 	db "CANCEL@"
@@ -689,7 +690,7 @@ SetCursorPositionsFromOptions:
 ; 01: delay after printing a letter (in frames)
 TextSpeedOptionData:
 	db 14,3 ; Slow
-	db  7,1 ; Medium
+	db  8,1 ; Medium
 	db  1,0 ; Fast
 	db 7 ; default X coordinate (Medium)
 	db $ff ; terminator

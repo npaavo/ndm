@@ -352,7 +352,7 @@ OaksLabScript9:
 	call DisplayTextID
 	ld a, $1
 	ld [H_SPRITEINDEX], a
-	ld a, SPRITE_FACING_RIGHT
+	ld a, SPRITE_FACING_LEFT
 	ld [hSpriteFacingDirection], a
 	call SetSpriteFacingDirectionAndDelay
 	call Delay3

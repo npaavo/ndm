@@ -176,6 +176,7 @@ AttackAnimationPointers:
 	dw NightTerrorAnim
 	dw NightTerrorStartAnim
 	dw BugOutAnim
+	dw SecondWindAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -792,6 +793,7 @@ DoubleTeamAnim:
 	db $46,$6F,$33
 	db $FF
 
+SecondWindAnim:
 RecoverAnim:
 	db SE_BLINK_MON, $68
 	db SE_LIGHT_SCREEN_PALETTE, $FF

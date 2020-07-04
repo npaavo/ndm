@@ -124,16 +124,16 @@ PrintSendOutMonMessage:
 	ld [H_DIVISOR], a ; enemy mon max HP divided by 4
 	call Divide
 	ld a, [H_QUOTIENT + 3] ; a = (enemy mon current HP * 25) / (enemy max HP / 4); this approximates the current percentage of max HP
-	ld hl, GoText ; 70% or greater
-	cp 70
+	ld hl, GoText ; 75% or greater
+	cp 75
 	jr nc, .printText
-	ld hl, DoItText ; 40% - 69%
-	cp 40
+	ld hl, DoItText ; 50% - 75%
+	cp 50
 	jr nc, .printText
-	ld hl, GetmText ; 10% - 39%
-	cp 10
+	ld hl, GetmText ; 26% - 50%
+	cp 25
 	jr nc, .printText
-	ld hl, EnemysWeakText ; 0% - 9%
+	ld hl, EnemysWeakText ; 0% - 25%
 .printText
 	jp PrintText
 
@@ -169,7 +169,7 @@ RetreatMon:
 	jp PrintText
 
 PlayerMon2Text:
-	TX_FAR _PlayerMon2Text
+	TX_FAR _PlayerMon2TextNoSp
 	TX_ASM
 	push de
 	push bc

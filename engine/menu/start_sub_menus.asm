@@ -595,8 +595,26 @@ DrawTrainerInfo:
 	lb bc, LEADING_ZEROES | 2, 5
 	call PrintNumber ; ID Number
 	
+	
 	coord hl, 2, 6
+	push hl
+	call CountNumBadgesOwned;
+	pop hl
+	ld de, TrainerInfo_RankText0
+	ld a, [wEffectiveNumBadgesOwned] 
+	cp 1
+	jr c, .placeRankText
+	ld de, TrainerInfo_RankText1
+	cp 2
+	jr c, .placeRankText
 	ld de, TrainerInfo_RankText2
+	cp 3
+	jr c, .placeRankText
+	ld de, TrainerInfo_RankText3
+	cp 4
+	jr c, .placeRankText
+	ld de, TrainerInfo_RankText4
+.placeRankText
 	call PlaceString
 	
 	coord hl, 2, 1
@@ -635,10 +653,10 @@ TrainerInfo_BadgesText:
 	db $76," BADGES ",$76,"@"
 	
 TrainerInfo_TrainerText0:
-	db "TID:@"
-	
+	db "TID: @"
+
 TrainerInfo_RankText0:
-	db "UNAPPROVED@"
+	db $76,"UNRANKED@"
 	
 TrainerInfo_RankText1:
 	db $76," CLASS D@"
@@ -654,9 +672,6 @@ TrainerInfo_RankText4:
 	
 TrainerInfo_RankText5:
 	db $76," CLASS S@"
-	
-TrainerInfo_RankText6:
-	db $76," CLASS X@"
 	
 
 TrainerInfo_DrawTrainerRank:

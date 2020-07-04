@@ -15,9 +15,16 @@ _ViridianPokeCenterText2::
 _ViridianPokeCenterText3::
 	text "The GYM LEADER"
 	line "totally thrashed"
-	cont "my #MON!"
-
-	para "I need to train"
-	line "much harder to"
-	cont "be on her level."
+	cont "my WATER type"
+	cont "#MON!"
+	
+	para "Maybe I should"
+	line "challenge a"
+	cont "different GYM..."
+	
+	para "Someday I'll catch"
+	line "some other types,"
+	cont "then I'll come"
+	cont "back here and"
+	cont "finally beat her!"
 	done

@@ -1,23 +1,23 @@
 _VermilionMartText2::
-	text "There are evil"
-	line "people who will"
-	cont "use #MON for"
-	cont "criminal acts."
-
-	para "TEAM ROCKET"
-	line "traffics in rare"
-	cont "#MON."
-
-	para "They also abandon"
-	line "#MON that they"
-	cont "consider not to"
-	cont "be popular or"
-	cont "useful."
+	text "POTION is a big"
+	line "brand here in"
+	cont "KANTO."
+	
+	para "Wait, they have"
+	line "POTION in JOHTO"
+	cont "too?"
+	
+	para "What's it taste"
+	line "like? The same?"
 	done
 
 _VermilionMartText3::
-	text "I think #MON"
-	line "can be good or"
-	cont "evil. It depends"
-	cont "on the trainer."
+	text "I keep telling"
+	line "him, don't drink"
+	cont "POTION, it's for"
+	cont "#MON."
+	
+	para "Me? I prefer the"
+	line "taste of REPEL."
+	
 	done

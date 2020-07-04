@@ -1,7 +1,13 @@
 _Route4Text1::
-	text "Ouch! I tripped"
-	line "over a rocky"
-	cont "#MON, GEODUDE!"
+	text "Mt. Moon is so"
+	line "big! I always"
+	cont "get lost inside!"
+	
+	para "Halfway through"
+	line "there is supposed"
+	cont "to be a shortcut"
+	cont "back to this"
+	cont "#MON CENTER!"
 	done
 
 _Route4BattleText1::
@@ -25,11 +31,12 @@ _Route4AfterBattleText1::
 
 _Route4Text5::
 	text "MT.MOON"
-	line "Tunnel Entrance"
+	line "PEWTER: WEST"
+	cont "CERULEAN: EAST"
 	done
 
 _Route4Text6::
-	text "ROUTE 4"
-	line "MT.MOON -"
-	cont "CERULEAN CITY"
+	text "CERULEAN RIVER"
+	line "is great for"
+	cont "fishing."
 	done

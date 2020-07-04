@@ -10,7 +10,9 @@ RedsHouse1F_Object:
 
 	db 2 ; objects
 	object SPRITE_MOM, 4, 4, STAY, RIGHT, 1 ; Mom
-	object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 2, TOWN_MAP ; get map
+	
+	;object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 2, TOWN_MAP ; get map
+	object SPRITE_BOOK_MAP_DEX, 2, 1, STAY, NONE, 2, SCYTHE ; get map
 
 	; warp-to
 	warp_to 4, 7, REDS_HOUSE_1F_WIDTH

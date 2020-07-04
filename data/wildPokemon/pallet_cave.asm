@@ -1,14 +1,14 @@
 PalletCaveMons:
 	db $00
 	db $02
-	db 18,LAPRAS
-	db 19,LAPRAS
-	db 20,LAPRAS
-	db 22,LAPRAS
-	db 23,LAPRAS
-	db 24,LAPRAS
-	db 30,LAPRAS
-	db 35,LAPRAS
-	db 40,LAPRAS
-	db 30,LAPRAS
+	db 2,LAPRAS
+	db 3,LAPRAS
+	db 4,LAPRAS
+	db 5,LAPRAS
+	db 6,LAPRAS
+	db 7,LAPRAS
+	db 8,LAPRAS
+	db 9,LAPRAS
+	db 10,LAPRAS
+	db 10,LAPRAS
 	db $00

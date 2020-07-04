@@ -13,22 +13,23 @@ _MtMoon3Text_49f7f::
 	text "uu"
 
 _MtMoon3Text_49f85::
-	text "Hey, stop!"
-
-	para "I found these"
-	line "fossils! They're"
-	cont "both mine!"
+	text "Hold on, I"
+	line "dropped my"
+	cont "glasses!"
+	
 	done
 
 _MtMoon3Text_49f8a::
-	text "OK!"
-	line "I'll share!"
+	text "Hey!"
+	line "I couldn't see!"
 	prompt
 
 _MtMoon3Text_49f8f::
-	text "We'll each take"
-	line "one!"
-	cont "No being greedy!"
+	text "I wouldn't have"
+	line "lost if I could"
+	cont "have seen what"
+	cont "#MON you"
+	cont "sent out..."
 	done
 
 _MtMoon3Text_49f94::

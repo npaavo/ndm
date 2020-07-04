@@ -8,7 +8,7 @@ PewterGym_Object:
 	db 0 ; signs
 
 	db 2 ; objects
-	object SPRITE_FISHER, 6, 3, STAY, DOWN, 1, OPP_BROCK, 1
+	object SPRITE_FISHER, 6, 3, STAY, DOWN, 1, OPP_LARS, 1
 	object SPRITE_CABLE_CLUB_WOMAN, 8, 15, STAY, LEFT, 3 ; person
 
 	; warp-to

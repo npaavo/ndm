@@ -177,6 +177,7 @@ const_value = 1
 	const NIGHT_TERROR ; ad	
 	const NIGHT_TERROR_START_ANIM ; clone for jank	ae
 	const BUG_OUT ; af
+	const SECOND_WIND ;b0
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

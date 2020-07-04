@@ -18,8 +18,8 @@ PewterCity_Object:
 
 	db 5 ; objects
 	object SPRITE_BUG_CATCHER, 7, 11, STAY, NONE, 1 ; person
-	object SPRITE_LASS, 28, 17, WALK, 0, 2 ; person
-	object SPRITE_BLACK_HAIR_BOY_1, 28, 9, WALK, 0, 3 ; person
+	object SPRITE_DAISY, 28, 17, WALK, 0, 2 ; person
+	object SPRITE_LASS, 28, 9, WALK, 0, 3 ; person
 	object SPRITE_BLACK_HAIR_BOY_1, 30, 19, WALK, 0, 4 ; person
 	object SPRITE_BLACK_HAIR_BOY_2, 9, 22, WALK, 0, 5 ; person
 

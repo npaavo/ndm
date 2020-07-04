@@ -8,7 +8,7 @@ IF DEF(_RED)
 	text "We must've just" 
 	line "passed by each"
 	cont "other! I came by" 
-	cont "your house to" 
+	cont "your place to" 
 	cont "pick you up!"
 	
 	para "I guess it's good"
@@ -27,7 +27,7 @@ IF DEF(_BLUE)
 ENDC
 _PalletTownText2::
 	text "PALLET CAMP is"
-	line "ok, I guess."
+	line "alright, I guess."
 
 	para "I can't imagine"
 	line "living here,"
@@ -35,7 +35,7 @@ _PalletTownText2::
 	
 	para "Oh, you're the one"
 	line "that moved into"
-	cont "that apartment?"
+	cont "that tiny shack?"
 	
 	para "It's... quaint."
 	done

@@ -2,7 +2,7 @@ Route2_Object:
 	db $f ; border block
 
 	db 6 ; warps
-	warp 12, 9, 0, DIGLETTS_CAVE_ROUTE_2
+	warp 12, 9, 0, DIGLETTS_CAVE
 	warp 3, 11, 0, VIRIDIAN_FOREST ; n exit
 	warp 16, 35, 0, ROUTE_2_GATE ; I believe these are needed 
 	warp 15, 39, 1, ROUTE_2_GATE ; for sprite loading

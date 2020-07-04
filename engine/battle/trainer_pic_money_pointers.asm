@@ -100,10 +100,10 @@ TrainerPicAndMoneyPointers:
 	dw BrunoPic
 	money 9900
 
-	dw BrockPic
+	dw LarsPic
 	money 9900
 
-	dw MistyPic
+	dw TobiasPic
 	money 9900
 
 	dw LtSurgePic

@@ -39,8 +39,8 @@ const_value = 1
 	trainer_const COOLTRAINER_M ; $1F
 	trainer_const COOLTRAINER_F ; $20
 	trainer_const BRUNO         ; $21
-	trainer_const BROCK         ; $22
-	trainer_const MISTY         ; $23
+	trainer_const LARS          ; $22
+	trainer_const TOBIAS        ; $23
 	trainer_const LT_SURGE      ; $24
 	trainer_const ERIKA         ; $25
 	trainer_const KOGA          ; $26

@@ -282,8 +282,35 @@ OverworldLoopLessDelay::
 	ld a, [wd736]
 	bit 6, a ; jumping a ledge?
 	jr nz, .normalPlayerSpriteAdvancement
+	
+	;MOD  Bike is normally 2x walking speed
+ 	; Holding B makes the bike even faster
+ 	ld a, [hJoyHeld]
+ 	and B_BUTTON
+ 	jr z, .notMachBike
+ 	call DoBikeSpeedup
+	
+	;MOD
+.notMachBike
+	call DoBikeSpeedup
+	jr .notRunning
+
 	call DoBikeSpeedup
 .normalPlayerSpriteAdvancement
+	; MOD
+	; surf at 2x walking speed
+	ld a, [wWalkBikeSurfState]
+	cp $02
+	jr z, .surfFaster
+	; Holding B makes you run at 2x walking speed
+	ld a, [hJoyHeld]
+	and B_BUTTON
+	jr z, .notRunning
+.surfFaster
+	call DoBikeSpeedup
+.notRunning
+	;original .normalPlayerSpriteAdvancement continues here
+
 	call AdvancePlayerSprite
 	ld a, [wWalkCounter]
 	and a
@@ -569,6 +596,7 @@ DarkMaps:
 	db REDS_HOUSE_2F
 	db MUSEUM_1F
 	db MUSEUM_2F
+	db DIGLETTS_CAVE
 	db $FF
 
 
@@ -780,6 +808,7 @@ ExtraWarpCheck::
 	jp Bankswitch
 
 MapEntryAfterBattle::
+	callba HealPartyPPOnly
 	callba IsPlayerStandingOnWarp ; for enabling warp testing after collisions
 	ld a, [wMapPalOffset]
 	and a

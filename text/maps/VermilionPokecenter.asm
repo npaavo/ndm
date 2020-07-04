@@ -1,19 +1,21 @@
 _VermilionPokecenterText2::
-	text "Even if they are"
-	line "the same level,"
-	cont "#MON can have"
-	cont "very different"
-	cont "abilities."
-
-	para "A #MON raised"
-	line "by a trainer is"
-	cont "stronger than one"
-	cont "in the wild."
+	text "There's a cave"
+	line "to the NORTH that"
+	cont "can take you to"
+	cont "SAFFRON CITY."
+	
+	para "It's too steep"
+	line "for me to climb."
+	cont "Maybe we should"
+	cont "get a road..."
 	done
 
 _VermilionPokecenterText3::
-	text "My #MON was"
-	line "poisoned! It"
-	cont "fainted while we"
-	cont "were walking!"
+	text "Last I remember"
+	line "I was in PEWTER."
+	para "Then I explored a"
+	line "cave, and ended"
+	cont "up here."
+	para "Life's one heck"
+	line "of an adventure!"
 	done

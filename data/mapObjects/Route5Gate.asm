@@ -4,8 +4,8 @@ Route5Gate_Object:
 	db 4 ; warps
 	warp 4, 5, 2, -1
 	warp 5, 5, 2, -1
-	warp 4, 0, 1, -1
-	warp 5, 0, 0, -1
+	warp 4, 0, 0, -1
+	warp 5, 0, 1, -1
 
 	db 0 ; signs
 

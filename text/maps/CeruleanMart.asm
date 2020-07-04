@@ -1,19 +1,28 @@
 _CeruleanMartText2::
-	text "Use REPEL to keep"
-	line "bugs and weak"
-	cont "#MON away."
-
-	para "Put your strongest"
-	line "#MON at the"
-	cont "top of the list"
-	cont "for best results!"
+	text "Here's a tip:"
+	line "you can save cash"
+	cont "on items by not"
+	cont "having any"
+	cont "#MON!"
+	
+	para "Or, shoplifting."
+	
+	para "But one of those"
+	line "two is illegal!"
+	
+	para "I'll leave it up"
+	line "to you to figure"
+	cont "out which one."
 	done
 
 _CeruleanMartText3::
-	text "Have you seen any"
-	line "RARE CANDY?"
-
-	para "It's supposed to"
-	line "make #MON go"
-	cont "up one level!"
+	text "I wonder what"
+	line "RARE CANDY tastes"
+	cont "like..."
+	
+	para "..."
+	
+	para "...not enough to"
+	line "like, actually"
+	cont "eat it, though."
 	done

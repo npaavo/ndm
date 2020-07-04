@@ -105,7 +105,7 @@ CeruleanCityFlyWarp:
 LavenderTownFlyWarp:
 	FLYWARP_DATA LAVENDER_TOWN_WIDTH,    6,  3
 VermilionCityFlyWarp:
-	FLYWARP_DATA VERMILION_CITY_WIDTH,   4, 11
+	FLYWARP_DATA VERMILION_CITY_WIDTH,   4, 17
 CeladonCityFlyWarp:
 	FLYWARP_DATA CELADON_CITY_WIDTH,    10, 41
 FuchsiaCityFlyWarp:

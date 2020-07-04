@@ -1,14 +1,23 @@
 _PewterPokecenterText2::
-	text "What!?"
-
-	para "TEAM ROCKET is"
-	line "at MT.MOON? Huh?"
-	cont "I'm on the phone!"
-
-	para "Scram!"
+	text "GYM LEADERS will"
+	line "pick different"
+	cont "#MON depending"
+	cont "on how many other"
+	cont "BADGES you've got."
+	
+	para "Keeps things fair,"
+	line "I guess."
+	
 	done
 
 _PewterJigglypuffText::
-	text "JIGGLYPUFF: Puu"
-	line "pupuu!"
+	text "JIGGLYPUFF:"
+	line "Jiggly! Puff!"
+	
+	para "..."
+	
+	para "Someone seems"
+	line "to be letting it"
+	cont "run around the"
+	cont "#MON CENTER."
 	done

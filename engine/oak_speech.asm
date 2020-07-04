@@ -15,7 +15,7 @@ SetDefaultNames:
 	call FillMemory
 	pop af
 	ld [wd732], a
-	pop af
+	pop af	
 	ld [wOptions], a
 	pop af
 	ld [wLetterPrintingDelayFlags], a

@@ -1,24 +1,20 @@
 _CeruleanPokecenterText2::
-	text "That BILL!"
-
-	para "I heard that"
-	line "he'll do whatever"
-	cont "it takes to get"
-	cont "rare #MON!"
+	text "Moves like"
+	line "DRAGON RAGE and"
+	cont "SONICBOOM always"
+	cont "do damage equal"
+	cont "to a #MON's"
+	cont "LEVEL."
 	done
 
 _CeruleanPokecenterText3::
-	text "Have you heard"
-	line "about BILL?"
-
-	para "Everyone calls"
-	line "him a #MANIAC!"
-
-	para "I think people"
-	line "are just jealous"
-	cont "of BILL, though."
-
-	para "Who wouldn't want"
-	line "to boast about"
-	cont "their #MON?"
+	text "#MON learn a"
+	line "new technique"
+	cont "every 5 levels,"
+	cont "up to level 50."
+	
+	para "...Then what?"	
+	 
+	para "They stop gaining"
+	line "levels, duh!"
 	done

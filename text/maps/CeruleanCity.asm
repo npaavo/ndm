@@ -1,233 +1,128 @@
-_CeruleanCityText_19668::
-	text "<RIVAL>: Yo!"
-	line "<PLAYER>!"
-
-	para "You're still"
-	line "struggling along"
-	cont "back here?"
-
-	para "I'm doing great!"
-	line "I caught a bunch"
-	cont "of strong and"
-	cont "smart #MON!"
-
-	para "Here, let me see"
-	line "what you caught,"
-	cont "<PLAYER>!"
+_CeruleanCityText1::
+	text "uu"
 	done
 
-_CeruleanCityText_1966d::
-	text "Hey!"
-	line "Take it easy!"
-	cont "You won already!"
-	prompt
-
-_CeruleanCityText_19672::
-	text "Heh!"
-	line "You're no match"
-	cont "for my genius!"
-	prompt
-
-_CeruleanCityText_19677::
-	text "<RIVAL>: Hey,"
-	line "guess what?"
-
-	para "I went to BILL's"
-	line "and got him to"
-	cont "show me his rare"
-	cont "#MON!"
-
-	para "That added a lot"
-	line "of pages to my"
-	cont "#DEX!"
-
-	para "After all, BILL's"
-	line "world famous as a"
-	cont "#MANIAC!"
-
-	para "He invented the"
-	line "#MON Storage"
-	cont "System on PC!"
-
-	para "Since you're using"
-	line "his system, go"
-	cont "thank him!"
-
-	para "Well, I better"
-	line "get rolling!"
-	cont "Smell ya later!"
+_CeruleanCityText2::
+	text "Always bring some"
+	line "FRESH WATER to"
+	cont "the GYM!"
+	
+	para "It's good for both"
+	line "#MON and"
+	cont "people!"
 	done
-
-_CeruleanCityText_196d9::
-	text "Hey! Stay out!"
-	line "It's not your"
-	cont "yard! Huh? Me?"
-
-	para "I'm an innocent"
-	line "bystander! Don't"
-	cont "you believe me?"
-	done
-
-_ReceivedTM28Text::
-	text "<PLAYER> recovered"
-	line "TM28!@@"
-
-_ReceivedTM28Text2::
-	text ""
-
-	para "I better get"
-	line "moving! Bye!@@"
-
-_TM28NoRoomText::
-	text "Make room for"
-	line "this!"
-
-	para "I can't run until"
-	line "I give it to you!"
-	done
-
-_CeruleanCityText_196ee::
-	text "Stop!"
-	line "I give up! I'll"
-	cont "leave quietly!"
-	prompt
-
-_CeruleanCityText_196f3::
-	text "OK! I'll return"
-	line "the TM I stole!"
-	prompt
 
 _CeruleanCityText3::
-	text "You're a trainer"
-	line "too? Collecting,"
-	cont "fighting, it's a"
-	cont "tough life."
+	text "You're a trainer?"
+	line "Wow! That's cool." 
+	
+	para "I like watching"
+	line "battles on TV."
+	
+	para "I always root for"
+	line "the trainer that"
+	cont "uses MAGMAR-"
+	cont "my favorite!"
+	
 	done
 
 _CeruleanCityText4::
-	text "That bush in"
-	line "front of the shop"
-	cont "is in the way."
-
-	para "There might be a"
-	line "way around."
+	text "Welcome to"
+	line "CERULEAN CITY!"
+	
+	para "Who am I? Just"
+	line "a welcoming"
+	cont "citizen is all!"
 	done
 
 _CeruleanCityText5::
 	text "You're making an"
 	line "encyclopedia on"
-	cont "#MON? That"
-	cont "sounds amusing."
+	cont "#MON? That's..."
+	cont "... neat."
+	
+	para "What's your day"
+	line "job, then?"
 	done
 
 _CeruleanCityText6::
-	text "The people here"
-	line "were robbed."
-
-	para "It's obvious that"
-	line "TEAM ROCKET is"
-	cont "behind this most"
-	cont "heinous crime!"
-
-	para "Even our POLICE"
-	line "force has trouble"
-	cont "with the ROCKETs!"
+	text "Huff... puff..."
+	para "... WHEEZE."
+	
+	para "I'm taking..."
+	line "... a break..."
 	done
 
-_CeruleanCityText_19730::
-	text "OK! SLOWBRO!"
-	line "Use SONICBOOM!"
-	cont "Come on, SLOWBRO"
-	cont "pay attention!"
+_CeruleanCityText7::
+	text "I do laps every"
+	line "day at the GYM."
+	
+	para "The CERULEAN GYM"
+	line "isn't just for"
+	cont "#MON battles!"
+	
+	para "People train"
+	line "there, too!"
 	done
 
-_CeruleanCityText_19735::
-	text "SLOWBRO punch!"
-	line "No! You blew it"
-	cont "again!"
-	done
-
-_CeruleanCityText_1973a::
-	text "SLOWBRO, WITHDRAW!"
-	line "No! That's wrong!"
-
-	para "It's so hard to"
-	line "control #MON!"
-
-	para "Your #MON's"
-	line "obedience depends"
-	cont "on your abilities"
-	cont "as a trainer!"
-	done
-
-_CeruleanCityText_1976f::
-	text "SLOWBRO took a"
-	line "snooze..."
-	done
-
-_CeruleanCityText_19774::
-	text "SLOWBRO is"
-	line "loafing around..."
-	done
-
-_CeruleanCityText_19779::
-	text "SLOWBRO turned"
-	line "away..."
-	done
-
-_CeruleanCityText_1977e::
-	text "SLOWBRO"
-	line "ignored orders..."
+_CeruleanCityText8::
+	text "I love this park."
+	line "Imagine if every"
+	cont "city was this"
+	cont "beautiful and"
+	cont "clean!"
 	done
 
 _CeruleanCityText9::
-	text "I want a bright"
-	line "red BICYCLE!"
+	text "The GYM leader,"
+	line "TOBIAS, is a real"
+	cont "hottie..."
 
-	para "I'll keep it at"
-	line "home, so it won't"
-	cont "get dirty!"
+	para "...and I don't"
+	line "care who knows!"
+	
+	para "He takes care of"
+	line "his body!"
 	done
 
 _CeruleanCityText10::
-	text "This is CERULEAN"
-	line "CAVE! Horribly"
-	cont "strong #MON"
-	cont "live in there!"
-
-	para "The #MON LEAGUE"
-	line "champion is the"
-	cont "only person who"
-	cont "is allowed in!"
+	text "Hmm... if we"
+	line "build a bridge"
+	cont "here, then..."
+	
+	para "Oh hey! I'm just"
+	line "thinking out loud."
 	done
 
 _CeruleanCityText12::
 	text "CERULEAN CITY"
-	line "A Mysterious,"
-	cont "Blue Aura"
-	cont "Surrounds It"
+	line "Nature's splendor"
+	cont "on full display!"
 	done
 
 _CeruleanCityText13::
-	text "TRAINER TIPS"
-
-	para "Pressing B Button"
-	line "during evolution"
-	cont "cancels the whole"
-	cont "process."
+	text "uu"
 	done
 
 _CeruleanCityText16::
-	text "Grass and caves"
-	line "handled easily!"
-	cont "BIKE SHOP"
+	text "CERULEAN CITY GYM"
+	
+	para "Almost there!"
+	line " - TOBIAS"
 	done
 
 _CeruleanCityText17::
-	text "CERULEAN CITY"
-	line "#MON GYM"
-	cont "LEADER: MISTY"
-
-	para "The Tomboyish"
-	line "Mermaid!"
+	text "CERULEAN CITY GYM"
+	
+	para "Yes, up the hill."
+	line "Hustle! - TOBIAS"
+	done
+	
+_CeruleanCityText18::
+	text "CERULEAN BEACH"
+	
+	para "Due to currents,"
+	line "please stay in"
+	cont "shallow waters"
+	cont "while swimming."
 	done

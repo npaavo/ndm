@@ -75,8 +75,8 @@ _PewterCityText5::
 
 _PewterCityText6::
 	text "PEWTER CITY"
-	line "A Stone Gray"
-	cont "City"
+	line "The Peak of"
+	cont "Perfection!"
 	done
 
 _PewterCityText7::

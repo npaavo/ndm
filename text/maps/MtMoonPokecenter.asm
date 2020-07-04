@@ -1,19 +1,17 @@
 _MtMoonPokecenterText1::
-	text "I've 6 # BALLs"
-	line "set in my belt."
-
-	para "At most, you can"
-	line "carry 6 #MON."
+	text "Okay, all healed"
+	line "up. I'm ready"
+	cont "to tackle the"
+	cont "Mt. Moon hike!"
 	done
 
 _MtMoonPokecenterText3::
-	text "TEAM ROCKET"
-	line "attacks CERULEAN"
-	cont "citizens..."
-
-	para "TEAM ROCKET is"
-	line "always in the"
-	cont "news!"
+	text "This newspaper"
+	line "is from last"
+	cont "week! Old news!"
+	
+	para "I wish the mail"
+	line "wasn't so slow."
 	done
 
 _MagikarpSalesmanText1::

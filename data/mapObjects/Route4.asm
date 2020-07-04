@@ -13,12 +13,13 @@ Route4_Object:
 	db 3 ; signs
 	sign 12, 5, 4 ; PokeCenterSignText
 	sign 15, 11, 5 ; Route4Text5
-	sign 27, 7, 6 ; Route4Text6
+	sign 49, 3, 5 ; Route4Text6
 
-	db 3 ; objects
+	db 4 ; objects
 	object SPRITE_LASS, 9, 8, WALK, 0, 1 ; person
-	object SPRITE_LASS, 63, 3, STAY, RIGHT, 2, OPP_LASS, 4
-	object SPRITE_BALL, 57, 3, STAY, NONE, 3, TM_04
+	object SPRITE_LASS, 58, 8, STAY, RIGHT, 2, OPP_LASS, 4
+	object SPRITE_BALL, 42, 15, STAY, NONE, 3, MAX_REVIVE
+	object SPRITE_HIKER, 82, 10, STAY, UP, 6 ; person
 
 	; warp-to
 	warp_to 11, 5, ROUTE_4_WIDTH ; MT_MOON_POKECENTER

@@ -61,8 +61,7 @@ _ExclamationText::
 	done
 
 _GroundRoseText::
-	text "Ground rose up"
-	line "somewhere!"
+	text "uu"
 	done
 
 _BoulderText::
@@ -73,7 +72,7 @@ _BoulderText::
 _MartSignText::
 	text "All your item"
 	line "needs fulfilled!"
-	cont "#MON MART"
+	cont "#MART"
 	done
 
 _PokeCenterSignText::
@@ -304,39 +303,31 @@ _TradeforText::
 	done
 
 _PlaySlotMachineText::
-	text "A slot machine!"
-	line "Want to play?"
+	text "uu"
 	done
 
 _OutOfCoinsSlotMachineText::
-	text "Darn!"
-	line "Ran out of coins!"
+	text "uu"
 	done
 
 _BetHowManySlotMachineText::
-	text "Bet how many"
-	line "coins?"
+	text "uu"
 	done
 
 _StartSlotMachineText::
-	text "Start!"
+	text "uu"
 	done
 
 _NotEnoughCoinsSlotMachineText::
-	text "Not enough"
-	line "coins!"
+	text "uu"
 	prompt
 
 _OneMoreGoSlotMachineText::
-	text "One more "
-	line "go?"
+	text "uu"
 	done
 
 _LinedUpText::
-	text " lined up!"
-	line "Scored @"
-	TX_RAM wcf4b
-	text " coins!"
+	text "uu"
 	done
 
 _NotThisTimeText::
@@ -394,115 +385,103 @@ _ViridianCityPokecenterGuyText::
 	done
 
 _PewterCityPokecenterGuyText::
-	text "Yawn!"
-
-	para "When JIGGLYPUFF"
-	line "sings, #MON"
-	cont "get drowsy..."
-
-	para "...Me too..."
-	line "Snore..."
+	text "I'm ready for a"
+	line "nap! Yawn!"
 	done
 
 _CeruleanPokecenterGuyText::
-	text "BILL has lots of"
-	line "#MON!"
-
-	para "He collects rare"
-	line "ones too!"
+	text "Being a trainer"
+	line "looks tough."
+	
 	done
 
 _LavenderPokecenterGuyText::
 	text "CUBONEs wear"
 	line "skulls, right?"
 
-	para "People will pay a"
-	line "lot for one!"
+	para "That's pretty"
+	line "metal. Imagine if"
+	cont "you wore a skull."
+	
+	para "How would it fit"
+	line "though? What a"
+	cont "mystery."
 	done
 
 _MtMoonPokecenterBenchGuyText::
-	text "If you have too"
-	line "many #MON, you"
-	cont "should store them"
-	cont "via PC!"
+	text "Gotta' catch 'em"
+	line "all, they said."
+	
+	para "It will be fun,"
+	line "they said."
 	done
 
 _RockTunnelPokecenterGuyText::
-	text "I heard that"
-	line "GHOSTs haunt"
-	cont "LAVENDER TOWN!"
+	text "I heard people"
+	line "get lost and die"
+	cont "in ROCK TUNNEL."
+	
+	para "Oh, you're going"
+	line "there, too?"
+	cont "Hahah... I'm sure"
+	cont "you'll be fine!"
 	done
 
 _UnusedBenchGuyText1::
-	text "I wish I could"
-	line "catch #MON."
+	text "uu1"
 	done
 
 _UnusedBenchGuyText2::
-	text "I'm tired from"
-	line "all the fun..."
+	text "uu2"
 	done
 
 _UnusedBenchGuyText3::
-	text "SILPH's manager"
-	line "is hiding in the"
-	cont "SAFARI ZONE."
+	text "uu3"
 	done
 
 _VermilionPokecenterGuyText::
-	text "It is true that a"
-	line "higher level"
-	cont "#MON will be"
-	cont "more powerful..."
-
-	para "But, all #MON"
-	line "will have weak"
-	cont "points against"
-	cont "specific types."
-
-	para "So, there is no"
-	line "universally"
-	cont "strong #MON."
+	text "I wish I could"
+	line "catch #MON,"
+	cont "but I can't."
+	
+	para "Why? Because I'm"
+	line "a quitter. Don't"
+	cont "be like me!"
 	done
 
 _CeladonCityPokecenterGuyText::
-	text "If I had a BIKE,"
-	line "I would go to"
-	cont "CYCLING ROAD!"
+	text "We really need"
+	line "roads. #MON"
+	cont "get in the way!"
 	done
 
 _FuchsiaCityPokecenterGuyText::
-	text "If you're studying "
-	line "#MON, visit"
-	cont "the SAFARI ZONE."
-
-	para "It has all sorts"
-	line "of rare #MON."
+	text "Haven't I seen"
+	line "you before? Ever"
+	cont "been on TV?"
+	
+	para "Maybe that was"
+	line "someone else."
 	done
 
 _CinnabarPokecenterGuyText::
-	text "#MON can still"
-	line "learn techniques"
-	cont "after canceling"
-	cont "evolution."
-
-	para "Evolution can wait"
-	line "until new moves"
-	cont "have been learned."
+	text "Wouldn't it be"
+	line "awful if the volcano"
+	cont "errupted? Good"
+	cont "thing that will"
+	cont "never happen."
 	done
 
 _SaffronCityPokecenterGuyText1::
-	text "It would be great"
-	line "if the ELITE FOUR"
-	cont "came and stomped"
-	cont "TEAM ROCKET!"
+	text "#MON trainers"
+	line "all have such cool"
+	cont "catchphrases."
+	
+	para "What's yours?"
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "TEAM ROCKET took"
-	line "off! We can go"
-	cont "out safely again!"
-	cont "That's great!"
+	text "uuS2"
 	done
 
 _CeladonCityHotelText::
@@ -521,14 +500,15 @@ _NewBicycleText::
 	done
 
 _PushStartText::
-	text "Push START to"
-	line "open the MENU!"
+	text "Hold B to run!"
+	line "#MON will"
+	cont "be more likely"
+	cont "to attack runners!"
 	done
 
 _SaveOptionText::
-	text "The SAVE option is"
-	line "on the MENU"
-	cont "screen."
+	text "SAVING is quick"
+	line "and easy! Do it!"
 	done
 
 _StrengthsAndWeaknessesText::
@@ -550,57 +530,31 @@ _GameOverText::
 	done
 
 _CinnabarGymQuizIntroText::
-	text "#MON Quiz!"
-
-	para "Get it right and"
-	line "the door opens to"
-	cont "the next room!"
-
-	para "Get it wrong and"
-	line "face a trainer!"
-
-	para "If you want to"
-	line "conserve your"
-	cont "#MON for the"
-	cont "GYM LEADER..."
-
-	para "Then get it right!"
-	line "Here we go!"
+	text "Quiz Time!"
 	prompt
 
 _CinnabarQuizQuestionsText1::
-	text "CATERPIE evolves"
-	line "into BUTTERFREE?"
+	text "q1"
 	done
 
 _CinnabarQuizQuestionsText2::
-	text "There are 9"
-	line "certified #MON"
-	cont "LEAGUE BADGEs?"
+	text "q2"
 	done
 
 _CinnabarQuizQuestionsText3::
-	text "POLIWAG evolves 3"
-	line "times?"
+	text "q3"
 	done
 
 _CinnabarQuizQuestionsText4::
-	text "Are thunder moves"
-	line "effective against"
-	cont "ground element-"
-	cont "type #MON?"
+	text "q4"
 	done
 
 _CinnabarQuizQuestionsText5::
-	text "#MON of the"
-	line "same kind and"
-	cont "level are not"
-	cont "identical?"
+	text "q5"
 	done
 
 _CinnabarQuizQuestionsText6::
-	text "TM28 contains"
-	line "TOMBSTONER?"
+	text "q6"
 	done
 
 _CinnabarGymQuizCorrectText::
@@ -648,50 +602,29 @@ _OakLabEmailText::
 
 	para "..."
 
-	para "Calling all"
-	line "#MON trainers!"
-
-	para "The elite trainers"
-	line "of #MON LEAGUE"
-	cont "are ready to take"
-	cont "on all comers!"
-
-	para "Bring your best"
-	line "#MON and see"
-	cont "how you rate as a"
-	cont "trainer!"
-
-	para "#MON LEAGUE HQ"
-	line "INDIGO PLATEAU"
-
-	para "PS: PROF.OAK,"
-	line "please visit us!"
-	cont "..."
+	para "Wait, why am I"
+	line "reading OAK's"
+	cont "emails?!"
 	done
 
 _GameCornerCoinCaseText::
-	text "A COIN CASE is"
-	line "required!"
+	text "uu"
 	done
 
 _GameCornerNoCoinsText::
-	text "You don't have"
-	line "any coins!"
+	text "uu"
 	done
 
 _GameCornerOutOfOrderText::
-	text "OUT OF ORDER"
-	line "This is broken."
+	text "uu"
 	done
 
 _GameCornerOutToLunchText::
-	text "OUT TO LUNCH"
-	line "This is reserved."
+	text "uu"
 	done
 
 _GameCornerSomeonesKeysText::
-	text "Someone's keys!"
-	line "They'll be back."
+	text "uu"
 	done
 
 _JustAMomentText::
@@ -745,10 +678,7 @@ _IndigoPlateauHQText::
 	done
 
 _RedBedroomSNESText::
-	text "<PLAYER> is"
-	line "playing the SNES!"
-	cont "...Okay!"
-	cont "It's time to go!"
+	text "uu"
 	done
 
 _Route15UpstairsBinocularsText::
@@ -880,9 +810,7 @@ _FoundHiddenCoins2Text::
 	text " coins!@@"
 
 _DroppedHiddenCoinsText::
-	text ""
-	para "Oops! Dropped"
-	line "some coins!"
+	text "uu"
 	done
 
 _IndigoPlateauStatuesText1::
@@ -946,13 +874,13 @@ _EnemyRanText::
 	prompt
 
 _HurtByPoisonText::
-	text "<USER>'s"
-	line "hurt by poison!"
+	text "<USER>"
+	line "suffers poison!"
 	prompt
 
 _HurtByBurnText::
 	text "<USER>'s"
-	line "hurt by the burn!"
+	line "burn stings!"
 	prompt
 
 _HurtByLeechSeedText::
@@ -992,8 +920,17 @@ _UseNextMonText::
 	done
 
 _Sony1WinText::
-	text "<RIVAL>: Yeah! Am"
-	line "I great or what?"
+	text "<RIVAL>: Come on,"
+	line "<PLAYER>. That"
+	cont "was sad, even"
+	cont "for you."
+	
+	para "I can't believe"
+	line "you let me pick"
+	cont "second! You're"
+	cont "such a dope!"
+	cont "Hahah!"
+
 	prompt
 
 _PlayerBlackedOutText2::
@@ -1033,8 +970,7 @@ _TrainerSentOutText::
 	done
 
 _NoWillText::
-	text "There's no will"
-	line "to fight!"
+	text "Unable to battle!"
 	prompt
 
 _CantEscapeText::
@@ -1368,17 +1304,20 @@ _GhostCantBeIDdText::
 	prompt
 
 _GoText::
-	text "Go! @@"
+	text "I choose you!"
+    line "@@"
 
 _DoItText::
-	text "Do it! @@"
+	text "Now's our chance,"
+	line "@@"
 
 _GetmText::
-	text "Get'm! @@"
+	text "It's all up to"
+	line "you, @@"
 
 _EnemysWeakText::
-	text "The enemy's weak!"
-	line "Get'm! @@"
+	text "Let's wrap this up!"
+	line "Go @@"
 
 _PlayerMon1Text::
 	TX_RAM wBattleMonNick
@@ -1388,19 +1327,25 @@ _PlayerMon1Text::
 _PlayerMon2Text::
 	TX_RAM wBattleMonNick
 	text " @@"
+	
+_PlayerMon2TextNoSp::
+	TX_RAM wBattleMonNick
+	text "@@"
 
 _EnoughText::
-	text "enough!@@"
+	text "! Nice"
+	line "try! @@"
 
 _OKExclamationText::
-	text "OK!@@"
+	text "! That'll"
+	line "do! @@"
 
 _GoodText::
-	text "good!@@"
+	text ", you"
+	line "did great!@@"
 
 _ComeBackText::
-	text ""
-	line "Come back!"
+	text " Return!"
 	done
 
 _SuperEffectiveText::
@@ -1532,11 +1477,6 @@ _TurnedOnPC1Text::
 	prompt
 
 _AccessedBillsPCText::
-	text "Logged in to your"
-	line "#MON STORAGE."
-
-	prompt
-
 _AccessedSomeonesPCText::
 	text "Logged in to your"
 	line "#MON STORAGE."
@@ -2169,6 +2109,11 @@ _RegainedHealthText::
 	line "regained health!"
 	prompt
 
+_SecondWindText::
+	text "<USER>"
+	line "recharged PP!"
+	prompt
+
 _TransformedText::
 	text "<USER>"
 	line "transformed into"
@@ -2677,11 +2622,13 @@ _ItemUseBallText08::
 	prompt
 
 _ItemUseBallText06::
-	text "Nice! The #DEX"
-	line "has new data for"
-	cont "@"
+	text "Better record"
+	line "some data in the"
+	cont "#DEX!"
+	para "Okay, so..."
+	line "@"
 	TX_RAM wEnemyMonNick
-	text "!@@"
+	text "...@@"
 
 _SurfingGotOnText::
 	text "<PLAYER> got on"

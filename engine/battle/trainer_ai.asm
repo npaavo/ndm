@@ -309,7 +309,7 @@ TrainerClassMoveChoiceModifications:
 	db 1,3,0  ; COOLTRAINER_M
 	db 1,3,0  ; COOLTRAINER_F
 	db 1,0    ; BRUNO
-	db 1,0    ; BROCK
+	db 1,0    ; LARS
 	db 1,3,0  ; MISTY
 	db 1,3,0  ; LT_SURGE
 	db 1,3,0  ; ERIKA
@@ -407,7 +407,7 @@ TrainerAIPointers:
 	dbw 2,CooltrainerMAI ; cooltrainerm
 	dbw 1,CooltrainerFAI ; cooltrainerf
 	dbw 2,BrunoAI ; bruno
-	dbw 5,BrockAI ; brock
+	dbw 5,LarsAI ; brock
 	dbw 1,MistyAI ; misty
 	dbw 1,LtSurgeAI ; surge
 	dbw 1,ErikaAI ; erika
@@ -454,7 +454,7 @@ CooltrainerFAI:
 	ret nc
 	jp AISwitchIfEnoughMons
 
-BrockAI:
+LarsAI:
 ; if his active monster has a status condition, use a full heal
 	ld a, [wEnemyMonStatus]
 	and a

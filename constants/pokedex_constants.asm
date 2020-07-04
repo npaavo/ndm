@@ -150,7 +150,7 @@ const_value = 1
 	const DEX_DRAGONAIR  ; 148
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEW     	 ; 150
-	const DEX_VISIGO   ; 151
+	const DEX_VISIGO     ; 151
 	const DEX_MEWTWO	 ; 152
 
 NUM_POKEMON    EQU 152

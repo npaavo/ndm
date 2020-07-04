@@ -1999,21 +1999,25 @@ HiddenPrefix::
 
 ; sets carry if item is HM, clears carry if item is not HM
 ; Input: a = item ID
+
+
+; MOD: this check doesn't matter for this mod, removed for space
 IsItemHM::
-	cp HM_01
-	jr c, .notHM
-	cp TM_01
-	ret
-.notHM
-	and a
+;	cp HM_01
+;	jr c, .notHM
+;	cp TM_01
+;	ret
+;.notHM
+;	and a
 	ret
 
 ; sets carry if move is an HM, clears carry if move is not an HM
 ; Input: a = move ID
 IsMoveHM::
-	ld hl, HMMoves
-	ld de, 1
-	jp IsInArray
+;	ld hl, HMMoves
+;	ld de, 1
+;	jp IsInArray
+	ret
 
 HMMoves::
 	db CUT,FLY,SURF,STRENGTH,FLASH

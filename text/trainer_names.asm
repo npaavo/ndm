@@ -33,7 +33,7 @@ TrainerNames:
 	db "EXPERT@"
 	db "BRUNO@"
 	db "LARS@"
-	db "MISTY@"
+	db "TOBIAS@"
 	db "LT.SURGE@"
 	db "ERIKA@"
 	db "KOGA@"

@@ -1,6 +1,6 @@
 db DEX_ONIX ; pokedex id
-db 35 ; base hp
-db 45 ; base attack
+db 75 ; base hp
+db 85 ; base attack
 db 160 ; base defense
 db 70 ; base speed
 db 30 ; base special

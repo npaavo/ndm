@@ -20,7 +20,7 @@ TryDoWildEncounter:
 	and a
 	jr z, .next
 	dec a
-	jr z, .lastRepelStep
+	jp z, .lastRepelStep
 	ld [wRepelRemainingSteps], a
 .next
 ; determine if wild pokemon can appear in the half-block we're standing in
@@ -40,17 +40,23 @@ TryDoWildEncounter:
 ; ...as long as it's not Viridian Forest or Safari Zone.
 	ld a, [wCurMap]
 	cp REDS_HOUSE_1F ; is this an indoor map?
-	jr c, .CantEncounter2
+	jp c, .CantEncounter2
 	ld a, [wCurMapTileset]
 	cp FOREST ; Viridian Forest/Safari Zone
-	jr z, .CantEncounter2
+	jp z, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter
 ; compare encounter chance with a random number to determine if there will be an encounter
 	ld b, a
+	; MOD: if running, logical shift left encounter rate to effectively double it
+	ld a, [hJoyHeld]
+	and B_BUTTON
+	jr z, .notRunning
+	sla b
+.notRunning
 	ld a, [hRandomAdd]
 	cp b
-	jr nc, .CantEncounter2
+	jp nc, .CantEncounter2
 	ld a, [hRandomSub]
 	ld b, a
 	ld hl, WildMonEncounterSlotChances
@@ -73,8 +79,53 @@ TryDoWildEncounter:
 .gotWildEncounterType
 	ld b, 0
 	add hl, bc
-	ld a, [hli]
-	ld [wCurEnemyLVL], a
+		
+	; in this function, B will hold the max level a mon can be at, as calculated from badges
+	
+	push hl ; hold on to grassmons
+	call CountNumBadgesOwned ; update badge count to determine high range
+	pop hl ; grassmons again
+		
+	ld a, [wEffectiveNumBadgesOwned]
+	inc a ; base starts at 0-7
+	cp 4
+	jr nc, .maxwildrange ; if we have 3 badges, we've hit the cap that mons can be (28)
+
+	ld [H_MULTIPLICAND], a 
+	ld a, 7
+	ld [H_MULTIPLIER], a
+	call Multiply
+	ld a, [H_PRODUCT+1]
+	ld b, a ;B is now our multiplied maximum
+	jr .GetRandomInRange
+.maxwildrange
+	ld a, 28
+	ld b, a ;B is now our allowed maximum
+.GetRandomInRange
+	call Random ; ROLL 
+	ld a, [hRandomAdd] ;A is part of that roll
+	and %00011111 ; quick and dirty random range 0-31	
+	cp b ;compare to our maximum
+	jr nc, .GetRandomInRange ; if we got a number greater than our allowed max, then roll again
+
+	;now we know that A is in the acceptable range of levels (0-B)
+	; where B = badge modifier
+
+	ld b, a ; now B is our rolled level (under max range via BADGES)
+
+	ld a, [hli] ; fetch field level.
+	add a, b ; add field level to rolled level
+	
+	cp 2
+	jr nc, .checkMaxLevel ; if we got 0 or 1, set to 2.
+	ld a, 2
+.checkMaxLevel	
+	cp MAX_LEVEL
+	jr c, .contLevel
+	ld a, MAX_LEVEL ; if we got > cap, reset it.
+.contLevel
+	ld [wCurEnemyLVL], a	
+	ld b, 0
 	ld a, [hl]
 	ld [wcf91], a
 	ld [wEnemyMonSpecies2], a

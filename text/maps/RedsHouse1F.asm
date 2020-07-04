@@ -1,14 +1,17 @@
 _MomWakeUpText::
-	text "CHLOE: Please be"
-	line "careful out on"
-	cont "the job! I'm sure"
-	cont "you'll do great."
-
-	para "If you ever need"
-	line "to rest, come"
+	text "CHLOE: <PLAYER>!"
+	line "If you ever need"
+	cont "to rest, come"
 	cont "back here. I'll"
 	cont "keep unpacking"
 	cont "our things."
+	
+	para "Oh, how do your"
+	line "new shoes fit?"
+	cont "I bet you could"
+	cont "outrun a FEAROW"
+	cont "in those!"
+	
 	done
 
 _MomHealText1::
@@ -18,9 +21,10 @@ _MomHealText1::
 	prompt
 
 _MomHealText2::
-	text "CHLOE: I believe"
-	line "in you! Never"
-	cont "give up!"
+	text "CHLOE: It's"
+	line "tough out there,"
+	cont "but I've got your"
+	cont "back!"
 	done
 
 _StandByMeText::

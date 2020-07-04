@@ -70,7 +70,7 @@ ENDM
 	mapconst CERULEAN_TRASHED_HOUSE,         4,  4 ; $3E
 	mapconst CERULEAN_TRADE_HOUSE,           6,  12 ; $3F
 	mapconst CERULEAN_POKECENTER,            4,  4 ; $40
-	mapconst CERULEAN_GYM,                   7,  5 ; $41
+	mapconst CERULEAN_GYM,                   9,  7 ; $41
 	mapconst BIKE_SHOP,                      4,  4 ; $42
 	mapconst CERULEAN_MART,                  4,  4 ; $43
 	mapconst MT_MOON_POKECENTER,             4,  4 ; $44
@@ -97,7 +97,7 @@ ENDM
 	mapconst VERMILION_POKECENTER,           4,  4 ; $59
 	mapconst POKEMON_FAN_CLUB,               4,  4 ; $5A
 	mapconst VERMILION_MART,                 4,  4 ; $5B
-	mapconst VERMILION_GYM,                  9,  5 ; $5C
+	mapconst VERMILION_GYM,                  9,  7 ; $5C
 	mapconst VERMILION_PIDGEY_HOUSE,         4,  4 ; $5D
 	mapconst VERMILION_DOCK,                 6, 14 ; $5E
 	mapconst SS_ANNE_1F,                     9, 20 ; $5F
