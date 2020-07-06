@@ -2425,43 +2425,37 @@ TrainerWalkUpToPlayer_Bank0::
 
 ; sets opponent type and mon set/lvl based on the engaging trainer data
 InitBattleEnemyParameters::
-	push af
 	ld a, [wEngagedTrainerClass]
 	ld [wCurOpponent], a
 	ld [wEnemyMonOrTrainerClass], a
 	cp 200
 	ld a, [wEngagedTrainerSet]
-	jr c, .noTrainer
-	; it's a trainer. all special battles will be overriden manually, so let's calc what party to use
-	ld a, [wEffectiveNumBadgesOwned]
-	cp 1
-	jr nc, .lessthantwo
-	cp 4
-	jr nc, .settothree
-.lessthantwo
-	inc a
-	jr .settrainernum
-.settothree
-	ld a, 3
-.settrainernum	
+	jr c, .noTrainer ; if the thing we encountered is <200, it's a mon and not a trainer.
+	
+	push hl
+	call CountNumBadgesOwned 
+	pop hl
+	
+	; in the map's trainer header for random fights, if set =
+	; $FF: do a scaling trainer battle
+	; $FE: do a scaling gym battle 
+	; other: it's a specified set index and I will handle it manually.
+	cp $FF
+	jr z, .ScalingTrainerBattle
+	cp $FE
+	jr z, .ScalingGymBattle
 	ld [wTrainerNo], a
-	pop af
+	ret	
+.ScalingTrainerBattle
+	call SetTrainerPartyByBadgeCount
+	ret
+.ScalingGymBattle 
+	call SetGymPartyByBadgeCount
 	ret
 .noTrainer
 	ld [wCurEnemyLVL], a
-	pop af
 	ret
 
-CountNumBadgesOwned::
-	ld hl, wObtainedBadges
-	ld b, $1
-	call CountSetBits
-	ld a, [wNumSetBits]
-	ld [wEffectiveNumBadgesOwned], a
-	xor a
-	ld [wGymBattleIsRematch], a	;gonna reset this flag here for my own sanity, sorry future me
-	ret
-	
 GetSpritePosition1::
 	ld hl, _GetSpritePosition1
 	jr SpritePositionBankswitch
@@ -2556,13 +2550,6 @@ EngageMapTrainer::
 	ld a, [hl]     ; load trainer mon set
 	ld [wEngagedTrainerSet], a
 	jp PlayTrainerMusic
-
-
-SetGymPartyByBadgeCount::
-	ld a, [wEffectiveNumBadgesOwned]
-	inc a
-	ld [wTrainerNo], a 
-	ret
 
 PrintEndBattleText::
 	push hl
@@ -2944,12 +2931,16 @@ GetTrainerInformation::
 	ld [de], a
 	jp BankswitchBack
 .linkBattle
+	ld hl, wTrainerPicPointer
+	ld de, RedPicFront
+	ld [hl], e
+	inc hl
+	ld [hl], d
 	ret
 
 GetTrainerName::
 	jpba GetTrainerName_
-	
-HasEnoughCoins::
+
 HasEnoughMoney::
 ; Check if the player has at least as much
 ; money as the 3-byte BCD value at hMoney.
@@ -2957,6 +2948,15 @@ HasEnoughMoney::
 	ld hl, hMoney
 	ld c, 3
 	jp StringCmp
+
+HasEnoughCoins::
+; Check if the player has at least as many
+; coins as the 2-byte BCD value at hCoins.
+	ld de, wPlayerCoins
+	ld hl, hCoins
+	ld c, 2
+	jp StringCmp
+
 
 BankswitchHome::
 ; switches to bank # in a

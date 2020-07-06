@@ -13,7 +13,7 @@ _PewterGymFirstFightIntroText::
 
 	para "That's why my"
 	line "#MON are all"
-	cont "the rock-type!"
+	cont "tough as nails!"
 	cont "Nothing phases"
 	cont "them!"
 
@@ -33,7 +33,7 @@ _PewterGymFirstFightIntroText::
 	line "BADGE in it for"
 	cont "you if you win!"
 	
-	prompt
+	done
 
 _PewterGymHowManyBadgesText::
 	text "Speakin' a, how"
@@ -146,7 +146,7 @@ _PewterGymAfterVictoryText::
 	
 	para "But fortune will"
 	line "pass you by if"
-	cont "you're not bold!"
+	cont "you're not bold."
 	
 	para "Go out in the"
 	line "world and make"
@@ -157,7 +157,7 @@ _PewterGymAfterVictoryText::
 	line "path from the"
 	cont "heart, and you'll"
 	cont "never truly be"
-	cont "lost!"
+	cont "lost."
 	
 	para "Keep that"
 	line "ADVENTURE BADGE"

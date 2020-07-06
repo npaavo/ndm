@@ -1,13 +1,13 @@
 Route2Mons:
 	db $19
-	db 4,BELLSPROUT
-	db 4,ODDISH
-	db 4,EEVEE
-	db 4,SPEAROW
-	db 4,PIDGEY
+	db 2,BELLSPROUT
+	db 2,ODDISH
+	db 2,EEVEE
+	db 2,SPEAROW
+	db 2,PIDGEY
 	db 4,BULBASAUR
-	db 4,CATERPIE
-	db 4,WEEDLE
+	db 2,CATERPIE
+	db 2,WEEDLE
 	db 7,FEAROW
 	db 10,SCYTHER
 	db $00

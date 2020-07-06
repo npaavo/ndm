@@ -342,12 +342,12 @@ NewGameText:
 	next "OPTION@"
 
 CableClubOptionsText:
-	db   "TRADE CENTER"
-	next "COLOSSEUM"
-	next "CANCEL@"
+	db   "uu"
+	next "uu"
+	next "uu@"
 	
 ModWarningText:
-	db   "v0.6 / CHARIZARD@"
+	db   "v0.7 / SQUIRTLE@"
 
 DisplayContinueGameInfo:
 	xor a

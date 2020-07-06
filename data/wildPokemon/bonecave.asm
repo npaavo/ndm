@@ -1,10 +1,10 @@
 BoneCaveMons:
 	db $0a
-	db 4,GASTLY
-	db 4,ZUBAT
-	db 4,CUBONE
-	db 4,DIGLETT
-	db 4,PARAS
+	db 2,GASTLY
+	db 2,ZUBAT
+	db 2,CUBONE
+	db 2,DIGLETT
+	db 2,PARAS
 	db 5,GOLBAT
 	db 5,HAUNTER
 	db 5,DUGTRIO

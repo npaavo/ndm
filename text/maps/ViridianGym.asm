@@ -15,7 +15,7 @@ _ViridianGymIntroText::
 	cont "year ago, right?"
 		
 	para "You see, I was a"
-	line "champion, too."
+	line "celebrity, too."
 	cont "Long before I"
 	cont "traveled here."
 	
@@ -29,14 +29,12 @@ _ViridianGymIntroText::
 	cont "after I left the"
 	cont "spotlight."
 	
-	para "On my journey, I"
-	line "grew close to the"
-	cont "GRASS type."
-	
-	para "They symbolize the"
-	line "growth that is"
-	cont "innate to all"
-	cont "living things."
+	para "<PLAYER>, don't you"
+	line "find it amazing"
+	cont "how #MON can"
+	cont "evolve after"
+	cont "enduring great"
+	cont "hardship?"
 	
 	para "No matter the"
 	line "circumstance, "
@@ -78,7 +76,7 @@ _ViridianGymHowManyBadgesText0::
 	cont "correct?" 
 	
 	para "Since you haven't"
-	line "earned any badges"
+	line "earned any BADGEs"
 	cont "yet, I'll use..."
 	
 	para "...these #MON."
@@ -255,6 +253,16 @@ _ViridianGymRematchText::
 	
 	prompt
 
+_ViridianGymText3::
+	text "Welcome to the"
+	line "VIRIDIAN CITY"
+	cont "GYM."
+	
+	para "LEADER WYLDA is"
+	line "in right now."
+	cont "Good luck in"
+	cont "your battle!"
+	done
 
 _TM27ExplanationText::
 	text "uu"

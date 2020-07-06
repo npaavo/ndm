@@ -66,12 +66,6 @@ TrainerDataPointers:
 	; null-terminated
 	; MOD: THIS IS HOW YOU FORCE A SPECIFIC TEAM, I use this for gym leaders and set rival fights.
 
-LoggerData: ; mod: woodsman
-
-	db 1,MACHOP,	MANKEY,		KOFFING,	GRIMER,	PARAS,		FARFETCHD,	CHARMANDER,	GROWLITHE,0
-	db 2,MACHOKE,	MANKEY,		KOFFING,	GRIMER,	PARAS,		FARFETCHD,	CHARMELEON,	GROWLITHE,0
-	db 3,MACHAMP,	PRIMEAPE,	WEEZING,	MUK,	PARASECT,	FARFETCHD,	CHARIZARD,	ARCANINE,0
-	
 YoungsterData: ;common field mons
 	
 	db 1,RATTATA,	EKANS,	PIDGEY,		ZUBAT,	SANDSHREW,		METAPOD,	NIDORAN_M,	NIDORAN_F,0
@@ -259,6 +253,12 @@ CooltrainerFData: ; serious mons (set 2)
 	db 2,JOLTEON,	FLAREON,	VAPOREON,	DROWZEE,	RHYHORN, 	HITMONLEE, JYNX,	NIDORINO,0
 	db 3,JOLTEON,	FLAREON,	VAPOREON,	HYPNO,		RHYDON, 	HITMONLEE, JYNX,	NIDOKING,0
 	
+BrunoData: ; TODO: replace with something interesting 
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
 WyldaData: ; Viridian gym leader, growth-themed
 
 	db $FF,10,BEEDRILL,10,PARAS,10,EXEGGCUTE,10,ODDISH,10,BULBASAUR,10,BELLSPROUT,0 ; 0 badge
@@ -295,19 +295,32 @@ BlaineData: ; Lavender town gym leader, TODO: mod to Aster, occultist
 	db $FF,20,STARMIE,20,ARBOK,20,GLOOM,20,TENTACRUEL,20,KADABRA,20,HAUNTER,0 ; 1 badge
 	db $FF,30,STARMIE,30,ARBOK,30,VILEPLUME,30,TENTACRUEL,30,ALAKAZAM,30,GENGAR,0 ; 2+ badges
 	
+SabrinaData: ; TODO: something with this slot
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
 GentlemanData: ;idc
 
 	db 1,GROWLITHE,	MAGMAR,	PIKACHU, 	SNORLAX,	POLIWAG,  	ODDISH, 	VULPIX,		PONYTA,0
 	db 2,GROWLITHE,	MAGMAR,	PIKACHU, 	SNORLAX,	POLIWAG,  	GLOOM, 		VULPIX,		PONYTA,0
 	db 3,ARCANINE,	MAGMAR,	RAICHU, 	SNORLAX,	POLIWRATH,  VILEPLUME,	NINETALES,	RAPIDASH,0
 	
-SabrinaData: ; TODO: something with this slot
 Green2Data:  ; TODO: something with this slot
-Green3Data:
-LoreleiData:
-AgathaData:; TODO: something with this slot	
-LanceData:; TODO: something with this slot
-BrunoData: ; TODO: replace with something interesting 
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
+Green3Data: ; TODO: something with this slot
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
+LoreleiData: ; TODO: something with this slot
+
 	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
 	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
 	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
@@ -318,3 +331,20 @@ ChannelerData: ; cultist
 	db 2,GASTLY,	HAUNTER,	GENGAR, 	ARBOK,	DITTO, 	TENTACOOL,	STARYU,		OMANYTE,0
 	db 3,HAUNTER,	GENGAR,		GENGAR, 	ARBOK,	DITTO, 	TENTACRUEL,	STARMIE,	OMASTAR,0
 	
+AgathaData:; TODO: something with this slot
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
+LanceData:; TODO: something with this slot
+
+	db 1,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 2,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	db 3,MEW,	MEW,	MEW, 	MEW,	MEW, 	MEW, MEW,	MEW,0
+	
+LoggerData: ; mod: woodsman
+
+	db 1,MACHOP,	MANKEY,		KOFFING,	GRIMER,	PARAS,		FARFETCHD,	CHARMANDER,	GROWLITHE,0
+	db 2,MACHOKE,	MANKEY,		KOFFING,	GRIMER,	PARAS,		FARFETCHD,	CHARMELEON,	GROWLITHE,0
+	db 3,MACHAMP,	PRIMEAPE,	WEEZING,	MUK,	PARASECT,	FARFETCHD,	CHARIZARD,	ARCANINE,0

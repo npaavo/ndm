@@ -88,15 +88,6 @@ TitleBallYTable:
 	db 0, $71, $6f, $6e, $6d, $6c, $6d, $6e, $6f, $71, $74, 0
 
 TitleScreenAnimateBallIfStarterOut:
-; Animate the TitleBall if a starter just got scrolled out.
-	ld a, [wTitleMonSpecies]
-	cp VENUSAUR
-	jr z, .ok
-	cp CHARIZARD
-	jr z, .ok
-	cp BLASTOISE
-	ret nz
-.ok
 	ld e, 1 ; animate titleball
 	ld bc, TitleScroll_WaitBall
 	ld d, 0

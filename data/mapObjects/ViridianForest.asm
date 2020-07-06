@@ -18,9 +18,9 @@ ViridianForest_Object:
 	db 9 ; objects
 	object SPRITE_BUG_CATCHER, 16, 43, STAY, NONE, 1 ; person, talker at start
 	object SPRITE_HIKER, 26, 19, STAY, NONE, 2, OPP_LOGGER, 1 ; trainer1, work middle
-	object SPRITE_HIKER, 26, 28, STAY, NONE, 3, OPP_LOGGER, 2 ; trainer2, work entrance
-	object SPRITE_HIKER, 25, 5, STAY, NONE, 4, OPP_LOGGER, 3 ; trainer3, topright
-	object SPRITE_HIKER, 17, 10, STAY, NONE, 5, OPP_LOGGER, 4 ; trainer4, clearing
+	object SPRITE_HIKER, 26, 28, STAY, NONE, 3, OPP_LOGGER, 1 ; trainer2, work entrance
+	object SPRITE_HIKER, 25, 5, STAY, NONE, 4, OPP_LOGGER, 1 ; trainer3, topright
+	object SPRITE_HIKER, 17, 10, STAY, NONE, 5, OPP_LOGGER, 1 ; trainer4, clearing
 	object SPRITE_BALL, 11, 9, STAY, NONE, 6, GREAT_BALL ; THIS MUST REMAIN SPRITE 5
 	object SPRITE_BALL, 10, 35, STAY, NONE, 7, SUPER_POTION ; THIS MUST REMAIN SPRITE 6
 	object SPRITE_BALL, 5, 44, STAY, NONE, 8, FULL_HEAL ; THIS MUST REMAIN SPRITE 7

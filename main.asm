@@ -903,12 +903,12 @@ INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 
 TradingAnimationGraphics:
-INCBIN "gfx/game_boy.2bpp"
-INCBIN "gfx/link_cable.2bpp"
+;INCBIN "gfx/game_boy.2bpp"
+;INCBIN "gfx/link_cable.2bpp"
 TradingAnimationGraphicsEnd:
 
 ; Pokeball traveling through the link cable.
-TradingAnimationGraphics2: INCBIN "gfx/trade2.2bpp"
+;TradingAnimationGraphics2: INCBIN "gfx/trade2.2bpp"
 TradingAnimationGraphics2End:
 
 INCLUDE "engine/evos_moves.asm"

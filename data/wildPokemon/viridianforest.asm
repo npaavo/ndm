@@ -1,11 +1,11 @@
 ForestMons:
 	db $0f
-	db 4,CATERPIE
-	db 4,WEEDLE
-	db 4,BELLSPROUT
-	db 4,METAPOD
-	db 4,KAKUNA
-	db 4,PARAS
+	db 2,CATERPIE
+	db 2,WEEDLE
+	db 2,BELLSPROUT
+	db 2,METAPOD
+	db 2,KAKUNA
+	db 2,PARAS
 	db 5,BEEDRILL
 	db 5,BUTTERFREE
 	db 7,TANGELA

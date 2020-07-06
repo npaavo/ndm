@@ -1,13 +1,13 @@
 Route7Mons:
 	db $0F
-	db 4,MAGNEMITE
-	db 4,GRIMER
-	db 4,KOFFING
-	db 4,MAGNEMITE
+	db 2,MACHOP
+	db 2,ABRA
+	db 2,DITTO
 	db 4,ELECTABUZZ
-	db 4,LICKITUNG
-	db 4,DITTO
-	db 7,WEEZING
-	db 7,ELECTRODE
-	db 10,MUK
+	db 4,MAGMAR
+	db 4,HITMONCHAN
+	db 4,HITMONLEE
+	db 7,MACHOKE
+	db 7,KADABRA
+	db 10,MACHAMP
 	db $00

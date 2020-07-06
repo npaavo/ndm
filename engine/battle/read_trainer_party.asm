@@ -1,3 +1,4 @@
+
 ReadTrainer:
 
 ; don't change any moves in a link battle
@@ -6,8 +7,6 @@ ReadTrainer:
 	ret nz
 
 ; set [wEnemyPartyCount] to 0, [wEnemyPartyMons] to FF
-; XXX first is total enemy pokemon?
-; XXX second is species of first pokemon?
 	ld hl, wEnemyPartyCount
 	xor a
 	ld [hli], a
@@ -47,26 +46,63 @@ ReadTrainer:
 ; else the first byte is the level of every pokemon on the team
 
 .IterateTrainer
-	ld a, [hli]
+	ld a, [hli] ; HL is at level, incremented to first mon.
 	cp $FF ; is the trainer special?
 	jr z, .SpecialTrainer ; if so, check for special moves
 	
 	; MOD: evaluate what level they should be at.
 	; We're hijacking the first byte for how many mons they can use of their list.
 	
-	
+	;let's make A the level they should be.
+	push hl ; hold on to grassmons
+	call CountNumBadgesOwned ; update badge count to determine high range
+	pop hl ; grassmons again
+		
+	ld a, [wEffectiveNumBadgesOwned]
+	inc a ; base starts at 0-7
+	cp 4
+	jr nc, .maxLevelTrainers ; if we have 3 badges, we've hit the cap that trainers can be (30)
+
+	ld [H_MULTIPLICAND], a 
+	ld a, 7
+	ld [H_MULTIPLIER], a
+	call Multiply
+	ld a, [H_PRODUCT+1]
+	jr .SetTrainerLevel
+.maxLevelTrainers
+	ld a, MAX_LEVEL
+.SetTrainerLevel	
 	ld [wCurEnemyLVL], a
-.LoopTrainerData
-	ld a, [hli]
-	and a ; have we reached the end of the trainer data?
-	jr z, .FinishUp
+	ld b, 3 ; B tracks how many mons we have left to assign
+.DecideTrainerMonsLoop
+	ld a, b 
+	cp 0
+	jp z, .FinishUp ;if we're done getting mons (all 3), then finish up.
+	
+	call Random ; ROLL 
+	ld a, [hRandomAdd] ;A is part of that roll
+	and %00000111 ; rightmost 3 bits (0-7)
+
+	ld c, a ; C tracks what index we want
+	xor a ; a=0
+	push hl
+.AdvancePartyDataLoop
+	cp c ; is a = c?
+	jr z, .setMon ; we got it. we're at the index 	
+	inc hl  ;push up pointer in list
+	inc a ;advance what slot we're testing
+	jr .AdvancePartyDataLoop
+.setMon
+	ld a, [hl]
 	ld [wcf91], a ; write species somewhere (XXX why?)
 	ld a, ENEMY_PARTY_DATA
 	ld [wMonDataLocation], a
 	push hl
 	call AddPartyMon
 	pop hl
-	jr .LoopTrainerData
+	pop hl  ; hl is now back to the start of the mon list.
+	dec b ; mons selected -1
+	jr .DecideTrainerMonsLoop
 .SpecialTrainer
 ; if this code is being run:
 ; - each pokemon has a specific level

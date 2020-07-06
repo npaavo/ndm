@@ -274,7 +274,6 @@ ViridianGymText1:
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	call SetGymPartyByBadgeCount
 	ld a, $1
 	ld [wGymLeaderNo], a
 	ld a, $3
@@ -335,10 +334,8 @@ ViridianGymAfterBattleText1:
 	db "@"
 
 ViridianGymText3:
-	TX_ASM
-	ld hl, ViridianGymTrainerHeader1
-	call TalkToTrainer
-	jp TextScriptEnd
+	TX_FAR _ViridianGymText3
+	db "@"
 
 ViridianGymBattleText2:
 	TX_FAR _ViridianGymBattleText2

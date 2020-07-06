@@ -12,8 +12,8 @@ INCBIN "pic/bmon/pikachu.pic",0,1 ; 55, sprite dimensions
 dw PikachuPicFront
 dw PikachuPicBack
 ; attacks known at lvl 0
-db THUNDERSHOCK
 db GROWL
+db THUNDERSHOCK
 db 0
 db 0
 db 0 ; growth rate

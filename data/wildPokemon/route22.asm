@@ -1,11 +1,11 @@
 Route22Mons:
 	db $19
-	db 4,PSYDUCK
-	db 4,POLIWAG
-	db 4,MEOWTH
-	db 4,SQUIRTLE
-	db 4,MACHOP
-	db 4,ABRA
+	db 2,PSYDUCK
+	db 2,POLIWAG
+	db 2,MEOWTH
+	db 3,SQUIRTLE
+	db 2,MACHOP
+	db 2,ABRA
 	db 4,NIDORAN_F
 	db 4,NIDORAN_M
 	db 7,RATICATE

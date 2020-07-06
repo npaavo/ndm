@@ -75,7 +75,7 @@ PewterGymScriptGiveRewards:
 
 PewterGym_TextPointers:
 	dw PewterGymText1 ; leader 
-	dw PewterGymText2 ;unused, trainer 
+	dw PewterGymText2 ; unused, trainer 
 	dw PewterGymText3 ; welcome assistant 
 	dw PewterGymText4 ; give rewards (first win)
 	dw PewterGymText5 ; give rewards (rematch)
@@ -153,7 +153,6 @@ PewterGymText1:
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	call SetGymPartyByBadgeCount
 	ld a, $2
 	ld [wGymLeaderNo], a
 	ld a, $3

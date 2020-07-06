@@ -154,47 +154,7 @@ Trade_ClearTileMap:
 	jp FillMemory
 
 LoadTradingGFXAndMonNames:
-	call Trade_ClearTileMap
-	call DisableLCD
-	ld hl, TradingAnimationGraphics
-	ld de, vChars2 + $310
-	ld bc, TradingAnimationGraphicsEnd - TradingAnimationGraphics
-	ld a, BANK(TradingAnimationGraphics)
-	call FarCopyData2
-	ld hl, TradingAnimationGraphics2
-	ld de, vSprites + $7c0
-	ld bc, TradingAnimationGraphics2End - TradingAnimationGraphics2
-	ld a, BANK(TradingAnimationGraphics2)
-	call FarCopyData2
-	ld hl, vBGMap0
-	ld bc, $800
-	ld a, " "
-	call FillMemory
-	call ClearSprites
-	ld a, $ff
-	ld [wUpdateSpritesEnabled], a
-	ld hl, wd730
-	set 6, [hl] ; turn on instant text printing
-	ld a, [wOnSGB]
-	and a
-	ld a, $e4 ; non-SGB OBP0
-	jr z, .next
-	ld a, $f0 ; SGB OBP0
-.next
-	ld [rOBP0], a
-	call EnableLCD
-	xor a
-	ld [H_AUTOBGTRANSFERENABLED], a
-	ld a, [wTradedPlayerMonSpecies]
-	ld [wd11e], a
-	call GetMonName
-	ld hl, wcd6d
-	ld de, wcf4b
-	ld bc, NAME_LENGTH
-	call CopyData
-	ld a, [wTradedEnemyMonSpecies]
-	ld [wd11e], a
-	jp GetMonName
+	ret
 
 Trade_LoadMonPartySpriteGfx:
 	ld a, %11010000

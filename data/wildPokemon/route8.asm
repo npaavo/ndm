@@ -1,8 +1,8 @@
 Route8Mons:
 	db $0F
-	db 4,SANDSHREW
-	db 4,EKANS
-	db 4,MEOWTH
+	db 2,SANDSHREW
+	db 2,EKANS
+	db 2,MEOWTH
 	db 4,LICKITUNG
 	db 4,RHYHORN
 	db 4,PONYTA
