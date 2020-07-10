@@ -60,11 +60,11 @@ ReadTrainer:
 		
 	ld a, [wEffectiveNumBadgesOwned]
 	inc a ; base starts at 0-7
-	cp 4
+	cp 5
 	jr nc, .maxLevelTrainers ; if we have 3 badges, we've hit the cap that trainers can be (30)
 
 	ld [H_MULTIPLICAND], a 
-	ld a, 7
+	ld a, 7 ; 7 x badges+1 
 	ld [H_MULTIPLIER], a
 	call Multiply
 	ld a, [H_PRODUCT+1]

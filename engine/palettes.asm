@@ -269,9 +269,9 @@ BadgeBlkDataLengths:
 	db 6     ; Earth Badge
 
 DeterminePaletteID:
-	bit TRANSFORMED, a ; a is battle status 3
-	ld a, PAL_GREYMON  ; if the mon has used Transform, use Ditto's palette
-	ret nz
+	;bit TRANSFORMED, a ; a is battle status 3
+	;ld a, PAL_GREYMON  ; if the mon has used Transform, use Ditto's palette
+	;ret nz
 	ld a, [hl]
 DeterminePaletteIDOutOfBattle:
 	ld [wd11e], a
@@ -286,7 +286,8 @@ DeterminePaletteIDOutOfBattle:
 	ld d, 0
 	ld hl, MonsterPalettes ; not just for Pokemon, Trainers use it too
 	add hl, de
-	ld a, [hl]
+	ld a, [hl] ; I believe A is the pallette now. for mons, this is $10 - $19.
+	
 	ret
 
 InitPartyMenuBlkPacket:

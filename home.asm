@@ -2434,12 +2434,14 @@ InitBattleEnemyParameters::
 	jr c, .noTrainer
 	; it's a trainer. all special battles will be overriden manually, so let's calc what party to use
 	ld a, [wEffectiveNumBadgesOwned]
-	cp 1
-	jr nc, .lessthantwo
+	inc a 
+	cp 3
+	jr z, .twobadges
 	cp 4
 	jr nc, .settothree
-.lessthantwo
-	inc a
+	jr .settrainernum
+.twobadges
+	dec a
 	jr .settrainernum
 .settothree
 	ld a, 3

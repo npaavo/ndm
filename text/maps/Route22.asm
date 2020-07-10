@@ -1,7 +1,7 @@
 _Route22RivalBeforeBattleText1::
 	text "<RIVAL>: Well"
-	line "look who we got"
-	cont "here! <PLAYER>!"
+	line "look who it is!"
+	cont "<PLAYER>!"
 
 	para "What are you"
 	line "doing out here?"
@@ -49,7 +49,10 @@ _Route22RivalAfterBattleText1::
 	line "#MON. I'm into"
 	cont "BADGES and WINS."
 
-	para "I will challenge"
+	para "You handle the"
+	line "catching."
+	
+	para "I'm gonna take on"
 	line "the KANTO GYM"
 	cont "LEADERS and show"
 	cont "them what a REAL"
@@ -61,16 +64,18 @@ _Route22RivalAfterBattleText1::
 	cont "rate scrub like"
 	cont "you keep lucking"
 	cont "out in battles!"
-	
-	para "I'm gonna beat"
-	line "you, <PLAYER>. I"
-	cont "just need to hit"
-	cont "my stride."
 
 	para "There's got to be"
 	line "some #MON in"
 	cont "KANTO that don't" 
 	cont "totally suck."
+	
+	para "These ones are"
+	line "worthless if"
+	cont "they can't even"
+	cont "beat YOU!"
+	
+	para "Pft."
 	
 	para "See ya, nerd."
 	done

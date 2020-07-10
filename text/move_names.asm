@@ -123,7 +123,7 @@ MoveNames::
 	db "LICK@"
 	db "SMOG@"
 	db "SLUDGE@"
-	db "BONE CLUB@"
+	db "CUDGEL@"
 	db "FIRE BLAST@"
 	db "WATERFALL@"
 	db "CLAMP@"
@@ -133,7 +133,7 @@ MoveNames::
 	db "CONSTRICT@"
 	db "AMNESIA@"
 	db "KINESIS@"
-	db "SOFTBOILED@"
+	db "NURTURE@" ; SOFTBOILED wuz here
 	db "HI JUMP KICK@"
 	db "GLARE@"
 	db "DREAM EATER@"
@@ -149,11 +149,11 @@ MoveNames::
 	db "FLASH@"
 	db "PSYWAVE@"
 	db "SPLASH@"
-	db "ACID ARMOR@"
+	db "LIQUEFY@"
 	db "CRABHAMMER@"
 	db "EXPLOSION@"
 	db "FURY SWIPES@"
-	db "BONEMERANG@"
+	db "BOOMERANG@"
 	db "REST@"
 	db "ROCK SLIDE@"
 	db "HYPER FANG@"
@@ -176,6 +176,9 @@ MoveNames::
 	db "NIGHT TERROR@"
 	db "NTA@" ; clone for animation jank
 	db "BUG OUT@"
+	db "SECOND WIND@"
+	db "MIND SPARK@"
+	db "STAMPEDE@"
 	
 	;END MODS
 	db "STRUGGLE@" ; struggle must go last

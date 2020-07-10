@@ -14,7 +14,7 @@ PrintMonType:
 	cp b
 	pop hl
 	jr z, EraseType2Text
-	ld bc, SCREEN_WIDTH * 2
+	ld bc, SCREEN_WIDTH
 	add hl, bc
 
 ; a = type

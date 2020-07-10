@@ -16,6 +16,7 @@ _VermilionPokecenterText3::
 	para "Then I explored a"
 	line "cave, and ended"
 	cont "up here."
+	
 	para "Life's one heck"
 	line "of an adventure!"
 	done

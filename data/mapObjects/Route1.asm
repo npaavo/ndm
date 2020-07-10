@@ -7,9 +7,10 @@ Route1_Object:
 	db 1 ; signs
 	sign 9, 27, 3 ; Route1Text3
 
-	db 2 ; objects
-	object SPRITE_BUG_CATCHER, 5, 26, WALK, 1, 1 ; person
-	object SPRITE_BUG_CATCHER, 15, 13, WALK, 2, 2 ; person
+	db 3 ; objects
+	object SPRITE_BUG_CATCHER, 6, 28, STAY, RIGHT, 1 ; person
+	object SPRITE_BUG_CATCHER, 15, 13, WALK, 0, 2 ; person
+	object SPRITE_GIRL, 8, 18, WALK, 0, 4 ; person
 
 	; warp-to (unused)
 	warp_to 2, 33, ROUTE_1_WIDTH

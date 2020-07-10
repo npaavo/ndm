@@ -13,10 +13,10 @@ INCBIN "pic/bmon/mew.pic",0,1 ; 55, sprite dimensions
 dw MewPicFront
 dw MewPicBack
 ; attacks known at lvl 0
+db MIND_SPARK
 db POUND
-db 0
-db 0
-db 0
+db TELEPORT
+db BARRIER
 db 3 ; growth rate
 ; learnset
 	tmlearn 1,2,3,4,5,6,7,8

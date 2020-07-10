@@ -35,11 +35,14 @@ _AddPartyMon:
 	ld a, [hNewPartyLength]
 	dec a
 	call SkipFixedLengthTextEntries
-	ld d, h
-	ld e, l
-	ld hl, wPlayerName
+	
+	push hl
+	pop de
+	ld hl, wEnemyMonOT
 	ld bc, NAME_LENGTH
 	call CopyData
+	
+	
 	ld a, [wMonDataLocation]
 	and a
 	jr nz, .skipNaming

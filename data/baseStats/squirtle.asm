@@ -14,7 +14,7 @@ dw SquirtlePicBack
 ; attacks known at lvl 0
 db TACKLE
 db TAIL_WHIP
-db BUBBLE
+db 0
 db 0
 db 3 ; growth rate
 ; learnset

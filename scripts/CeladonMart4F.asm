@@ -2,7 +2,7 @@ CeladonMart4F_Script:
 	jp EnableAutoTextBoxDrawing
 
 CeladonMart4F_TextPointers:
-	dw CeladonMart4ClerkText
+	dw MtMoonRockGuyText
 	dw CeladonMart4Text2
 	dw CeladonMart4Text3
 	dw CeladonMart4Text4

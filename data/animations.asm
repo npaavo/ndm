@@ -123,7 +123,7 @@ AttackAnimationPointers:
 	dw LickAnim
 	dw SmogAnim
 	dw SludgeAnim
-	dw BoneClubAnim
+	dw CudgelAnim
 	dw FireBlastAnim
 	dw WaterfallAnim
 	dw ClampAnim
@@ -149,11 +149,11 @@ AttackAnimationPointers:
 	dw FlashAnim
 	dw PsywaveAnim
 	dw SplashAnim
-	dw AcidArmorAnim
+	dw LiquefyAnim
 	dw CrabHammerAnim
 	dw ExplosionAnim
 	dw FurySwipesAnim
-	dw BonemerangAnim
+	dw BoomerangAnim
 	dw RestAnim
 	dw RockSlideAnim
 	dw HyperFangAnim
@@ -177,6 +177,8 @@ AttackAnimationPointers:
 	dw NightTerrorStartAnim
 	dw BugOutAnim
 	dw SecondWindAnim
+	dw MindSparkAnim
+	dw StampedeAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -400,6 +402,7 @@ WrapAnim:
 	db $FF
 
 TakeDownAnim:
+StampedeAnim:
 	db SE_MOVE_MON_HORIZONTALLY, $48
 	db SE_DARK_SCREEN_FLASH, $23
 	db SE_RESET_MON_POSITION, $FF
@@ -833,6 +836,7 @@ SmokeScreenAnim:
 	db SE_RESET_SCREEN_PALETTE, $FF
 	db $FF
 
+MindSparkAnim:
 ConfuseRayAnim:
 	db SE_DARK_SCREEN_PALETTE, $6C
 	db $46,$FF,$3E
@@ -925,7 +929,7 @@ SludgeAnim:
 	db $46,$7B,$14
 	db $FF
 
-BoneClubAnim:
+CudgelAnim:
 	db $08,$7C,$02
 	db $FF
 
@@ -1071,7 +1075,7 @@ SplashAnim:
 	db SE_BOUNCE_UP_AND_DOWN, $95
 	db $FF
 
-AcidArmorAnim:
+LiquefyAnim:
 	db SE_SLIDE_MON_DOWN_AND_HIDE, $96
 	db $FF
 
@@ -1088,7 +1092,7 @@ FurySwipesAnim:
 	db $04,$99,$0F
 	db $FF
 
-BonemerangAnim:
+BoomerangAnim:
 	db $06,$9A,$02
 	db $FF
 

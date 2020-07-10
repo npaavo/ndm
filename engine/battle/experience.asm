@@ -68,21 +68,9 @@ GainExperience:
 	call Divide
 	ld hl, wPartyMon1OTID - (wPartyMon1DVs - 1)
 	add hl, de
-	ld b, [hl] ; party mon OTID
 	inc hl
-	ld a, [wPlayerID]
-	cp b
-	jr nz, .tradedMon
-	ld b, [hl]
-	ld a, [wPlayerID + 1]
-	cp b
 	ld a, 0
-	jr z, .next
-.tradedMon
-	call BoostExp ; traded mon exp boost
-	ld a, 1
-.next
-	ld [wGainBoostedExp], a
+	ld [wGainBoostedExp], a ; MOD no boosted EXP because no trades! 
 	ld a, [wIsInBattle]
 	dec a ; is it a trainer battle?
 	call BoostExp ; if so, boost exp

@@ -23,15 +23,18 @@ Route22Script7:
 
 Route22Script_50ed6:
 	ld a, [wRivalStarter]
-	ld b, a
-.asm_50eda
-	ld a, [hli]
-	cp b
-	jr z, .asm_50ee1
-	inc hl
-	jr .asm_50eda
-.asm_50ee1
-	ld a, [hl]
+	cp STARTER2
+	jr nz, .NotSquirtle
+	ld a, $7
+	jr .done
+.NotSquirtle
+	cp STARTER3
+	jr nz, .Charmander
+	ld a, $8
+	jr .done
+.Charmander
+	ld a, $9
+.done
 	ld [wTrainerNo], a
 	ret
 

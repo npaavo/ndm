@@ -1,7 +1,7 @@
 db DEX_MR_MIME ; pokedex id
 db 40 ; base hp
 db 45 ; base attack
-db 65 ; base defense
+db 75 ; base defense
 db 90 ; base speed
 db 100 ; base special
 db PSYCHIC ; species type 1
@@ -12,8 +12,8 @@ INCBIN "pic/bmon/mr.mime.pic",0,1 ; 66, sprite dimensions
 dw MrMimePicFront
 dw MrMimePicBack
 ; attacks known at lvl 0
-db CONFUSION
-db BARRIER
+db MIND_SPARK
+db 0
 db 0
 db 0
 db 0 ; growth rate

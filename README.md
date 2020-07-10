@@ -1,4 +1,4 @@
-# Pokémon Diversity Mod
+# Pokémon (But Good)
 
 This is a mod of Pokémon Red and Blue, based off the pokered disassembly
 
@@ -13,7 +13,7 @@ To set up the repository, see [**INSTALL.md**](INSTALL.md).
 ## See also
 
 * Original Disassembly of [**Pokémon Red**][pokered]
-* Discord: [**Diversity Mod Discord**][Discord]
+* Discord: [**Pokémon (But Good) Discord**][Discord]
 
 [pokered]: https://github.com/pret/pokered
 [Discord]: https://discord.gg/cBfujky

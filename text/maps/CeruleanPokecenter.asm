@@ -10,8 +10,8 @@ _CeruleanPokecenterText2::
 _CeruleanPokecenterText3::
 	text "#MON learn a"
 	line "new technique"
-	cont "every 5 levels,"
-	cont "up to level 50."
+	cont "every 3 levels,"
+	cont "up to level 30."
 	
 	para "...Then what?"	
 	 

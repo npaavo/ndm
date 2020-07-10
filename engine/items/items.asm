@@ -414,7 +414,24 @@ ItemUseBall:
 	ld [wPokeBallAnimData], a
 
 .skipShakeCalculations
+	ld a, [wTotalCaptures]
+	inc a 
+	ld [wTotalCaptures], a
 	ld c, 20
+	
+	ld de, wEnemyMonOT
+	ld a, [wTotalCaptures]
+	ld [de], a;
+	inc de 
+	ld a, [wPlayTimeHours];
+	ld [de], a;
+	inc de
+	ld a, [wPlayTimeMinutes];
+	ld [de], a
+	inc de
+	ld a, [wPlayTimeSeconds];
+	ld [de], a
+	
 	call DelayFrames
 
 ; Do the animation.
@@ -2849,7 +2866,7 @@ SendNewMonToBox:
 	dec b
 	jr nz, .asm_e7db
 .asm_e7ee
-	ld hl, wPlayerName
+	ld hl, wEnemyMonOT
 	ld de, wBoxMonOT
 	ld bc, NAME_LENGTH
 	call CopyData

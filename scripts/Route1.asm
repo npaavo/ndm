@@ -5,6 +5,7 @@ Route1_TextPointers:
 	dw Route1Text1
 	dw Route1Text2
 	dw Route1Text3
+	dw Route1Text4
 
 Route1Text1:
 	TX_ASM
@@ -49,4 +50,8 @@ Route1Text2:
 
 Route1Text3:
 	TX_FAR _Route1Text3
+	db "@"
+
+Route1Text4:
+	TX_FAR _Route1Text4
 	db "@"

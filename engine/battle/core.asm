@@ -3916,7 +3916,7 @@ ExclamationPointMoveSets:
 	db WRAP, THRASH, TAIL_WHIP, LEER, BITE, GROWL, ROAR, SING, PECK, COUNTER
 	db STRENGTH, ABSORB, STRING_SHOT, EARTHQUAKE, FISSURE, DIG, TOXIC, SCREECH, HARDEN
 	db MINIMIZE, WITHDRAW, DEFENSE_CURL, METRONOME, LICK, CLAMP, CONSTRICT, POISON_GAS
-	db LEECH_LIFE, BUBBLE, FLASH, SPLASH, ACID_ARMOR, FURY_SWIPES, REST, SHARPEN, SLASH, SUBSTITUTE
+	db LEECH_LIFE, BUBBLE, FLASH, SPLASH, LIQUEFY, FURY_SWIPES, REST, SHARPEN, SLASH, SUBSTITUTE
 	db $00
 	db $FF ; terminator
 
@@ -4033,7 +4033,7 @@ OHKOText:
 ; checks if a traded mon will disobey due to lack of badges
 ; stores whether the mon will use a move in Z flag
 
-; mons will never disobey, because trades cannot happen in this mod
+; mons will never disobey, because trades cannot happen in this mod.
 CheckForDisobedience:
 	ld a, $1
 	and a; clear Z flag

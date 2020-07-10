@@ -2,7 +2,7 @@ _MtMoonPokecenterText1::
 	text "Okay, all healed"
 	line "up. I'm ready"
 	cont "to tackle the"
-	cont "Mt. Moon hike!"
+	cont "MT. MOON hike!"
 	done
 
 _MtMoonPokecenterText3::

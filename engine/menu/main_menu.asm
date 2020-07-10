@@ -339,7 +339,7 @@ ContinueText:
 
 NewGameText:
 	db   "NEW GAME"
-	next "OPTION@"
+	next "OPTIONS@"
 
 CableClubOptionsText:
 	db   "uu"
@@ -347,7 +347,8 @@ CableClubOptionsText:
 	next "uu@"
 	
 ModWarningText:
-	db   "v0.7 / SQUIRTLE@"
+	db   "v0.9 / BLASTOISE"
+	next "- MOVESETS DONE@"
 
 DisplayContinueGameInfo:
 	xor a

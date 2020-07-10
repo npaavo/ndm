@@ -385,13 +385,30 @@ _ViridianCityPokecenterGuyText::
 	done
 
 _PewterCityPokecenterGuyText::
-	text "I'm ready for a"
-	line "nap! Yawn!"
+	text "There's a guy"
+	line "that sells rocks"
+	cont "up the road, at"
+	cont "the MT. MOON"
+	cont "#MON CENTER."
+	
+	para "If I could get"
+	line "away with being"
+	cont "a rock salesman"
+	cont "then I wouldn't"
+	cont "be here!"
 	done
 
 _CeruleanPokecenterGuyText::
 	text "Being a trainer"
 	line "looks tough."
+	
+	para "Not the battles"
+	line "or anything,"
+	cont "just picking"
+	cont "out a cool look."
+	
+	para "Everyone's got"
+	line "style!"
 	
 	done
 
@@ -423,8 +440,10 @@ _RockTunnelPokecenterGuyText::
 	
 	para "Oh, you're going"
 	line "there, too?"
-	cont "Hahah... I'm sure"
+	cont "Hahah... well,"
 	cont "you'll be fine!"
+	
+	para "Probably!"
 	done
 
 _UnusedBenchGuyText1::
@@ -453,6 +472,17 @@ _CeladonCityPokecenterGuyText::
 	text "We really need"
 	line "roads. #MON"
 	cont "get in the way!"
+	
+	para "Have you been to"
+	line "the zone between"
+	cont "SAFFRON? #MON"
+	cont "just run around"
+	cont "town... like"
+	cont "animals!"
+	
+	para "... I mean, I"
+	line "guess they are,"
+	cont "but..."
 	done
 
 _FuchsiaCityPokecenterGuyText::
@@ -462,6 +492,15 @@ _FuchsiaCityPokecenterGuyText::
 	
 	para "Maybe that was"
 	line "someone else."
+	
+	para "I guess it'd"
+	line "have to have"
+	cont "been someone"
+	cont "else if it"
+	cont "wasn't you."
+	
+	para "Anyway, thanks"
+	line "for chatting."
 	done
 
 _CinnabarPokecenterGuyText::
@@ -478,6 +517,10 @@ _SaffronCityPokecenterGuyText1::
 	cont "catchphrases."
 	
 	para "What's yours?"
+	
+	para "Mine would be"
+	line "IT'S #MON"
+	cont "TIME!!!"
 	done
 
 _SaffronCityPokecenterGuyText2::
@@ -921,15 +964,13 @@ _UseNextMonText::
 
 _Sony1WinText::
 	text "<RIVAL>: Come on,"
-	line "<PLAYER>. That"
-	cont "was sad, even"
-	cont "for you."
+	line "<PLAYER>. I need"
+	cont "SOMEONE to keep"
+	cont "me sharp."
 	
-	para "I can't believe"
-	line "you let me pick"
-	cont "second! You're"
-	cont "such a dope!"
-	cont "Hahah!"
+	para "Maybe this whole"
+	line "#MON thing"
+	cont "isn't for you."
 
 	prompt
 
@@ -981,6 +1022,7 @@ _CantEscapeText::
 
 _NoRunningText::
 	text "I can't give up!"
+	line "Not now!"
 	prompt
 
 _GotAwayText::
@@ -1640,12 +1682,10 @@ _CF4BExclamationText::
 	prompt
 
 _RequireCoinCaseText::
-	text "A COIN CASE is"
-	line "required!@@"
+	text "uu@@"
 
 _ExchangeCoinsForPrizesText::
-	text "We exchange your"
-	line "coins for prizes."
+	text "uu"
 	prompt
 
 _WhichPrizeText::
@@ -1664,8 +1704,7 @@ _SoYouWantPrizeText::
 	done
 
 _SorryNeedMoreCoinsText::
-	text "Sorry, you need"
-	line "more coins.@@"
+	text "uu@@"
 
 _OopsYouDontHaveEnoughRoomText::
 	text "Oops! You don't"

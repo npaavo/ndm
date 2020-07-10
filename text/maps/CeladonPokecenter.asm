@@ -1,12 +1,25 @@
 _CeladonPokecenterText2::
-	text "# FLUTE awakens"
-	line "#MON with a"
-	cont "sound that only"
-	cont "they can hear!"
+	text "Imagine if"
+	line "#MON could"
+	cont "just keep getting"
+	cont "stronger and"
+	cont "stronger..."
+	
+	para "...to like, level"
+	line "50... no, 100!"
+	
+	para "That'd sure suck!"
+	line "Who has that"
+	cont "much time to"
+	cont "train? And for"
+	cont "what?"
+	
 	done
 
 _CeladonPokecenterText3::
-	text "I rode uphill on"
-	line "CYCLING ROAD from"
-	cont "FUCHSIA!"
+	text "Just between you"
+	line "and me, I think"
+	cont "CELADON is a"
+	cont "smelly dump!"
+	
 	done

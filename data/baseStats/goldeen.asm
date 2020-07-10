@@ -14,7 +14,7 @@ dw GoldeenPicBack
 ; attacks known at lvl 0
 db PECK
 db TAIL_WHIP
-db 0
+db SPLASH
 db 0
 db 0 ; growth rate
 ; learnset

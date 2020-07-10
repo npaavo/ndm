@@ -12,9 +12,9 @@ INCBIN "pic/bmon/tauros.pic",0,1 ; 77, sprite dimensions
 dw TaurosPicFront
 dw TaurosPicBack
 ; attacks known at lvl 0
+db HORN_ATTACK
 db TACKLE
-db 0
-db 0
+db SHARPEN
 db 0
 db 5 ; growth rate
 ; learnset

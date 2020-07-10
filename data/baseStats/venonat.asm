@@ -5,7 +5,7 @@ db 50 ; base defense
 db 45 ; base speed
 db 40 ; base special
 db BUG ; species type 1
-db POISON ; species type 2
+db PSYCHIC ; species type 2
 db 190 ; catch rate
 db 75 ; base exp yield
 INCBIN "pic/bmon/venonat.pic",0,1 ; 55, sprite dimensions

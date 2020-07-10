@@ -124,7 +124,7 @@ const_value = 1
 	const LICK         ; 7a
 	const SMOG         ; 7b
 	const SLUDGE       ; 7c
-	const BONE_CLUB    ; 7d
+	const CUDGEL	   ; 7d
 	const FIRE_BLAST   ; 7e
 	const WATERFALL    ; 7f
 	const CLAMP        ; 80
@@ -150,11 +150,11 @@ const_value = 1
 	const FLASH        ; 94
 	const PSYWAVE      ; 95
 	const SPLASH       ; 96
-	const ACID_ARMOR   ; 97
+	const LIQUEFY	   ; 97
 	const CRABHAMMER   ; 98
 	const EXPLOSION    ; 99
 	const FURY_SWIPES  ; 9a
-	const BONEMERANG   ; 9b
+	const BOOMERANG    ; 9b
 	const REST         ; 9c
 	const ROCK_SLIDE   ; 9d
 	const HYPER_FANG   ; 9e
@@ -178,6 +178,8 @@ const_value = 1
 	const NIGHT_TERROR_START_ANIM ; clone for jank	ae
 	const BUG_OUT ; af
 	const SECOND_WIND ;b0
+	const MIND_SPARK  ;b1
+	const STAMPEDE    ;b2
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

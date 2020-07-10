@@ -6,7 +6,7 @@ MtMoonPokecenter_TextPointers:
 	dw MtMoonHealNurseText
 	dw MtMoonPokecenterText2
 	dw MtMoonPokecenterText3
-	dw MagikarpSalesmanText
+	dw MtMoonRockGuyText
 	dw MtMoonPokecenterText5
 	dw MtMoonTradeNurseText
 

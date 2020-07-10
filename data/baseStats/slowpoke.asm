@@ -12,8 +12,8 @@ INCBIN "pic/bmon/slowpoke.pic",0,1 ; 55, sprite dimensions
 dw SlowpokePicFront
 dw SlowpokePicBack
 ; attacks known at lvl 0
-db CONFUSION
-db 0
+db GLARE
+db PSYWAVE
 db 0
 db 0
 db 0 ; growth rate

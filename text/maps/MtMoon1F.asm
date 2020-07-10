@@ -107,8 +107,8 @@ _MtMoon1BattleText8::
 	done
 
 _MtMoon1EndBattleText8::
-	text "They're"
-	line "driving me BATTY!"
+	text "They"
+	line "drive me BATTY!"
 	prompt
 
 _MtMoon1AfterBattleText8::

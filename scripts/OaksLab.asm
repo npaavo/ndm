@@ -1,3 +1,4 @@
+
 OaksLab_Script:
 	CheckEvent EVENT_PALLET_AFTER_GETTING_POKEBALLS_2
 	call nz, OaksLabScript_1d076
@@ -970,6 +971,24 @@ OaksLabMonChoiceMenu:
 	ld [wCurEnemyLVL], a
 	ld a, [wcf91]
 	ld [wd11e], a
+	
+	push de
+	ld de, wEnemyMonOT
+	ld a, [wTotalCaptures]
+	ld [de], a;
+	inc a 
+	ld [wTotalCaptures], a
+	inc de 
+	ld a, [wPlayTimeHours]
+	ld [de], a;
+	inc de
+	ld a, [wPlayTimeMinutes]
+	ld [de], a
+	inc de
+	ld a, [wPlayTimeSeconds]
+	ld [de], a
+	pop de
+	
 	call AddPartyMon
 	ld hl, wd72e
 	set 3, [hl]

@@ -1,8 +1,8 @@
 db DEX_DITTO ; pokedex id
-db 48 ; base hp
+db 100 ; base hp
 db 48 ; base attack
 db 48 ; base defense
-db 48 ; base speed
+db 150 ; base speed
 db 48 ; base special
 db NORMAL ; species type 1
 db NORMAL ; species type 2

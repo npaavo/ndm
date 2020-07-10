@@ -14,7 +14,7 @@ dw MeowthPicBack
 ; attacks known at lvl 0
 db SCRATCH
 db GROWL
-db PAY_DAY
+db 0
 db 0
 db 0 ; growth rate
 ; learnset

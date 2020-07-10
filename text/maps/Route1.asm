@@ -3,11 +3,6 @@ _Route1ViridianMartSampleText::
 	line "#MON MART in"
 	cont "VIRIDIAN CITY!"
 
-	para "We recently"
-	line "expanded our"
-	cont "selection, so"
-	cont "come visit us!"
-
 	para "We're running a"
 	line "promotion- here,"
 	cont "take this!"
@@ -27,9 +22,9 @@ _Route1Text_1cae8::
 	text "!@@"
 
 _Route1Text_1caee::
-	text "We also carry"
-	line "# BALLs for"
-	cont "catching #MON!"
+	text "Stop by VIRIDIAN"
+	line "#MART for"
+	cont "all you need!"
 	done
 
 _Route1Text_1caf3::
@@ -50,4 +45,13 @@ _Route1Text3::
 	text "ROUTE 1"
 	line "PALLET CAMP -"
 	cont "VIRIDIAN CITY"
+	done
+
+_Route1Text4::
+	text "PP is restored"
+	line "at the end of"
+	cont "a battle, when"
+	cont "your #MON"
+	cont "have some time"
+	cont "to breathe."
 	done

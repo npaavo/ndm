@@ -5,7 +5,7 @@ db 90 ; base defense
 db 50 ; base speed
 db 25 ; base special
 db WATER ; species type 1
-db WATER ; species type 2
+db BUG ; species type 2
 db 225 ; catch rate
 db 115 ; base exp yield
 INCBIN "pic/bmon/krabby.pic",0,1 ; 55, sprite dimensions

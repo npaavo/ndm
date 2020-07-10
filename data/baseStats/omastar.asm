@@ -12,7 +12,7 @@ INCBIN "pic/bmon/omastar.pic",0,1 ; 66, sprite dimensions
 dw OmastarPicFront
 dw OmastarPicBack
 ; attacks known at lvl 0
-db WATER_GUN
+db BUBBLE
 db WITHDRAW
 db HORN_ATTACK
 db 0

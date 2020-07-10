@@ -3176,6 +3176,7 @@ wSafariZoneGameOver:: ; da46
 wNumSafariBalls:: ; da47
 	ds 1
 
+wTotalCaptures:: ds 1 ; i'm so sorry
 
 wDayCareInUse:: ; da48
 ; 0 if no pokemon is in the daycare
@@ -3206,6 +3207,11 @@ wBoxMonNicksEnd:: ; dee2
 wBoxDataEnd::
 
 ; dee2
+
+;MODS 
+
+wPlaceHolderDVs:: ds 5 ; dee2 - dee7?
+
 
 SECTION "Stack", WRAM0
 wStack:: ; dfff
