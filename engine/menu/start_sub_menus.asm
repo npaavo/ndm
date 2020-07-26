@@ -517,10 +517,13 @@ DrawTrainerInfo:
 	lb bc, BANK(RedPicFront), $01
 	predef DisplayPicCenteredOrUpperRight
 	call DisableLCD
-	coord hl, 0, 2
-	ld a, " "
-	call TrainerInfo_DrawVerticalLine
+	
 	coord hl, 1, 2
+	ld a, " "
+	ld c, 7
+	call TrainerInfo_DrawVerticalLine
+	coord hl, 19, 0
+	ld c, 8
 	call TrainerInfo_DrawVerticalLine
 	ld hl, vChars2 + $70
 	ld de, vChars2
@@ -558,12 +561,12 @@ DrawTrainerInfo:
 	call TrainerInfo_FarCopyData
 	call EnableLCD
 	ld hl, wTrainerInfoTextBoxWidthPlus1
-	ld a, 18 + 1
+	ld a, 12
 	ld [hli], a
 	dec a
 	ld [hli], a
-	ld [hl], 1
-	coord hl, 0, 0
+	ld [hl], 8
+	coord hl, 1, 0
 	call TrainerInfo_DrawTextBox
 	ld hl, wTrainerInfoTextBoxWidthPlus1
 	ld a, 16 + 1
@@ -571,32 +574,35 @@ DrawTrainerInfo:
 	dec a
 	ld [hli], a
 	ld [hl], 3
-	coord hl, 1, 10
+	coord hl, 1, 9
+	ld c, 9
 	call TrainerInfo_DrawTextBox
-	coord hl, 0, 10
+	coord hl, 0, 0
 	ld a, $d7
+	ld c, 18
 	call TrainerInfo_DrawVerticalLine
-	coord hl, 19, 10
+	coord hl, 19, 9
+	ld c, 9
 	call TrainerInfo_DrawVerticalLine
-	coord hl, 5, 9
+	coord hl, 5, 10
 	ld de, TrainerInfo_BadgesText
 	call PlaceString
-	coord hl, 2, 2
+	coord hl, 3, 2
 	;ld de, TrainerInfo_NameMoneyTimeText
 	;call PlaceString
 
 	
-	coord hl, 2, 5
+	coord hl, 3, 5
 	ld de, TrainerInfo_TrainerText0
 	call PlaceString
 	
-	coord hl, 6, 5
+	coord hl, 7, 5
 	ld de, wPlayerID
 	lb bc, LEADING_ZEROES | 2, 5
 	call PrintNumber ; ID Number
 	
 	
-	coord hl, 2, 6
+	coord hl, 3, 7
 	push hl
 	call CountNumBadgesOwned;
 	pop hl
@@ -617,14 +623,27 @@ DrawTrainerInfo:
 .placeRankText
 	call PlaceString
 	
-	coord hl, 2, 1
+	coord hl, 3, 6
+	
+	ld [hl], $e1 ; Pk
+	inc hl
+	ld [hl], $e2 ; Mn
+	inc hl
+	ld [hl], $d6 ; : 
+	inc hl	
+	
+	ld de, wTotalCaptures ; BCD 3 bytes 
+	ld c, $c3 ; BCD flags: 110 | 00011 : no leading zeroes, left-align | 3 byte size
+	call PrintBCDNumber	
+	
+	coord hl, 3, 1
 	ld de, wPlayerName
 	call PlaceString
-	coord hl, 2, 2
+	coord hl, 3, 2
 	ld de, wPlayerMoney
-	ld c, $e3
+	ld c, $e3 ; BCD flags:  111 | 00011 : no leading zeroes, left-align, currency symbol | 3 byte size
 	call PrintBCDNumber
-	coord hl, 2, 3
+	coord hl, 3, 3
 	ld de, wPlayTimeHours ; hours
 	lb bc, LEFT_ALIGN | 1, 3
 	call PrintNumber
@@ -696,7 +715,7 @@ TrainerInfo_DrawTextBox:
 	ld a, [wTrainerInfoTextBoxWidthPlus1]
 	ld e, a
 	ld d, 0
-	ld c, 6 ; height of the text box
+	ld c, 7 ; height of the text box
 .loop
 	ld [hl], $7c ; left edge tile ID
 	add hl, de
@@ -732,9 +751,9 @@ TrainerInfo_NextTextBoxRow:
 ; INPUT:
 ; hl = address of top tile in the line
 ; a = tile ID
+; c = height
 TrainerInfo_DrawVerticalLine:
 	ld de, SCREEN_WIDTH
-	ld c, 8
 .loop
 	ld [hl], a
 	add hl, de

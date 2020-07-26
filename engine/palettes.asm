@@ -30,14 +30,48 @@ SetPal_Battle:
 	ld de, wPalPacket
 	ld bc, $10
 	call CopyData
-	ld a, [wPlayerBattleStatus3]
-	ld hl, wBattleMonSpecies
-	call DeterminePaletteID
+	
+	xor a 
+	ldh [hVendingMachineItem], a ; clear the shiny interrupt	
+	
+	;gather BattleMon DVs, Logical OR them together.
+	ld a, [wBattleMonDVs] 
 	ld b, a
-	ld a, [wEnemyBattleStatus3]
+	ld a, [wBattleMonDVs+1]
+	or b
+	;if they result in 0xFF, then they use a palette offset.
+	cp $FF
+	jr nz, .SkipMyShiny
+	;this is the part where we figure out what the palette offset actually is.
+	
+	ld a, b
+	and $F ;mask off so only lowest 4 bits remain (0-16)
+	ldh [hVendingMachineItem], a ; store palette offset for DeterminePaletteID	
+.SkipMyShiny
+	ld hl, wBattleMonSpecies
+	call DeterminePaletteID ; sets a to the mon's palette 
+	ld [wPlaceHolderDVs], a ; stores that palette in placeholder DVs slot 1
+
+	xor a 
+	ldh [hVendingMachineItem], a ; clear the shiny interrupt	
+	ld a, [wEnemyMonDVs] 
+	ld b, a
+	ld a, [wEnemyMonDVs+1]
+	or b
+	;if they result in 0xFF, then they use a palette offset.
+	cp $FF
+	;jr nz, .SkipTheirShiny
+	;this is the part where we figure out what the palette offset actually is.
+	ld a, b
+	and $F ;mask off so only lowest 4 bits remain (0-16)
+	ldh [hVendingMachineItem], a ; store palette offset for DeterminePaletteID	
+	
+.SkipTheirShiny
 	ld hl, wEnemyMonSpecies2
-	call DeterminePaletteID
-	ld c, a
+	call DeterminePaletteID ; enemy palette in a
+	ld c, a ; store that in c 
+	ld a, [wPlaceHolderDVs]
+	ld b, a ; reload the palette into b
 	ld hl, wPalPacket + 1
 	ld a, [wPlayerHPBarColor]
 	add PAL_GREENBAR
@@ -47,15 +81,19 @@ SetPal_Battle:
 	add PAL_GREENBAR
 	ld [hli], a
 	inc hl
-	ld a, b
+	ld a, b ; load in the palette of the battle mon
 	ld [hli], a
 	inc hl
-	ld a, c
+	ld a, c ; load in the palette of the enemy mon
 	ld [hl], a
 	ld hl, wPalPacket
 	ld de, BlkPacket_Battle
 	ld a, SET_PAL_BATTLE
 	ld [wDefaultPaletteCommand], a
+	
+	xor a 
+	ldh [hVendingMachineItem], a ; stop leaking palettes lol 
+	
 	ret
 
 SetPal_TownMap:
@@ -74,6 +112,10 @@ SetPal_StatusScreen:
 	jr c, .pokemon
 	ld a, $1 ; not pokemon
 .pokemon
+
+
+	;on stats screen, pokemon is loaded in
+
 	call DeterminePaletteIDOutOfBattle
 	push af
 	ld hl, wPalPacket + 1
@@ -285,9 +327,24 @@ DeterminePaletteIDOutOfBattle:
 	ld e, a
 	ld d, 0
 	ld hl, MonsterPalettes ; not just for Pokemon, Trainers use it too
-	add hl, de
-	ld a, [hl] ; I believe A is the pallette now. for mons, this is $10 - $19.
+	add hl, de ; hl is the stanadrd palette of the mon.
 	
+	ld a, [hVendingMachineItem] ; load in the offset value.
+	and a ; "cp 0 (but good)"
+	jr z, .DontAdjustPalette
+	
+	; a > 0
+	ld b, a
+	ld a, [hl]
+	add b
+.miniloop ; clamp the value down between $10 and $19 inclusive
+	cp $1A
+	jr c, .endDeterminePalette
+	sub 10
+	jr .miniloop
+.DontAdjustPalette
+	ld a, [hl]
+.endDeterminePalette
 	ret
 
 InitPartyMenuBlkPacket:

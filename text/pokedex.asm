@@ -1,3 +1,9 @@
+;REMINDER: ALL DEX ENTRIES ARE PERIOD-TERMINATED IN CODE! 
+;Skip punctuation on the last sentence!
+
+;MOD: these are supposed to be first-person observations.
+;It's okay to use the first person and keep them unscientific.
+
 _RhydonDexEntry::
 	text "Protected by an"
 	next "armor-like hide,"
@@ -1343,8 +1349,8 @@ _RaticateDexEntry:: ;mod
 	next "teeth are sharp"
 	next "and super hard."
 
-	page "They have been"
-	next "seen even biting"
+	page "I have seen them"
+	next "even biting right"
 	next "through rocks"
 	dex
 
@@ -1455,27 +1461,27 @@ _CharizardDexEntry:: ;mod
 
 	page "becoming extremely"
 	next "territorial and"
-	next "hot-tempered."
+	next "hot-tempered"
 	dex
 
-_OddishDexEntry::
-	text "During the day,"
-	next "it keeps its face"
-	next "buried in the"
+_OddishDexEntry:: ;mod
+	text "Its feet are better"
+	next "at burrowing than"
+	next "running. It"
 
-	page "ground. At night,"
-	next "it wanders around"
-	next "sowing its seeds"
+	page "clumsily hobbles"
+	next "around at night,"
+	next "sowing seeds"
 	dex
 
-_GloomDexEntry::
-	text "The fluid that"
-	next "oozes from its"
-	next "mouth isn't drool."
+_GloomDexEntry:: ;mod
+	text "It can control"
+	next "the pungency of"
+	next "its odors."
 
-	page "It is a nectar"
-	next "that is used to"
-	next "attract prey"
+	page "When stressed,"
+	next "its stench is"
+	next "unmatched"
 	dex
 
 _VileplumeDexEntry::
@@ -1488,33 +1494,33 @@ _VileplumeDexEntry::
 	next "hard to hold up"
 	dex
 
-_BellsproutDexEntry::
-	text "A carnivorous"
-	next "#MON that traps"
-	next "and eats bugs."
+_BellsproutDexEntry::  ;mod
+	text "Though it appears"
+	next "to be a plant, it"
+	next "eats only bugs."
 
-	page "It uses its root"
-	next "feet to soak up"
-	next "needed moisture"
+	page "It still needs to"
+	next "soak in water via"
+	next "its roots, though"
 	dex
 
-_WeepinbellDexEntry::
-	text "It spits out"
-	next "POISONPOWDER to"
-	next "immobilize the"
+_WeepinbellDexEntry::  ;mod
+	text "It produces highly"
+	next "corrosive acids,"
+	next "which burn flesh."
 
-	page "enemy and then"
-	next "finishes it with"
-	next "a spray of ACID"
+	page "It should only be"
+	next "handled with great"
+	next "care and trust"
 	dex
 
-_VictreebelDexEntry::
-	text "Said to live in"
-	next "huge colonies"
-	next "deep in jungles,"
+_VictreebelDexEntry::  ;mod
+	text "It has an arsenal"
+	next "of effective lures"
+	next "to draw in prey."
 
-	page "although no one"
-	next "has ever returned"
-	next "from there"
+	page "When its food is"
+	next "near, it leaps"
+	next "with a scream"
 	dex
 

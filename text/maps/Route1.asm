@@ -40,14 +40,8 @@ _Route1Text2::
 	cont "doesn't have a"
 	cont "good TYPE match."
 	done
-
+	
 _Route1Text3::
-	text "ROUTE 1"
-	line "PALLET CAMP -"
-	cont "VIRIDIAN CITY"
-	done
-
-_Route1Text4::
 	text "PP is restored"
 	line "at the end of"
 	cont "a battle, when"
@@ -55,3 +49,10 @@ _Route1Text4::
 	cont "have some time"
 	cont "to breathe."
 	done
+	
+_Route1Text4::
+	text "ROUTE 1"
+	line "PALLET CAMP -"
+	cont "VIRIDIAN CITY"
+	done
+

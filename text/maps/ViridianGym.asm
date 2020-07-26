@@ -116,7 +116,7 @@ _ViridianGymWinText::
 	
 	para "As proof of your"
 	line "victory, take"
-	cont "this LIFE BADGE!@@"
+	cont "the SPROUT BADGE!@@"
 
 _ViridianGymRematchWinText::
 	text "That's it!"
@@ -136,7 +136,7 @@ _ViridianGymText12::
 	cont "many challenges"
 	cont "are ahead."
 	
-	para "The LIFE BADGE"
+	para "The SPROUT BADGE"
 	line "is proof that you"
 	cont "can overcome and"
 	cont "adapt to them."

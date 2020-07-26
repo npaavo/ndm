@@ -212,11 +212,13 @@ OaksLabScript8:
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_UP
 	db $FF
 
 .MiddleBallMovement2
 	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
@@ -237,11 +239,13 @@ OaksLabScript8:
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
+	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_UP
 	db $FF
 
 .RightBallMovement2
 	db NPC_MOVEMENT_DOWN
+	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
@@ -277,6 +281,7 @@ OaksLabScript8:
 	db NPC_MOVEMENT_DOWN
 	db NPC_MOVEMENT_RIGHT ; not yet terminated!
 .LeftBallMovement2
+	db NPC_MOVEMENT_RIGHT
 	db NPC_MOVEMENT_RIGHT
 	db $FF
 
@@ -939,7 +944,7 @@ OaksLabMonChoiceMenu:
 	call YesNoChoice ; yes/no menu
 	ld a, [wCurrentMenuItem]
 	and a
-	jr nz, OaksLabMonChoiceEnd
+	jp nz, OaksLabMonChoiceEnd
 	ld a, [wcf91]
 	ld [wPlayerStarter], a
 	ld [wd11e], a
@@ -973,12 +978,20 @@ OaksLabMonChoiceMenu:
 	ld [wd11e], a
 	
 	push de
-	ld de, wEnemyMonOT
-	ld a, [wTotalCaptures]
-	ld [de], a;
-	inc a 
-	ld [wTotalCaptures], a
-	inc de 
+	
+	
+	ld de, wTotalCaptures+2
+	ld hl, hVendingMachinePrice+2
+	ld a, 1
+	ldh [hVendingMachinePrice+2], a	
+	ld c, 3	
+	predef AddBCDPredef
+	
+	ld de, wEnemyMonOT 
+	ld hl, wTotalCaptures 
+	ld bc, 3
+	
+	call CopyData
 	ld a, [wPlayTimeHours]
 	ld [de], a;
 	inc de
@@ -987,6 +1000,7 @@ OaksLabMonChoiceMenu:
 	inc de
 	ld a, [wPlayTimeSeconds]
 	ld [de], a
+	
 	pop de
 	
 	call AddPartyMon

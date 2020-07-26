@@ -22,8 +22,6 @@ SetDefaultNames:
 	ld a, [wOptionsInitialized]
 	and a
 	call z, InitOptions
-	ld a, 1
-	ld [wTotalCaptures], a
 	ld hl, NintenText
 	ld de, wPlayerName
 	ld bc, NAME_LENGTH

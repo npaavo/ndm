@@ -1,131 +1,284 @@
-_CeruleanGymText_5c7be::
-	text "Hi, you're a new"
-	line "face!"
+_CeruleanGymFirstFightIntroText::
+	text "Welcome, <PLAYER>!"
+	
+	para "Think I'm gonna"
+	line "go easy on you,"
+	cont "just because you"
+	cont "helped me out?"
+	
+	para "Not a chance!"
+	line "You gotta work"
+	cont "hard if you want"
+	cont "the results to"
+	cont "mean anything!"
+	
+	para "I train every"
+	line "day- both my body"
+	cont "and my #MON!"
+	
+	para "I pick only the"
+	line "fastest #MON!"
+	cont "Gives me a goal"
+	cont "to chase after!"
+	
+	para "You're free to"
+	line "work out, but"
+	cont "I get the feeling"
+	cont "you'd rather have"
+	cont "a #MON battle!"
+	
+	prompt
 
-	para "Trainers who want"
-	line "to turn pro have"
-	cont "to have a policy"
-	cont "about #MON!"
-
-	para "What is your"
-	line "approach when you"
-	cont "catch #MON?"
-
-	para "My policy is an"
-	line "all-out offensive"
-	cont "with water-type"
-	cont "#MON!"
+_CeruleanGymHowManyBadgesText::
+	text "So, how many"
+	line "other GYMs have"
+	cont "you trained at?"
+	cont "Let's see those"
+	cont "badges!  ..."
+	
+	para "You've got @"
+	TX_NUM wEffectiveNumBadgesOwned, 1, 1
+	text "?"
+	line "Cool! I can dig"
+	cont "it! I love to"
+	cont "see ambition!"
+	
+	para "Then I'll use... "
+	line "these #MON!"
+		
+	para "Let's get right"
+	line "to it. Think you"
+	cont "can keep up?"
+	
+	para "I'm excited to"
+	line "see if you break"
+	cont "a sweat!"
+	
 	done
 
-_CeruleanGymText_5c7c3::
-	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+_CeruleanGymHowManyBadgesText0::
+	text "So, how many"
+	line "other GYMs have"
+	cont "you trained at?"
+	cont "Let's see those"
+	cont "badges!  ..."
+	
+	para "None yet?!"
+	line "All RIGHT!"
+	cont "It's never too"
+	cont "late to start!"
+	
+	para "Let's get right"
+	line "to it. Think you"
+	cont "can keep up?"
+	
+	para "I'm excited to"
+	line "see if you break"
+	cont "a sweat!"
 
-	para "Use it on an"
-	line "aquatic #MON!"
 	done
 
-_CeruleanGymText_5c7c8::
-	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
+_CeruleanGymWinText::
+	text "Oh dang!"
+	line "I lost?!"
+	
+	para "I sure wasn't"
+	line "expecting to be"
+	cont "the one on the"
+	cont "floor!"
 
-	para "That includes"
-	line "even outsiders!"
-
-	para "There's more, you"
-	line "can now use CUT"
-	cont "any time!"
-
-	para "You can CUT down"
-	line "small bushes to"
-	cont "open new paths!"
-
-	para "You can also have"
-	line "my favorite TM!"
+	para "Good hustle!"
+	line "You've earned the"
+	cont "JET BADGE!"
+	
 	done
 
-_ReceivedTM11Text::
-	text "<PLAYER> received"
-	line "TM11!@@"
+_CeruleanGymRematchText::
+	text "Hey, I know you!"
+	line "<PLAYER>! Welcome"
+	cont "back!"
+	
+	para "Gonna work out"
+	line "for a bit?"
+	
+	para "... A rematch?!"
+	line "Dang, already?"
+	
+	para "Fine! I've been"
+	line "working on some"
+	cont "new strats."
+	
+	prompt
+	
+	
+_CeruleanGymCantRematchYetText::
+	text "Oh hey <PLAYER>,"
+	line "you're already"
+	cont "ready to fight"
+	cont "again?!"
+	
+	para "Jeez, even I"
+	line "need a breather!"
+	
+	text "You're something"
+	line "else! Come back"
+	cont "a little later,"
+	cont "will ya?"
+	
+	text "I'm still cooling"
+	line "off!"
+	
+	done 
 
-_CeruleanGymText_5c7d3::
-	text "You better make"
-	line "room for this!"
+_CeruleanGymRematchWinText::
+	text "No way!"
+	
+	para "I just can't keep"
+	line "up with you!"
+	
+	para "Good battle!@@"
+
+_CeruleanGymAfterVictoryText::
+	text "PHEW!"
+	
+	para "You've shown me"
+	line "you know your"
+	cont "way around a"
+	cont "#MON battle,"
+	cont "in more ways"
+	cont "than one!"
+	
+	para "I'm proud to"
+	line "bestow the JET"
+	cont "BADGE to anyone"
+	cont "who clearly puts"
+	cont "in the hours!"
+	
+	para "Take these, too!"
+	
+	para "<PLAYER> got 3"
+	line "ULTRA BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+	para "They're like a"
+	line "#BALL..."
+	cont "but better!"
+	
+	para "Kinda like how"
+	line "you're a better"
+	cont "trainer today"
+	cont "than you were"
+	cont "yesterday!"
+	
+	para "You reached some"
+	line "high elevation"
+	cont "today, but guess"
+	cont "what?!"
+	
+	para "Tomorrow, you'll"
+	line "be even higher!"
+	cont "And the next"
+	cont "day! And the"
+	cont "next!"
+	
+	para "I want to see"
+	line "how high you can"
+	cont "go, <PLAYER>."
+	cont "Come back and"
+	cont "rematch me"
+	cont "someday!"
+	
+	para "There won't be"
+	line "a badge I can"
+	cont "give you, but"
+	cont "the journey is"
+	cont "its own reward!"
+	
 	done
 
-_CeruleanGymText_5c7d8::
-	text "Wow!"
-	line "You're too much!"
+_CeruleanGymAfterRematchText::
+	text "I don't know how"
+	line "you keep reaching"
+	cont "new heights,"
+	cont "<PLAYER>!"
+	
+	para "Surely you're in"
+	line "space now!"
+	
+	para "Thanks for coming"
+	line "down for a bit"
+	cont "to humor me."
+	cont "Have some of"
+	cont "these!"
+	
+	para "<PLAYER> got 3"
+	line "GREAT BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+		
+	para "Those are GREAT"
+	line "BALLs, courtesy"
+	cont "of me!"
+	
+	para "Catch something"
+	line "cool with 'em!"
+	
+	done
+	
 
-	para "All right!"
+_CeruleanGymText_5c4c1::
+	text ""
 
-	para "You can have the"
-	line "CASCADEBADGE to"
-	cont "show you beat me!@@"
+	para "Take it! You"
+	line "sure earned it!"
+	prompt
 
 _CeruleanGymBattleText1::
-	text "I'm more than good"
-	line "enough for you!"
-
-	para "MISTY can wait!"
+	text "uu battle1"
 	done
 
 _CeruleanGymEndBattleText1::
-	text "You"
-	line "overwhelmed me!"
+	text "uu endbattle1"
 	prompt
 
 _CeruleanGymAfterBattleText1::
-	text "You have to face"
-	line "other trainers to"
-	cont "find out how good"
-	cont "you really are."
+	text "uu afterbattle1"
 	done
 
-_CeruleanGymBattleText2::
-	text "Splash!"
-
-	para "I'm first up!"
-	line "Let's do it!"
+_CeruleanGymWelcomeHere::
+	text "Welcome to the"
+	line "CERULEAN GYM."
+	
+	para "LEADER TOBIAS is"
+	line "awaiting any"
+	cont "challengers."
+	cont "Good luck!"
 	done
 
-_CeruleanGymEndBattleText2::
-	text "That"
-	line "can't be!"
-	prompt
-
-_CeruleanGymAfterBattleText2::
-	text "MISTY is going to"
-	line "keep improving!"
-
-	para "She won't lose to"
-	line "someone like you!"
+_CeruleanGymWelcomeEmpty::
+	text "Welcome to the"
+	line "Cerulean GYM."
+	
+	para "LEADER LARS is"
+	line "not presently"
+	cont "available."
+	
+	para "He went for a"
+	line "flight this"
+	cont "morning, but"
+	cont "hasn't returned"
+	cont "yet."
+	
+	para "He is usually"
+	line "back by now, but"
+	cont "something must"
+	cont "have come up."
+	
+	para "Sorry!"
+	
 	done
 
-_CeruleanGymText_5c82a::
-	text "Yo! Champ in"
-	line "making!"
-
-	para "Here's my advice!"
-
-	para "The LEADER, MISTY,"
-	line "is a pro who uses"
-	cont "water #MON!"
-
-	para "You can drain all"
-	line "their water with"
-	cont "plant #MON!"
-
-	para "Or, zap them with"
-	line "electricity!"
-	done
-
-_CeruleanGymText_5c82f::
-	text "You beat MISTY!"
-	line "What'd I tell ya?"
-
-	para "You and me kid,"
-	line "we make a pretty"
-	cont "darn good team!"
-	done

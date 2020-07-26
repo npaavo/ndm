@@ -3176,37 +3176,38 @@ wSafariZoneGameOver:: ; da46
 wNumSafariBalls:: ; da47
 	ds 1
 
-wTotalCaptures:: ds 1 ; i'm so sorry
+wTotalCaptures:: 
+	ds 3 ; BCD, i'm so sorry for throwing off the ending addresses da48-a
 
-wDayCareInUse:: ; da48
+wDayCareInUse:: ; da4b
 ; 0 if no pokemon is in the daycare
 ; 1 if pokemon is in the daycare
 	ds 1
 
-wDayCareMonName:: ds NAME_LENGTH ; da49
-wDayCareMonOT::   ds NAME_LENGTH ; da54
+wDayCareMonName:: ds NAME_LENGTH ; da49 x
+wDayCareMonOT::   ds NAME_LENGTH ; da54 x
 
-wDayCareMon:: box_struct wDayCareMon ; da5f
+wDayCareMon:: box_struct wDayCareMon ; da5f x
 
 wMainDataEnd::
 
 
 wBoxDataStart::
 
-wNumInBox::  ds 1 ; da80
+wNumInBox::  ds 1 ; da80 x
 wBoxSpecies:: ds MONS_PER_BOX + 1
 
 wBoxMons::
-wBoxMon1:: box_struct wBoxMon1 ; da96
-wBoxMon2:: ds box_struct_length * (MONS_PER_BOX + -1) ; dab7
+wBoxMon1:: box_struct wBoxMon1 ; da96 x
+wBoxMon2:: ds box_struct_length * (MONS_PER_BOX + -1) ; dab7 x
 
-wBoxMonOT::    ds NAME_LENGTH * MONS_PER_BOX ; dd2a
-wBoxMonNicks:: ds NAME_LENGTH * MONS_PER_BOX ; de06
-wBoxMonNicksEnd:: ; dee2
+wBoxMonOT::    ds NAME_LENGTH * MONS_PER_BOX ; dd2a x
+wBoxMonNicks:: ds NAME_LENGTH * MONS_PER_BOX ; de06 x
+wBoxMonNicksEnd:: ; dee2 x
 
 wBoxDataEnd::
 
-; dee2
+; dee2 x
 
 ;MODS 
 

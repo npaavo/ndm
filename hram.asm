@@ -292,8 +292,8 @@ hOaksAideNumMonsOwned EQU $FFDD
 hItemToRemoveID    EQU $FFDB
 hItemToRemoveIndex EQU $FFDC
 
-hVendingMachineItem  EQU $FFDB
-hVendingMachinePrice EQU $FFDC ; 3-byte BCD number
+hVendingMachineItem  EQU $FFDB ; MOD: I use this as an interupt for "shiny" mons. it's either 0 or a number that says how many offsets to use 
+hVendingMachinePrice EQU $FFDC ; 3-byte BCD number ; MOD: I use this as a placeholder for capture number bumping
 
 ; the first tile ID in a sequence of tile IDs that increase by 1 each step
 hStartTileID EQU $FFE1

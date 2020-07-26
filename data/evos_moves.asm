@@ -641,14 +641,14 @@ TangelaEvosMoves:
 	db 0
 ; Learnset
 	db 6, VINE_WHIP
-	db 9, BIND
+	db 9, WRAP
 	db 12, ABSORB
 	db 15, STUN_SPORE
 	db 18, POISONPOWDER
-	db 21, WRAP
+	db 21, BIND
 	db 24, SLEEP_POWDER
 	db 27, MEGA_DRAIN
-	db 30, GROWTH
+	db 30, TOXIC
 	db 0
 
 VisigoEvosMoves:
@@ -1163,8 +1163,8 @@ DoduoEvosMoves:
 	db 9, AGILITY
 	db 12, FURY_SWIPES
 	db 15, RAGE
-	db 18, MIMIC
-	db 21, TRI_ATTACK
+	db 18, TRI_ATTACK
+	db 21, JUMP_KICK
 	db 24, BODY_SLAM
 	db 27, DRILL_PECK
 	db 30, HYPER_BEAM
@@ -1783,8 +1783,8 @@ DodrioEvosMoves:
 	db 9, AGILITY
 	db 12, FURY_SWIPES
 	db 15, RAGE
-	db 18, MIMIC
-	db 21, TRI_ATTACK
+	db 18, TRI_ATTACK
+	db 21, JUMP_KICK
 	db 24, BODY_SLAM
 	db 27, DRILL_PECK
 	db 30, HYPER_BEAM
@@ -2637,7 +2637,7 @@ MonGhostEvosMoves:
 
 OddishEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 20, GLOOM
+	db EV_LEVEL, 15, GLOOM
 	db 0
 ; Learnset
 	db 6, TACKLE
@@ -2684,7 +2684,7 @@ VileplumeEvosMoves:
 
 BellsproutEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 20, WEEPINBELL
+	db EV_LEVEL, 15, WEEPINBELL
 	db 0
 ; Learnset
 	db 6, ACID

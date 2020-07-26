@@ -61,7 +61,7 @@ $(pokered_obj): %_red.o: %.asm $$(dep)
 $(pokeblue_obj): %_blue.o: %.asm $$(dep)
 	$(RGBASM) -D _BLUE -h -o $@ $*.asm
 
-pokered_opt  = -jsv -k 01 -l 0x33 -m 0x13 -p 0 -r 03 -t "POKEMON RED"
+pokered_opt  = -jsv -k 01 -l 0x33 -m 0x13 -p 0 -r 03 -t "PKMN BUT GOOD"
 pokeblue_opt = -jsv -k 01 -l 0x33 -m 0x13 -p 0 -r 03 -t "POKEMON BLUE"
 
 %.gbc: $$(%_obj)

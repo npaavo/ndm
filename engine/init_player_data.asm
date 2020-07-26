@@ -39,6 +39,13 @@ START_MONEY EQU $3000
 	ld hl, wPlayerCoins
 	ld [hli], a
 	ld [hl], a
+	
+	ld hl, wTotalCaptures
+	ld [hli], a
+	ld [hli], a
+	ld [hl], a
+	
+	xor a
 
 	ld hl, wGameProgressFlags
 	ld bc, wGameProgressFlagsEnd - wGameProgressFlags

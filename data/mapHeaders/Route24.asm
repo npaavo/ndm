@@ -4,7 +4,6 @@ Route24_h:
 	dw Route24_Blocks ; blocks
 	dw Route24_TextPointers ; texts
 	dw Route24_Script ; scripts
-	db SOUTH | EAST ; connections
-	SOUTH_MAP_CONNECTION ROUTE_24, CERULEAN_CITY, -3, 2, CeruleanCity_Blocks, 1
-	EAST_MAP_CONNECTION ROUTE_24, ROUTE_25, 0, 0, Route25_Blocks
+	db NORTH ; connections
+	NORTH_MAP_CONNECTION ROUTE_24, VERMILION_CITY, 28, 0, VermilionCity_Blocks
 	dw Route24_Object ; objects

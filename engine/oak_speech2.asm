@@ -191,15 +191,15 @@ DisplayIntroNameTextBox:
 DefaultNamesPlayer:
 	db   "NEW NAME"
 	next "MARCEL"
+	next "LEWIS"
 	next "NICK"
-	next "...you"
 	db   "@"
 
 DefaultNamesRival:
 	db   "NEW NAME"
 	next "RONALD"
-	next "GARY"
 	next "DENNIS"
+	next "GARY"
 	db   "@"
 
 
@@ -231,13 +231,14 @@ GetDefaultName:
 DefaultNamesPlayerList:
 	db "NEW NAME@"
 	db "MARCEL@"
+	db "LEWIS@"
 	db "NICK@"
-	db "...you@"
+	
 DefaultNamesRivalList:
 	db "NEW NAME@"
 	db "RONALD@"
-	db "GARY@"
 	db "DENNIS@"
+	db "GARY@"
 
 TextTerminator_6b20:
 	db "@"

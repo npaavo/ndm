@@ -186,20 +186,17 @@ StatusScreen:
 	ld de, CaptureTimeText
 	call PlaceString
 	
-	; capture number (OTName first btye)
+	; capture number (OTName first 3 btyes BCD)
 	ld hl, OTPointers
 	call .GetStringPointer
-	ld d, h 
-	ld e, l 	
+	push hl 
+	pop de 	
 	coord hl, 11, 15
-	lb bc, LEADING_ZEROES | 1, 3 ; 1 byte, 3 digits
-	call PrintNumber
+	ld c, $c3 ; BCD flags: 110 | 00011 : no leading zeroes, left-align | 3 byte size
+	call PrintBCDNumber
 	
-	; capture time, OTName 2nd, 3rd, 4th byte 
-	 	
+	; capture time, OTName 4th, 5th, 6th byte 
 	coord hl, 4, 16
-	inc de; 
-	inc de; 
 	lb bc, 1, 3 ; 1 byte, 3 digits
 	call PrintNumber
 	

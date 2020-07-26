@@ -4,7 +4,7 @@ mapconst: MACRO
 \1_WIDTH EQU \3
 ENDM
 
-	const_def
+	const_def							;height, width
 	mapconst PALLET_TOWN,                    9, 10 ; $00
 	mapconst VIRIDIAN_CITY,                 18, 20 ; $01
 	mapconst PEWTER_CITY,                   14, 20 ; $02
@@ -40,7 +40,7 @@ ENDM
 	mapconst ROUTE_21,                      45, 10 ; $20
 	mapconst ROUTE_22,                       9, 20 ; $21
 	mapconst ROUTE_23,                      72, 10 ; $22
-	mapconst ROUTE_24,                      18, 10 ; $23
+	mapconst ROUTE_24,                      12, 36 ; $23 - MOD: now connects vermilion (s) and "safari zone" (n)
 	mapconst ROUTE_25,                       9, 30 ; $24
 	mapconst REDS_HOUSE_1F,                  4,  4 ; $25
 	mapconst REDS_HOUSE_2F,                  7,  7 ; $26 - MOD lapras cave
@@ -187,7 +187,7 @@ ENDM
 	mapconst SAFFRON_PIDGEY_HOUSE,           4,  4 ; $B3
 	mapconst SAFFRON_MART,                   4,  4 ; $B4
 	mapconst SILPH_CO_1F,                    9, 15 ; $B5
-	mapconst SAFFRON_POKECENTER,             4,  4 ; $B6
+	mapconst SAFFRON_POKECENTER,             6,  8 ; $B6
 	mapconst MR_PSYCHICS_HOUSE,              4,  4 ; $B7
 	mapconst ROUTE_15_GATE_1F,               5,  4 ; $B8
 	mapconst ROUTE_15_GATE_2F,               4,  4 ; $B9

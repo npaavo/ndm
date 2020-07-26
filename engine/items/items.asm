@@ -414,24 +414,8 @@ ItemUseBall:
 	ld [wPokeBallAnimData], a
 
 .skipShakeCalculations
-	ld a, [wTotalCaptures]
-	inc a 
-	ld [wTotalCaptures], a
+
 	ld c, 20
-	
-	ld de, wEnemyMonOT
-	ld a, [wTotalCaptures]
-	ld [de], a;
-	inc de 
-	ld a, [wPlayTimeHours];
-	ld [de], a;
-	inc de
-	ld a, [wPlayTimeMinutes];
-	ld [de], a
-	inc de
-	ld a, [wPlayTimeSeconds];
-	ld [de], a
-	
 	call DelayFrames
 
 ; Do the animation.
@@ -505,6 +489,33 @@ ItemUseBall:
 	ld [hl], a
 
 .skip6
+	
+	xor a 
+	ldh [hVendingMachinePrice], a
+	ldh [hVendingMachinePrice+1], a
+	inc a
+	ldh [hVendingMachinePrice+2], a	
+	
+	ld de, wTotalCaptures + 2
+	ld hl, hVendingMachinePrice + 2
+	ld c, 3	
+	predef AddBCDPredef
+	
+	ld de, wEnemyMonOT 
+	ld hl, wTotalCaptures 
+	ld bc, 3
+	
+	call CopyData	
+	
+	ld a, [wPlayTimeHours];
+	ld [de], a;
+	inc de
+	ld a, [wPlayTimeMinutes];
+	ld [de], a
+	inc de
+	ld a, [wPlayTimeSeconds];
+	ld [de], a
+	
 	ld a, [wcf91]
 	push af
 	ld a, [wEnemyMonSpecies2]
@@ -529,7 +540,9 @@ ItemUseBall:
 	ld a, [wBattleType]
 	dec a ; is this the old man battle?
 	jr z, .oldManCaughtMon ; if so, don't give the player the caught Pokémon
+	
 
+	
 	ld hl, ItemUseBallText05
 	call PrintText
 

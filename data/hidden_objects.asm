@@ -207,16 +207,19 @@ BluesHouseHiddenObjects:
 	dw PrintBookcaseText
 	db $FF
 OaksLabHiddenObjects:
-	db $00,$04,$04
+	db $07,$02,$04
 	db BANK(DisplayOakLabLeftPoster)
 	dw DisplayOakLabLeftPoster
-	db $00,$05,$04
+	db $07,$03,$04
+	db BANK(DisplayOakLabLeftPoster)
+	dw DisplayOakLabLeftPoster
+	db $08,$09,$04
 	db BANK(DisplayOakLabRightPoster)
 	dw DisplayOakLabRightPoster
-	db $01,$00,$04
+	db $02,$00,$04
 	db BANK(DisplayOakLabEmailText)
 	dw DisplayOakLabEmailText
-	db $01,$01,$04
+	db $02,$01,$04
 	db BANK(DisplayOakLabEmailText)
 	dw DisplayOakLabEmailText
 	db $FF

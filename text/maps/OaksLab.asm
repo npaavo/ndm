@@ -485,6 +485,7 @@ IF DEF(_BLUE)
 	text "f" 
 	done
 ENDC
+
 _OaksLabText_1d405::
 	text "I study #MON as"
 	line "PROF.OAK's AIDE."

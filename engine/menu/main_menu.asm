@@ -347,8 +347,8 @@ CableClubOptionsText:
 	next "uu@"
 	
 ModWarningText:
-	db   "v0.9 / BLASTOISE"
-	next "- MOVESETS DONE@"
+	db   "v0.10 / CATERPIE"
+	next "   World Updates@"
 
 DisplayContinueGameInfo:
 	xor a

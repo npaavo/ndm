@@ -45,7 +45,7 @@ MoveEnd:
 	move HORN_DRILL,   OHKO_EFFECT,                  1, NORMAL,    30, 1
 	move TACKLE,       NO_ADDITIONAL_EFFECT,        35, NORMAL,    95, 5
 	move BODY_SLAM,    PARALYZE_SIDE_EFFECT2,       85, NORMAL,   100, 2
-	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,    85, 3
+	move WRAP,         TRAPPING_EFFECT,             15, NORMAL,    85, 4
 	move TAKE_DOWN,    RECOIL_EFFECT,               90, NORMAL,    85, 2
 	move THRASH,       THRASH_PETAL_DANCE_EFFECT,   90, NORMAL,   100, 1
 	move DOUBLE_EDGE,  RECOIL_EFFECT,              100, NORMAL,   100, 2

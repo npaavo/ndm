@@ -543,15 +543,26 @@ _NewBicycleText::
 	done
 
 _PushStartText::
-	text "Hold B to run!"
-	line "#MON will"
-	cont "be more likely"
-	cont "to attack runners!"
+	text "There are some"
+	line "samples being"
+	cont "scienced here."
+	
+	para "You're not a"
+	line "scientist, so"
+	cont "that's the best"
+	cont "description you"
+	cont "can muster."
 	done
 
 _SaveOptionText::
-	text "SAVING is quick"
-	line "and easy! Do it!"
+	text "It's a map of KANTO"
+	line "with different"
+	cont "areas in various"
+	cont "colors."
+	
+	para "It seems to be"
+	line "related to"
+	cont "population."
 	done
 
 _StrengthsAndWeaknessesText::

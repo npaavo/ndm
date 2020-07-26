@@ -34,7 +34,7 @@ MapSpriteSets:
 	db $01 ; ROUTE_21
 	db $01 ; ROUTE_22
 	db $06 ; ROUTE_23
-	db $02 ; ROUTE_24
+	db $04 ; ROUTE_24
 	db $02 ; ROUTE_25
 
 ; Format:
