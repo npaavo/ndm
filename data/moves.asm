@@ -145,7 +145,7 @@ MoveEnd:
 	move CONSTRICT,    SPEED_DOWN_SIDE_EFFECT,      30, NORMAL,   100, 5
 	move AMNESIA,      SPECIAL_UP2_EFFECT,           0, PSYCHIC,  100, 1
 	move KINESIS,      ACCURACY_DOWN1_EFFECT,        0, PSYCHIC,   80, 3
-	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,   100, 2
+	move SOFTBOILED,   HEAL_EFFECT,                  0, NORMAL,   100, 2 ; renamed to nurture
 	move HI_JUMP_KICK, JUMP_KICK_EFFECT,            85, FIGHTING,  90, 2
 	move GLARE,        PARALYZE_EFFECT,              0, NORMAL,    75, 2
 	move DREAM_EATER,  DREAM_EATER_EFFECT,         100, PSYCHIC,  100, 2

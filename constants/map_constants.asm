@@ -131,15 +131,15 @@ ENDM
 	mapconst CELADON_MART_2F,                4, 10 ; $7B
 	mapconst CELADON_MART_3F,                4, 10 ; $7C
 	mapconst CELADON_MART_4F,                4, 10 ; $7D
-	mapconst CELADON_MART_ROOF,              8, 12 ; $7E
+	mapconst CELADON_MART_ROOF,              4, 10 ; $7E
 	mapconst CELADON_MART_ELEVATOR,          2,  2 ; $7F
 	mapconst CELADON_MANSION_1F,             4,  6 ; $80
 	mapconst CELADON_MANSION_2F,             6,  10 ; $81
 	mapconst CELADON_MANSION_3F,             8,  12 ; $82
 	mapconst CELADON_MANSION_ROOF,           8,  12 ; $83
 	mapconst CELADON_MANSION_ROOF_HOUSE,     4,  4 ; $84
-	mapconst CELADON_POKECENTER,             4,  4 ; $85
-	mapconst CELADON_GYM,                    9,  5 ; $86
+	mapconst CELADON_POKECENTER,             4,  8 ; $85
+	mapconst CELADON_GYM,                    9,  9 ; $86
 	mapconst GAME_CORNER,                    9, 10 ; $87
 	mapconst CELADON_MART_5F,                4, 10 ; $88
 	mapconst GAME_CORNER_PRIZE_ROOM,         4,  5 ; $89
@@ -235,9 +235,9 @@ ENDM
 	mapconst CERULEAN_CAVE_B1F,              9, 15 ; $E3
 	mapconst CERULEAN_CAVE_1F,               9, 15 ; $E4
 	mapconst NAME_RATERS_HOUSE,              4,  4 ; $E5
-	mapconst CERULEAN_BADGE_HOUSE,           4,  4 ; $E6
+	mapconst CERULEAN_BADGE_HOUSE,           8,  8 ; $E6 ; mod - Rt9 underground fossil cave
 	mapconst UNUSED_MAP_E7,                  0,  0 ; $E7
-	mapconst ROCK_TUNNEL_B1F,               18, 20 ; $E8
+	mapconst ROCK_TUNNEL_B1F,                8, 13 ; $E8
 	mapconst SILPH_CO_9F,                    9, 13 ; $E9
 	mapconst SILPH_CO_10F,                   9,  8 ; $EA
 	mapconst SILPH_CO_11F,                   9,  9 ; $EB

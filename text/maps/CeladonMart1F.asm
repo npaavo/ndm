@@ -1,31 +1,30 @@
-_CeladonMart1Text1::
-	text "Hello! Welcome to"
-	line "CELADON DEPT."
-	cont "STORE."
-
-	para "The board on the"
-	line "right describes"
-	cont "the store layout."
-	done
-
-_CeladonMart1Text2::
-	text "1F: SERVICE"
-	line "    COUNTER"
-
-	para "2F: TRAINER'S"
-	line "    MARKET"
-
-	para "3F: TV GAME SHOP"
-
-	para "4F: WISEMAN GIFTS"
-
-	para "5F: DRUG STORE"
-
-	para "ROOFTOP SQUARE:"
-	line "VENDING MACHINES"
-	done
-
 _CeladonMart1Text3::
-	text "1F: SERVICE"
-	line "    COUNTER"
+	text "Too many..."
+	line "prices..."
+	cont "...and values."
+	
+	para "I'm losing it!"
+	done
+
+_CeladonMart1Text4::
+	text "This shop has just"
+	line "about everything!" 
+	done
+
+_CeladonMart1Text5::
+	text "I've set the high"
+	line "score on this"
+	cont "display game."
+	
+	para "Now everyone will"
+	line "know that NIC"
+	cont "is a cool kid!"
+	
+	para "When I set high"
+	line "scores at home,"
+	cont "I'm the only one"
+	cont "that knows."
+	
+	para "That's just basic"
+	line "marketing!"
 	done

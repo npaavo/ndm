@@ -429,15 +429,15 @@ OaksLabScript11:
 	ld a, [wRivalStarter]
 	cp STARTER2
 	jr nz, .NotSquirtle
-	ld a, $4
+	ld a, $5
 	jr .done
 .NotSquirtle
 	cp STARTER3
 	jr nz, .Charmander
-	ld a, $5
+	ld a, $6
 	jr .done
 .Charmander
-	ld a, $6
+	ld a, $7
 .done
 	ld [wTrainerNo], a
 	ld a, $1

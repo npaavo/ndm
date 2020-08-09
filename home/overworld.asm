@@ -591,6 +591,7 @@ CheckAndSetDarkMaps::
 	
 DarkMaps:
 	db ROCK_TUNNEL_1F
+	db ROCK_TUNNEL_B1F
 	db BLUES_HOUSE
 	db ROUTE_2_TRADE_HOUSE
 	db REDS_HOUSE_2F

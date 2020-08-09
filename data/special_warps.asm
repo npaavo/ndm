@@ -107,7 +107,7 @@ LavenderTownFlyWarp:
 VermilionCityFlyWarp:
 	FLYWARP_DATA VERMILION_CITY_WIDTH,   4, 17
 CeladonCityFlyWarp:
-	FLYWARP_DATA CELADON_CITY_WIDTH,    10, 41
+	FLYWARP_DATA CELADON_CITY_WIDTH,    32, 26
 FuchsiaCityFlyWarp:
 	FLYWARP_DATA FUCHSIA_CITY_WIDTH,    28, 19
 CinnabarIslandFlyWarp:
@@ -119,4 +119,4 @@ SaffronCityFlyWarp:
 Route4FlyWarp:
 	FLYWARP_DATA ROUTE_4_WIDTH,          6, 11
 Route10FlyWarp:
-	FLYWARP_DATA ROUTE_10_WIDTH,        20, 11
+	FLYWARP_DATA ROUTE_10_WIDTH,        11, 3

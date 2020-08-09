@@ -48,10 +48,9 @@ _Route10AfterBattleText3::
 	done
 
 _Route10BattleText4::
-	text "I've been to a"
-	line "#MON GYM a few"
-	cont "times. But, I"
-	cont "lost each time."
+	text "That sign can't"
+	line "stop me, because"
+	cont "I don't care!"
 	done
 
 _Route10EndBattleText4::
@@ -60,9 +59,8 @@ _Route10EndBattleText4::
 	prompt
 
 _Route10AfterBattleText4::
-	text "I noticed some"
-	line "#MANIACs"
-	cont "prowling around."
+	text "Trespassing is"
+	line "exciting!"
 	done
 
 _Route10BattleText5::
@@ -104,6 +102,18 @@ _Route10Text7::
 	text "ROCK TUNNEL"
 	done
 
-_Route10Text10::
+_Route10PowerPlantWarning1::
 	text "POWER PLANT"
+	
+	para "AUTHORIZED"
+	line "PERSONNEL ONLY"
+	
+	para "Trespassing is"
+	line "dangerous and"
+	cont "illegal."
+	done
+	
+_Route10PowerPlantWarning2::
+	text "WARNING: HIGH"
+	line "VOLTAGE"
 	done

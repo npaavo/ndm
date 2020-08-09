@@ -54,6 +54,7 @@ EndOfBattle:
 	ld [wForcePlayerToChooseMon], a
 	ld [wNumRunAttempts], a
 	ld [wEscapedFromBattle], a
+	ldh [hVendingMachineItem], a ; MOD, fixes shiny palettes
 	ld hl, wPartyAndBillsPCSavedMenuItem
 	ld [hli], a
 	ld [hli], a

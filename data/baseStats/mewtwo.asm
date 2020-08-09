@@ -12,10 +12,10 @@ INCBIN "pic/bmon/mewtwo.pic",0,1 ; 77, sprite dimensions
 dw MewtwoPicFront
 dw MewtwoPicBack
 ; attacks known at lvl 0
-db CONFUSION
+db MIND_SPARK
 db DISABLE
 db SWIFT
-db PSYCHIC_M
+db 
 db 5 ; growth rate
 ; learnset
 	tmlearn 1,5,6,8

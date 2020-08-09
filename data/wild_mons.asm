@@ -229,7 +229,7 @@ WildDataPointers:
 	dw DungeonMonsB1
 	dw DungeonMons1
 	dw NoMons
-	dw NoMons
+	dw FossilCaveMons ; MOD - fossil cave
 	dw NoMons
 	dw TunnelMonsB2
 	dw NoMons
@@ -324,3 +324,4 @@ INCLUDE "data/wildPokemon/victoryroad1.asm"
 INCLUDE "data/wildPokemon/diglettscave.asm"
 INCLUDE "data/wildPokemon/bonecave.asm"
 INCLUDE "data/wildPokemon/sewer_plant.asm"
+INCLUDE "data/wildPokemon/fossilcave.asm"

@@ -11,22 +11,23 @@ _Route4Text1::
 	done
 
 _Route4BattleText1::
-	text "I came to get my"
-	line "mushroom #MON!"
+	text "Hey you!"
+	line "Did you come from"
+	cont "MT. MOON?"
 	done
 
 _Route4EndBattleText1::
-	text "Oh! My cute"
-	line "mushroom #MON!"
+	text "Well, that"
+	line "doesn't answer the"
+	cont "question, but"
+	cont "congrats anyway!"
 	prompt
 
 _Route4AfterBattleText1::
-	text "There might not"
-	line "be any more"
-	cont "mushrooms here."
-
-	para "I think I got"
-	line "them all."
+	text "Everyone just"
+	line "wants to battle,"
+	cont "I guess."
+	
 	done
 
 _Route4Text5::

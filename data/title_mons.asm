@@ -8,12 +8,12 @@ TitleMons:
 	db SCYTHER
 	db JOLTEON
 	db ARTICUNO
-	db ONIX
+	db RAPIDASH
 	db NIDOQUEEN
 	db LICKITUNG
 	db TAUROS
 	db JYNX
-	db GYARADOS
-	db CLEFABLE
+	db ONIX
+	db KINGLER
 	db ALAKAZAM
 	

@@ -1085,7 +1085,8 @@ INCLUDE "data/mapHeaders/Route7.asm"
 INCLUDE "data/mapObjects/Route7.asm"
 Route7_Blocks: INCBIN "maps/Route7.blk"
 
-CeladonPokecenter_Blocks:
+CeladonPokecenter_Blocks: INCBIN "maps/CeladonPokecenter.blk"
+
 RockTunnelPokecenter_Blocks:
 MtMoonPokecenter_Blocks: INCBIN "maps/MtMoonPokecenter.blk"
 

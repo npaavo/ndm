@@ -259,7 +259,8 @@ SpearowEvosMoves:
 	db EV_LEVEL, 20, FEAROW
 	db 0
 ; Learnset
-	db 9, LEER
+	db 6, LEER
+	db 9, SCRATCH
 	db 12, FURY_ATTACK
 	db 15, MIRROR_MOVE
 	db 18, DRILL_PECK
@@ -706,8 +707,9 @@ OnixEvosMoves:
 FearowEvosMoves:
 ; Evolutions
 	db 0
-; Learnset
-	db 9, LEER
+; Learnset	
+	db 6, LEER
+	db 9, SCRATCH
 	db 12, FURY_ATTACK
 	db 15, MIRROR_MOVE
 	db 18, DRILL_PECK
@@ -724,8 +726,8 @@ PidgeyEvosMoves:
 ; Learnset
 	db 6, SAND_ATTACK
 	db 9, QUICK_ATTACK
-	db 12, WHIRLWIND
-	db 15, WING_ATTACK
+	db 12, WING_ATTACK
+	db 15, FLY
 	db 18, AGILITY
 	db 21, MIRROR_MOVE
 	db 24, RAZOR_WIND
@@ -1308,7 +1310,7 @@ VulpixEvosMoves:
 	db 0
 ; Learnset
 	db 6, QUICK_ATTACK
-	db 9, ROAR
+	db 9, GLARE
 	db 12, CONFUSE_RAY
 	db 15, FIREBALL
 	db 18, FIRE_SPIN
@@ -1323,7 +1325,7 @@ NinetalesEvosMoves:
 	db 0
 ; Learnset
 	db 6, QUICK_ATTACK
-	db 9, ROAR
+	db 9, GLARE
 	db 12, CONFUSE_RAY
 	db 15, FIREBALL
 	db 18, FIRE_SPIN
@@ -1549,11 +1551,11 @@ JigglypuffEvosMoves:
 	db EV_ITEM, MOON_STONE, 1, WIGGLYTUFF
 	db 0
 ; Learnset
-	db 6, POUND
+	db 6, LEER
 	db 9, DISABLE
 	db 12, BIDE
-	db 15, DEFENSE_CURL
-	db 18, DOUBLESLAP
+	db 15, DOUBLESLAP
+	db 18, DEFENSE_CURL
 	db 21, REST
 	db 24, BODY_SLAM
 	db 27, COUNTER
@@ -1564,11 +1566,11 @@ WigglytuffEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	db 6, POUND
+	db 6, LEER
 	db 9, DISABLE
 	db 12, BIDE
-	db 15, DEFENSE_CURL
-	db 18, DOUBLESLAP
+	db 15, DOUBLESLAP
+	db 18, DEFENSE_CURL
 	db 21, REST
 	db 24, BODY_SLAM
 	db 27, COUNTER
@@ -2211,8 +2213,8 @@ PidgeottoEvosMoves:
 ; Learnset
 	db 6, SAND_ATTACK
 	db 9, QUICK_ATTACK
-	db 12, WHIRLWIND
-	db 15, WING_ATTACK
+	db 12, WING_ATTACK
+	db 15, FLY
 	db 18, AGILITY
 	db 21, MIRROR_MOVE
 	db 24, RAZOR_WIND
@@ -2226,8 +2228,8 @@ PidgeotEvosMoves:
 ; Learnset
 	db 6, SAND_ATTACK
 	db 9, QUICK_ATTACK
-	db 12, WHIRLWIND
-	db 15, WING_ATTACK
+	db 12, WING_ATTACK
+	db 15, FLY
 	db 18, AGILITY
 	db 21, MIRROR_MOVE
 	db 24, RAZOR_WIND

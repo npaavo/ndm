@@ -1465,8 +1465,8 @@ _CharizardDexEntry:: ;mod
 	dex
 
 _OddishDexEntry:: ;mod
-	text "Its feet are better"
-	next "at burrowing than"
+	text "Its feet are used"
+	next "for burrowing, not"
 	next "running. It"
 
 	page "clumsily hobbles"

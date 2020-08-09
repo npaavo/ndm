@@ -51,7 +51,6 @@ ReadTrainer:
 	jr z, .SpecialTrainer ; if so, check for special moves
 	
 	; MOD: evaluate what level they should be at.
-	; We're hijacking the first byte for how many mons they can use of their list.
 	
 	;let's make A the level they should be.
 	push hl ; hold on to grassmons
@@ -59,15 +58,25 @@ ReadTrainer:
 	pop hl ; grassmons again
 		
 	ld a, [wEffectiveNumBadgesOwned]
+	and a  ; =0?
+	jr z, .minLevelTrainers ; manually set to 8
+	
 	inc a ; base starts at 0-7
 	cp 5
-	jr nc, .maxLevelTrainers ; if we have 3 badges, we've hit the cap that trainers can be (30)
+	jr nc, .maxLevelTrainers ; if we have 4 badges, we've hit the cap that trainers can be (30)
 
 	ld [H_MULTIPLICAND], a 
 	ld a, 7 ; 7 x badges+1 
 	ld [H_MULTIPLIER], a
 	call Multiply
+	ld a, [hRandomAdd]
+	and 7 ; bit mask, this subtracts the value by 0-7
+	ld b, a
 	ld a, [H_PRODUCT+1]
+	sub b	
+	jr .SetTrainerLevel
+.minLevelTrainers
+	ld a, 8
 	jr .SetTrainerLevel
 .maxLevelTrainers
 	ld a, MAX_LEVEL

@@ -1,0 +1,25 @@
+FossilCaveMons:
+	db $01
+	db 2,ZUBAT
+	db 2,ZUBAT
+	db 2,ZUBAT
+	db 2,ZUBAT
+	db 2,ZUBAT
+	db 3,KABUTO
+	db 3,OMANYTE
+	db 7,KABUTOPS
+	db 7,OMASTAR
+	db 10,GOLBAT
+	db $00
+	db $20
+	db 2,KABUTO
+	db 2,OMANYTE
+	db 2,KABUTO
+	db 2,OMANYTE
+	db 2,KABUTO
+	db 2,OMANYTE
+	db 2,LAPRAS
+	db 7,KABUTOPS
+	db 7,OMASTAR
+	db 10,LAPRAS
+	db $00

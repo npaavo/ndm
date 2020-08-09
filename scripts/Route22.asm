@@ -25,15 +25,15 @@ Route22Script_50ed6:
 	ld a, [wRivalStarter]
 	cp STARTER2
 	jr nz, .NotSquirtle
-	ld a, $7
+	ld a, $8
 	jr .done
 .NotSquirtle
 	cp STARTER3
 	jr nz, .Charmander
-	ld a, $8
+	ld a, $9
 	jr .done
 .Charmander
-	ld a, $9
+	ld a, $a
 .done
 	ld [wTrainerNo], a
 	ret

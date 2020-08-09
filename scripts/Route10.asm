@@ -22,7 +22,8 @@ Route10_TextPointers:
 	dw Route10Text7
 	dw PokeCenterSignText
 	dw Route10Text9
-	dw Route10Text10
+	dw Route10PowerPlantWarning1
+	dw Route10PowerPlantWarning2
 
 Route10TrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_ROUTE_10_TRAINER_0
@@ -190,9 +191,13 @@ Route10AfterBattleText6:
 
 Route10Text9:
 Route10Text7:
-	TX_FAR _Route10Text7 ; _Route10Text9
+	TX_FAR _Route10Text7 
 	db "@"
 
-Route10Text10:
-	TX_FAR _Route10Text10
+Route10PowerPlantWarning1:
+	TX_FAR _Route10PowerPlantWarning1
+	db "@"
+	
+Route10PowerPlantWarning2:
+	TX_FAR _Route10PowerPlantWarning2
 	db "@"

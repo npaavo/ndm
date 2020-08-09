@@ -2435,16 +2435,11 @@ InitBattleEnemyParameters::
 	; it's a trainer. all special battles will be overriden manually, so let's calc what party to use
 	ld a, [wEffectiveNumBadgesOwned]
 	inc a 
-	cp 3
-	jr z, .twobadges
-	cp 4
-	jr nc, .settothree
+	cp 5
+	jr nc, .settofour ; at 4+ badges, use the same party: #4, the highest.
 	jr .settrainernum
-.twobadges
-	dec a
-	jr .settrainernum
-.settothree
-	ld a, 3
+.settofour
+	ld a, 4
 .settrainernum	
 	ld [wTrainerNo], a
 	pop af
@@ -2559,10 +2554,14 @@ EngageMapTrainer::
 	ld [wEngagedTrainerSet], a
 	jp PlayTrainerMusic
 
-
+SetPartyByBadgeCount::
 SetGymPartyByBadgeCount::
 	ld a, [wEffectiveNumBadgesOwned]
 	inc a
+	cp 4
+	jr nc, .noCapAdjust
+	ld a, 4
+.noCapAdjust
 	ld [wTrainerNo], a 
 	ret
 

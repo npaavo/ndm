@@ -1,13 +1,23 @@
 _RockTunnelPokecenterText2::
-	text "The element types"
-	line "of #MON make"
-	cont "them stronger"
-	cont "than some types"
-	cont "and weaker than"
-	cont "others!"
+	text "There have been"
+	line "frequent power"
+	cont "outages recently."
+	
+	para "Probably a darn"
+	line "PIKACHU nibbling"
+	cont "on wires!"
 	done
 
 _RockTunnelPokecenterText3::
-	text "I sold a useless"
-	line "NUGGET for ¥5000!"
+	text "I wish I had a"
+	line "LANTERN so I"
+	cont "could explore"
+	cont "the caves."
+	
+	para "Some people also"
+	line "keep #MON"
+	cont "that can light up"
+	cont "on them."
+	
+	para "Seems exploitive!"	
 	done

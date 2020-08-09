@@ -60,7 +60,7 @@ SetPal_Battle:
 	or b
 	;if they result in 0xFF, then they use a palette offset.
 	cp $FF
-	;jr nz, .SkipTheirShiny
+	jr nz, .SkipTheirShiny
 	;this is the part where we figure out what the palette offset actually is.
 	ld a, b
 	and $F ;mask off so only lowest 4 bits remain (0-16)
@@ -113,9 +113,26 @@ SetPal_StatusScreen:
 	ld a, $1 ; not pokemon
 .pokemon
 
+	push af
+	xor a
+	ldh [hVendingMachineItem], a ; reset
 
-	;on stats screen, pokemon is loaded in
-
+	;on stats screen, pokemon is loaded in wLoadedMon
+	ld a, [wLoadedMonDVs] 
+	ld b, a
+	ld a, [wLoadedMonDVs+1]
+	or b
+	;if they result in 0xFF, then they use a palette offset.
+	cp $FF
+	jr nz, .SkipShiny
+	;this is the part where we figure out what the palette offset actually is.
+	
+	ld a, b
+	and $F ;mask off so only lowest 4 bits remain (0-16)
+	ldh [hVendingMachineItem], a ; store palette offset for DeterminePaletteID	
+	
+.SkipShiny
+	pop af
 	call DeterminePaletteIDOutOfBattle
 	push af
 	ld hl, wPalPacket + 1
@@ -139,6 +156,8 @@ SetPal_Pokedex:
 	ld de, wPalPacket
 	ld bc, $10
 	call CopyData
+	xor a
+	ldh [hVendingMachineItem], a
 	ld a, [wcf91]
 	call DeterminePaletteIDOutOfBattle
 	ld hl, wPalPacket + 3
@@ -328,6 +347,8 @@ DeterminePaletteIDOutOfBattle:
 	ld d, 0
 	ld hl, MonsterPalettes ; not just for Pokemon, Trainers use it too
 	add hl, de ; hl is the stanadrd palette of the mon.
+	
+	
 	
 	ld a, [hVendingMachineItem] ; load in the offset value.
 	and a ; "cp 0 (but good)"

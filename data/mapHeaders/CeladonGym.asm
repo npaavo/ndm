@@ -1,5 +1,5 @@
 CeladonGym_h:
-	db GYM ; tileset
+	db LAB ; tileset
 	db CELADON_GYM_HEIGHT, CELADON_GYM_WIDTH ; dimensions (y, x)
 	dw CeladonGym_Blocks ; blocks
 	dw CeladonGym_TextPointers ; texts

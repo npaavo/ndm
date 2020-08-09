@@ -2,18 +2,20 @@ CeladonMart1F_Script:
 	jp EnableAutoTextBoxDrawing
 
 CeladonMart1F_TextPointers:
-	dw CeladonMart1Text1
-	dw CeladonMart1Text2
+	dw CeladonMart1Clerk1Text
+	dw CeladonMart1Clerk2Text
 	dw CeladonMart1Text3
-
-CeladonMart1Text1:
-	TX_FAR _CeladonMart1Text1
-	db "@"
-
-CeladonMart1Text2:
-	TX_FAR _CeladonMart1Text2
-	db "@"
+	dw CeladonMart1Text4
+	dw CeladonMart1Text5
 
 CeladonMart1Text3:
 	TX_FAR _CeladonMart1Text3
+	db "@"
+
+CeladonMart1Text4:
+	TX_FAR _CeladonMart1Text4
+	db "@"
+
+CeladonMart1Text5:
+	TX_FAR _CeladonMart1Text5
 	db "@"

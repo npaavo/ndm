@@ -690,7 +690,7 @@ FieldMoveNames:
 	db "FLASH@"
 	db "DIG@"
 	db "TELEPORT@"
-	db "SOFTBOILED@"
+	db "NURTURE@"
 
 PokemonMenuEntries:
 	db   "STATS"
