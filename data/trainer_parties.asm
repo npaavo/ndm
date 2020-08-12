@@ -35,8 +35,8 @@ TrainerDataPointers:
 	dw LarsData
 	dw TobiasData
 	dw LtSurgeData
-	dw ErikaData
-	dw KogaData
+	dw MaxineData
+	dw HughData
 	dw BlaineData
 	dw SabrinaData
 	dw GentlemanData
@@ -321,13 +321,13 @@ LtSurgeData: ; Vermilion gym leader, TODO: mod to Tori, mermaid performer
 	db $FF,26,CLOYSTER,26,STARMIE,26,GYARADOS,26,OMASTAR,26,SEADRA,26,DEWGONG,0 ; 2 badges
 	db $FF,30,CLOYSTER,30,STARMIE,30,GYARADOS,30,OMASTAR,30,SEADRA,30,DEWGONG,0 ; 3+ badges
 	
-ErikaData:; Celadon gym leader, TODO: mod to ???, chief research scientist 
+MaxineData:; Celadon gym leader, TODO: mod to Maxine, chief research scientist 
 	db $FF,10,DITTO,10,VOLTORB,10,KOFFING,10,MAGNEMITE,10,GRIMER,10,PORYGON,0 ; 0 badge
 	db $FF,18,DITTO,18,VOLTORB,18,KOFFING,18,MAGNEMITE,18,GRIMER,18,PORYGON,0 ; 1 badge
 	db $FF,26,DITTO,26,ELECTRODE,26,WEEZING,26,MAGNETON,26,MUK,26,PORYGON,0 ; 2 badges	
 	db $FF,30,DITTO,30,ELECTRODE,30,WEEZING,30,MAGNETON,30,MUK,30,PORYGON,0 ; 3+ badges	
 	
-KogaData: ; Saffron gym leader, TODO: mod to Hugh, mayor of pkmn/human city
+HughData: ; Saffron gym leader, TODO: mod to Hugh, mayor of pkmn/human city
 	db $FF,10,HITMONCHAN,10,JYNX,10,HITMONLEE,10,MR_MIME,10,MACHOP,10,ABRA,0 ; 0 badge
 	db $FF,18,HITMONCHAN,18,JYNX,18,HITMONLEE,18,MR_MIME,18,MACHOKE,18,KADABRA,0 ; 1 badge
 	db $FF,26,HITMONCHAN,26,JYNX,26,HITMONLEE,26,MR_MIME,26,MACHAMP,26,ALAKAZAM,0 ; 2 badges	

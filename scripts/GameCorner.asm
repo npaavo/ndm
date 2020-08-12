@@ -284,7 +284,7 @@ CeladonGameCornerText6:
 
 CeladonGameCornerText7:
 	TX_ASM
-	CheckEvent EVENT_BEAT_ERIKA
+	CheckEvent EVENT_BEAT_CELADON_GYM_MAXINE
 	ld hl, CeladonGameCornerText_48dca
 	jr z, .asm_48dc4
 	ld hl, CeladonGameCornerText_48dcf

@@ -1,89 +1,81 @@
 _VermilionCityText1::
-	text "We're careful"
-	line "about pollution!"
-
-	para "We've heard GRIMER"
-	line "multiplies in"
-	cont "toxic sludge!"
+	text "VERMILION is"
+	line "still as pretty"
+	cont "as it was"
+	cont "decades ago!"
+	
+	para "All these sea"
+	line "cottages are"
+	cont "the originals!"
 	done
-
-_VermilionCityText_198a7::
-	text "Did you see S.S."
-	line "ANNE moored in"
-	cont "the harbor?"
+	
+_VermilionCityText2::
+	text "I dropped my"
+	line "watch off this"
+	cont "pier years ago."
+	
+	para "I wonder if it"
+	line "left VERMILION..."
+	
+	para "I sure haven't..."
 	done
-
-_VermilionCityText_198ac::
-	text "So, S.S.ANNE has"
-	line "departed!"
-
-	para "She'll be back in"
-	line "about a year."
-	done
-
-_SSAnneWelcomeText4::
-	text "Welcome to S.S."
-	line "ANNE!"
-	done
-
-_SSAnneWelcomeText9::
-	text "Welcome to S.S."
-	line "ANNE!"
-
-	para "Excuse me, do you"
-	line "have a ticket?"
-	prompt
-
-_SSAnneFlashedTicketText::
-	text "<PLAYER> flashed"
-	line "the S.S.TICKET!"
-
-	para "Great! Welcome to"
-	line "S.S.ANNE!"
-	done
-
-_SSAnneNoTicketText::
-	text "<PLAYER> doesn't"
-	line "have the needed"
-	cont "S.S.TICKET."
-
-	para "Sorry!"
-
-	para "You need a ticket"
-	line "to get aboard."
-	done
-
-_SSAnneNotHereText::
-	text "The ship set sail."
+	
+_VermilionCityText3::
+	text "Have you been"
+	line "to one of TORI's"
+	cont "WATER #MON"
+	cont "shows?"
+	
+	para "It's quite a sight!"
+	line "People come from"
+	cont "all over to see"
+	cont "synchronized"
+	cont "swimming with a"
+	cont "#MON twist!"
+	
+	para "TORI's real cute,"
+	line "too..."
+	
 	done
 
 _VermilionCityText4::
-	text "I'm putting up a"
-	line "building on this"
-	cont "plot of land."
+	text "The show isn't"
+	line "until tomorrow,"
+	cont "honey!"
 
-	para "My #MON is"
-	line "tamping the land."
+	para "The ferry isn't"
+	line "here!"
+	
+	para "I know you're"
+	line "excited, but..."
 	done
 
 _VermilionCityText5::
-	text "MACHOP: Guoh!"
-	line "Gogogoh!@@"
-
-_VermilionCityText14::
-	text ""
-	para "A MACHOP is"
-	line "stomping the land"
-	cont "flat."
+	text "I want to get"
+	line "the best seats"
+	cont "to TORI's show!"
+	
+	para "Her water"
+	line "#MON are so"
+	cont "well-trained!"
+	
+	para "OH! Maybe she'll"
+	line "use her GYARADOS"
+	cont "this time!"
 	done
 
-_VermilionCityText6::
-	text "S.S.ANNE is a"
-	line "famous luxury"
-	cont "cruise ship."
 
-	para "We visit VERMILION"
-	line "once a year."
+_VermilionCityText6::
+	text "I work the ferry"
+	line "to the GYM."
+	
+	para "It doesn't run"
+	line "today. If you're"
+	cont "in a hurry..."
+	cont "swim I guess?"
+	
+	para "Watch out for"
+	line "sea #MON!"
 	done
 
 _VermilionCityText7::
@@ -93,17 +85,7 @@ _VermilionCityText7::
 	done
 
 _VermilionCityText8::
-	text "NOTICE!"
-
-	para "ROUTE 12 may be"
-	line "blocked off by a"
-	cont "sleeping #MON."
-
-	para "Detour through"
-	line "ROCK TUNNEL to"
-	cont "LAVENDER TOWN."
-
-	para "VERMILION POLICE"
+	text "Route 11"
 	done
 
 _VermilionCityText11::
@@ -123,4 +105,8 @@ _VermilionCityText12::
 
 _VermilionCityText13::
 	text "VERMILION HARBOR"
+	done
+
+_VermilionCityText14::
+	text "14"
 	done

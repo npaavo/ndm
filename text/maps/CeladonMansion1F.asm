@@ -2,11 +2,14 @@ _CeladonMansion1Text1::
 	text "MEOWTH: Meow!@@"
 
 _CeladonMansion1Text2::
-	text "My dear #MON"
-	line "keep me company."
+	text "The SEWAGE PLANT"
+	line "is currently"
+	cont "under lockdown."
 
-	para "MEOWTH even brings"
-	line "money home!"
+	para "Some dangerous"
+	line "#MON have"
+	cont "suddenly taken"
+	cont "over!"
 	done
 
 _CeladonMansion1Text3::

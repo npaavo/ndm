@@ -593,10 +593,19 @@ RocketHideout4HiddenObjects:
 	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 SaffronPokecenterHiddenObjects:
-	db $04,$00,$04
+	db $08,$00,$04
+	db Bank(PrintBenchGuyText)
+	dw PrintBenchGuyText	
+	db $04,$0E,$04
 	db Bank(PrintBenchGuyText)
 	dw PrintBenchGuyText
-	db $03,$07,$04
+	db $07,$07,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $07,$09,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $07,$13,$04
 	db BANK(OpenPokemonCenterPC)
 	dw OpenPokemonCenterPC
 	db $FF

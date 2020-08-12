@@ -1,87 +1,88 @@
 _CeladonCityText1::
-	text "I got my KOFFING"
-	line "in CINNABAR!"
-
-	para "It's nice, but it"
-	line "breathes poison"
-	cont "when it's angry!"
+	text "Looking to move"
+	line "into one of our"
+	cont "fine new homes?"
+	
+	para "Don't worry, you"
+	line "can't smell the"
+	cont "SEWAGE PLANT from"
+	cont "inside!"
 	done
 
 _CeladonCityText2::
-	text "Heheh! This GYM"
-	line "is great! It's"
-	cont "full of women!"
+	text "The arena is"
+	line "closed for now."
+	
+	para "I can't wait to"
+	line "win big betting"
+	cont "on battles"
+	cont "again!"
 	done
 
 _CeladonCityText3::
-	text "The GAME CORNER"
-	line "is bad for our"
-	cont "city's image!"
+	text "I can get anything"
+	line "I need from the"
+	cont "CELADON MART."
+	
+	para "It's just down the"
+	line "street from my"
+	cont "apartment. It's so"
+	cont "convenient!"
 	done
 
 _CeladonCityText4::
-	text "Moan! I blew it"
-	line "all at the slots!"
-
-	para "I knew I should"
-	line "have cashed in my"
-	cont "coins for prizes!"
+	text "I wonder what cool"
+	line "experiments go on"
+	cont "in the lab!"
+	
+	para "MAXINE is an idol"
+	line "for geniuses like"
+	cont "myself!"
 	done
 
-_TM41PreText::
-	text "Hello, there!"
+_CeladonCityText5::
+	text "Shhh!"
+	line "I'm investigating"
+	cont "the CELADON"
+	cont "SEWAGE PLANT!"
 
-	para "I've seen you,"
-	line "but I never had a"
-	cont "chance to talk!"
-
-	para "Here's a gift for"
-	line "dropping by!"
-	prompt
-
-_ReceivedTM41Text::
-	text "<PLAYER> received"
-	line "@"
-	TX_RAM wcf4b
-	text "!@@"
-
-_TM41ExplanationText::
-	text "TM41 teaches"
-	line "SOFTBOILED!"
-
-	para "Only one #MON"
-	line "can use it!"
-
-	para "That #MON is"
-	line "CHANSEY!"
-	done
-
-_TM41NoRoomText::
-	text "Oh, your pack is"
-	line "full of items!"
+	para "They've been"
+	line "neglecting their"
+	cont "safety tests!"
 	done
 
 _CeladonCityText6::
-	text "This is my trusted"
-	line "pal, POLIWRATH!"
+	text "Looking for"
+	line "trouble?"
 
-	para "It evolved from"
-	line "POLIWHIRL when I"
-	cont "used WATER STONE!"
+	para "No? Sure. That's"
+	line "what they all say!"
 	done
 
 _CeladonCityText7::
-	text "POLIWRATH: Ribi"
-	line "ribit!@@"
+	text "The café above the"
+	line "#MON CENTER is"
+	cont "is a popular hang-"
+	cont "out for teens."
+	done
 
 _CeladonCityText8::
-	text "What are you"
-	line "staring at?"
+	text "Clean up that mud"
+	line "on your shoes!"
+	
+	para "You're getting"
+	line "our streets dirty!"
 	done
 
 _CeladonCityText9::
-	text "Keep out of TEAM"
-	line "ROCKET's way!"
+	text "CELADON has all I"
+	line "need!"
+	
+	para "It's a model of a"
+	line "modern city!"
+	
+	para "I should move"
+	line "here!"
 	done
 
 _CeladonCityText10::

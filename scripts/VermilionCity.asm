@@ -133,87 +133,17 @@ VermilionCityText1:
 	db "@"
 
 VermilionCityText2:
-	TX_ASM
-	CheckEvent EVENT_SS_ANNE_LEFT
-	jr nz, .asm_1989e
-	ld hl, VermilionCityText_198a7
-	call PrintText
-	jr .asm_198a4
-.asm_1989e
-	ld hl, VermilionCityText_198ac
-	call PrintText
-.asm_198a4
-	jp TextScriptEnd
-
-VermilionCityText_198a7:
-	TX_FAR _VermilionCityText_198a7
-	db "@"
-
-VermilionCityText_198ac:
-	TX_FAR _VermilionCityText_198ac
+	TX_FAR _VermilionCityText2
 	db "@"
 
 VermilionCityText3:
-	TX_ASM
-	CheckEvent EVENT_SS_ANNE_LEFT
-	jr nz, .asm_198f6
-	ld a, [wSpriteStateData1 + 9]
-	cp SPRITE_FACING_RIGHT
-	jr z, .asm_198c8
-	ld hl, VermilionCityCoords1
-	call ArePlayerCoordsInArray
-	jr nc, .asm_198d0
-.asm_198c8
-	ld hl, SSAnneWelcomeText4
-	call PrintText
-	jr .asm_198fc
-.asm_198d0
-	ld hl, SSAnneWelcomeText9
-	call PrintText
-	ld b, S_S_TICKET
-	predef GetQuantityOfItemInBag
-	ld a, b
-	and a
-	jr nz, .asm_198e9
-	ld hl, SSAnneNoTicketText
-	call PrintText
-	jr .asm_198fc
-.asm_198e9
-	ld hl, SSAnneFlashedTicketText
-	call PrintText
-	ld a, $4
-	ld [wVermilionCityCurScript], a
-	jr .asm_198fc
-.asm_198f6
-	ld hl, SSAnneNotHereText
-	call PrintText
-.asm_198fc
-	jp TextScriptEnd
+	TX_FAR _VermilionCityText3
+	db "@"
 
 VermilionCityCoords1:
 	db $1d,$13
 	db $1f,$13
 	db $ff
-
-SSAnneWelcomeText4:
-	TX_FAR _SSAnneWelcomeText4
-	db "@"
-
-SSAnneWelcomeText9:
-	TX_FAR _SSAnneWelcomeText9
-	db "@"
-
-SSAnneFlashedTicketText:
-	TX_FAR _SSAnneFlashedTicketText
-	db "@"
-
-SSAnneNoTicketText:
-	TX_FAR _SSAnneNoTicketText
-	db "@"
-
-SSAnneNotHereText:
-	TX_FAR _SSAnneNotHereText
-	db "@"
 
 VermilionCityText4:
 	TX_FAR _VermilionCityText4
@@ -221,12 +151,7 @@ VermilionCityText4:
 
 VermilionCityText5:
 	TX_FAR _VermilionCityText5
-	TX_ASM
-	ld a, MACHOP
-	call PlayCry
-	call WaitForSoundToFinish
-	ld hl, VermilionCityText14
-	ret
+	db "@"
 
 VermilionCityText14:
 	TX_FAR _VermilionCityText14

@@ -3,6 +3,7 @@ SaffronMart_Script:
 
 SaffronMart_TextPointers:
 	dw SaffronCashierText
+	dw PotionCashierText
 	dw SaffronMartText2
 	dw SaffronMartText3
 

@@ -247,6 +247,7 @@ GameboyKidSprite:     INCBIN "gfx/sprites/gameboy_kid.2bpp"
 ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
 AgathaSprite:         INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite:          INCBIN "gfx/sprites/bruno.2bpp"
+MaxineSprite:
 LoreleiSprite:        INCBIN "gfx/sprites/lorelei.2bpp"
 SeelSprite:           INCBIN "gfx/sprites/seel.2bpp"
 
@@ -940,8 +941,6 @@ INCLUDE "data/mapHeaders/LavenderTown.asm"
 INCLUDE "data/mapObjects/LavenderTown.asm"
 LavenderTown_Blocks: INCBIN "maps/LavenderTown.blk"
 
-ViridianPokecenter_Blocks: INCBIN "maps/ViridianPokecenter.blk"
-
 SafariZoneCenterRestHouse_Blocks:
 SafariZoneWestRestHouse_Blocks:
 SafariZoneEastRestHouse_Blocks:
@@ -954,6 +953,7 @@ INCLUDE "engine/pokedex_rating.asm"
 INCLUDE "data/mapHeaders/ViridianPokecenter.asm"
 INCLUDE "scripts/ViridianPokecenter.asm"
 INCLUDE "data/mapObjects/ViridianPokecenter.asm"
+ViridianPokecenter_Blocks:INCBIN "maps/ViridianPokecenter.blk"
 
 INCLUDE "data/mapHeaders/PokemonMansion1F.asm"
 INCLUDE "scripts/PokemonMansion1F.asm"
@@ -1087,9 +1087,6 @@ Route7_Blocks: INCBIN "maps/Route7.blk"
 
 CeladonPokecenter_Blocks: INCBIN "maps/CeladonPokecenter.blk"
 
-RockTunnelPokecenter_Blocks:
-MtMoonPokecenter_Blocks: INCBIN "maps/MtMoonPokecenter.blk"
-
 Route18Gate1F_Blocks:
 Route15Gate1F_Blocks:
 Route11Gate1F_Blocks: INCBIN "maps/Route11Gate1F.blk"
@@ -1196,6 +1193,8 @@ INCLUDE "data/mapHeaders/RockTunnelPokecenter.asm"
 INCLUDE "scripts/RockTunnelPokecenter.asm"
 INCLUDE "data/mapObjects/RockTunnelPokecenter.asm"
 
+RockTunnelPokecenter_Blocks: INCBIN "maps/RockTunnelPokecenter.blk"
+
 INCLUDE "data/mapHeaders/Route11Gate1F.asm"
 INCLUDE "scripts/Route11Gate1F.asm"
 INCLUDE "data/mapObjects/Route11Gate1F.asm"
@@ -1279,6 +1278,7 @@ FisherPic::        INCBIN "pic/trainer/fisher.pic"
 SwimmerPic::       INCBIN "pic/trainer/swimmer.pic"
 CueBallPic::       INCBIN "pic/trainer/cueball.pic"
 GamblerPic::       INCBIN "pic/trainer/gambler.pic"
+ToriPic::        	
 BeautyPic::        INCBIN "pic/trainer/beauty.pic"
 PsychicPic::       INCBIN "pic/trainer/psychic.pic"
 PunkPic::          INCBIN "pic/trainer/street_punk.pic"
@@ -1304,7 +1304,9 @@ ErikaPic::         INCBIN "pic/trainer/erika.pic"
 KogaPic::          INCBIN "pic/trainer/koga.pic"
 BlainePic::        INCBIN "pic/trainer/blaine.pic"
 SabrinaPic::       INCBIN "pic/trainer/sabrina.pic"
+HughPic::
 GentlemanPic::     INCBIN "pic/trainer/gentleman.pic"
+MaxinePic::
 LoreleiPic::       INCBIN "pic/trainer/lorelei.pic"
 ChannelerPic::     INCBIN "pic/trainer/channeler.pic"
 AgathaPic::        INCBIN "pic/trainer/agatha.pic"
@@ -1596,10 +1598,14 @@ Museum1F_Blocks: INCBIN "maps/Museum1F.blk"
 
 Museum2F_Blocks: INCBIN "maps/Museum2F.blk"
 
-SaffronPokecenter_Blocks:
+SaffronPokecenter_Blocks: INCBIN "maps/SaffronPokecenter.blk"
+
+; most pokecenters use the same blocks. can't cross banks, though.
+MtMoonPokecenter_Blocks:
+PewterPokecenter_Blocks:
+CeruleanPokecenter_Blocks:
 VermilionPokecenter_Blocks:
-LavenderPokecenter_Blocks:
-PewterPokecenter_Blocks: INCBIN "maps/PewterPokecenter.blk"
+LavenderPokecenter_Blocks:INCBIN "maps/PewterPokecenter.blk"
 
 UndergroundPathRoute7_Blocks:
 UndergroundPathRoute7Copy_Blocks:
@@ -1636,7 +1642,6 @@ INCLUDE "data/mapObjects/PewterPokecenter.asm"
 INCLUDE "data/mapHeaders/CeruleanPokecenter.asm"
 INCLUDE "scripts/CeruleanPokecenter.asm"
 INCLUDE "data/mapObjects/CeruleanPokecenter.asm"
-CeruleanPokecenter_Blocks: INCBIN "maps/CeruleanPokecenter.blk"
 
 INCLUDE "data/mapHeaders/CeruleanGym.asm"
 INCLUDE "scripts/CeruleanGym.asm"

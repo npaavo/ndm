@@ -5,7 +5,8 @@ PewterMart_Script:
 	ret
 
 PewterMart_TextPointers:
-	dw PewterCashierText
+	dw ToolCashierText
+	dw PotionCashierText
 	dw PewterMartText2
 	dw PewterMartText3
 

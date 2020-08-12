@@ -41,43 +41,7 @@ CeladonCityText4:
 	db "@"
 
 CeladonCityText5:
-	TX_ASM
-	CheckEvent EVENT_GOT_TM41
-	jr nz, .asm_7053f
-	ld hl, TM41PreText
-	call PrintText
-	lb bc, TM_41, 1
-	call GiveItem
-	jr c, .Success
-	ld hl, TM41NoRoomText
-	call PrintText
-	jr .Done
-.Success
-	ld hl, ReceivedTM41Text
-	call PrintText
-	SetEvent EVENT_GOT_TM41
-	jr .Done
-.asm_7053f
-	ld hl, TM41ExplanationText
-	call PrintText
-.Done
-	jp TextScriptEnd
-
-TM41PreText:
-	TX_FAR _TM41PreText
-	db "@"
-
-ReceivedTM41Text:
-	TX_FAR _ReceivedTM41Text
-	TX_SFX_ITEM_1
-	db "@"
-
-TM41ExplanationText:
-	TX_FAR _TM41ExplanationText
-	db "@"
-
-TM41NoRoomText:
-	TX_FAR _TM41NoRoomText
+	TX_FAR _CeladonCityText5
 	db "@"
 
 CeladonCityText6:

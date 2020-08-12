@@ -7042,8 +7042,9 @@ SleepEffect:
 .setSleepCounter
 ; set target's sleep counter to a random number between 1 and 7
 	call BattleRandom
-	and $3
+	and $3 ; mod: 1-3, +1 later (2-4)
 	jr z, .setSleepCounter
+	inc a ; increment so they can't immediately wake up
 	ld [de], a
 	call PlayCurrentMoveAnimation2
 	ld hl, FellAsleepText

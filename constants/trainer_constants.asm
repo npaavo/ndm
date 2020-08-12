@@ -42,8 +42,8 @@ const_value = 1
 	trainer_const LARS          ; $22
 	trainer_const TOBIAS        ; $23
 	trainer_const LT_SURGE      ; $24
-	trainer_const ERIKA         ; $25
-	trainer_const KOGA          ; $26
+	trainer_const MAXINE        ; $25
+	trainer_const HUGH          ; $26
 	trainer_const BLAINE        ; $27
 	trainer_const SABRINA       ; $28
 	trainer_const GENTLEMAN     ; $29

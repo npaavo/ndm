@@ -20,18 +20,6 @@ _FightingDojoText_5ce93::
 _FightingDojoText_5ce98::
 	text "Indeed, I have"
 	line "lost!"
-
-	para "But, I beseech"
-	line "you, do not take"
-	cont "our emblem as"
-	cont "your trophy!"
-
-	para "In return, I will"
-	line "give you a prized"
-	cont "fighting #MON!"
-
-	para "Choose whichever"
-	line "one you like!"
 	done
 
 _FightingDojoText_5ce9d::

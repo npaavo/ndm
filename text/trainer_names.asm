@@ -35,7 +35,7 @@ TrainerNames:
 	db "LARS@"
 	db "TOBIAS@"
 	db "TORI@"
-	db "ERIKA@"
+	db "MAXINE@"
 	db "HUGH@"
 	db "ASTER@"
 	db "SABRINA@"

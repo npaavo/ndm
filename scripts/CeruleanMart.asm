@@ -2,7 +2,8 @@ CeruleanMart_Script:
 	jp EnableAutoTextBoxDrawing
 
 CeruleanMart_TextPointers:
-	dw CeruleanCashierText
+	dw ToolCashierText
+	dw PotionCashierText
 	dw CeruleanMartText2
 	dw CeruleanMartText3
 

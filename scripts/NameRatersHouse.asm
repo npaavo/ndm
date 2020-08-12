@@ -9,32 +9,7 @@ NameRaterScript_1da15:
 	ret
 
 NameRaterScript_1da20:
-	ld hl, wPartyMonOT
-	ld bc, NAME_LENGTH
-	ld a, [wWhichPokemon]
-	call AddNTimes
-	ld de, wPlayerName
-	ld c, NAME_LENGTH
-	call .asm_1da47
-	jr c, .asm_1da52
-	ld hl, wPartyMon1OTID
-	ld bc, wPartyMon2 - wPartyMon1
-	ld a, [wWhichPokemon]
-	call AddNTimes
-	ld de, wPlayerID
-	ld c, $2
-.asm_1da47
-	ld a, [de]
-	cp [hl]
-	jr nz, .asm_1da52
-	inc hl
-	inc de
-	dec c
-	jr nz, .asm_1da47
-	and a
-	ret
-.asm_1da52
-	scf
+
 	ret
 
 NameRatersHouse_TextPointers:

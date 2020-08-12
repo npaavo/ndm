@@ -1,0 +1,14 @@
+CeruleanMons:
+	db $00
+	db $10
+	db 0,GOLDEEN
+	db 0,PSYDUCK
+	db 0,GOLDEEN
+	db 0,SQUIRTLE
+	db 0,POLIWAG
+	db 0,GOLDEEN
+	db 3,SEAKING
+	db 3,SEAKING
+	db 3,POLIWHIRL
+	db 7,POLIWRATH
+	db $00

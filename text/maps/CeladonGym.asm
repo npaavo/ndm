@@ -1,219 +1,235 @@
-_CeladonGymText_48a5e::
-	text "Hello. Lovely"
-	line "weather isn't it?"
-	cont "It's so pleasant."
-
-	para "...Oh dear..."
-	line "I must have dozed"
-	cont "off. Welcome."
-
-	para "My name is ERIKA."
-	line "I am the LEADER"
-	cont "of CELADON GYM."
-
-	para "I teach the art of"
-	line "flower arranging."
-	cont "My #MON are of"
-	cont "the grass-type."
-
-	para "Oh, I'm sorry, I"
-	line "had no idea that"
-	cont "you wished to"
-	cont "challenge me."
-
-	para "Very well, but I"
-	line "shall not lose."
+_CeladonGymFirstFightIntroText::
+	text "Hello again,"
+	line "<PLAYER>."
+	
+	para "I must admit I"
+	line "wasn't expecting"
+	cont "you to follow"
+	cont "through on my"
+	cont "deal, but what's"
+	cont "done is done."
+	
+	para "So now I must take"
+	line "a moment from my"
+	cont "very important"
+	cont "work for a "
+	cont "#MON battle."
+	
+	para "Hmph."
+	
+	para "Well, so be it!"
+	line "It's time for an"
+	cont "experiment."
+	
+	para "<PLAYER>, I don't"
+	line "play games with"
+	cont "#MON."
+	
+	para "There are some"
+	line "truly remarkable"
+	cont "creatures that"
+	cont "have emerged"
+	cont "from our works."
+	
+	para "Evolution is a"
+	line "slow process. Why"
+	cont "wait on nature"
+	cont "when we can give"
+	cont "it a jump-start!"
+	
+	para "So come! Face"
+	line "the power of"
+	cont "nature... guided"
+	cont "by true genius!"
+	
 	done
 
-_CeladonGymText_48a63::
-	text "Oh!"
-	line "I concede defeat."
+_CeladonGymHowManyBadgesText::
+	text "Fairness is a"
+	line "hinderance, but I'm"
+	cont "obligated to try"
+	cont "to make things"
+	cont "equal. How many"
+	cont "BADGEs have you"
+	cont "earned so far?"
+	
+	para "@"
+	TX_NUM wEffectiveNumBadgesOwned, 1, 1
+	text "? Fine."
+	
+	para "I'll use these"
+	line "#MON, then."
+	
+	para "Don't lose your"
+	line "head. You'll need"
+	cont "it!"
+	
+	done
 
-	para "You are remarkably"
-	line "strong."
+_CeladonGymHowManyBadgesText0::
+	text "Fairness is a"
+	line "hinderance, but I'm"
+	cont "obligated to try"
+	cont "to make things"
+	cont "equal. How many"
+	cont "BADGEs have you"
+	cont "earned so far?"
+	
+	para "None? That's..."
+	line "...unexpected."
+	
+	para "I'll use these"
+	line "#MON, then."
+	
+	para "Don't lose your"
+	line "head. You'll need"
+	cont "it!"
 
-	para "I must confer you"
-	line "the RAINBOWBADGE."
+	done
+
+_CeladonGymWinText::
+	text "..."
+	line "Well, the "
+	cont "evidence speaks"
+	cont "for itself."
+	
+	para "It seems you did"
+	line "your homework."
+
+	para "As per procedure,"
+	line "you've earned a"
+	cont "PROGRESS BADGE.@@"
+
+_CeladonGymRematchText::
+	text "<PLAYER> again?"
+	line "Ugh... I was just"
+	cont "getting into"
+	cont "something..."
+	
+	para "Fine, fine, it's"
+	line "been a while"
+	cont "since I was"
+	cont "challenged."
+	
+	para "Not to a battle,"
+	line "but by anything."
+	cont "The curse of"
+	cont "genius!"
+	
 	prompt
+	
+	
+_CeladonGymCantRematchYetText::
+	text "<PLAYER>? Do you"
+	line "think I've got"
+	cont "nothing to do but"
+	cont "battle you?"
+	
+	para "Go do whatever it"
+	line "is that you do"
+	cont "that isn't science."
+	
+	done 
 
-_CeladonGymText_48a68::
-	text "You are cataloging"
-	line "#MON? I must"
-	cont "say I'm impressed."
+_CeladonGymRematchWinText::
+	text "I could"
+	line "probably have"
+	cont "predicted this."
+	
+	para "But, my hypothesis"
+	line "was incorrect."
+	
+	para "I suppose some"
+	line "congratulations"
+	cont "are in order.@@"
 
-	para "I would never"
-	line "collect #MON"
-	cont "if they were"
-	cont "unattractive."
+_CeladonGymAfterVictoryText::
+	text "Words are cheap,"
+	line "but you're good"
+	cont "at this."
+	
+	para "You should stick"
+	line "to battling. It's"
+	cont "clearly a talent"
+	cont "of yours."
+	
+	para "Take these. You'll"
+	line "certainly find a"
+	cont "use for them."
+	
+	para "<PLAYER> got 3"
+	line "ULTRA BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+	para "Capture some new"
+	line "specimens. The"
+	cont "strong kind, of"
+	cont "course."
+	
+	para "Keep experimenting"
+	line "with new #MON."
+	cont "Maybe we can"
+	cont "rematch sometime."
+	
 	done
 
-_CeladonGymText9::
-	text "The RAINBOWBADGE"
-	line "will make #MON"
-	cont "up to L50 obey."
-
-	para "It also allows"
-	line "#MON to use"
-	cont "STRENGTH in and"
-	cont "out of battle."
-
-	para "Please also take"
-	line "this with you."
+_CeladonGymAfterRematchText::
+	text "Yes, yes, you won."
+	line "Good work."
+	
+	para "If I give you a"
+	line "prize, will you"
+	cont "get out of my lab?"
+	
+	para "<PLAYER> got 3"
+	line "GREAT BALLs!@"
+	
+	TX_SFX_KEY_ITEM
+	
+	text ""
+		
+	para "Good luck with"
+	line "whatever it is you"
+	cont "do, <PLAYER>."
+	
 	done
-
-_ReceivedTM21Text::
-	text "<PLAYER> received"
-	line "@"
-	TX_RAM wcf4b
-	text "!@@"
-
-_TM21ExplanationText::
+	
+_CeladonGymText_5c4c1::
 	text ""
 
-	para "TM21 contains"
-	line "MEGA DRAIN."
-
-	para "Half the damage"
-	line "it inflicts is"
-	cont "drained to heal"
-	cont "your #MON!"
-	done
-
-_TM21NoRoomText::
-	text "You should make"
-	line "room for this."
-	done
-
-_CeladonGymBattleText2::
-	text "Hey!"
-
-	para "You are not"
-	line "allowed in here!"
-	done
-
-_CeladonGymEndBattleText2::
-	text "You're"
-	line "too rough!"
+	para "Take it! You"
+	line "sure earned it!"
 	prompt
 
-_CeladonGymAfterBattleText2::
-	text "Bleaah!"
-	line "I hope ERIKA"
-	cont "wipes you out!"
+_CeladonGymBattleText1::
+	text "uu battle1"
 	done
 
-_CeladonGymBattleText3::
-	text "I was getting"
-	line "bored."
-	done
-
-_CeladonGymEndBattleText3::
-	text "My"
-	line "makeup!"
+_CeladonGymEndBattleText1::
+	text "uu endbattle1"
 	prompt
 
-_CeladonGymAfterBattleText3::
-	text "Grass-type #MON"
-	line "are tough against"
-	cont "the water-type!"
-
-	para "They also have an"
-	line "edge on rock and"
-	cont "ground #MON!"
+_CeladonGymAfterBattleText1::
+	text "uu afterbattle1"
 	done
 
-_CeladonGymBattleText4::
-	text "Aren't you the"
-	line "peeping Tom?"
+_CeladonGymWelcomeHere::
+	text "Welcome to the"
+	line "CELADON CITY GYM."
+	
+	para "LEADER MAXINE is"
+	line "in right now."
+	
+	para "Please only"
+	line "interrupt her if"
+	cont "you intend to win."
+	
 	done
 
-_CeladonGymEndBattleText4::
-	text "I'm"
-	line "in shock!"
-	prompt
-
-_CeladonGymAfterBattleText4::
-	text "Oh, you weren't"
-	line "peeping? We get a"
-	cont "lot of gawkers!"
+_CeladonGymWelcomeEmpty::
+	text "Welcome to the"
+	line "CELADON CITY GYM."	
 	done
 
-_CeladonGymBattleText5::
-	text "Look at my grass"
-	line "#MON!"
-
-	para "They're so easy"
-	line "to raise!"
-	done
-
-_CeladonGymEndBattleText5::
-	text "No!"
-	prompt
-
-_CeladonGymAfterBattleText5::
-	text "We only use grass-"
-	line "type #MON at"
-	cont "our GYM!"
-
-	para "We also use them"
-	line "for making flower"
-	cont "arrangements!"
-	done
-
-_CeladonGymBattleText6::
-	text "Don't bring any"
-	line "bugs or fire"
-	cont "#MON in here!"
-	done
-
-_CeladonGymEndBattleText6::
-	text "Oh!"
-	line "You!"
-	prompt
-
-_CeladonGymAfterBattleText6::
-	text "Our LEADER, ERIKA,"
-	line "might be quiet,"
-	cont "but she's also"
-	cont "very skilled!"
-	done
-
-_CeladonGymBattleText7::
-	text "Pleased to meet"
-	line "you. My hobby is"
-	cont "#MON training."
-	done
-
-_CeladonGymEndBattleText7::
-	text "Oh!"
-	line "Splendid!"
-	prompt
-
-_CeladonGymAfterBattleText7::
-	text "I have a blind"
-	line "date coming up."
-	cont "I have to learn"
-	cont "to be polite."
-	done
-
-_CeladonGymBattleText8::
-	text "Welcome to"
-	line "CELADON GYM!"
-
-	para "You better not"
-	line "underestimate"
-	cont "girl power!"
-	done
-
-_CeladonGymEndBattleText8::
-	text "Oh!"
-	line "Beaten!"
-	prompt
-
-_CeladonGymAfterBattleText8::
-	text "I didn't bring my"
-	line "best #MON!"
-
-	para "Wait 'til next"
-	line "time!"
-	done

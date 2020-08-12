@@ -10,8 +10,8 @@ Route16Gate1F_Object:
 	db 0 ; signs
 
 	db 2 ; objects
-	object SPRITE_GUARD, 4, 5, STAY, DOWN, 1 ; person
-	object SPRITE_GAMBLER, 4, 3, STAY, NONE, 2 ; person
+	object SPRITE_GUARD,  6,  4, STAY, LEFT, 1 ; person
+	object SPRITE_ROCKER,  5, 12, STAY, UP, 2 ; person
 
 	; warp-to
 	warp_to 0, 8, ROUTE_16_GATE_1F_WIDTH

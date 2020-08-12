@@ -40,7 +40,7 @@ ViridianMartScript0:
 	ret
 
 RLEMovement1d4bb:
-	db D_LEFT, $01
+	db D_LEFT, $03
 	db D_UP, $02
 	db $ff
 
@@ -71,7 +71,8 @@ ViridianMart_TextPointers:
 	dw ViridianMartText4
 	dw ViridianMartText5
 ViridianMart_TextPointers2:
-	dw ViridianCashierText
+	dw ToolCashierText
+	dw PotionCashierText
 	dw ViridianMartText2
 	dw ViridianMartText3
 

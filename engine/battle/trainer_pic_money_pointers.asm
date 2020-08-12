@@ -106,13 +106,13 @@ TrainerPicAndMoneyPointers:
 	dw TobiasPic
 	money 9900
 
-	dw LtSurgePic
+	dw ToriPic
 	money 9900
 
-	dw ErikaPic
+	dw MaxinePic
 	money 9900
 
-	dw KogaPic
+	dw HughPic
 	money 9900
 
 	dw BlainePic

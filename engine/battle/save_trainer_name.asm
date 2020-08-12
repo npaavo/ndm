@@ -19,7 +19,9 @@ SaveTrainerName:
 	ret
 
 TrainerNamePointers:
-; what is the point of these?
+; what is the point of these? 
+		; These show up at the end of some fights text to say stuff like 
+		; JR.TRAINERM: Wow! UR GOOD LUL
 	dw YoungsterName
 	dw BugCatcherName
 	dw LassName
@@ -77,9 +79,9 @@ BugCatcherName:
 LassName:
 	db "LASS@"
 JrTrainerMName:
-	db "JR.TRAINER♂@"
+	db "ADVENTURER@"
 JrTrainerFName:
-	db "JR.TRAINER♀@"
+	db "ADVENTURER@"
 PokemaniacName:
 	db "POKéMANIAC@"
 SuperNerdName:
@@ -109,6 +111,6 @@ ScientistName:
 RocketName:
 	db "ROCKET@"
 CooltrainerMName:
-	db "COOLTRAINER♂@"
+	db "EXPERT@"
 CooltrainerFName:
-	db "COOLTRAINER♀@"
+	db "EXPERT@"

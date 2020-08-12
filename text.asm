@@ -399,16 +399,25 @@ _PewterCityPokecenterGuyText::
 	done
 
 _CeruleanPokecenterGuyText::
-	text "Being a trainer"
+	text "Being a TRAINER"
 	line "looks tough."
 	
-	para "Not the battles"
-	line "or anything,"
-	cont "just picking"
-	cont "out a cool look."
+	para "You gotta like,"
+	line "take care of a"
+	cont "living creature."
 	
-	para "Everyone's got"
-	line "style!"
+	para "Feed it..."
+    line "train it..."
+	
+	para "And then some of"
+	line "these maniacs get"
+	cont "like, 6 of them."
+	
+	para "I mean, what?!"
+	line "Right?!"
+	
+	para "I can barely keep"
+	line "a schedule!"
 	
 	done
 
@@ -513,18 +522,20 @@ _CinnabarPokecenterGuyText::
 
 _SaffronCityPokecenterGuyText1::
 	text "#MON trainers"
-	line "all have such cool"
+	line "must have cool"
 	cont "catchphrases."
 	
 	para "What's yours?"
 	
-	para "Mine would be"
-	line "IT'S #MON"
-	cont "TIME!!!"
+	para "Mine would be..."
+	
+	para "IT'S #MON"
+	line "TIME!!!"
 	done
 
 _SaffronCityPokecenterGuyText2::
-	text "uuS2"
+	text "Sorry buddy, this"
+	line "space is reserved."
 	done
 
 _CeladonCityHotelText::
@@ -561,7 +572,7 @@ _SaveOptionText::
 	cont "colors."
 	
 	para "It seems to be"
-	line "related to"
+	line "based on #MON"
 	cont "population."
 	done
 
@@ -1063,8 +1074,8 @@ _MoveDisabledText::
 
 _NoMovesLeftText::
 	TX_RAM wBattleMonNick
-	text " has no"
-	line "moves left!"
+	text " is"
+	line "exhausted!"
 	done
 
 _MultiHitText::

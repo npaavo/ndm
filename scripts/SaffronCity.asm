@@ -73,8 +73,7 @@ SaffronCityText11:
 	db "@"
 
 SaffronCityText12:
-	TX_FAR _SaffronCityText12
-	TX_CRY_PIDGEOT
+	TX_FAR _SaffronCityText12	
 	db "@"
 
 SaffronCityText13:

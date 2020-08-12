@@ -2,7 +2,7 @@ CeladonGym_Script:
 	ld hl, wCurrentMapScriptFlags
 	bit 6, [hl]
 	res 6, [hl]
-	call nz, CeladonGymScript_48927
+	call nz, SetCeladonGymInfo
 	call EnableAutoTextBoxDrawing
 	ld hl, CeladonGymTrainerHeader0
 	ld de, CeladonGym_ScriptPointers
@@ -11,7 +11,7 @@ CeladonGym_Script:
 	ld [wCeladonGymCurScript], a
 	ret
 
-CeladonGymScript_48927:
+SetCeladonGymInfo:
 	ld hl, Gym4CityName
 	ld de, Gym4LeaderName
 	jp LoadGymLeaderAndCityName
@@ -20,9 +20,9 @@ Gym4CityName:
 	db "CELADON CITY@"
 
 Gym4LeaderName:
-	db "ERIKA@"
+	db "MAXINE@"
 
-CeladonGymText_48943:
+CeladonGymResetScripts:
 	xor a
 	ld [wJoyIgnore], a
 	ld [wCeladonGymCurScript], a
@@ -38,298 +38,210 @@ CeladonGym_ScriptPointers:
 CeladonGymScript3:
 	ld a, [wIsInBattle]
 	cp $ff
-	jp z, CeladonGymText_48943
+	jp z, CeladonGymResetScripts
 	ld a, $f0
 	ld [wJoyIgnore], a
 
-CeladonGymText_48963:
-	ld a, $9
+CeladonGymScriptGiveRewards:
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
+	ld a, $4
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_BEAT_ERIKA
-	lb bc, TM_21, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, $a
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM21
-	jr .asm_4898c
-.BagFull
-	ld a, $b
-	ld [hSpriteIndexOrTextID], a
-	call DisplayTextID
-.asm_4898c
+	SetEvent EVENT_BEAT_CELADON_GYM_MAXINE
 	ld hl, wObtainedBadges
-	set 3, [hl]
+	set 4, [hl]
 	ld hl, wBeatGymFlags
-	set 3, [hl]
-
+	set 4, [hl]
+	lb bc, ULTRA_BALL, 3
+	call GiveItem
+	jr .done
+.rematchwintext
+	lb bc, GREAT_BALL, 3
+	call GiveItem
+	ld a, $5
+	ld [hSpriteIndexOrTextID], a
+	call DisplayTextID
+.done
 	; deactivate gym trainers
-	SetEventRange EVENT_BEAT_CELADON_GYM_TRAINER_0, EVENT_BEAT_CELADON_GYM_TRAINER_6
+	;SetEventRange EVENT_BEAT_VIRIDIAN_GYM_TRAINER_0, EVENT_BEAT_VIRIDIAN_GYM_TRAINER_7
 
-	jp CeladonGymText_48943
+	;ld a, HS_ROUTE_22_RIVAL_2
+	;ld [wMissableObjectIndex], a
+	;predef ShowObject
+	;SetEvents EVENT_2ND_ROUTE22_RIVAL_BATTLE, EVENT_ROUTE22_RIVAL_WANTS_BATTLE
+	jp CeladonGymResetScripts
 
 CeladonGym_TextPointers:
-	dw CeladonGymText1
-	dw CeladonGymText2
-	dw CeladonGymText3
-	dw CeladonGymText4
-	dw CeladonGymText5
-	dw CeladonGymText6
-	dw CeladonGymText7
-	dw CeladonGymText8
-	dw CeladonGymText9
-	dw TM21Text
-	dw TM21NoRoomText
+	dw CeladonGymText1 ; leader 
+	dw CeladonGymText2 ; unused, trainer 
+	dw CeladonGymText3 ; welcome assistant 
+	dw CeladonGymText4 ; give rewards (first win)
+	dw CeladonGymText5 ; give rewards (rematch)
+	dw CeladonGymText6 ; no room for TM text 
 
 CeladonGymTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_0
-	db ($2 << 4) ; trainer's view range
+	db ($0 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_0
-	dw CeladonGymBattleText2 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText2 ; TextAfterBattle
-	dw CeladonGymEndBattleText2 ; TextEndBattle
-	dw CeladonGymEndBattleText2 ; TextEndBattle
-
-CeladonGymTrainerHeader1:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_1
-	db ($2 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_1
-	dw CeladonGymBattleText3 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText3 ; TextAfterBattle
-	dw CeladonGymEndBattleText3 ; TextEndBattle
-	dw CeladonGymEndBattleText3 ; TextEndBattle
-
-CeladonGymTrainerHeader2:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_2
-	db ($4 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_2
-	dw CeladonGymBattleText4 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText4 ; TextAfterBattle
-	dw CeladonGymEndBattleText4 ; TextEndBattle
-	dw CeladonGymEndBattleText4 ; TextEndBattle
-
-CeladonGymTrainerHeader3:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_3
-	db ($4 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_3
-	dw CeladonGymBattleText5 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText5 ; TextAfterBattle
-	dw CeladonGymEndBattleText5 ; TextEndBattle
-	dw CeladonGymEndBattleText5 ; TextEndBattle
-
-CeladonGymTrainerHeader4:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_4
-	db ($2 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_4
-	dw CeladonGymBattleText6 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText6 ; TextAfterBattle
-	dw CeladonGymEndBattleText6 ; TextEndBattle
-	dw CeladonGymEndBattleText6 ; TextEndBattle
-
-CeladonGymTrainerHeader5:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_5
-	db ($2 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_5
-	dw CeladonGymBattleText7 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText7 ; TextAfterBattle
-	dw CeladonGymEndBattleText7 ; TextEndBattle
-	dw CeladonGymEndBattleText7 ; TextEndBattle
-
-CeladonGymTrainerHeader6:
-	dbEventFlagBit EVENT_BEAT_CELADON_GYM_TRAINER_6, 1
-	db ($3 << 4) ; trainer's view range
-	dwEventFlagAddress EVENT_BEAT_CELADON_GYM_TRAINER_6, 1
-	dw CeladonGymBattleText8 ; TextBeforeBattle
-	dw CeladonGymAfterBattleText8 ; TextAfterBattle
-	dw CeladonGymEndBattleText8 ; TextEndBattle
-	dw CeladonGymEndBattleText8 ; TextEndBattle
+	dw CeladonGymBattleText1 ; TextBeforeBattle
+	dw CeladonGymAfterBattleText1 ; TextAfterBattle
+	dw CeladonGymEndBattleText1 ; TextEndBattle
+	dw CeladonGymEndBattleText1 ; TextEndBattle
 
 	db $ff
 
 CeladonGymText1:
 	TX_ASM
-	CheckEvent EVENT_BEAT_ERIKA
-	jr z, .asm_48a2d
-	CheckEventReuseA EVENT_GOT_TM21
-	jr nz, .asm_48a25
-	call z, CeladonGymText_48963
+	call CountNumBadgesOwned
+	CheckEvent EVENT_BEAT_CELADON_GYM_MAXINE
+	jr z, .startbattle
+	CheckEventReuseA EVENT_BEAT_CELADON_GYM_MAXINE
+	jr nz, .rematch
+	call z, CeladonGymScriptGiveRewards
 	call DisableWaitingAfterTextDisplay
-	jr .asm_48a5b
-.asm_48a25
-	ld hl, CeladonGymText_48a68
+	jp .done
+.rematch
+	CheckEvent EVENT_CANT_REMATCH_GYM_4
+	jr nz, .cantrematch
+	ld a, $1
+	ld [wGymBattleIsRematch], a	
+	ld hl, CeladonGymRematchText
 	call PrintText
-	jr .asm_48a5b
-.asm_48a2d
-	ld hl, CeladonGymText_48a5e
+	jr .initbattle
+.cantrematch
+	ld hl, CeladonGymCantRematchYetText
 	call PrintText
+	jr .done
+.startbattle
+	ld hl, CeladonGymFirstFightIntroText
+	call PrintText
+.initbattle
+	SetEvent EVENT_CANT_REMATCH_GYM_4
+	;allegedly this does nothing but at this point this jenga tower 
+	;has collapsed enough times where I'm sure it does something
 	ld hl, wd72d
 	set 6, [hl]
 	set 7, [hl]
-	ld hl, CeladonGymText_48a63
-	ld de, CeladonGymText_48a63
+	ld a, [wEffectiveNumBadgesOwned]
+	ld b, a
+	xor a
+	cp b
+	jr z, .nobadges
+	jr nz, .plural
+.nobadges
+	ld hl, CeladonGymHowManyBadgesText0
+	call PrintText	
+	jr .initfight
+.plural
+	ld hl, CeladonGymHowManyBadgesText
+	call PrintText
+.initfight
+	ld a, [wGymBattleIsRematch]
+	cp $1
+	jr z, .rematchwintext
+	ld hl, CeladonGymWinText
+	ld de, CeladonGymWinText
+	jr .continit
+.rematchwintext 
+	ld hl, CeladonGymRematchWinText
+	ld de, CeladonGymRematchWinText	
+.continit
 	call SaveEndBattleTextPointers
 	ld a, [H_SPRITEINDEX]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
 	call InitBattleEnemyParameters
-	ld a, $4
+	ld a, $2
 	ld [wGymLeaderNo], a
 	ld a, $3
 	ld [wCeladonGymCurScript], a
-	ld [wCurMapScript], a
-.asm_48a5b
+.done
 	jp TextScriptEnd
 
-CeladonGymText_48a5e:
-	TX_FAR _CeladonGymText_48a5e
+CeladonGymFirstFightIntroText:
+	TX_FAR _CeladonGymFirstFightIntroText
 	db "@"
 
-CeladonGymText_48a63:
-	TX_FAR _CeladonGymText_48a63
+CeladonGymAfterVictoryText:
+	TX_FAR _CeladonGymAfterVictoryText
 	db "@"
 
-CeladonGymText_48a68:
-	TX_FAR _CeladonGymText_48a68
+CeladonGymRematchText:
+	TX_FAR _CeladonGymRematchText
+	db "@"
+	
+CeladonGymCantRematchYetText:
+	TX_FAR _CeladonGymCantRematchYetText
+	db "@" 
+
+CeladonGymHowManyBadgesText0:
+	TX_FAR _CeladonGymHowManyBadgesText0
+	db "@" 
+	
+CeladonGymHowManyBadgesText:
+	TX_FAR _CeladonGymHowManyBadgesText
+	db "@" 
+
+CeladonGymText4:
+	TX_FAR _CeladonGymAfterVictoryText
 	db "@"
 
-CeladonGymText9:
-	TX_FAR _CeladonGymText9
+CeladonGymText5:
+	TX_FAR _CeladonGymAfterRematchText
 	db "@"
 
-TM21Text:
-	TX_FAR _ReceivedTM21Text
-	TX_SFX_ITEM_1
-	TX_FAR _TM21ExplanationText
+CeladonGymText6:
+	TX_FAR _TM34NoRoomText
 	db "@"
 
-TM21NoRoomText:
-	TX_FAR _TM21NoRoomText
+CeladonGymWinText:
+	TX_FAR _CeladonGymWinText
+	TX_SFX_LEVEL_UP ; probably supposed to play SFX_GET_ITEM_1 but the wrong music bank is loaded
+	TX_FAR _CeladonGymText_5c4c1
 	db "@"
 
+CeladonGymRematchWinText:
+	TX_FAR _CeladonGymRematchWinText
+	db "@" 
+
+	
 CeladonGymText2:
 	TX_ASM
 	ld hl, CeladonGymTrainerHeader0
 	call TalkToTrainer
 	jp TextScriptEnd
 
-CeladonGymBattleText2:
-	TX_FAR _CeladonGymBattleText2
+CeladonGymBattleText1:
+	TX_FAR _CeladonGymBattleText1
 	db "@"
 
-CeladonGymEndBattleText2:
-	TX_FAR _CeladonGymEndBattleText2
+CeladonGymEndBattleText1:
+	TX_FAR _CeladonGymEndBattleText1
 	db "@"
 
-CeladonGymAfterBattleText2:
-	TX_FAR _CeladonGymAfterBattleText2
+CeladonGymAfterBattleText1:
+	TX_FAR _CeladonGymAfterBattleText1
 	db "@"
 
 CeladonGymText3:
 	TX_ASM
-	ld hl, CeladonGymTrainerHeader1
-	call TalkToTrainer
+	CheckEvent EVENT_FOUND_LARS_IN_CAVE
+	jr nz, .LeaderIsHere
+	ld hl, CeladonGymWelcomeEmpty
+	jr .done
+.LeaderIsHere
+	ld hl, CeladonGymWelcomeHere
+.done
+	call PrintText
 	jp TextScriptEnd
 
-CeladonGymBattleText3:
-	TX_FAR _CeladonGymBattleText3
+CeladonGymWelcomeHere:
+	TX_FAR _CeladonGymWelcomeHere
+	db "@"
+	
+CeladonGymWelcomeEmpty:
+	TX_FAR _CeladonGymWelcomeEmpty
 	db "@"
 
-CeladonGymEndBattleText3:
-	TX_FAR _CeladonGymEndBattleText3
-	db "@"
-
-CeladonGymAfterBattleText3:
-	TX_FAR _CeladonGymAfterBattleText3
-	db "@"
-
-CeladonGymText4:
-	TX_ASM
-	ld hl, CeladonGymTrainerHeader2
-	call TalkToTrainer
-	jp TextScriptEnd
-
-CeladonGymBattleText4:
-	TX_FAR _CeladonGymBattleText4
-	db "@"
-
-CeladonGymEndBattleText4:
-	TX_FAR _CeladonGymEndBattleText4
-	db "@"
-
-CeladonGymAfterBattleText4:
-	TX_FAR _CeladonGymAfterBattleText4
-	db "@"
-
-CeladonGymText5:
-	TX_ASM
-	ld hl, CeladonGymTrainerHeader3
-	call TalkToTrainer
-	jp TextScriptEnd
-
-CeladonGymBattleText5:
-	TX_FAR _CeladonGymBattleText5
-	db "@"
-
-CeladonGymEndBattleText5:
-	TX_FAR _CeladonGymEndBattleText5
-	db "@"
-
-CeladonGymAfterBattleText5:
-	TX_FAR _CeladonGymAfterBattleText5
-	db "@"
-
-CeladonGymText6:
-	TX_ASM
-	ld hl, CeladonGymTrainerHeader4
-	call TalkToTrainer
-	jp TextScriptEnd
-
-CeladonGymBattleText6:
-	TX_FAR _CeladonGymBattleText6
-	db "@"
-
-CeladonGymEndBattleText6:
-	TX_FAR _CeladonGymEndBattleText6
-	db "@"
-
-CeladonGymAfterBattleText6:
-	TX_FAR _CeladonGymAfterBattleText6
-	db "@"
-
-CeladonGymText7:
-	TX_ASM
-	ld hl, CeladonGymTrainerHeader5
-	call TalkToTrainer
-	jp TextScriptEnd
-
-CeladonGymBattleText7:
-	TX_FAR _CeladonGymBattleText7
-	db "@"
-
-CeladonGymEndBattleText7:
-	TX_FAR _CeladonGymEndBattleText7
-	db "@"
-
-CeladonGymAfterBattleText7:
-	TX_FAR _CeladonGymAfterBattleText7
-	db "@"
-
-CeladonGymText8:
-	TX_ASM
-	ld hl, CeladonGymTrainerHeader6
-	call TalkToTrainer
-	jp TextScriptEnd
-
-CeladonGymBattleText8:
-	TX_FAR _CeladonGymBattleText8
-	db "@"
-
-CeladonGymEndBattleText8:
-	TX_FAR _CeladonGymEndBattleText8
-	db "@"
-
-CeladonGymAfterBattleText8:
-	TX_FAR _CeladonGymAfterBattleText8
-	db "@"

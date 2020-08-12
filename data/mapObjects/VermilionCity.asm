@@ -9,7 +9,7 @@ VermilionCity_Object:
 
 	db 4 ; signs
 	sign 23, 5, 7 ; VermilionCityText7
-	sign 39, 15, 8 ; VermilionCityText8
+	sign 37, 15, 8 ; VermilionCityText8
 	sign 14, 3, 9 ; MartSignText
 	sign 18, 3, 10 ; PokeCenterSignText
 
@@ -18,7 +18,7 @@ VermilionCity_Object:
 	object SPRITE_GAMBLER, 5, 9, STAY, DOWN, 2 ; person
 	object SPRITE_SAILOR, 6, 12, STAY, DOWN, 3 ; person
 	object SPRITE_GAMBLER, 20, 22, STAY, NONE, 4 ; person
-	object SPRITE_SLOWBRO, 20, 23, WALK, 1, 5 ; person
+	object SPRITE_ERIKA, 20, 23, WALK, 1, 5 ; person
 	object SPRITE_SAILOR, 30, 22, WALK, 2, 6 ; person
 
 	; warp-to

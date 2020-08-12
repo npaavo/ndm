@@ -1,151 +1,208 @@
 _SaffronCityText1::
-	text "What do you want?"
-	line "Get lost!"
+	text "JYNX:"
+	line "Jynx!"
+	
+	para "It continues to"
+	line "dance if you keep"
+	cont "eye contact."
 	done
 
 _SaffronCityText2::
-	text "BOSS said he'll"
-	line "take this town!"
+	text "MACHOKE: "
+	line "Ma ma choke!"
+	
+	para "It flexes and"
+	line "poses to show "
+	cont "off its muscles."
 	done
 
 _SaffronCityText3::
-	text "Get out of the"
-	line "way!"
+	text "MR. MIME: "
+	line "Miime! Miiime!"
+	
+	para "You check your"
+	line "watch. It is, in"
+	cont "fact, MR. MIME"
+	cont "time."
 	done
 
 _SaffronCityText4::
-	text "SAFFRON belongs"
-	line "to TEAM ROCKET!"
+	text "HITMONCHAN:"
+	line "Hit! Mon! CHAN!"
+	
+	para "It gives you a"
+	line "thumbs-up and"
+	cont "a smile. Nice!"
 	done
 
 _SaffronCityText5::
-	text "Being evil makes"
-	line "me feel so alive!"
+	text "HITMONLEE:"
+	line "Lee."
+	
+	para "It nods at you"
+	line "with an air of"
+	cont "mystique. What"
+	cont "does it know?!"
 	done
 
 _SaffronCityText6::
-	text "Ow! Watch where"
-	line "you're walking!"
+	text "how did u get"
+	line "here hhh? --whoa"
 	done
 
 _SaffronCityText7::
-	text "With SILPH under"
-	line "control, we can"
-	cont "exploit #MON"
-	cont "around the world!"
+	text "FEAROW:"
+	line "UAARK! FEA-ROW!"
+	
+	para "Even though this"
+	line "FEAROW is tame,"
+	cont "it still seems"
+	cont "hostile. You"
+	cont "take a moment to"
+	cont "contemplate your"
+	cont "prejudices."
 	done
 
 _SaffronCityText8::
-	text "You beat TEAM"
-	line "ROCKET all alone?"
-	cont "That's amazing!"
+	text "WILD #MON?"
+	line "What do you mean?"
+	
+	para "You're strange!"
 	done
 
 _SaffronCityText9::
-	text "Yeah! TEAM ROCKET"
-	line "is gone!"
-	cont "It's safe to go"
-	cont "out again!"
+	text "We live alongside"
+	line "#MON here in"
+	cont "SAFFRON CITY!"
 	done
 
 _SaffronCityText10::
-	text "People should be"
-	line "flocking back to"
-	cont "SAFFRON now."
+	text "I'm visiting my"
+	line "friend MR.MIME"
+	cont "today!"
 	done
 
 _SaffronCityText11::
-	text "I flew here on my"
-	line "PIDGEOT when I"
-	cont "read about SILPH."
-
-	para "It's already over?"
-	line "I missed the"
-	cont "media action."
+	text "Some #MON"
+	line "have better houses"
+	cont "than people!"
+	
+	para "I've never seen"
+	line "anything like it!"
 	done
 
 _SaffronCityText12::
-	text "PIDGEOT: Bi bibii!@@"
+	text "#MON may be"
+	line "our equals, but"
+	cont "we still fight"
+	cont "them in battles."
+	
+	para "It's not fair. I"
+	line "can't get away"
+	cont "with beating up"
+	cont "the kids from"
+	cont "school."
+	
+	para "But if I beat"
+	line "them in a battle?"
+	cont "Nobody cares!"
+	done
 
 _SaffronCityText13::
-	text "I saw ROCKET"
-	line "BOSS escaping"
-	cont "SILPH's building."
+	text "You're not allowed"
+	line "to catch the"
+	cont "#MON in the"
+	cont "city limits."
+	
+	para "Between SAFFRON"
+	line "and CELADON is"
+	cont "allowed, though."
+	
 	done
 
 _SaffronCityText14::
-	text "I'm a security"
-	line "guard."
-
-	para "Suspicious kids I"
-	line "don't allow in!"
+	text "Hey kid, you want"
+	line "some #BALLS?"
+	
+	para "I got em... at"
+	line "a price..."
 	done
 
 _SaffronCityText15::
-	text "..."
-	line "Snore..."
-
-	para "Hah! He's taking"
-	line "a snooze!"
+	text "#BALLS may be"
+	line "illegal to sell"
+	cont "here, but people"
+	cont "just buy them a"
+	cont "town over in"
+	cont "CELADON..."
+	
+	para "Mayor HUGH is"
+	line "an idiot!"
 	done
 
 _SaffronCityText16::
 	text "SAFFRON CITY"
-	line "Shining, Golden"
-	cont "Land of Commerce"
+	line "A city of unity"
 	done
 
 _SaffronCityText17::
-	text "FIGHTING DOJO"
+	text "Now exiting"
+	line "SAFFRON CITY."
+	
+	para "CERULEAN:"
+	line "2km NORTH"
 	done
 
 _SaffronCityText18::
-	text "SAFFRON CITY"
-	line "#MON GYM"
-	cont "LEADER: SABRINA"
-
-	para "The Master of"
-	line "Psychic #MON!"
+	text "Saffron: for"
+	line "#MON AND"
+	cont "people!"
+	
+	para "It looks like an"
+	line "old campaign"
+	cont "poster."
 	done
 
 _SaffronCityText20::
-	text "TRAINER TIPS"
-
-	para "FULL HEAL cures"
-	line "all ailments like"
-	cont "sleep and burns."
-
-	para "It costs a bit"
-	line "more, but it's"
-	cont "more convenient."
+	text "Now exiting"
+	line "SAFFRON CITY."
+	
+	para "LAVENDER:"
+	line "3km EAST"
 	done
 
 _SaffronCityText21::
-	text "TRAINER TIPS"
+	text "CITY NOTICE"
 
-	para "New GREAT BALL"
-	line "offers improved"
-	cont "capture rates."
-
-	para "Try it on those"
-	line "hard-to-catch"
-	cont "#MON."
+	para "SALE OF #BALLS"
+	line "IS ILLEGAL"
+	cont "WITHIN CITY"
+	cont "LIMITS."
+	
+	para "PLEASE REPORT"
+	line "ANY #BALL"
+	cont "SELLERS TO THE"
+	cont "SAFFRON POLICE."
 	done
 
 _SaffronCityText22::
-	text "SILPH CO."
-	line "OFFICE BUILDING"
+	text "SAFFRON CITY HALL"
+	line "MAYOR: HUGH"
+
+	para "(also a GYM)"
 	done
 
 _SaffronCityText24::
-	text "MR.PSYCHIC's"
-	line "HOUSE"
+	text "It's not a sign."
+	
+	para "It's some..."
+	line "interpretive art."
 	done
 
 _SaffronCityText25::
-	text "SILPH's latest"
-	line "product!"
-
-	para "Release to be"
-	line "determined..."
+	text "Now exiting"
+	line "SAFFRON CITY."
+	
+	para "CELADON:"
+	line "500m WEST"
 	done

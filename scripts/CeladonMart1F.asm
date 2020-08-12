@@ -2,8 +2,8 @@ CeladonMart1F_Script:
 	jp EnableAutoTextBoxDrawing
 
 CeladonMart1F_TextPointers:
-	dw CeladonMart1Clerk1Text
-	dw CeladonMart1Clerk2Text
+	dw ToolCashierText
+	dw PotionCashierText
 	dw CeladonMart1Text3
 	dw CeladonMart1Text4
 	dw CeladonMart1Text5

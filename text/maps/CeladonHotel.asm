@@ -1,21 +1,17 @@
 _CeladonHotelText1::
-	text "#MON? No, this"
-	line "is a hotel for"
-	cont "people."
-
-	para "We're full up."
+	text "I can't help you"
+	line "right now."
 	done
 
 _CeladonHotelText2::
-	text "I'm on vacation"
-	line "with my brother"
-	cont "and boy friend."
-
-	para "CELADON is such a"
-	line "pretty city!"
+	text "Come on! My"
+	line "toilet won't"
+	cont "even flush!"
+	
+	para "What's going on?!"
 	done
 
 _CeladonHotelText3::
-	text "Why did she bring"
-	line "her brother?"
+	text "I've been waiting"
+	line "for hours."
 	done

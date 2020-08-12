@@ -347,8 +347,9 @@ CableClubOptionsText:
 	next "uu@"
 	
 ModWarningText:
-	db   "v0.10 / CATERPIE"
-	next "   World Updates@"
+	db   "v0.12 / BUTTERFREE"
+	next " Demo No.1"
+	next " Report bugs pls!@"
 
 DisplayContinueGameInfo:
 	xor a

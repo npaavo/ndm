@@ -2,9 +2,9 @@ WildDataPointers:
 	dw NoMons      ; PALLET_TOWN
 	dw NoMons      ; VIRIDIAN_CITY
 	dw NoMons      ; PEWTER_CITY
-	dw NoMons      ; CERULEAN_CITY
+	dw CeruleanMons; CERULEAN_CITY
 	dw NoMons      ; LAVENDER_TOWN
-	dw NoMons      ; VERMILION_CITY
+	dw Route24Mons ; VERMILION_CITY
 	dw NoMons      ; CELADON_CITY
 	dw NoMons      ; FUCHSIA_CITY
 	dw NoMons      ; CINNABAR_ISLAND
@@ -261,6 +261,7 @@ WildDataPointers:
         ; level, species (ten times)
 
 INCLUDE "data/wildPokemon/nomons.asm"
+INCLUDE "data/wildPokemon/cerulean.asm"
 INCLUDE "data/wildPokemon/pallet_cave.asm"
 INCLUDE "data/wildPokemon/route1_cave.asm"
 INCLUDE "data/wildPokemon/route1.asm"

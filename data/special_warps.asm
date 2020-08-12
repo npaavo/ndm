@@ -115,7 +115,7 @@ CinnabarIslandFlyWarp:
 IndigoPlateauFlyWarp:
 	FLYWARP_DATA INDIGO_PLATEAU_WIDTH,   6,  9
 SaffronCityFlyWarp:
-	FLYWARP_DATA SAFFRON_CITY_WIDTH,    30,  9
+	FLYWARP_DATA SAFFRON_CITY_WIDTH,    12, 13
 Route4FlyWarp:
 	FLYWARP_DATA ROUTE_4_WIDTH,          6, 11
 Route10FlyWarp:

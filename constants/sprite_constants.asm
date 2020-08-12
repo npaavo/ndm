@@ -15,10 +15,10 @@ const_value = 0
 ; overworld sprites
 const_value = 1
 
-	const SPRITE_RED                       ; $01
-	const SPRITE_BLUE                      ; $02
+	const SPRITE_RED                       ; $01 ; player
+	const SPRITE_BLUE                      ; $02 ; rival
 	const SPRITE_OAK                       ; $03
-	const SPRITE_TRAINER				   ; $04 (EVERYTHING AFTER THIS +1 LUL)
+	const SPRITE_TRAINER				   ; $04 (EVERYTHING AFTER THIS +1 LUL) ; RBY trainer sprite
 	const SPRITE_BUG_CATCHER               ; $04
 	const SPRITE_SLOWBRO                   ; $05
 	const SPRITE_LASS                      ; $06

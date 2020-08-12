@@ -50,7 +50,7 @@ ItemNames:
 	db "NUGGET@"
 	db "AXE@"
 	db "POKé DOLL@"
-	db "FULL HEAL@"
+	db "PANACEA@"
 	db "REVIVE@"
 	db "MAX REVIVE@"
 	db "GUARD SPEC.@"

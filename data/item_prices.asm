@@ -1,22 +1,22 @@
 ItemPrices:
-	money 10000 ; MASTER_BALL
-	money 1200  ; ULTRA_BALL
-	money 600   ; GREAT_BALL
+	money 20000 ; MASTER_BALL
+	money 2000  ; ULTRA_BALL
+	money 1000   ; GREAT_BALL
 	money 200   ; POKE_BALL
 	money 0     ; TOWN_MAP
 	money 1 ; BICYCLE
 	money 1	; SURFBOARD - MOD?
 	money 1000  ; SAFARI_BALL
 	money 0     ; POKEDEX
-	money 4000  ; MOON_STONE
-	money 100   ; ANTIDOTE
-	money 100   ; BURN_HEAL
-	money 100   ; ICE_HEAL
-	money 100   ; AWAKENING
-	money 100   ; PARLYZ_HEAL
-	money 3000  ; FULL_RESTORE
-	money 2000  ; MAX_POTION
-	money 1500  ; HYPER_POTION
+	money 4450  ; MOON_STONE
+	money 50   ; ANTIDOTE
+	money 50   ; BURN_HEAL
+	money 50   ; ICE_HEAL
+	money 50   ; AWAKENING
+	money 50   ; PARLYZ_HEAL
+	money 2000  ; FULL_RESTORE
+	money 1500  ; MAX_POTION ; this item has no real meaning when level cap is 30
+	money 1200  ; HYPER_POTION
 	money 600   ; SUPER_POTION
 	money 300   ; POTION
 	money 0     ; BOULDERBADGE
@@ -28,17 +28,17 @@ ItemPrices:
 	money 0     ; VOLCANOBADGE
 	money 0     ; EARTHBADGE
 	money 550   ; ESCAPE_ROPE
-	money 350   ; REPEL
+	money 300   ; REPEL     ------- only one tier of repel in this game
 	money 0     ; OLD_AMBER
 	money 2100  ; FIRE_STONE
 	money 2100  ; THUNDER_STONE
 	money 2100  ; WATER_STONE
-	money 5000  ; HP_UP
-	money 5000  ; PROTEIN
-	money 5000  ; IRON
-	money 5000  ; CARBOS
-	money 5000  ; CALCIUM
-	money 1  ; RARE_CANDY
+	money 2500  ; HP_UP
+	money 2500  ; PROTEIN
+	money 2500  ; IRON
+	money 2500  ; CARBOS
+	money 2500  ; CALCIUM
+	money 1000  ; RARE_CANDY ; hey nerd this is where the RARE CANDY IS
 	money 0     ; DOME_FOSSIL
 	money 0     ; HELIX_FOSSIL
 	money 0     ; SECRET_KEY
@@ -50,9 +50,9 @@ ItemPrices:
 	money 10000 ; NUGGET
 	money 0     ; SCYTHE - MOD
 	money 1000  ; POKE_DOLL
-	money 600   ; FULL_HEAL
+	money 200   ; FULL_HEAL ; PANACEA
 	money 1500  ; REVIVE
-	money 4000  ; MAX_REVIVE
+	money 5000  ; MAX_REVIVE
 	money 700   ; GUARD_SPEC
 	money 500   ; SUPER_REPEL
 	money 700   ; MAX_REPEL
