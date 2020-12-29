@@ -16,7 +16,7 @@ PlayIntro:
 	inc a
 	ld [H_AUTOBGTRANSFERENABLED], a
 	call PlayShootingStar
-	call PlayIntroScene
+	;call PlayIntroScene
 	call GBFadeOutToWhite
 	xor a
 	ld [hSCX], a
@@ -26,188 +26,15 @@ PlayIntro:
 	ret
 
 PlayIntroScene:
-	ld b, SET_PAL_NIDORINO_INTRO
-	call RunPaletteCommand
-	ldPal a, BLACK, DARK_GRAY, LIGHT_GRAY, WHITE
-	ld [rBGP], a
-	ld [rOBP0], a
-	ld [rOBP1], a
-	xor a
-	ld [hSCX], a
-	ld b, GENGAR_INTRO_TILES1
-	call IntroCopyTiles
-	ld a, 0
-	ld [wBaseCoordX], a
-	ld a, 80
-	ld [wBaseCoordY], a
-	lb bc, 6, 6
-	call InitIntroNidorinoOAM
-	lb de, 80 / 2, MOVE_NIDORINO_RIGHT
-	call IntroMoveMon
-	ret c
-
-; hip
-	ld a, SFX_INTRO_HIP
-	call PlaySound
-	xor a
-	ld [wIntroNidorinoBaseTile], a
-	ld de, IntroNidorinoAnimation1
-	call AnimateIntroNidorino
-; hop
-	ld a, SFX_INTRO_HOP
-	call PlaySound
-	ld de, IntroNidorinoAnimation2
-	call AnimateIntroNidorino
-	ld c, 10
-	call CheckForUserInterruption
-	ret c
-
-; hip
-	ld a, SFX_INTRO_HIP
-	call PlaySound
-	ld de, IntroNidorinoAnimation1
-	call AnimateIntroNidorino
-; hop
-	ld a, SFX_INTRO_HOP
-	call PlaySound
-	ld de, IntroNidorinoAnimation2
-	call AnimateIntroNidorino
-	ld c, 30
-	call CheckForUserInterruption
-	ret c
-
-; raise
-	ld b, GENGAR_INTRO_TILES2
-	call IntroCopyTiles
-	ld a, SFX_INTRO_RAISE
-	call PlaySound
-	lb de, 8 / 2, MOVE_GENGAR_LEFT
-	call IntroMoveMon
-	ld c, 30
-	call CheckForUserInterruption
-	ret c
-
-; slash
-	ld b, GENGAR_INTRO_TILES3
-	call IntroCopyTiles
-	ld a, SFX_INTRO_CRASH
-	call PlaySound
-	lb de, 16 / 2, MOVE_GENGAR_RIGHT
-	call IntroMoveMon
-; hip
-	ld a, SFX_INTRO_HIP
-	call PlaySound
-	ld a, (FightIntroFrontMon2 - FightIntroFrontMon) / BYTES_PER_TILE
-	ld [wIntroNidorinoBaseTile], a
-	ld de, IntroNidorinoAnimation3
-	call AnimateIntroNidorino
-	ld c, 30
-	call CheckForUserInterruption
-	ret c
-
-	lb de, 8 / 2, MOVE_GENGAR_LEFT
-	call IntroMoveMon
-	ld b, GENGAR_INTRO_TILES1
-	call IntroCopyTiles
-	ld c, 60
-	call CheckForUserInterruption
-	ret c
-
-; hip
-	ld a, SFX_INTRO_HIP
-	call PlaySound
-	xor a
-	ld [wIntroNidorinoBaseTile], a
-	ld de, IntroNidorinoAnimation4
-	call AnimateIntroNidorino
-; hop
-	ld a, SFX_INTRO_HOP
-	call PlaySound
-	ld de, IntroNidorinoAnimation5
-	call AnimateIntroNidorino
-	ld c, 20
-	call CheckForUserInterruption
-	ret c
-
-	ld a, (FightIntroFrontMon2 - FightIntroFrontMon) / BYTES_PER_TILE
-	ld [wIntroNidorinoBaseTile], a
-	ld de, IntroNidorinoAnimation6
-	call AnimateIntroNidorino
-	ld c, 30
-	call CheckForUserInterruption
-	ret c
-
-; lunge
-	ld a, SFX_INTRO_LUNGE
-	call PlaySound
-	ld a, (FightIntroFrontMon3 - FightIntroFrontMon) / BYTES_PER_TILE
-	ld [wIntroNidorinoBaseTile], a
-	ld de, IntroNidorinoAnimation7
-	jp AnimateIntroNidorino
+	ret
 
 AnimateIntroNidorino:
-	ld a, [de]
-	cp ANIMATION_END
-	ret z
-	ld [wBaseCoordY], a
-	inc de
-	ld a, [de]
-	ld [wBaseCoordX], a
-	push de
-	ld c, 6 * 6
-	call UpdateIntroNidorinoOAM
-	ld c, 5
-	call DelayFrames
-	pop de
-	inc de
-	jr AnimateIntroNidorino
+	ret
 
 UpdateIntroNidorinoOAM:
-	ld hl, wOAMBuffer
-	ld a, [wIntroNidorinoBaseTile]
-	ld d, a
-.loop
-	ld a, [wBaseCoordY]
-	add [hl]
-	ld [hli], a ; Y
-	ld a, [wBaseCoordX]
-	add [hl]
-	ld [hli], a ; X
-	ld a, d
-	ld [hli], a ; tile
-	inc hl
-	inc d
-	dec c
-	jr nz, .loop
 	ret
 
 InitIntroNidorinoOAM:
-	ld hl, wOAMBuffer
-	ld d, 0
-.loop
-	push bc
-	ld a, [wBaseCoordY]
-	ld e, a
-.innerLoop
-	ld a, e
-	add 8
-	ld e, a
-	ld [hli], a ; Y
-	ld a, [wBaseCoordX]
-	ld [hli], a ; X
-	ld a, d
-	ld [hli], a ; tile
-	ld a, OAM_BEHIND_BG
-	ld [hli], a ; attributes
-	inc d
-	dec c
-	jr nz, .innerLoop
-	ld a, [wBaseCoordX]
-	add 8
-	ld [wBaseCoordX], a
-	pop bc
-	dec b
-	jr nz, .loop
 	ret
 
 IntroClearScreen:
@@ -238,39 +65,6 @@ IntroPlaceBlackTiles:
 	ret
 
 IntroMoveMon:
-; d = number of times to move the mon (2 pixels each time)
-	ld a, e
-	cp MOVE_NIDORINO_RIGHT
-	jr z, .moveNidorinoRight
-	cp MOVE_GENGAR_LEFT
-	jr z, .moveGengarLeft
-; move Gengar right
-	ld a, [hSCX]
-	dec a
-	dec a
-	jr .next
-.moveNidorinoRight
-	push de
-	ld a, 2
-	ld [wBaseCoordX], a
-	xor a
-	ld [wBaseCoordY], a
-	ld c, 6 * 6
-	call UpdateIntroNidorinoOAM
-	pop de
-.moveGengarLeft
-	ld a, [hSCX]
-	inc a
-	inc a
-.next
-	ld [hSCX], a
-	push de
-	ld c, 2
-	call CheckForUserInterruption
-	pop de
-	ret c
-	dec d
-	jr nz, IntroMoveMon
 	ret
 
 IntroCopyTiles:
@@ -309,6 +103,12 @@ LoadIntroGraphics:
 	jp FarCopyData2
 
 PlayShootingStar:
+	ld a, BANK(Music_IntroBattle)
+	ld [wAudioROMBank], a
+	ld [wAudioSavedROMBank], a
+	ld a, MUSIC_INTRO_BATTLE
+	ld [wNewSoundID], a
+	call PlaySound
 	ld b, SET_PAL_GAME_FREAK_INTRO
 	call RunPaletteCommand
 	callba LoadCopyrightAndTextBoxTiles
@@ -335,12 +135,12 @@ PlayShootingStar:
 	ld c, 40
 	call DelayFrames
 .next
-	ld a, BANK(Music_IntroBattle)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
-	ld a, MUSIC_INTRO_BATTLE
-	ld [wNewSoundID], a
-	call PlaySound
+	;ld a, BANK(Music_IntroBattle)
+	;ld [wAudioROMBank], a
+	;ld [wAudioSavedROMBank], a
+	;ld a, MUSIC_INTRO_BATTLE
+	;ld [wNewSoundID], a
+	;call PlaySound
 	call IntroClearMiddleOfScreen
 	call ClearSprites
 	jp Delay3

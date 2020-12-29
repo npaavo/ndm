@@ -1,49 +1,54 @@
 _Route9BattleText1::
-	text "You have #MON"
-	line "with you!"
-	cont "You're mine!"
+	text "I'm looking for"
+	line "a few new"
+	cont "#MON to train!"
 	done
 
 _Route9EndBattleText1::
-	text "You"
-	line "deceived me!"
+	text "Haha,"
+	line "see why?"
 	prompt
 
 _Route9AfterBattleText1::
-	text "You need light to"
-	line "get through that"
-	cont "dark tunnel ahead."
+	text "A good trainer"
+	line "knows when to"
+	cont "switch up their"
+	cont "team!"
 	done
 
 _Route9BattleText2::
-	text "Who's that walking"
-	line "with those good"
-	cont "looking #MON?"
+	text "Where you off"
+	line "too in such"
+	cont "a hurry?"
 	done
 
 _Route9EndBattleText2::
-	text "Out"
-	line "like a light!"
+	text "Fine!"
+	line "Beat it!"
 	prompt
 
 _Route9AfterBattleText2::
-	text "Keep walking!"
+	text "Someday you're"
+	line "gonna learn to"
+	cont "slow down and"
+	cont "enjoy life!"
 	done
 
 _Route9BattleText3::
-	text "I'm taking ROCK"
-	line "TUNNEL to go to"
-	cont "LAVENDER..."
+	text "I'm looking for"
+	line "a challenge."
+	cont "How about you?"
 	done
 
 _Route9EndBattleText3::
-	text "Can't"
-	line "measure up!"
+	text "Okay!"
+	line "You're good!"
 	prompt
 
 _Route9AfterBattleText3::
-	text "Are you off to"
-	line "ROCK TUNNEL too?"
+	text "Everyone wants"
+	line "to learn from"
+	cont "the best."
 	done
 
 _Route9BattleText4::
@@ -63,39 +68,61 @@ _Route9AfterBattleText4::
 	done
 
 _Route9BattleText5::
-	text "Bwahaha!"
-	line "Great! I was"
-	cont "bored, eh!"
+	text "Fall down,"
+	line "kiddo?"
 	done
 
 _Route9EndBattleText5::
-	text "Keep it"
-	line "coming, eh!"
-
-	para "Oh wait. I'm out"
-	line "of #MON!"
+	text "Dang!"
+	line "Looks like I'm"
+	cont "the one on the"
+	cont "ground now!"
 	prompt
 
 _Route9AfterBattleText5::
-	text "You sure had guts"
-	line "standing up to me"
-	cont "there, eh?"
+	text "Be careful on"
+	line "those ledges."
+	cont "Whatever you"
+	cont "do, don't look"
+	cont "DOWN!"
 	done
 
 _Route9BattleText6::
-	text "Hahaha!"
-	line "Aren't you a"
-	cont "little toughie!"
+	text "Well well well."
+	line "We finally meet,"
+	cont "<PLAYER>!"
+	
+	para "Oh? Surprised"
+	line "I know your"
+	cont "name? That won't"
+	cont "be the only"
+	cont "surprise!"
+	
+	para "Now enough"
+	line "talk, let's"
+	cont "BATTLE!"
 	done
 
 _Route9EndBattleText6::
-	text "What's"
-	line "that?"
+	text "...How."
+	line "How did you"
+	cont "win?!"
+	
+	para "I made the"
+	line "perfect team,"
+	cont "and still lost!"
+	
+	para "NOOOOO!"
 	prompt
 
 _Route9AfterBattleText6::
-	text "Hahaha! Kids"
-	line "should be tough!"
+	text "How did I know"
+	line "your name?"
+	
+	para "Oh, I just"
+	line "guessed. You"
+	cont "looked like a"
+	cont "'<PLAYER>'."
 	done
 
 _Route9BattleText7::

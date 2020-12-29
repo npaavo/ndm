@@ -1,13 +1,15 @@
 Route2_Object:
 	db $f ; border block
 
-	db 6 ; warps
+	db 8 ; warps
 	warp 12, 9, 0, DIGLETTS_CAVE
 	warp 3, 11, 0, VIRIDIAN_FOREST ; n exit
-	warp 16, 35, 0, ROUTE_2_GATE ; I believe these are needed 
+	warp 16, 35, 0, ROUTE_2_GATE ; I believe these are needed
 	warp 15, 39, 1, ROUTE_2_GATE ; for sprite loading
-	warp 3, 43, 1, VIRIDIAN_FOREST ; s exit
+	warp  2, 41, 1, VIRIDIAN_FOREST ; s exit
+	warp  3, 41, 1, VIRIDIAN_FOREST ; s exit
 	warp 6, 25, 2, VIRIDIAN_FOREST ; lake
+	warp 7, 25, 2, VIRIDIAN_FOREST ; lake
 
 	db 2 ; signs
 	sign 9, 65, 4 ; Route2Text3 , trail sign
@@ -23,6 +25,6 @@ Route2_Object:
 	warp_to 3, 11, ROUTE_2_WIDTH ; VIRIDIAN_FOREST_NORTH_GATE
 	warp_to 16, 35, ROUTE_2_WIDTH ; ROUTE_2_GATE (n)
 	warp_to 15, 39, ROUTE_2_WIDTH ; ROUTE_2_GATE (s)
-	warp_to 3, 43, ROUTE_2_WIDTH ; VIRIDIAN_FOREST_SOUTH_GATE
-	warp_to 6, 25, ROUTE_2_WIDTH ; lake
+	warp_to  3, 41, ROUTE_2_WIDTH ; VIRIDIAN_FOREST_SOUTH_GATE
+	warp_to  6, 25, ROUTE_2_WIDTH ; lake
 

@@ -14,7 +14,7 @@ dw HaunterPicBack
 ; attacks known at lvl 0
 db LICK
 db CONFUSE_RAY
-db NIGHT_SHADE
+db 0
 db 0
 db 3 ; growth rate
 ; learnset

@@ -32,7 +32,7 @@ SetPal_Battle:
 	call CopyData
 	
 	xor a 
-	ldh [hVendingMachineItem], a ; clear the shiny interrupt	
+	ldh [hVendingMachineItem], a ; clear the strange interrupt	
 	
 	;gather BattleMon DVs, Logical OR them together.
 	ld a, [wBattleMonDVs] 
@@ -53,7 +53,7 @@ SetPal_Battle:
 	ld [wPlaceHolderDVs], a ; stores that palette in placeholder DVs slot 1
 
 	xor a 
-	ldh [hVendingMachineItem], a ; clear the shiny interrupt	
+	ldh [hVendingMachineItem], a ; clear the strange interrupt	
 	ld a, [wEnemyMonDVs] 
 	ld b, a
 	ld a, [wEnemyMonDVs+1]
@@ -299,6 +299,19 @@ SetPal_TrainerCard:
 	jr nz, .badgeLoop
 	ld hl, PalPacket_TrainerCard
 	ld de, wTrainerCardBlkPacket
+	ret
+
+SetLoadedMonStrangePalette:
+	ld a, [wLoadedMonDVs] 
+	ld b, a
+	ld a, [wLoadedMonDVs+1]
+	or b
+	cp $FF ;if they result in 0xFF, then they use a palette offset.
+	jr nz, .SkipStrangePalette
+	ld a, b
+	and $F ;mask off so only lowest 4 bits remain (0-16)
+	ldh [hVendingMachineItem], a ; store palette offset for DeterminePaletteID	
+.SkipStrangePalette
 	ret
 
 SetPalFunctions:

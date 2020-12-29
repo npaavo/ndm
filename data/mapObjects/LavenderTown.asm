@@ -6,7 +6,7 @@ LavenderTown_Object:
 	warp 14, 5, 0, POKEMON_TOWER_1F
 	warp 7, 9, 0, MR_FUJIS_HOUSE
 	warp 15, 13, 0, LAVENDER_MART
-	warp 3, 13, 0, LAVENDER_CUBONE_HOUSE
+	warp 3, 13, 0, POKEMON_TOWER_1F
 	warp 7, 13, 0, NAME_RATERS_HOUSE
 
 	db 6 ; signs

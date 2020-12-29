@@ -30,23 +30,38 @@ SaffronCity_TextPointers:
 
 SaffronCityText1:
 	TX_FAR _SaffronCityText1
-	db "@"
+	TX_ASM
+	ld a, JYNX
+	call PlayCry
+	jp TextScriptEnd
 
 SaffronCityText2:
 	TX_FAR _SaffronCityText2
-	db "@"
+	TX_ASM
+	ld a, MACHOKE
+	call PlayCry
+	jp TextScriptEnd
 
 SaffronCityText3:
 	TX_FAR _SaffronCityText3
-	db "@"
+	TX_ASM
+	ld a, MR_MIME
+	call PlayCry
+	jp TextScriptEnd
 
 SaffronCityText4:
 	TX_FAR _SaffronCityText4
-	db "@"
+	TX_ASM
+	ld a, HITMONCHAN
+	call PlayCry
+	jp TextScriptEnd
 
 SaffronCityText5:
 	TX_FAR _SaffronCityText5
-	db "@"
+	TX_ASM
+	ld a, HITMONLEE
+	call PlayCry
+	jp TextScriptEnd
 
 SaffronCityText6:
 	TX_FAR _SaffronCityText6
@@ -54,7 +69,11 @@ SaffronCityText6:
 
 SaffronCityText7:
 	TX_FAR _SaffronCityText7
-	db "@"
+	TX_ASM
+	ld a, FEAROW
+	call PlayCry
+	jp TextScriptEnd
+	
 
 SaffronCityText8:
 	TX_FAR _SaffronCityText8

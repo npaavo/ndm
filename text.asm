@@ -2437,12 +2437,6 @@ _TryingToLearnText::
 	TX_RAM wcf4b
 	text "!"
 
-	para "But, @"
-	TX_RAM wLearnMoveMonName
-	text ""
-	line "can't learn more"
-	cont "than 4 moves!"
-
 	para "Delete an older"
 	line "move to make room"
 	cont "for @"
@@ -2484,36 +2478,22 @@ _PokemonCenterFarewellText::
 	done
 
 _CableClubNPCAreaReservedFor2FriendsLinkedByCableText::
-	text "This area is"
-	line "reserved for 2"
-	cont "friends who are"
-	cont "linked by cable."
+	text "uu"
 	done
 
 _CableClubNPCWelcomeText::
-	text "Welcome to the"
-	line "Cable Club!"
+	text "uu"
 	done
 
 _CableClubNPCPleaseApplyHereHaveToSaveText::
-	text "Please apply here."
-
-	para "Before opening"
-	line "the link, we have"
-	cont "to save the game."
+	text "uu"
 	done
 
 _CableClubNPCPleaseWaitText::
 	text "Please wait.@@"
 
 _CableClubNPCLinkClosedBecauseOfInactivityText::
-	text "The link has been"
-	line "closed because of"
-	cont "inactivity."
-
-	para "Please contact"
-	line "your friend and"
-	cont "come again!"
+	text "uu"
 	done
 
 

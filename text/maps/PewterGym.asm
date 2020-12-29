@@ -33,7 +33,7 @@ _PewterGymFirstFightIntroText::
 	line "BADGE in it for"
 	cont "you if you win!"
 	
-	done
+	prompt
 
 _PewterGymHowManyBadgesText::
 	text "Speakin' a, how"

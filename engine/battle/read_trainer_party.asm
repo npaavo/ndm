@@ -14,6 +14,10 @@ ReadTrainer:
 	ld [hl], a
 
 ; get the pointer to trainer data for this class
+	push hl ; hold on to grassmons
+	call CountNumBadgesOwned ; update badge count to determine high range
+	pop hl ; grassmons again
+	
 	ld a, [wCurOpponent]
 	sub $C9 ; convert value from pokemon to trainer
 	add a
@@ -53,9 +57,7 @@ ReadTrainer:
 	; MOD: evaluate what level they should be at.
 	
 	;let's make A the level they should be.
-	push hl ; hold on to grassmons
-	call CountNumBadgesOwned ; update badge count to determine high range
-	pop hl ; grassmons again
+
 		
 	ld a, [wEffectiveNumBadgesOwned]
 	and a  ; =0?

@@ -1,13 +1,13 @@
 Route5Mons:
 	db $0F
-	db 2,ABRA
-	db 2,VENONAT
-	db 2,MANKEY
-	db 2,DROWZEE
-	db 2,EXEGGCUTE
-	db 2,PSYDUCK
-	db 4,MR_MIME
-	db 7,PRIMEAPE
-	db 7,KADABRA
-	db 10,ALAKAZAM
+	db 0,ABRA
+	db 0,VENONAT
+	db 0,MANKEY
+	db 0,DROWZEE
+	db 0,EXEGGCUTE
+	db 0,PSYDUCK
+	db 3,MR_MIME
+	db 3,PRIMEAPE
+	db 3,KADABRA
+	db 7,ALAKAZAM
 	db $00

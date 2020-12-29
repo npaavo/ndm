@@ -1,13 +1,13 @@
 CaveMons:
 	db $08
-	db 3,DIGLETT
-	db 3,DIGLETT
-	db 3,DIGLETT
-	db 3,DIGLETT
-	db 3,DIGLETT
-	db 3,DIGLETT
+	db 0,DIGLETT
+	db 0,DIGLETT
+	db 1,DIGLETT
+	db 1,DIGLETT
+	db 2,DIGLETT
+	db 2,DIGLETT
 	db 3,DIGLETT
 	db 3,DIGLETT
 	db 3,DUGTRIO
-	db 3,DUGTRIO
+	db 7,DUGTRIO
 	db $00

@@ -41,3 +41,22 @@ _Route4Text6::
 	line "is great for"
 	cont "fishing."
 	done
+	
+_Route4Text7::
+	text "#MON CEN..."
+	line "..."
+	
+	para "...there's a"
+	line "poster covering"
+	cont "part of the"
+	cont "signboard..."
+	
+	para "EXCLUSIVE SALE!"
+	line "Evolution Stones"
+	cont "to power up"
+	cont "your #MON!"
+	
+	para "Inquire Within!"
+	
+	para "...it's an ad."
+	done

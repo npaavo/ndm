@@ -5,7 +5,7 @@ CeruleanCity_Object:
 	warp 19, 17, 0, CERULEAN_POKECENTER
 	warp 30, 7, 0, CERULEAN_GYM
 	warp 13, 23, 0, CERULEAN_MART
-	warp 4, 11, 0, CERULEAN_CAVE_1F
+	warp  4,  7, 0, CERULEAN_CAVE_1F
 
 	db 6 ; signs
 	sign 7, 21, 12 ; CeruleanCityText12
@@ -32,4 +32,4 @@ CeruleanCity_Object:
 	warp_to 19, 17, CERULEAN_CITY_WIDTH ; CERULEAN_POKECENTER
 	warp_to 30, 7, CERULEAN_CITY_WIDTH ; CERULEAN_GYM
 	warp_to 13, 23, CERULEAN_CITY_WIDTH ; CERULEAN_MART
-	warp_to 4, 11, CERULEAN_CITY_WIDTH ; CERULEAN_CAVE_1F
+	warp_to  4,  7, CERULEAN_CITY_WIDTH ; CERULEAN_CAVE_1F

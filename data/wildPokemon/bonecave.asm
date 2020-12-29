@@ -1,13 +1,13 @@
 BoneCaveMons:
 	db $0a
-	db 2,GASTLY
-	db 2,ZUBAT
-	db 2,CUBONE
-	db 2,DIGLETT
-	db 2,PARAS
-	db 5,GOLBAT
-	db 5,HAUNTER
-	db 5,DUGTRIO
-	db 10,GENGAR
+	db 0,GASTLY
+	db 0,ZUBAT
+	db 0,CUBONE
+	db 0,DIGLETT
+	db 0,PARAS
+	db 3,GOLBAT
+	db 3,HAUNTER
+	db 3,PARASECT
+	db 7,GENGAR
 	db 10,VISIGO
 	db $00

@@ -36,6 +36,7 @@ CoordsData_PSH:
 PSHRivalWalkupScript: 
 	CheckEvent EVENT_FOUGHT_RIVAL_PEWTER_CITY
 	ret nz	
+	call CountNumBadgesOwned
 	ld hl, CoordsData_PSH
 	call ArePlayerCoordsInArray
 	ret nc ; if not in area, skip

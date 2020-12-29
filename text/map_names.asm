@@ -105,3 +105,7 @@ CeruleanCaveName:
 	db "CERULEAN CAVE@"
 PowerPlantName:
 	db "POWER PLANT@"
+HauntedHouseName:
+	db "ABANDONED@"
+RemoteIslandName:
+	db "REMOTE ISLAND@"

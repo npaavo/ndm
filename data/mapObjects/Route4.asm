@@ -11,7 +11,7 @@ Route4_Object:
 	warp 74, 9, 2, CERULEAN_TRADE_HOUSE
 
 	db 3 ; signs
-	sign 12, 5, 4 ; PokeCenterSignText
+	sign 12, 5, 7 ; PokeCenterSignText
 	sign 15, 11, 5 ; Route4Text5
 	sign 49, 3, 5 ; Route4Text6
 

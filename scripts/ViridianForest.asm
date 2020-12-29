@@ -29,7 +29,7 @@ ViridianForest_TextPointers:
 
 ViridianForestTrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_0
-	db ($5 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_0
 	dw ViridianForestBattleText1 ; TextBeforeBattle
 	dw ViridianForestAfterBattleText1 ; TextAfterBattle
@@ -38,7 +38,7 @@ ViridianForestTrainerHeader0:
 
 ViridianForestTrainerHeader1:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_1
-	db ($5 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_1
 	dw ViridianForestBattleText2 ; TextBeforeBattle
 	dw ViridianForestAfterBattleText2 ; TextAfterBattle
@@ -47,7 +47,7 @@ ViridianForestTrainerHeader1:
 
 ViridianForestTrainerHeader2:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_2
-	db ($5 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_2
 	dw ViridianForestBattleText3 ; TextBeforeBattle
 	dw ViridianForestAfterBattleText3 ; TextAfterBattle
@@ -56,7 +56,7 @@ ViridianForestTrainerHeader2:
 	
 ViridianForestTrainerHeader3:
 	dbEventFlagBit EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3
-	db ($5 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_VIRIDIAN_FOREST_TRAINER_3
 	dw ViridianForestBattleText4 ; TextBeforeBattle
 	dw ViridianForestAfterBattleText4 ; TextAfterBattle

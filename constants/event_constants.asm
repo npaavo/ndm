@@ -1025,9 +1025,9 @@ const_value = 0
 	const EVENT_3FE                                  ; 3FE, (D7C6, bit 6)
 	const EVENT_BOUGHT_MAGIKARP                      ; 3FF, (D7C6, bit 7)
 	const EVENT_400                                  ; 400, (D7C7, bit 0)
-	const EVENT_401                                  ; 401, (D7C7, bit 1)
-	const EVENT_402                                  ; 402, (D7C7, bit 2)
-	const EVENT_403                                  ; 403, (D7C7, bit 3)
+	const EVENT_BEAT_ROUTE_5_TRAINER_0               ; 401, (D7C7, bit 1) MOD
+	const EVENT_BEAT_ROUTE_5_TRAINER_1               ; 402, (D7C7, bit 2) MOD
+	const EVENT_BEAT_ROUTE_5_TRAINER_2               ; 403, (D7C7, bit 3) MOD
 	const EVENT_404                                  ; 404, (D7C7, bit 4)
 	const EVENT_405                                  ; 405, (D7C7, bit 5)
 	const EVENT_406                                  ; 406, (D7C7, bit 6)

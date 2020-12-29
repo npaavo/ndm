@@ -50,10 +50,11 @@ CeladonCityText6:
 
 CeladonCityText7:
 	TX_FAR _CeladonCityText7
-	TX_ASM
-	ld a, POLIWRATH
-	call PlayCry
-	jp TextScriptEnd
+	db "@"
+	;TX_ASM
+	;ld a, POLIWRATH
+	;call PlayCry
+	;jp TextScriptEnd
 
 CeladonCityText8:
 	TX_FAR _CeladonCityText8

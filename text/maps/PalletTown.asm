@@ -67,5 +67,5 @@ _PalletTownText6::
 	cont "temporary home."
 	
 	para "You live here"
-	line "now."
+	line "now!"
 	done

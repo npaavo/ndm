@@ -934,6 +934,10 @@ INCLUDE "engine/trade.asm"
 INCLUDE "engine/intro.asm"
 INCLUDE "engine/trade2.asm"
 
+RedsHouse1_GFX:
+RedsHouse2_GFX:    INCBIN "gfx/tilesets/reds_house.2bpp"
+RedsHouse1_Block:
+RedsHouse2_Block:  INCBIN "gfx/blocksets/reds_house.bst"
 
 SECTION "bank11", ROMX
 
@@ -1188,6 +1192,7 @@ CeladonHotel_Blocks: INCBIN "maps/CeladonHotel.blk"
 INCLUDE "data/mapHeaders/MtMoonPokecenter.asm"
 INCLUDE "scripts/MtMoonPokecenter.asm"
 INCLUDE "data/mapObjects/MtMoonPokecenter.asm"
+MtMoonPokecenter_Blocks: INCBIN "maps/MtMoonPokecenter.blk"
 
 INCLUDE "data/mapHeaders/RockTunnelPokecenter.asm"
 INCLUDE "scripts/RockTunnelPokecenter.asm"
@@ -1601,7 +1606,6 @@ Museum2F_Blocks: INCBIN "maps/Museum2F.blk"
 SaffronPokecenter_Blocks: INCBIN "maps/SaffronPokecenter.blk"
 
 ; most pokecenters use the same blocks. can't cross banks, though.
-MtMoonPokecenter_Blocks:
 PewterPokecenter_Blocks:
 CeruleanPokecenter_Blocks:
 VermilionPokecenter_Blocks:
@@ -1871,11 +1875,6 @@ SECTION "bank19", ROMX
 Overworld_GFX:     INCBIN "gfx/tilesets/overworld.2bpp"
 Overworld_Block:   INCBIN "gfx/blocksets/overworld.bst"
 
-RedsHouse1_GFX:
-RedsHouse2_GFX:    INCBIN "gfx/tilesets/reds_house.2bpp"
-	ds 16
-RedsHouse1_Block:
-RedsHouse2_Block:  INCBIN "gfx/blocksets/reds_house.bst"
 
 House_GFX:         INCBIN "gfx/tilesets/house.2bpp"
 House_Block:       INCBIN "gfx/blocksets/house.bst"

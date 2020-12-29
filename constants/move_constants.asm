@@ -96,7 +96,7 @@ const_value = 1
 	const PSYCHIC_M    ; 5e
 	const HYPNOSIS     ; 5f
 	const MEDITATE     ; 60
-	const AGILITY      ; 61
+	const MACH_STRIKE  ; 61 
 	const QUICK_ATTACK ; 62
 	const RAGE         ; 63
 	const TELEPORT     ; 64
@@ -150,7 +150,7 @@ const_value = 1
 	const FLASH        ; 94
 	const PSYWAVE      ; 95
 	const SPLASH       ; 96
-	const LIQUEFY	   ; 97
+	const LIQUID_FORM  ; 97
 	const CRABHAMMER   ; 98
 	const EXPLOSION    ; 99
 	const FURY_SWIPES  ; 9a
@@ -176,10 +176,11 @@ const_value = 1
 	const SKIP_STONE   ; ad	
 	const NIGHT_TERROR ; ad	
 	const NIGHT_TERROR_START_ANIM ; clone for jank	ae
-	const BUG_OUT ; af
-	const SECOND_WIND ;b0
-	const MIND_SPARK  ;b1
-	const STAMPEDE    ;b2
+	const BUG_OUT      ; af
+	const SECOND_WIND  ; b0
+	const MIND_SPARK   ; b1
+	const STAMPEDE     ; b2
+	const FORKING_BOLT ; b3
 	;END MODS
 
 NUM_ATTACKS EQU const_value + -1

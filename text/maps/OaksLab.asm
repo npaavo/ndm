@@ -533,8 +533,8 @@ _OaksLabText_44210::
 
 _OaksLabText_44215::
 	text "Looking good!"
-	line "Your dedication is"
-	cont "admirable!"
+	line "Your dedication"
+	cont "is admirable!"
 	done
 
 _OaksLabText_4421a::
@@ -568,8 +568,8 @@ _OaksLabText_4422e::
 	done
 
 _OaksLabText_44233::
-	text "You finally got at"
-	line "least 100 species!"
+	text "You finally got"
+	line "100 species!"
 	cont "I can't believe"
 	cont "how good you are!"
 	done

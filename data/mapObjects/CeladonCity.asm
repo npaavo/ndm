@@ -12,14 +12,14 @@ CeladonCity_Object:
 
 	db 9 ; signs
 	sign 27, 15, 10 ; CeladonCityText10
-	sign 19, 15, 11 ; CeladonCityText11
+	sign 19, 17, 11 ; CeladonCityText11
 	sign 42, 9, 12 ; PokeCenterSignText
-	sign 13, 29, 13 ; CeladonCityText13
+	sign 11, 31, 13 ; CeladonCityText13
 	sign 21, 9, 14 ; CeladonCityText14
 	sign 12, 13, 15 ; CeladonCityText15
-	sign 39, 21, 16 ; CeladonCityText16
-	sign 33, 21, 17 ; CeladonCityText17
-	sign 27, 21, 18 ; CeladonCityText18
+	sign  9,  5, 16 ; CeladonCityText16
+	sign 28, 31, 17 ; CeladonCityText17
+	sign 25, 21, 18 ; CeladonCityText18
 
 	db 9 ; objects
 	object SPRITE_MEDIUM, 35, 3, WALK, 0, 1 ; person

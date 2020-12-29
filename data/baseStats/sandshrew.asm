@@ -14,7 +14,7 @@ dw SandshrewPicBack
 ; attacks known at lvl 0
 db SCRATCH
 db SHARPEN
-db 0
+db DEFENSE_CURL
 db 0
 db 0 ; growth rate
 ; learnset

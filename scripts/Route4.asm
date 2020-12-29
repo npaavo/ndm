@@ -19,6 +19,7 @@ Route4_TextPointers:
 	dw PokeCenterSignText
 	dw Route4Text5
 	dw Route4Text6
+	dw Route4Text7
 
 Route4TrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_ROUTE_4_TRAINER_0
@@ -59,4 +60,8 @@ Route4Text5:
 
 Route4Text6:
 	TX_FAR _Route4Text6
+	db "@"
+	
+Route4Text7:
+	TX_FAR _Route4Text7
 	db "@"

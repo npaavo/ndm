@@ -1,13 +1,13 @@
 Route8Mons:
 	db $0F
-	db 2,SANDSHREW
-	db 2,EKANS
-	db 2,MEOWTH
-	db 4,LICKITUNG
-	db 4,RHYHORN
-	db 4,PONYTA
-	db 4,TAUROS
-	db 7,PERSIAN
-	db 7,ARBOK
-	db 10,KANGASKHAN
+	db 0,SANDSHREW
+	db 0,EKANS
+	db 0,MEOWTH
+	db 0,LICKITUNG
+	db 0,RHYHORN
+	db 0,PONYTA
+	db 3,TAUROS
+	db 3,PERSIAN
+	db 3,ARBOK
+	db 7,KANGASKHAN
 	db $00

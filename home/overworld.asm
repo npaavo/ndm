@@ -598,6 +598,13 @@ DarkMaps:
 	db MUSEUM_1F
 	db MUSEUM_2F
 	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE ; any time you expand this list, it bricks savefiles. so feel free to replace these. @future me, trim this out once everything is set.
+	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE
+	db DIGLETTS_CAVE
 	db $FF
 
 

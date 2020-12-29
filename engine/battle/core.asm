@@ -460,14 +460,21 @@ MainInBattleLoop:
 .noLinkBattle
 	ld a, [wPlayerSelectedMove]
 	cp QUICK_ATTACK
+	jr z, .stillfast
+	cp MACH_STRIKE 
 	jr nz, .playerDidNotUseQuickAttack
+.stillfast
 	ld a, [wEnemySelectedMove]
 	cp QUICK_ATTACK
+	jr z, .compareSpeed  ; if both used Quick Attack
+	cp MACH_STRIKE
 	jr z, .compareSpeed  ; if both used Quick Attack
 	jp .playerMovesFirst ; if player used Quick Attack and enemy didn't
 .playerDidNotUseQuickAttack
 	ld a, [wEnemySelectedMove]
 	cp QUICK_ATTACK
+	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
+	cp MACH_STRIKE
 	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
 	ld a, [wPlayerSelectedMove]
 	cp COUNTER
@@ -2999,13 +3006,13 @@ SelectEnemyMove:
 	call SaveScreenTilesToBuffer1
 	call LinkBattleExchangeData
 	call LoadScreenTilesFromBuffer1
-	ld a, [wSerialExchangeNybbleReceiveData]
-	cp LINKBATTLE_STRUGGLE
-	jp z, .linkedOpponentUsedStruggle
-	cp LINKBATTLE_NO_ACTION
-	jr z, .unableToSelectMove
-	cp 4
-	ret nc
+	;ld a, [wSerialExchangeNybbleReceiveData]
+	;cp LINKBATTLE_STRUGGLE
+	;jp z, .linkedOpponentUsedStruggle
+	;cp LINKBATTLE_NO_ACTION
+	;jr z, .unableToSelectMove
+	;cp 4
+	;ret nc
 	ld [wEnemyMoveListIndex], a
 	ld c, a
 	ld hl, wEnemyMonMoves
@@ -3043,10 +3050,31 @@ SelectEnemyMove:
 	ld a, STRUGGLE ; struggle if the only move is disabled
 	jr nz, .done
 .atLeastTwoMovesAvailable
-	ld a, [wIsInBattle]
-	dec a
-	jr z, .chooseRandomMove ; wild encounter
-	callab AIEnemyTrainerChooseMoves
+	;callab AIEnemyTrainerChooseMoves ; all this does now is load in a PP list to hl.
+	
+	;ld a, [wEnemyMonPartyPos] ; which enemy is active
+	;ld hl, wEnemyMon1
+	;ld bc, wEnemyMon2 - wEnemyMon1
+	;call AddNTimes ; add BC to HL, A times. A is set to 0 after.
+	;hl is now the active enemy mon's data start.
+	;ld bc, wEnemyMon1PP - wEnemyMon1
+	;add hl, bc  ; add the offset to PP information
+	ld hl, wEnemyMonPP
+	
+	ld b, NUM_MOVES + 1
+	; see if ANY moves have PP
+	push hl
+.checkForNoPPLeft
+	dec b
+	ld a, b 
+	and a ; did we run out of moves to check and haven't exited? struggle time
+	jr z, .popAndUseStruggle
+	ld a, [hli]
+	and a 
+	jr nz, .popAndchooseRandomMove ; a move has PP, move on to picking!	
+	jr .checkForNoPPLeft
+.popAndchooseRandomMove
+	pop hl
 .chooseRandomMove
 	push hl
 	call BattleRandom
@@ -3065,23 +3093,78 @@ SelectEnemyMove:
 	inc b ; select move 4, [be,ff] (66/256 chance)
 .moveChosen
 	ld a, b
-	dec a
+	dec a ; a is the index of the move chosen (0,1,2,3)
 	ld [wEnemyMoveListIndex], a
 	ld a, [wEnemyDisabledMove]
 	swap a
 	and $f
 	cp b
 	ld a, [hl]
-	pop hl
+	pop hl ; reset the PP list back to the first index.
 	jr z, .chooseRandomMove ; move disabled, try again
-	and a
-	jr z, .chooseRandomMove ; move non-existant, try again
+	and a ; a is the PP value of the selected move
+	jr z, .chooseRandomMove ; move has no PP, try again
 .done
+
+	cp STRUGGLE
+	jr z, .useStruggle	
+	
+	; b is the index of the selected move. we need to get that move, and reduce its pp. 
+	dec b ; 1-4 --> 0-3	
+	ld a, b
+	ld [wEnemySelectedMove], a ; this is a temporary storage. the engine reads this as what move to use- this is just its index on the mon right now.	
+	
+	;push bc 
+	
+	;ld a, [wEnemyMonPartyPos] ; which enemy is active
+	;ld hl, wEnemyMon1
+	;ld bc, wEnemyMon2 - wEnemyMon1
+	;call AddNTimes ; add BC to HL, A times. A is set to 0 after.
+	
+	;ld hl, wEnemyMon
+	
+	;push hl  ; we will need their starting index in a second.
+	
+	;ld bc, wEnemyMon1Moves - wEnemyMon1 ; jump to move list...
+	;add hl, bc
+	
+	;ld a, [wEnemySelectedMove]
+	;ld c, a
+	;ld b, 0
+	;add hl, bc ; jump ahead that many indicies...
+	
+	ld hl, wEnemyMonMoves
+	ld c, a
+	ld b, 0
+	add hl, bc
+	
+	ld a, [hl]
+	ld [wEnemySelectedMove], a ; actual move selection
+	
+	;pop hl ; get the address of the mon again 
+	
+	;ld bc, wEnemyMon1PP - wEnemyMon1 ; jump to PP 
+	;add hl, bc 
+	
+	ld hl, wEnemyMonPP
+	
+	;pop bc ; get back the selected index (b)
+	;ld a, b
+
+	;ld c, a
+	;ld b, 0
+	add hl, bc           ; calculate the address in memory of the PP we need to decrement
+	                     ; based on the move chosen.
+	dec [hl]             ; Decrement PP
+	
+	
+	ret
+.popAndUseStruggle
+	pop hl 
+.useStruggle
+	ld a, STRUGGLE
 	ld [wEnemySelectedMove], a
 	ret
-.linkedOpponentUsedStruggle
-	ld a, STRUGGLE
-	jr .done
 
 ; this appears to exchange data with the other gameboy during link battles
 LinkBattleExchangeData:
@@ -3910,13 +3993,13 @@ ExclamationPointMoveSets:
 	db $00
 	db RECOVER, BIDE, SELFDESTRUCT, AMNESIA
 	db $00
-	db MEDITATE, AGILITY, TELEPORT, MIMIC, DOUBLE_TEAM, BARRAGE
+	db MEDITATE, MACH_STRIKE, TELEPORT, MIMIC, DOUBLE_TEAM, BARRAGE
 	db $00
 	db POUND, SCRATCH, VICEGRIP, WING_ATTACK, FLY, BIND, SLAM, HORN_ATTACK, BODY_SLAM
 	db WRAP, THRASH, TAIL_WHIP, LEER, BITE, GROWL, ROAR, SING, PECK, COUNTER
 	db STRENGTH, ABSORB, STRING_SHOT, EARTHQUAKE, FISSURE, DIG, TOXIC, SCREECH, HARDEN
 	db MINIMIZE, WITHDRAW, DEFENSE_CURL, METRONOME, LICK, CLAMP, CONSTRICT, POISON_GAS
-	db LEECH_LIFE, BUBBLE, FLASH, SPLASH, LIQUEFY, FURY_SWIPES, REST, SHARPEN, SLASH, SUBSTITUTE
+	db LEECH_LIFE, BUBBLE, FLASH, SPLASH, LIQUID_FORM, FURY_SWIPES, REST, SHARPEN, SLASH, SUBSTITUTE
 	db $00
 	db $FF ; terminator
 
@@ -4613,16 +4696,7 @@ HandleCounterMove:
 	ld a, [de]
 	and a
 	ret z ; miss if the opponent's last selected move's Base Power is 0.
-; check if the move the target last selected was Normal or Fighting type
-	inc de
-	ld a, [de]
-	and a ; normal type
-	jr z, .counterableType
-	cp FIGHTING
-	jr z, .counterableType
-; if the move wasn't Normal or Fighting type, miss
-	xor a
-	ret
+	inc de ; this used to be part of checking the type of the move they used was normal or fighting. now counter just works if they take damge. idk if something else uses this but it's one line and i don't care.
 .counterableType
 	ld hl, wDamage
 	ld a, [hli]
@@ -4684,14 +4758,8 @@ ApplyAttackToEnemyPokemon:
 	ld a, [hl]
 	ld b, a ; Seismic Toss deals damage equal to the user's level ; MOD: and so does sonic boom and dragon rage
 	ld a, [wPlayerMoveNum]
-	cp SEISMIC_TOSS
-	jr z, .storeDamage
-	cp NIGHT_SHADE
-	jr z, .storeDamage
-	cp SONICBOOM
-	jr z, .storeDamage
-	cp DRAGON_RAGE
-	jr z, .storeDamage
+	cp PSYWAVE
+	jr nz, .storeDamage
 ; Psywave
 	ld a, [hl]
 	ld b, a
@@ -4801,16 +4869,8 @@ ApplyAttackToPlayerPokemon:
 	ld a, [hl]
 	ld b, a
 	ld a, [wEnemyMoveNum]
-	cp SEISMIC_TOSS
-	jr z, .storeDamage
-	cp NIGHT_SHADE
-	jr z, .storeDamage
-	ld b, SONICBOOM_DAMAGE
-	cp SONICBOOM
-	jr z, .storeDamage
-	ld b, DRAGON_RAGE_DAMAGE
-	cp DRAGON_RAGE
-	jr z, .storeDamage
+	cp PSYWAVE
+	jr nz, .storeDamage
 ; Psywave
 	ld a, [hl]
 	ld b, a

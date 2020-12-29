@@ -1,12 +1,35 @@
 ; creates a set of moves that may be used and returns its address in hl
 ; unused slots are filled with 0, all used slots may be chosen with equal probability
 AIEnemyTrainerChooseMoves:
-	ld a, $a
-	ld hl, wBuffer ; init temporary move selection array. Only the moves with the lowest numbers are chosen in the end
-	ld [hli], a   ; move 1
-	ld [hli], a   ; move 2
-	ld [hli], a   ; move 3
-	ld [hl], a    ; move 4
+	;ld a, $a
+	;ld hl, wBuffer ; init temporary move selection array. Only the moves with the lowest numbers are chosen in the end
+	;ld [hli], a   ; move 1
+	;ld [hli], a   ; move 2
+	;ld [hli], a   ; move 3
+	;ld [hl], a    ; move 4
+	
+	; increment through that mon's PP.
+	; if that move is out of PP, set wBuffer value to $FF
+	; if all moves are out of PP, skip move decision, use struggle.
+	
+	
+	; first we're gonna copy over the PP values to the wBuffer.
+	
+	
+
+	ld a, [wEnemyMonPartyPos] ; which enemy is active
+	ld hl, wEnemyMon1
+	ld bc, wEnemyMon2 - wEnemyMon1
+	call AddNTimes ; add BC to HL, A times. A is set to 0 after.
+	;hl is now the active enemy mon's data start.
+	ld bc, wEnemyMon1PP - wEnemyMon1
+	add hl, bc  ; add the offset to PP information
+	
+	ld bc, NUM_MOVES	
+	ld de, wBuffer
+	call CopyData ; copy BC bytes, from HL, to DE.
+	
+	;wBuffer is now an array of how much PP is remaining on each of the moves.	
 	ld a, [wEnemyDisabledMove] ; forbid disabled move (if any)
 	swap a
 	and $f
@@ -16,8 +39,15 @@ AIEnemyTrainerChooseMoves:
 	ld c, a
 	ld b, $0
 	add hl, bc    ; advance pointer to forbidden move
-	ld [hl], $50  ; forbid (highly discourage) disabled move
+	ld [hl], $0   ; that move has 0 PP as far as this function cares
 .noMoveDisabled
+	
+	ld hl, wBuffer 
+	ret  ; we're done here. it's in god's hands now.
+
+
+
+
 	ld hl, TrainerClassMoveChoiceModifications
 	ld a, [wTrainerClass]
 	ld b, a
@@ -276,54 +306,54 @@ ReadMove:
 ; move choice modification methods that are applied for each trainer class
 ; 0 is sentinel value
 TrainerClassMoveChoiceModifications:
-	db 0      ; YOUNGSTER
+	db 1,0      ; YOUNGSTER
 	db 1,0    ; BUG CATCHER
 	db 1,0    ; LASS
-	db 1,3,0  ; SAILOR
+	db 1,0  ; SAILOR
 	db 1,0    ; JR_TRAINER_M
 	db 1,0    ; JR_TRAINER_F
-	db 1,2,3,0; POKEMANIAC
-	db 1,2,0  ; SUPER_NERD
+	db 1,0; POKEMANIAC
+	db 1,0  ; SUPER_NERD
 	db 1,0    ; HIKER
 	db 1,0    ; BIKER
-	db 1,3,0  ; BURGLAR
+	db 1,0  ; BURGLAR
 	db 1,0    ; ENGINEER
-	db 1,2,0  ; JUGGLER_X
-	db 1,3,0  ; FISHER
-	db 1,3,0  ; SWIMMER
-	db 0      ; CUE_BALL
+	db 1,0  ; JUGGLER_X
+	db 1,0  ; FISHER
+	db 1,0  ; SWIMMER
+	db 1,0      ; CUE_BALL
 	db 1,0    ; GAMBLER
-	db 1,3,0  ; BEAUTY
-	db 1,2,0  ; PSYCHIC_TR
-	db 1,3,0  ; ROCKER
+	db 1,0  ; BEAUTY
+	db 1,0  ; PSYCHIC_TR
+	db 1,0  ; ROCKER
 	db 1,0    ; JUGGLER
 	db 1,0    ; TAMER
 	db 1,0    ; BIRD_KEEPER
 	db 1,0    ; BLACKBELT
 	db 1,0    ; SONY1
-	db 1,3,0  ; PROF_OAK
-	db 1,2,0  ; CHIEF
-	db 1,2,0  ; SCIENTIST
-	db 1,3,0  ; GIOVANNI
+	db 1,0  ; PROF_OAK
+	db 1,0  ; CHIEF
+	db 1,0  ; SCIENTIST
+	db 1,0  ; GIOVANNI
 	db 1,0    ; ROCKET
-	db 1,3,0  ; COOLTRAINER_M
-	db 1,3,0  ; COOLTRAINER_F
+	db 1,0  ; COOLTRAINER_M
+	db 1,0  ; COOLTRAINER_F
 	db 1,0    ; BRUNO
 	db 1,0    ; LARS
-	db 1,3,0  ; MISTY
-	db 1,3,0  ; LT_SURGE
-	db 1,3,0  ; ERIKA
-	db 1,3,0  ; KOGA
-	db 1,3,0  ; BLAINE
-	db 1,3,0  ; SABRINA
-	db 1,2,0  ; GENTLEMAN
-	db 1,3,0  ; SONY2
-	db 1,3,0  ; SONY3
-	db 1,2,3,0; LORELEI
+	db 1,0  ; MISTY
+	db 1,0  ; LT_SURGE
+	db 1,0  ; ERIKA
+	db 1,0  ; KOGA
+	db 1,0  ; BLAINE
+	db 1,0  ; SABRINA
+	db 1,0  ; GENTLEMAN
+	db 1,0  ; SONY2
+	db 1,0  ; SONY3
+	db 1,0; LORELEI
 	db 1,0    ; CHANNELER
 	db 1,0    ; AGATHA
-	db 1,3,0  ; LANCE
-	db 0      ; LOGGER - MOD
+	db 1,0   ; LANCE
+	db 1,0    ; LOGGER - MOD
 	db 1,0    ; WYLDA - MOD
 
 INCLUDE "engine/battle/trainer_pic_money_pointers.asm"
@@ -386,7 +416,7 @@ TrainerAIPointers:
 	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
-	dbw 3,JugglerAI ; juggler_x
+	dbw 3,GenericAI ; juggler_x
 	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
@@ -394,35 +424,35 @@ TrainerAIPointers:
 	dbw 3,GenericAI
 	dbw 3,GenericAI
 	dbw 3,GenericAI
-	dbw 3,JugglerAI ; juggler
+	dbw 3,GenericAI ; juggler
 	dbw 3,GenericAI
 	dbw 3,GenericAI
-	dbw 2,BlackbeltAI ; blackbelt
+	dbw 3,GenericAI ; blackbelt
 	dbw 3,GenericAI
 	dbw 3,GenericAI
-	dbw 1,GenericAI ; chief
+	dbw 3,GenericAI ; chief
 	dbw 3,GenericAI
-	dbw 1,GiovanniAI ; giovanni
+	dbw 3,GenericAI ; giovanni
 	dbw 3,GenericAI
-	dbw 2,CooltrainerMAI ; cooltrainerm
-	dbw 1,CooltrainerFAI ; cooltrainerf
-	dbw 2,BrunoAI ; bruno
-	dbw 5,LarsAI ; brock
-	dbw 1,MistyAI ; misty
-	dbw 1,LtSurgeAI ; surge
-	dbw 1,ErikaAI ; erika
-	dbw 2,KogaAI ; koga
-	dbw 2,BlaineAI ; blaine
-	dbw 1,SabrinaAI ; sabrina
+	dbw 3,GenericAI ; cooltrainerm
+	dbw 3,GenericAI ; cooltrainerf
+	dbw 3,GenericAI ; bruno
+	dbw 3,GenericAI ; brock
+	dbw 3,GenericAI ; misty
+	dbw 3,GenericAI ; surge
+	dbw 3,GenericAI ; erika
+	dbw 3,GenericAI ; koga
+	dbw 3,GenericAI ; blaine
+	dbw 3,GenericAI ; sabrina
 	dbw 3,GenericAI
-	dbw 1,Sony2AI ; sony2
-	dbw 1,Sony3AI ; sony3
-	dbw 2,LoreleiAI ; lorelei
+	dbw 3,GenericAI ; sony2
+	dbw 3,GenericAI ; sony3
+	dbw 3,GenericAI ; lorelei
 	dbw 3,GenericAI
-	dbw 2,AgathaAI ; agatha
-	dbw 1,LanceAI ; lance
-	dbw 1,GenericAI ; Logger
-	dbw 1,LoreleiAI ; Wylda
+	dbw 3,GenericAI ; agatha
+	dbw 3,GenericAI ; lance
+	dbw 3,GenericAI ; Logger
+	dbw 3,GenericAI ; Wylda
 
 JugglerAI:
 	cp $40

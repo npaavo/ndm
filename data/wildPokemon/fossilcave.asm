@@ -1,25 +1,25 @@
 FossilCaveMons:
 	db $01
-	db 2,ZUBAT
-	db 2,ZUBAT
-	db 2,ZUBAT
-	db 2,ZUBAT
-	db 2,ZUBAT
-	db 3,KABUTO
-	db 3,OMANYTE
-	db 7,KABUTOPS
-	db 7,OMASTAR
-	db 10,GOLBAT
+	db 0,ZUBAT
+	db 0,ZUBAT
+	db 0,ZUBAT
+	db 0,ZUBAT
+	db 0,KABUTO
+	db 0,OMANYTE
+	db 3,KABUTOPS
+	db 3,OMASTAR
+	db 3,AERODACTYL
+	db 7,AERODACTYL
 	db $00
 	db $20
-	db 2,KABUTO
-	db 2,OMANYTE
-	db 2,KABUTO
-	db 2,OMANYTE
-	db 2,KABUTO
-	db 2,OMANYTE
-	db 2,LAPRAS
-	db 7,KABUTOPS
-	db 7,OMASTAR
-	db 10,LAPRAS
+	db 0,KABUTO
+	db 0,OMANYTE
+	db 0,KABUTO
+	db 0,OMANYTE
+	db 0,KABUTO
+	db 0,OMANYTE
+	db 3,LAPRAS
+	db 3,KABUTOPS
+	db 3,OMASTAR
+	db 7,LAPRAS
 	db $00

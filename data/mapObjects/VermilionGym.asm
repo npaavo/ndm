@@ -8,7 +8,7 @@ VermilionGym_Object:
 	db 0 ; signs
 
 	db 1 ; objects
-	object SPRITE_SWIMMER, 6, 4, STAY, DOWN, 1, OPP_LT_SURGE, 1
+	object SPRITE_SWIMMER, 6, 4, STAY, DOWN, 1, OPP_TORI, 1
 
 	; warp-to
 	warp_to 6, 17, VERMILION_GYM_WIDTH

@@ -1,14 +1,15 @@
 ViridianCity_Object:
 	db $f ; border block
 
-	db 7 ; warps
+	db 8 ; warps
 	warp 23, 25, 0, VIRIDIAN_POKECENTER
 	warp 29, 19, 0, VIRIDIAN_MART
 	warp 35, 16, 0, VIRIDIAN_SCHOOL_HOUSE
 	warp 30, 29, 0, VIRIDIAN_NICKNAME_HOUSE
 	warp 32, 7, 0, VIRIDIAN_GYM
 	warp 4, 31, 0, BLUES_HOUSE
-	warp 16, 27, 1, ROUTE_11_GATE_1F  ;  DEBUG WRONG WARP
+	warp 36,  5, 0, POKEMON_TOWER_1F  ;  DEBUG WRONG WARP
+	warp 37,  5, 1, POKEMON_TOWER_1F  ;  DEBUG WRONG WARP
 
 	db 7 ; signs
 	sign 17, 17, 8 ; ViridianCityText8
@@ -16,7 +17,7 @@ ViridianCity_Object:
 	sign 21, 29, 10 ; ViridianCityText10
 	sign 30, 19, 11 ; MartSignText
 	sign 24, 25, 12 ; PokeCenterSignText
-	sign 29, 9, 13 ; ViridianCityText13
+	sign 29,  9, 13 ; ViridianCityText13
 	sign 35, 17, 16 ; ViridianCityText16
 
 	db 7 ; objects
@@ -26,12 +27,14 @@ ViridianCity_Object:
 	object SPRITE_GIRL, 17, 9, STAY, RIGHT, 4 ; person
 	object SPRITE_LYING_OLD_MAN, 18, 9, STAY, NONE, 5 ; person
 	object SPRITE_FISHER2, 6, 23, STAY, DOWN, 6 ; person
-	object SPRITE_GAMBLER, 17, 5, WALK, 2, 7 ; person
+	object SPRITE_GAMBLER, 17,  5, WALK, 2, 7 ; person
 
 	; warp-to
 	warp_to 23, 25, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_POKECENTER
 	warp_to 29, 19, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_MART
 	warp_to 35, 16, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_SCHOOL_HOUSE ; east house exit
 	warp_to 30, 29, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_NICKNAME_HOUSE ; rt1 cave
-	warp_to 32, 7, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_GYM
+	warp_to 32,  7, VIRIDIAN_CITY_WIDTH ; VIRIDIAN_GYM
 	warp_to 4, 31, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
+	warp_to 36,  5, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon
+	warp_to 37,  5, VIRIDIAN_CITY_WIDTH ; BLUES_HOUSE / mod dungeon

@@ -757,7 +757,6 @@ GetMonFieldMoves:
 FieldMoveDisplayData:
 	db CUT, $01, $0C
 	db FLY, $02, $0C
-	db $B4, $03, $0C ; unused field move
 	db SURF, $04, $0C
 	db STRENGTH, $05, $0A
 	db FLASH, $06, $0C

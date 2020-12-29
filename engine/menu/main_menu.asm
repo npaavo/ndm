@@ -319,6 +319,7 @@ StartNewGame:
 
 ; enter map after using a special warp or loading the game from the main menu
 SpecialEnterMap:
+	call CountNumBadgesOwned
 	xor a
 	ld [hJoyPressed], a
 	ld [hJoyHeld], a
@@ -347,9 +348,8 @@ CableClubOptionsText:
 	next "uu@"
 	
 ModWarningText:
-	db   "v0.12 / BUTTERFREE"
-	next " Demo No.1"
-	next " Report bugs pls!@"
+	db   "v0.13a / WEEDLE"
+	next "discord.gg/cBfujky@"
 
 DisplayContinueGameInfo:
 	xor a

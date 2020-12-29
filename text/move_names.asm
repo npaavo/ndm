@@ -95,7 +95,7 @@ MoveNames::
 	db "PSYCHIC@"
 	db "HYPNOSIS@"
 	db "MEDITATE@"
-	db "AGILITY@"
+	db "MACH STRIKE@" ; AGILIY was here
 	db "QUICK ATTACK@"
 	db "RAGE@"
 	db "TELEPORT@"
@@ -123,7 +123,7 @@ MoveNames::
 	db "LICK@"
 	db "SMOG@"
 	db "SLUDGE@"
-	db "CUDGEL@"
+	db "CUDGEL@" ; BONE_CLUB wuz here
 	db "FIRE BLAST@"
 	db "WATERFALL@"
 	db "CLAMP@"
@@ -149,11 +149,11 @@ MoveNames::
 	db "FLASH@"
 	db "PSYWAVE@"
 	db "SPLASH@"
-	db "LIQUEFY@"
+	db "LIQUID FORM@" ; ACID_ARMOR was here
 	db "CRABHAMMER@"
 	db "EXPLOSION@"
 	db "FURY SWIPES@"
-	db "BOOMERANG@"
+	db "BOOMERANG@" ;BONEMERANG was here
 	db "REST@"
 	db "ROCK SLIDE@"
 	db "HYPER FANG@"
@@ -179,6 +179,7 @@ MoveNames::
 	db "SECOND WIND@"
 	db "MIND SPARK@"
 	db "STAMPEDE@"
+	db "FORKING BOLT@"
 	
 	;END MODS
 	db "STRUGGLE@" ; struggle must go last

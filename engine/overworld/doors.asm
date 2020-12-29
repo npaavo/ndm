@@ -42,7 +42,7 @@ DoorTileIDPointers:
 	db $ff
 
 OverworldDoorTileIDs:
-	db $1B,$58,$00
+	db $1B,$58,$5E,$5F,$00
 
 ForestDoorTileIDs:
 	db $3a,$00

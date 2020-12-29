@@ -13,7 +13,7 @@ dw JynxPicFront
 dw JynxPicBack
 ; attacks known at lvl 0
 db POUND
-db LOVELY_KISS
+db SING
 db 0
 db 0
 db 0 ; growth rate

@@ -8,6 +8,6 @@ Route1Mons:
 	db 0,ODDISH
 	db 0,NIDORAN_M
 	db 0,NIDORAN_F
-	db 7,PIDGEOTTO
-	db 10,SCYTHER
+	db 3,PIDGEOTTO
+	db 7,SCYTHER
 	db $00

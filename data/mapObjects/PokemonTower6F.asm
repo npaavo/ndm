@@ -1,5 +1,5 @@
 PokemonTower6F_Object:
-	db $1 ; border block
+	db $3 ; border block
 
 	db 2 ; warps
 	warp 18, 9, 1, POKEMON_TOWER_5F

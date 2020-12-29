@@ -1,13 +1,13 @@
 Route7Mons:
 	db $0F
-	db 2,MACHOP
-	db 2,ABRA
-	db 2,DITTO
-	db 4,ELECTABUZZ
-	db 4,MAGMAR
-	db 4,HITMONCHAN
-	db 4,HITMONLEE
-	db 7,MACHOKE
-	db 7,KADABRA
-	db 10,MACHAMP
+	db 0,MACHOP
+	db 0,ABRA
+	db 0,DITTO
+	db 0,ELECTABUZZ
+	db 0,HITMONLEE
+	db 0,HITMONCHAN
+	db 3,JYNX
+	db 3,MACHOKE
+	db 3,KADABRA
+	db 7,MACHAMP
 	db $00

@@ -119,4 +119,4 @@ SaffronCityFlyWarp:
 Route4FlyWarp:
 	FLYWARP_DATA ROUTE_4_WIDTH,          6, 11
 Route10FlyWarp:
-	FLYWARP_DATA ROUTE_10_WIDTH,        11, 3
+	FLYWARP_DATA ROUTE_10_WIDTH,        12, 3

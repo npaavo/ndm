@@ -95,7 +95,7 @@ AttackAnimationPointers:
 	dw PsychicAnim
 	dw HypnosisAnim
 	dw MeditateAnim
-	dw AgilityAnim
+	dw MachStrikeAnim
 	dw QuickAttackAnim
 	dw RageAnim
 	dw TeleportAnim
@@ -149,7 +149,7 @@ AttackAnimationPointers:
 	dw FlashAnim
 	dw PsywaveAnim
 	dw SplashAnim
-	dw LiquefyAnim
+	dw LiquidFormAnim
 	dw CrabHammerAnim
 	dw ExplosionAnim
 	dw FurySwipesAnim
@@ -179,6 +179,7 @@ AttackAnimationPointers:
 	dw SecondWindAnim
 	dw MindSparkAnim
 	dw StampedeAnim
+	dw ForkingBoltAnim
 	;END MODS
 	dw StruggleAnim ; struggle must go last
 	dw ShowPicAnim
@@ -679,7 +680,9 @@ FireSpinAnim:
 	db $46,$FF,$0D
 	db $46,$FF,$0E
 	db $FF
-
+	
+ForkingBoltAnim: ; intentional fall through to save space
+	db $41,$54,$29
 ThunderShockAnim:
 	db $42,$53,$29
 	db $FF
@@ -750,11 +753,8 @@ MeditateAnim:
 	db SE_RESET_SCREEN_PALETTE, $FF
 	db $FF
 
-AgilityAnim:
-	db SE_LIGHT_SCREEN_PALETTE, $60
-	db SE_RESET_SCREEN_PALETTE, $FF
-	db $FF
 
+MachStrikeAnim:	
 QuickAttackAnim:
 	db SE_SLIDE_MON_OFF, $61
 	db $46,$FF,$04
@@ -1075,7 +1075,7 @@ SplashAnim:
 	db SE_BOUNCE_UP_AND_DOWN, $95
 	db $FF
 
-LiquefyAnim:
+LiquidFormAnim:
 	db SE_SLIDE_MON_DOWN_AND_HIDE, $96
 	db $FF
 

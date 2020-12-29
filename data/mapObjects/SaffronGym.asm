@@ -2,8 +2,8 @@ SaffronGym_Object:
 	db $2e ; border block
 
 	db 2 ; warps
-	warp 8, 17, 2, -1
-	warp 9, 17, 2, -1
+	warp 8, 17, 4, -1
+	warp 9, 17, 4, -1
 
 	db 0 ; signs
 

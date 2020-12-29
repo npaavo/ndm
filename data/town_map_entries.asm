@@ -27,19 +27,21 @@ ExternalMapEntries:
 	EMAP $B,$C,Route14Name
 	EMAP $A,$D,Route15Name
 	EMAP $4,$6,Route16Name
-	EMAP $7,$D,Route17Name
+	EMAP $8,$A,Route17Name
 	EMAP $8,$E,Route18Name
 	EMAP $6,$F,Route19Name
 	EMAP $4,$F,Route20Name
-	EMAP $2,$D,Route21Name
+	EMAP $2,$C,Route21Name
 	EMAP $1,$6,Route22Name
 	EMAP $0,$3,Route23Name
 	EMAP $A,$1,Route24Name
 	EMAP $B,$0,Route25Name
+	EMAP $B,$B,HauntedHouseName
+	EMAP $E,$D,RemoteIslandName
 
 InternalMapEntries:
-	IMAP OAKS_LAB,                      $2,$B,PalletTownName
-	IMAP VIRIDIAN_GYM,                  $2,$8,ViridianCityName
+	IMAP OAKS_LAB,                      $2,$9,PalletTownName
+	IMAP VIRIDIAN_GYM,                  $2,$6,ViridianCityName
 	IMAP VIRIDIAN_FOREST_SOUTH_GATE,    $2,$6,Route2Name
 	IMAP VIRIDIAN_FOREST,               $2,$4,ViridianForestName
 	IMAP PEWTER_POKECENTER,             $2,$3,PewterCityName

@@ -1,6 +1,5 @@
 _SaffronCityText1::
-	text "JYNX:"
-	line "Jynx!"
+	text "JYNX: Jyyyynx!"
 	
 	para "It continues to"
 	line "dance if you keep"
@@ -37,7 +36,7 @@ _SaffronCityText4::
 
 _SaffronCityText5::
 	text "HITMONLEE:"
-	line "Lee."
+	line "... Lee."
 	
 	para "It nods at you"
 	line "with an air of"

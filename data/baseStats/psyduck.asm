@@ -13,8 +13,8 @@ dw PsyduckPicFront
 dw PsyduckPicBack
 ; attacks known at lvl 0
 db SCRATCH
-db 0
-db 0
+db TAIL_WHIP
+db DISABLE
 db 0
 db 0 ; growth rate
 ; learnset

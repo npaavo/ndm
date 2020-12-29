@@ -1,13 +1,13 @@
 Route1CaveMons:
 	db $15
-	db 2, ZUBAT
-	db 2, EKANS
-	db 4, CHARMANDER
-	db 2, SANDSHREW
-	db 2, DIGLETT
-	db 2, GEODUDE
-	db 4, GROWLITHE
-	db 4, VULPIX
-	db 7, ONIX
-	db 10, MAGMAR
+	db 0, ZUBAT
+	db 0, EKANS
+	db 0, CHARMANDER
+	db 0, SANDSHREW
+	db 0, DIGLETT
+	db 0, GEODUDE
+	db 0, GROWLITHE
+	db 0, VULPIX
+	db 3, ONIX
+	db 7, MAGMAR
 	db $00
