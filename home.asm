@@ -2434,9 +2434,14 @@ InitBattleEnemyParameters::
 	jr c, .noTrainer
 	; it's a trainer. all special battles will be overriden manually, so let's calc what party to use
 	ld a, [wEffectiveNumBadgesOwned]
+	and a
+	jr z, .minLevel ; manually set to 1	
 	inc a 
 	cp 5
 	jr nc, .settofour ; at 4+ badges, use the same party: #4, the highest.
+	jr .settrainernum
+.minLevel 
+	ld a, 1
 	jr .settrainernum
 .settofour
 	ld a, 4

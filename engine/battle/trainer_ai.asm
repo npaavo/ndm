@@ -14,9 +14,6 @@ AIEnemyTrainerChooseMoves:
 	
 	
 	; first we're gonna copy over the PP values to the wBuffer.
-	
-	
-
 	ld a, [wEnemyMonPartyPos] ; which enemy is active
 	ld hl, wEnemyMon1
 	ld bc, wEnemyMon2 - wEnemyMon1
@@ -44,9 +41,6 @@ AIEnemyTrainerChooseMoves:
 	
 	ld hl, wBuffer 
 	ret  ; we're done here. it's in god's hands now.
-
-
-
 
 	ld hl, TrainerClassMoveChoiceModifications
 	ld a, [wTrainerClass]
@@ -454,126 +448,126 @@ TrainerAIPointers:
 	dbw 3,GenericAI ; Logger
 	dbw 3,GenericAI ; Wylda
 
-JugglerAI:
-	cp $40
-	ret nc
-	jp AISwitchIfEnoughMons
+;JugglerAI:
+;	cp $40
+;	ret nc
+;	jp AISwitchIfEnoughMons
 
-BlackbeltAI:
-	cp $20
-	ret nc
-	jp AIUseXAttack
+;BlackbeltAI:
+	;cp $20
+	;ret nc
+	;jp AIUseXAttack
 
-GiovanniAI:
-	cp $40
-	ret nc
-	jp AIUseGuardSpec
-
-CooltrainerMAI:
-	cp $40
-	ret nc
-	jp AIUseXAttack
-
-CooltrainerFAI:
-	cp $40
-	ld a, $A
-	call AICheckIfHPBelowFraction
-	jp c, AIUseHyperPotion
-	ld a, 5
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AISwitchIfEnoughMons
-
-LarsAI:
-; if his active monster has a status condition, use a full heal
-	ld a, [wEnemyMonStatus]
-	and a
-	ret z
-	jp AIUseFullHeal
-
-MistyAI:
-	cp $40
-	ret nc
-	jp AIUseXDefend
-
-LtSurgeAI:
-	cp $40
-	ret nc
-	jp AIUseXSpeed
-
-ErikaAI:
-	cp $80
-	ret nc
-	ld a, $A
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseSuperPotion
-
-KogaAI:
-	cp $40
-	ret nc
-	jp AIUseXAttack
-
-BlaineAI:
-	cp $40
-	ret nc
-	jp AIUseSuperPotion
-
-SabrinaAI:
-	cp $40
-	ret nc
-	ld a, $A
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseHyperPotion
-
-Sony2AI:
-	cp $20
-	ret nc
-	ld a, 5
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUsePotion
-
-Sony3AI:
-	cp $20
-	ret nc
-	ld a, 5
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseFullRestore
-
-LoreleiAI:
-	cp $80
-	ret nc
-	ld a, 5
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseSuperPotion
-
-BrunoAI:
-	cp $40
-	ret nc
-	jp AIUseXDefend
-
-AgathaAI:
-	cp $14
-	jp c, AISwitchIfEnoughMons
-	cp $80
-	ret nc
-	ld a, 4
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseSuperPotion
-
-LanceAI:
-	cp $80
-	ret nc
-	ld a, 5
-	call AICheckIfHPBelowFraction
-	ret nc
-	jp AIUseHyperPotion
-
+;GiovanniAI:
+	;cp $40
+	;ret nc
+	;jp AIUseGuardSpec
+;
+;CooltrainerMAI:
+	;cp $40
+	;ret nc
+	;jp AIUseXAttack
+;
+;CooltrainerFAI:
+	;cp $40
+	;ld a, $A
+	;call AICheckIfHPBelowFraction
+	;jp c, AIUseHyperPotion
+	;ld a, 5
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AISwitchIfEnoughMons
+;
+;LarsAI:
+;; if his active monster has a status condition, use a full heal
+	;ld a, [wEnemyMonStatus]
+	;and a
+	;ret z
+	;jp AIUseFullHeal
+;
+;MistyAI:
+	;cp $40
+	;ret nc
+	;jp AIUseXDefend
+;
+;LtSurgeAI:
+	;cp $40
+	;ret nc
+	;jp AIUseXSpeed
+;
+;ErikaAI:
+	;cp $80
+	;ret nc
+	;ld a, $A
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseSuperPotion
+;
+;KogaAI:
+	;cp $40
+	;ret nc
+	;jp AIUseXAttack
+;
+;BlaineAI:
+	;cp $40
+	;ret nc
+	;jp AIUseSuperPotion
+;
+;SabrinaAI:
+	;cp $40
+	;ret nc
+	;ld a, $A
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseHyperPotion
+;
+;Sony2AI:
+	;cp $20
+	;ret nc
+	;ld a, 5
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUsePotion
+;
+;Sony3AI:
+	;cp $20
+	;ret nc
+	;ld a, 5
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseFullRestore
+;
+;LoreleiAI:
+	;cp $80
+	;ret nc
+	;ld a, 5
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseSuperPotion
+;
+;BrunoAI:
+	;cp $40
+	;ret nc
+	;jp AIUseXDefend
+;
+;AgathaAI:
+	;cp $14
+	;jp c, AISwitchIfEnoughMons
+	;cp $80
+	;ret nc
+	;ld a, 4
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseSuperPotion
+;
+;LanceAI:
+	;cp $80
+	;ret nc
+	;ld a, 5
+	;call AICheckIfHPBelowFraction
+	;ret nc
+	;jp AIUseHyperPotion
+;
 GenericAI:
 	and a ; clear carry
 	ret

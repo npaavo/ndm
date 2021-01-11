@@ -122,9 +122,9 @@ VermilionCity_TextPointers:
 	dw VermilionCityText6
 	dw VermilionCityText7
 	dw VermilionCityText8
+	dw VermilionCityText11
 	dw MartSignText
 	dw PokeCenterSignText
-	dw VermilionCityText11
 	dw VermilionCityText12
 	dw VermilionCityText13
 
@@ -162,9 +162,20 @@ VermilionCityText6:
 	db "@"
 
 VermilionCityText7:
+	TX_ASM
+	ld a, $7
+	ld [H_SPRITEINDEX], a
+	xor a ; SPRITE_FACING_DOWN
+	ld [hSpriteFacingDirection], a
+	call SetSpriteFacingDirectionAndDelay
+	ld hl, VermilionCityText7b
+	call PrintText
+	jp TextScriptEnd
+
+VermilionCityText7b:
 	TX_FAR _VermilionCityText7
 	db "@"
-
+	
 VermilionCityText8:
 	TX_FAR _VermilionCityText8
 	db "@"

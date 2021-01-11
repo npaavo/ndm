@@ -3,7 +3,7 @@ db 65 ; base hp
 db 55 ; base attack
 db 115 ; base defense
 db 60 ; base speed
-db 100 ; base special
+db 110 ; base special
 db GRASS ; species type 1
 db GRASS ; species type 2
 db 45 ; catch rate
@@ -13,7 +13,7 @@ dw TangelaPicFront
 dw TangelaPicBack
 ; attacks known at lvl 0
 db CONSTRICT
-db VINE_WHIP
+db TACKLE
 db 0
 db 0
 db 0 ; growth rate

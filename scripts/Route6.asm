@@ -23,7 +23,7 @@ Route6_TextPointers:
 
 Route6TrainerHeader0:
 	dbEventFlagBit EVENT_BEAT_ROUTE_6_TRAINER_0
-	db ($0 << 4) ; trainer's view range
+	db ($3 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_ROUTE_6_TRAINER_0
 	dw Route6BattleText1 ; TextBeforeBattle
 	dw Route6AfterBattleText1 ; TextAfterBattle
@@ -32,16 +32,16 @@ Route6TrainerHeader0:
 
 Route6TrainerHeader1:
 	dbEventFlagBit EVENT_BEAT_ROUTE_6_TRAINER_1
-	db ($0 << 4) ; trainer's view range
+	db ($2 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_ROUTE_6_TRAINER_1
 	dw Route6BattleText2 ; TextBeforeBattle
-	dw Route6AfterBattleText1 ; TextAfterBattle
+	dw Route6AfterBattleText2 ; TextAfterBattle
 	dw Route6EndBattleText2 ; TextEndBattle
 	dw Route6EndBattleText2 ; TextEndBattle
 
 Route6TrainerHeader2:
 	dbEventFlagBit EVENT_BEAT_ROUTE_6_TRAINER_2
-	db ($4 << 4) ; trainer's view range
+	db ($2 << 4) ; trainer's view range
 	dwEventFlagAddress EVENT_BEAT_ROUTE_6_TRAINER_2
 	dw Route6BattleText3 ; TextBeforeBattle
 	dw Route6AfterBattleText3 ; TextAfterBattle
@@ -107,6 +107,10 @@ Route6BattleText2:
 
 Route6EndBattleText2:
 	TX_FAR _Route6EndBattleText2
+	db "@"
+
+Route6AfterBattleText2:
+	TX_FAR _Route6AfterBattleText2
 	db "@"
 
 Route6Text3:

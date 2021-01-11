@@ -79,28 +79,38 @@ _VermilionCityText6::
 	done
 
 _VermilionCityText7::
+	text "..."
+	line "..."
+	
+	para "He glances at"
+	line "you wordlessly,"
+	cont "before resuming"
+	cont "staring wistfully"
+	cont "out to sea..."
+	
+	para "Must be a sailor."
+	done
+
+_VermilionCityText8::
+	
 	text "VERMILION CITY"
 	line "The Port of"
 	cont "Exquisite Sunsets"
 	done
-
-_VermilionCityText8::
-	text "Route 11"
-	done
-
+	
 _VermilionCityText11::
-	text "#MON FAN CLUB"
-	line "All #MON fans"
-	cont "welcome!"
+	text "Route 11"
 	done
 
 _VermilionCityText12::
 	text "VERMILION CITY"
 	line "#MON GYM"
-	cont "LEADER: LT.SURGE"
+	cont "LEADER: TORI"
 
-	para "The Lightning "
-	line "American!"
+	para "#MON SHOWS:"
+	line "Get tickets in"
+	cont "advance! Doors"
+	cont "at 7pm"
 	done
 
 _VermilionCityText13::

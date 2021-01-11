@@ -103,8 +103,6 @@ HealParty:
 HealPartyPPOnly:
 ; MOD Restore PP, called at the end of every battle now
 
-;todo : actually cut out the part where HP is restored
-
 	ld hl, wPartySpecies
 	ld de, wPartyMon1HP
 .healmon
@@ -117,9 +115,11 @@ HealPartyPPOnly:
 
 	ld hl, wPartyMon1Status - wPartyMon1HP ; hl = distance from HP to STATUS
 	add hl, de ; hl is now PartyHP + dist to status
-	xor a ; zero out a
-	;ld [hl], a ; cure status 
-
+	xor a
+	bit FRZ, [hl] 
+	jr z, .notFrozen
+	ld [hl], a ; clear frozen (technically all) status
+.notFrozen
 	push de ;stack: HP, HP, HP?
 	ld b, NUM_MOVES ; A Pokémon has 4 moves
 .pp

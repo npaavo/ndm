@@ -104,20 +104,19 @@ _CeladonCityText10::
 _CeladonCityText11::
 	text "CELADON CITY"
 	line "The City of"
-	cont "Rainbow Dreams"
+	cont "the Future!"
 	done
 
 _CeladonCityText13::
-	text "CELADON CITY"
-	line "#MON GYM"
-	cont "LEADER: ERIKA"
+	text "CELADON LABS"
+	line "CHIEF: MAXINE"
 
-	para "The Nature Loving"
-	line "Princess!"
+	para "Now accepting"
+	line "GYM challengers!"
 	done
 
 _CeladonCityText14::
-	text "CELADON MANSION"
+	text "CELADON SEWAGE"
 	done
 
 _CeladonCityText15::
@@ -127,27 +126,18 @@ _CeladonCityText15::
 	done
 
 _CeladonCityText16::
-	text "TRAINER TIPS"
-
-	para "GUARD SPEC."
-	line "protects #MON"
-	cont "against SPECIAL"
-	cont "attacks such as"
-	cont "fire and water!"
-
-	para "Get your items at"
-	line "CELADON DEPT."
-	cont "STORE!"
+	text "CELADON SEWAGE"
+	line "Customer Service"
 	done
 
 _CeladonCityText17::
-	text "Coins exchanged"
-	line "for prizes!"
-	cont "PRIZE EXCHANGE"
+	text "CELADON #MON"
+	line "CENTER"
+	
+	para "Check out our"
+	line "Café upstairs!"
 	done
 
 _CeladonCityText18::
-	text "ROCKET GAME CORNER"
-	line "The playground"
-	cont "for grown-ups!"
+	text "uu 18"
 	done

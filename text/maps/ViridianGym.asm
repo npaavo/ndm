@@ -9,9 +9,8 @@ _ViridianGymIntroText::
 	para "<PLAYER>. I knew"
 	line "I recognized you."
 	
-	para "You participated" 
-	line "in the JOHTO"
-	cont "CHAMPIONSHIPS a"
+	para "You fought in the" 
+	line "CHAMPIONSHIPS a"
 	cont "year ago, right?"
 		
 	para "You see, I was a"
@@ -27,7 +26,7 @@ _ViridianGymIntroText::
 	para "I had a lot of"
 	line "growing up to do"
 	cont "after I left the"
-	cont "spotlight."
+	cont "spotlight!"
 	
 	para "<PLAYER>, don't you"
 	line "find it amazing"

@@ -40,5 +40,12 @@ DecrementPP:
 	add hl ,bc           ; calculate the address in memory of the PP we need to decrement
 	                     ; based on the move chosen.
 	dec [hl]             ; Decrement PP
+	ld a, [wBattleMonStatus]
+	and 1 << BRN
+	ret z ; return if player not burnt
+	ld a, [hl]
+	and a ; is PP 0?
+	ret z ; if so, bail
+	dec [hl] ; if not, subtract again
 .done 
 	ret

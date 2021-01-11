@@ -1,6 +1,5 @@
 
 ReadTrainer:
-
 ; don't change any moves in a link battle
 	ld a, [wLinkState]
 	and a
@@ -54,10 +53,8 @@ ReadTrainer:
 	cp $FF ; is the trainer special?
 	jr z, .SpecialTrainer ; if so, check for special moves
 	
-	; MOD: evaluate what level they should be at.
-	
+	; MOD: evaluate what level they should be at.	
 	;let's make A the level they should be.
-
 		
 	ld a, [wEffectiveNumBadgesOwned]
 	and a  ; =0?
@@ -72,10 +69,11 @@ ReadTrainer:
 	ld [H_MULTIPLIER], a
 	call Multiply
 	ld a, [hRandomAdd]
-	and 7 ; bit mask, this subtracts the value by 0-7
+	and 7 ; bit mask, this sets the value to 0-7 (instead of 0-255)
 	ld b, a
-	ld a, [H_PRODUCT+1]
-	sub b	
+	ld a, [H_PRODUCT+1] ; a = Max possible level, (B+1)*7
+	inc a; +1
+	sub b
 	jr .SetTrainerLevel
 .minLevelTrainers
 	ld a, 8

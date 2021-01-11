@@ -1,12 +1,5 @@
 _ViridianMartText1::
-	text "I think OAK"
-	line "applied to issue"
-	cont "TRAINER LICENSEs."
-	
-	para "If you're heading"
-	line "back to PALLET"
-	cont "CAMP, you should"
-	cont "hit him up."
+	text "uu"
 	done
 
 _ViridianMartText4::
@@ -17,8 +10,8 @@ _ViridianMartText4::
 	done
 
 ViridianMartParcelQuestText::
-	text "I saw you on TV,"
-	line "during the JOHTO"
+	text "I saw you on TV!"
+	line "You were in the"
 	cont "CHAMPIONSHIPS!"
 	
 	para "What's a top"
@@ -27,8 +20,10 @@ ViridianMartParcelQuestText::
 	
 	para "..."
 	line "Helping OAK?"
-	cont "Seems a little"
-	cont "beneath you, but"
+	cont "THAT guy?"
+	
+	para "Seems a little"
+	line "beneath you, but"
 	cont "sure!"
 	
 	para "So, need to buy"
@@ -39,6 +34,11 @@ ViridianMartParcelQuestText::
 	cont "LICENSE... ..."
 	
 	para "Cool! Checks out."
+	
+	para "If you need some"
+	line "#MON medicine,"
+	cont "check the other"
+	cont "counter."
 	done
 
 _ViridianMartText2::

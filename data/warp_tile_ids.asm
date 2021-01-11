@@ -34,7 +34,7 @@ WarpTileIDPointers:
 ; then you would use $0A
 
 OverworldWarpTileIDs:
-	db $1B,$58,$FF
+	db $1B,$58,$5E,$5F,$FF
 
 ForestGateWarpTileIDs:
 MuseumWarpTileIDs:

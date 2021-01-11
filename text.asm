@@ -95,15 +95,20 @@ _OaksAideHiText::
 	text "Hi! Remember me?"
 	line "I help PROF. OAK"
 	cont "with field tasks!"
+	
+	para "He wants to check"
+	line "in on the project"
+	cont "he sent you on!"
 
 	para "If you've got @"
 	TX_NUM hOaksAideRequirement, 1, 3
 	text ""
 	line "kinds of #MON,"
-	cont "I'll give you a"
+	cont "I've got a"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
-	text "!"
+	text " to"
+	cont "help you out!"
 
 	para "So, <PLAYER>! Have"
 	line "you caught at"
@@ -115,16 +120,18 @@ _OaksAideHiText::
 
 _OaksAideUhOhText::
 	text "Let's see..."
-	line "Uh-oh! You have"
-	cont "caught only @"
+	line "Only @"
 	TX_NUM hOaksAideNumMonsOwned, 1, 3
-	text ""
-	cont "kinds of #MON!"
+	text "?"
+	cont "Come on, you"
+	cont "can do better!"
 
-	para "You'll need @"
+	para "I want to see"
+	line "you get at"
+	cont "least @"
 	TX_NUM hOaksAideRequirement, 1, 3
 	text " kinds"
-	line "if you want the"
+	cont "if you want the"
 	cont "@"
 	TX_RAM wOaksAideRewardItemName
 	text "."
@@ -1780,7 +1787,7 @@ _DoYouWantToNicknameText::
 	done
 
 _YourNameIsText::
-	text "I knew it! "
+	text "I knew it!"
 	line "Honored to meet"
 	cont "you, <PLAYER>!"
 	prompt
@@ -2802,9 +2809,8 @@ _MonCannotLearnMachineMoveText::
 	prompt
 
 _ItemUseNotTimeText::
-	text "OAK: <PLAYER>!"
-	line "This isn't the"
-	cont "time to use that! "
+	text "No use for that"
+	line "right now!"
 	prompt
 
 _ItemUseNotYoursToUseText::

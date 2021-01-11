@@ -6,8 +6,12 @@ IF DEF(_RED)
 
 	para "My name is OAK!"
 	line "I study #MON"
-	cont "at a small camp"
+	cont "at an outpost"
 	cont "in KANTO!"
+	
+	para "My research has"
+	line "gone great! ..."
+	cont "until recently."
 	
 	para "Our cities and"
     line "towns are growing"
@@ -42,11 +46,7 @@ ENDC
 
 _OakSpeechText2B::
 IF DEF(_RED)
-	text "Those who study"
-	line "#MON agree"
-	cont "this is bad!"
-	
-	para "Wild #MON"
+	text "Wild #MON"
 	line "have become more"
 	cont "and more hostile"
 	cont "every day."
@@ -87,7 +87,6 @@ IF DEF(_RED)
 	para "I'm honestly a"
 	line "bit star-struck."
 	cont "Is it really you?"
-	cont "State your name."
 	prompt
 ENDC
 IF DEF(_BLUE)
@@ -102,6 +101,9 @@ IF DEF(_RED)
 	cont "contacted other"
 	cont "TRAINERS about"
 	cont "this opportunity."
+	
+	para "We need all the"
+	line "help we can get!"
 
 	para "I'm sure you know"
 	line "this one."
@@ -122,8 +124,8 @@ IF DEF(_RED)
 
 	para "We can't waste"
 	line "another moment!"
-	cont "Meet me north"
-	cont "of CAMP PALLET!"
+	cont "I'll see you at"
+	cont "CAMP PALLET!"
 	done
 ENDC 
 IF DEF(_BLUE)

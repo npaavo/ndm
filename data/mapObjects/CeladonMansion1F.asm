@@ -7,7 +7,7 @@ CeladonMansion1F_Object:
 	warp 10, 0, 0, CELADON_MANSION_2F
 
 	db 1 ; signs
-	sign 4, 9, 5 ; CeladonMansion1Text5
+	sign  9,  5, 5 ; CeladonMansion1Text5
 
 	db 1 ; objects
 	;object SPRITE_SLOWBRO, 0, 5, STAY, RIGHT, 1 ; person

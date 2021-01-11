@@ -60,15 +60,15 @@ const_value = 0
 	const EVENT_GOT_OAKS_PARCEL                      ; 039, (D74E, bit 1)
 	const EVENT_03A                                  ; 03A, (D74E, bit 2)
 	const EVENT_03B                                  ; 03B, (D74E, bit 3)
-	const EVENT_03C                                  ; 03C, (D74E, bit 4)
-	const EVENT_03D                                  ; 03D, (D74E, bit 5)
-	const EVENT_03E                                  ; 03E, (D74E, bit 6)
-	const EVENT_03F                                  ; 03F, (D74E, bit 7)
+	const EVENT_03C                                  ; 03C, (D74E, bit 4) 
+	const EVENT_03D                                  ; 03D, (D74E, bit 5) 
+	const EVENT_03E                                  ; 03E, (D74E, bit 6) 
+	const EVENT_03F                                  ; 03F, (D74E, bit 7) 
 	const EVENT_040                                  ; 040, (D74F, bit 0)
-	const EVENT_041                                  ; 041, (D74F, bit 1)
-	const EVENT_042                                  ; 042, (D74F, bit 2)
-	const EVENT_043                                  ; 043, (D74F, bit 3)
-	const EVENT_044                                  ; 044, (D74F, bit 4)
+	const EVENT_BEAT_ROUTE_2_TRAINER_0               ; 041, (D74F, bit 1) MOD
+	const EVENT_BEAT_ROUTE_2_TRAINER_1               ; 042, (D74F, bit 2) MOD
+	const EVENT_BEAT_ROUTE_2_TRAINER_2               ; 043, (D74F, bit 3) MOD
+	const EVENT_BEAT_ROUTE_2_TRAINER_3               ; 044, (D74F, bit 4) MOD
 	const EVENT_045                                  ; 045, (D74F, bit 5)
 	const EVENT_046                                  ; 046, (D74F, bit 6)
 	const EVENT_047                                  ; 047, (D74F, bit 7)
@@ -359,7 +359,7 @@ const_value = 0
 	const EVENT_BEAT_VERMILION_GYM_TRAINER_2         ; 164, (D773, bit 4)
 	const EVENT_165                                  ; 165, (D773, bit 5)
 	const EVENT_GOT_TM24                             ; 166, (D773, bit 6)
-	const EVENT_BEAT_VERMILION_GYM_TORI                        ; 167, (D773, bit 7)
+	const EVENT_BEAT_VERMILION_GYM_TORI              ; 167, (D773, bit 7)
 	const EVENT_168                                  ; 168, (D774, bit 0)
 	const EVENT_169                                  ; 169, (D774, bit 1)
 	const EVENT_16A                                  ; 16A, (D774, bit 2)

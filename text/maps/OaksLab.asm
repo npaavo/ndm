@@ -165,9 +165,12 @@ IF DEF(_RED)
 	text "<RIVAL>: About"
 	line "time you show up!"
 	
+	para "Keeping me"
+	line "waiting... rude!"
+
 	para "I was about to"
 	line "pack up and head"
-	cont "back to JOHTO!"
+	cont "back home!"
 	
 	para "People there"
 	line "respect my time!"
@@ -365,6 +368,10 @@ IF DEF(_RED)
 	cont "conquer the KANTO"
 	cont "#MON LEAGUE."
 	
+	para "I've got a"
+	line "reputation to"
+	cont "uphold, you know."
+	
 	para "Thanks for the"
 	line "#MON. See ya,"
 	cont "nerds!"
@@ -410,7 +417,7 @@ ENDC
 
 _OaksLabText25::
 IF DEF(_RED)
-	text "You'll also need" 
+	text "Oh! Also, take" 
 	line "this! It's my new"
 	cont "invention I call"
 	cont "the #DEX!"

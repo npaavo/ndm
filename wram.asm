@@ -3214,6 +3214,7 @@ wBoxDataEnd::
 wPlaceHolderDVs:: ds 5 ; dee2 - dee7?
 
 wRoute5CurScript:: ds 1 ; dee8?
+wRoute2CurScript:: ds 1 ; dee9?
 
 SECTION "Stack", WRAM0
 wStack:: ; dfff

@@ -583,6 +583,9 @@ HandlePoisonBurnLeechSeed:
 	and 1 << BRN
 	jr z, .poisoned
 	ld hl, HurtByBurnText
+	call PrintText
+	pop hl
+	jr .notBurnedOrPoisoned
 .poisoned
 	call PrintText
 	xor a
@@ -2509,10 +2512,24 @@ PartyMenuOrRockOrRun:
 ; fall through to SwitchPlayerMon
 
 SwitchPlayerMon:
+
+	; remove frozen status, this is new 
+	ld hl, wBattleMonStatus
+	bit FRZ, [hl] 
+	jr z, .notFrozenSwitchCheck
+	ld hl, wPartyMons
+	ld bc, wPartyMon2 - wPartyMon1
+	ld a, [wPlayerMonNumber]
+	call AddNTimes ; HL is now start of active mon data
+	ld bc, wPartyMon1Status - wPartyMon1
+	add hl, bc ; hl now points to status of active mon 
+	xor a
+	ld [hl], a ; clear frozen (all) status
+.notFrozenSwitchCheck	
 	callab RetreatMon
 	ld c, 50
 	call DelayFrames
-	call AnimateRetreatingPlayerMon
+	call AnimateRetreatingPlayerMon	
 	ld a, [wWhichPokemon]
 	ld [wPlayerMonNumber], a
 	ld c, a
@@ -3157,7 +3174,13 @@ SelectEnemyMove:
 	                     ; based on the move chosen.
 	dec [hl]             ; Decrement PP
 	
-	
+	ld a, [wEnemyMonStatus]
+	and 1 << BRN
+	ret z ; return if enemy not burnt
+	ld a, [hl]
+	and a ; is PP 0?
+	ret z ; if so, bail
+	dec [hl] ; if not, subtract again	
 	ret
 .popAndUseStruggle
 	pop hl 
@@ -6418,6 +6441,8 @@ QuarterSpeedDueToParalysis:
 	ret
 
 HalveAttackDueToBurn:
+	ret
+	
 	ld a, [H_WHOSETURN]
 	and a
 	jr z, .playerTurn

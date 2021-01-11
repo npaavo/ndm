@@ -520,6 +520,7 @@ GyaradosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
+	db 6, TACKLE
 	db 9, WATER_GUN
 	db 12, WRAP
 	db 15, BITE
@@ -583,7 +584,7 @@ ScytherEvosMoves:
 	db 0
 ; Learnset
 	db 6, BUG_OUT
-	db 9, LEER
+	db 9, CUT
 	db 12, FURY_SWIPES
 	db 15, DOUBLE_TEAM
 	db 18, KARATE_CHOP
@@ -1283,12 +1284,12 @@ KrabbyEvosMoves:
 ; Learnset
 	db 9, LEECH_LIFE
 	db 12, VICEGRIP
-	db 15, CRABHAMMER
-	db 18, STOMP
-	db 21, CLAMP
+	db 15, STOMP
+	db 18, GUILLOTINE
+	db 21, CRABHAMMER
 	db 24, BODY_SLAM
 	db 27, SWORDS_DANCE
-	db 30, GUILLOTINE
+	db 30, CLAMP
 	db 0
 
 MissingNo4FEvosMoves:
@@ -2020,10 +2021,10 @@ SnorlaxEvosMoves:
 
 MagikarpEvosMoves:
 ; Evolutions
-	db EV_LEVEL, 15, GYARADOS
+	db EV_LEVEL, 9, GYARADOS
 	db 0
 ; Learnset
-	db 9, TACKLE
+	db 6, TACKLE
 	db 0
 
 MissingNo86EvosMoves:
@@ -2064,12 +2065,12 @@ KinglerEvosMoves:
 ; Learnset
 	db 9, LEECH_LIFE
 	db 12, VICEGRIP
-	db 15, CRABHAMMER
-	db 18, STOMP
-	db 21, CLAMP
+	db 15, STOMP
+	db 18, GUILLOTINE
+	db 21, CRABHAMMER
 	db 24, BODY_SLAM
 	db 27, SWORDS_DANCE
-	db 30, GUILLOTINE
+	db 30, CLAMP
 	db 0
 
 CloysterEvosMoves:

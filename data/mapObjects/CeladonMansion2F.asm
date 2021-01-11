@@ -8,7 +8,7 @@ CeladonMansion2F_Object:
 	warp 15, 10, 2, CELADON_MANSION_3F
 
 	db 2 ; signs
-	sign 9, 7, 1 ; CeladonMansion2Text1
+	sign  9,  7, 1 ; CeladonMansion2Text1
 	sign 19, 9, 1 ; CeladonMansion2Text1
 
 	db 0 ; objects

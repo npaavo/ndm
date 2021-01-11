@@ -114,6 +114,11 @@ _ViridianForestText8c::
 	text "The FOREMAN is"
 	line "really busy! Don't"
 	cont "bother him!"
+	
+	para "You got an AXE,"
+	line "now at least"
+	cont "pretend you know"
+	cont "how to use it!"
 
 	done	
 

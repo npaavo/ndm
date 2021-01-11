@@ -42,7 +42,7 @@ _CeladonGymFirstFightIntroText::
 	cont "nature... guided"
 	cont "by true genius!"
 	
-	done
+	prompt
 
 _CeladonGymHowManyBadgesText::
 	text "Fairness is a"
