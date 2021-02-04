@@ -282,10 +282,12 @@ CeruleanPokecenterHiddenObjects:
 	dw OpenPokemonCenterPC
 	db $FF
 CeruleanGymHiddenObjects:
-	db $0b,$03,$04
-	dbw BANK(GymStatues),GymStatues
-	db $0b,$06,$04
-	dbw BANK(GymStatues),GymStatues
+	db $0d,$04,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $0d,$05,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
 	db $FF
 CeruleanMartHiddenObjects:
 	db $FF
@@ -306,42 +308,12 @@ VermilionPokecenterHiddenObjects:
 	dw PrintBenchGuyText
 	db $FF
 VermilionGymHiddenObjects:
-	db $0e,$03,$04
-	dbw BANK(GymStatues), GymStatues
-	db $0e,$06,$04
-	dbw BANK(GymStatues), GymStatues
-	db $01,$06,$00
-	dbw BANK(PrintTrashText), PrintTrashText
-	db $07,$01,$00
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $09,$01,$01
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $0b,$01,$02
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $07,$03,$03
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $09,$03,$04
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $0b,$03,$05
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $07,$05,$06
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $09,$05,$07
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $0b,$05,$08
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $07,$07,$09
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $09,$07,$0a
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $0b,$07,$0b
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $07,$09,$0c
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $09,$09,$0d
-	dbw BANK(GymTrashScript), GymTrashScript
-	db $0b,$09,$0e
-	dbw BANK(GymTrashScript), GymTrashScript
+	db $0d,$04,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $0d,$05,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
 	db $FF
 CeladonMansion2HiddenObjects:
 	db $05,$00,$04
@@ -357,108 +329,14 @@ CeladonPokecenterHiddenObjects:
 	dw OpenPokemonCenterPC
 	db $FF
 CeladonGymHiddenObjects:
-	db $0f,$03,$04
-	dbw BANK(GymStatues),GymStatues
-	db $0f,$06,$04
-	dbw BANK(GymStatues),GymStatues
+	db $0e,$00,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
+	db $0e,$01,$04
+	db BANK(OpenPokemonCenterPC)
+	dw OpenPokemonCenterPC
 	db $FF
 GameCornerHiddenObjects:
-	db $0f,$12,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$12,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$12,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$12,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$12,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$12,$ff ; "Someone's Keys"
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$0d,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$0d,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$0d,$fe ; "Out To Lunch"
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$0d,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$0d,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0f,$0d,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0f,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$0c,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0f,$07,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0f,$06,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$06,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$06,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$06,$fd ; "Out Of Order"
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$06,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$06,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0a,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0b,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0c,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0d,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0e,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $0f,$01,$d0
-	dbw BANK(StartSlotMachine), StartSlotMachine
-	db $08,$00,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $10,$01,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0b,$03,COIN+20
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0e,$03,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0c,$04,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0c,$09,COIN+20
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0f,$09,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0e,$10,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $10,$0a,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $07,$0b,COIN+40
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $08,$0f,COIN+100
-	dbw BANK(HiddenCoins),HiddenCoins
-	db $0f,$0c,COIN+10
-	dbw BANK(HiddenCoins),HiddenCoins
 	db $FF
 CeladonHotelHiddenObjects:
 	db $03,$0d,$04
@@ -713,7 +591,7 @@ BillsHouseHiddenObjects:
 	dbw BANK(BillsHousePC), BillsHousePC
 	db $FF
 ViridianCityHiddenObjects:
-	db $04,$0e,POTION
+	db $1e,$0f,POTION
 	dbw BANK(HiddenItems),HiddenItems
 	db $FF
 SafariZoneRestHouse2HiddenObjects:
